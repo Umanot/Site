@@ -1,0 +1,53 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="umanot.site">
+
+  <!-- 'Umanot - SitePackage' Zope 3 browser layer
+    Register views, viewlets and resources for this layer to make sure
+    they only apply to the 'Umanot - SitePackage' theme.
+    You can also use this layer to override default Plone browser views
+    and viewlets only within the 'Umanot - SitePackage' theme.
+  -->
+  <interface
+      interface=".interfaces.IThemeSpecific"
+      type="zope.publisher.interfaces.browser.IBrowserSkinType"
+      name="Umanot - SitePackage"
+      />
+  
+  <!-- Viewlets registration -->
+  <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
+  <browser:viewlet
+      name="umanot.someviewlet"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".viewlets.MyViewlet"
+      layer=".interfaces.IThemeSpecific"
+      permission="zope2.View"
+      />
+  -->
+
+  <!-- Zope 3 browser resources -->
+
+  <!-- Resource directory for images
+    See umanot/site/browser/images/README.txt
+    for more information about registering images as Zope 3 browser
+    resources.
+  -->
+  <browser:resourceDirectory
+      name="umanot.site.images"
+      directory="images"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- Resource directory for stylesheets
+    See umanot/site/browser/stylesheets/README.txt
+    for more information about registering stylesheets as Zope 3 browser
+    resources.
+  -->
+  <browser:resourceDirectory
+      name="umanot.site.stylesheets"
+      directory="stylesheets"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+</configure>
