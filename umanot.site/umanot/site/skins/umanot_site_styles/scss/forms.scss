@@ -1,0 +1,231 @@
+/* @group Forms */
+
+input[type="text"] {
+  padding: 4px 7px;
+}
+
+#sharing-search-button {margin-top: -3px;}
+
+fieldset,
+.editionComment {
+    line-height:1.5em;
+    margin:1em 0;
+    padding:1em 1em 1em;
+    width:auto;
+}
+
+/* Emulates the styling from the h1 tag */
+#content .field input[type="text"][name$=".title"],
+#archetypes-fieldname-title input {
+    line-height: 125%;
+    color: #333;
+    letter-spacing: -0.05em;
+    margin: inherit -0.05em;
+    font-size: 2em;
+    font-weight: bold;
+    height: auto;
+    padding: 4px;
+}
+
+/* Emulates styling from the description's view */
+#content .field textarea[name$=".description"],
+#archetypes-fieldname-description textarea#description {
+    font-family: Arial,FreeSans,sans-serif;
+    font-weight: bold;
+    width: 97%;
+}
+
+
+div.formControls {margin-top: 1em;}
+
+#actionsView.formControls,
+#login_form .formControls,
+.pb-ajax .formControls {padding: 0; border: 0px; background: transparent;}
+
+
+#content textarea {
+    font: 100% Monaco, "Courier New", Courier, monospace;
+    width: 100%;
+    padding: 10px;
+}
+#content select {
+    vertical-align: top;
+}
+
+fieldset {
+    border: 1px solid #eee;
+    background-color: #f8f8f8;
+}
+
+label {
+    font-weight:bold;
+}
+label .fieldErrorBox {
+    font-weight: normal;
+}
+
+#content optgroup {
+    font-style: normal;
+    font-weight: bold;
+    color: #999;
+    padding-left: 0.25em;
+}
+#content option {
+    color: #333;
+}
+#content optgroup > option {
+    padding: 0 0.25em 0 1em;
+}
+dl.enableFormTabbing dd {
+    margin-left: 0;
+    padding-top: 2em;
+}
+.searchSection {
+    color: #76797c;
+    margin-top: 0.25em;
+}
+.searchSection label:hover {
+    color: #333;
+}
+.field {
+    clear: both;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px dotted #ddd;
+}
+
+.field input[type="text"] {
+    margin-bottom: 0;
+}
+.field input[type="text"][name$=".title"],
+input#title {
+    width: 97%;
+}
+.field.error input[type="text"][name$=".title"],
+.error input#title {
+    width: 97%;
+}
+
+.field input[type="checkbox"] {
+  display: block;
+  float: left;
+  margin: 5px 12px 0 0;
+}
+
+.fieldRequired {
+    color: #B22222;
+    font-weight: normal;
+    font-size: 80%;
+}
+.fieldUploadFile {
+    text-align: right;
+    margin-right: 0.75em;
+    display: none;
+}
+.fieldTextFormat {
+    text-align: right;
+    margin-right: 0.75em
+}
+.formHelp {
+    color: #555;
+    margin: 5px 0 10px;
+    display: block;
+    font-weight: normal;
+    font-size: 90%;
+    float: none!important;
+}
+
+label .formHelp {margin: 0;}
+
+div.field.error {
+    background-color: #F2DEDE;
+    border:  1px solid #EED3D7;
+    padding: 0.5em;
+    margin:  1em 0;
+}
+
+dt {float: none!important;}
+
+div.field.error label {color: #B94A48;}
+
+.formQuestion.label {
+  font-size: 100%;
+  padding: 0;
+  text-align: left;
+  color: #333;
+  line-height: 1.4em;
+  white-space: normal;
+}
+
+
+.error .fieldRequired {
+    color: #d00;
+}
+div.error.warning {
+    background-color: transparent;
+    border: none;
+    margin-top: 0;
+    padding: 0;
+}
+
+div.error.warning input {
+    border: 2px solid red;
+}
+
+input.inputLabelActive {
+    color: #76797c;
+}
+textarea#form\.description {
+    height: 6em;
+    width: 99%;
+}
+table.listing tbody tr.odd.selected td,
+table.listing tbody tr.odd.dragging td,
+tr.dragging,
+tr.selected {
+    background-color: #ffa;
+}
+table.listing tbody tr.odd.error td,
+tr.error {
+    background-color: #fdc;
+}
+.multi-widget-field {
+    padding-left: 0.5em;
+    border-left: 1.5em solid #DDD;
+}
+
+.multi-widget-checkbox {
+    margin-left: -2em;
+    margin-right: 0.5em;
+    width: 1.5em;
+    display: inline-block;
+}
+
+/* @group Login form */
+
+body.template-logged_out #portal-breadcrumb,
+body.template-login_form #portal-breadcrumb,
+body.template-login_failed #portal-breadcrumb {display: none;}
+
+#login_form {width: 26em; margin: 1em auto 0; padding: 2em; background-color: #f8f8f8; box-shadow: 0 0 3px #ddd; border: 1px solid #ddd;}
+
+#login_form .field {border: 0; margin: 0;}
+
+body.template-register #content input,
+body.template-new-user #content input {
+    font-size: 150%;
+    width: inherit;
+}
+
+#fieldset-openid-login label, 
+#login-form label {
+    display: inline-block;
+    width: 7em;
+}
+
+#login-forgotten-password {margin-top: 4em; padding-top: 1em; border-top: 1px solid #ddd;}
+
+input[type="text"].quickSearch {margin: 0;}
+
+#archetypes-fieldname-image .field {border: 0; margin: 0;}
+#archetypes-fieldname-attachment div {padding-left: 0!important;}

@@ -1,0 +1,304 @@
+@import "var";
+
+
+#content ul.formTabs {
+    background-color: #fff;
+    border: 0;
+    height: 30px;
+    margin: 0;
+    padding: 0;
+}
+#edit-bar {
+    background-color: $editBarMainColor;
+    border: 0.25em solid $editBarMainColor;
+    font-size: 11px;
+    margin: 1em 0;
+    padding-top: 0.05em;
+}
+
+#edit-bar:after,
+#edit-bar:before {
+  content: " ";
+  display: table;
+  clear: both;
+}
+
+#content-views {
+    float: left;
+    background-color: $editBarMainColor;
+    margin: 0;
+    list-style: none;
+    list-style-image: none;
+    padding: 0;
+}
+
+#content-views li {display: inline;}
+
+#content-views a {color: #fff;}
+
+/* Shared CSS between the two tab types */
+#edit-bar,
+#content ul.formTabs,
+#content-core ul.formTabs {
+    display: block;
+    border-style: solid solid none solid;
+    margin-left: 0;
+}
+#content li.formTab,
+#content-core li.formTab {
+    display: inline;
+    margin-right:0.25em;
+}
+#content-views a,
+#content li.formTab a,
+#content-core li.formTab a {
+    display: inline-block;
+}
+#content-views a,
+#content li.formTab a,
+#content-core li.formTab a {
+    line-height: 26px;
+    padding: 0 0.75em;
+    text-decoration: none;
+    border: none;
+    margin: 0 ;
+}
+
+#content li.formTab a,
+#content-core li.formTab a {
+    border: 0; padding: 2px 0.75em;
+    background-color: transparent;
+    border: 1px solid #ddd;
+    border-bottom: 0;
+    font-weight: bold;
+    color: #999;
+}
+
+#content li.formTab a.selected,
+#content-core li.formTab a.selected {border: 1px solid #ddd;  border-bottom: 0px; background-color: #f8f8f8; color: #333;}
+
+#content-views li.selected a,
+#content-views li a:hover {
+    background-color: #fff;
+    color: #333;
+}
+
+#content li.formTab a.notify,
+#content-core li.formTab a.notify {
+    background-color: #B22222;
+    color: #fff;
+}
+#content li.formTab a.required span:after,
+#content-core li.formTab a.required span:after,
+div.field span.required:after {
+    content: "(Required)";
+    color: #B22222;
+    font-size: 80%;
+    font-weight: normal;
+    line-height: 1em;
+}
+#content li.formTab a.required span:after {padding-left: 6px;}
+
+#content fieldset.formPanel,
+#content-core fieldset.formPanel {
+    border: 1px solid #ddd;
+    border-bottom: 0px;
+    background-color: #f8f8f8;
+    margin: 0;
+}
+#content fieldset.formPanel.hidden,
+#content-core fieldset.formPanel.hidden,
+.formPanel legend {
+    display: none;
+}
+#content div.formControls input.hidden,
+#content-core div.formControls input.hidden {
+    display: none;
+}
+
+/* TOOLS */
+
+#portal-personaltools-wrapper {
+  background-color: $editBarMainColor;
+  padding: 8px 15px 0;
+}
+
+#portal-personaltools-wrapper:after,
+#portal-personaltools-wrapper:before {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+#portal-personaltools,
+#edit-tools {
+    float: left;
+    background: #fff;
+    position: relative;
+    z-index: 3;
+    padding: 0;
+    margin: 0 10px 0 0;
+    list-style: none;
+
+    border-top: 0px;
+}
+
+#portal-personaltools {
+  padding: 0;
+}
+
+#portal-personaltools dt,
+#edit-tools dt {
+    font-weight: normal;
+    padding: 0 10px;
+    margin: 0;
+}
+
+#portal-personaltools dt {padding: 5px 16px 5px 13px;}
+
+#portal-personaltools dt.actionMenuHeader a:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+	  border-right: 5px solid transparent;
+    border-top: 5px solid #999;
+	  position: relative;
+	  top: 11px;
+    left: 5px;
+}
+
+#portal-personaltools.actionMenu.activated dt a {margin: 0;}
+
+#portal-personaltools dd {
+    left: -1px;
+    padding: 0;
+    background: #fff;
+    min-width: 170px;
+    top: 26px;
+    border: 1px solid $editBarMainColor;
+    border-top: 0;
+}
+
+#portal-personaltools dd li {margin-bottom: 0;}
+
+#portal-personaltools dd a {
+    line-height: 1.5em;
+    padding: 0.5em 1em;
+}
+#portal-personaltools dd a:hover {
+    background: $editBarMainColor;
+    color: #fff;
+}
+
+#portal-personaltools dd ul {padding: 0;}
+
+#editbarSwitch span {cursor: pointer; font-weight: bold; color: $editBarMainColor;}
+
+#contentActionMenus dl.actionMenu a,
+#contentActionMenus dl.actionMenu.activated dd {
+    color: #fff;
+    z-index: 5;
+}
+#contentActionMenus dl.actionMenu.activated dd {
+    padding:0;
+    margin: 0;
+    right: -13px;
+    top:23px;
+    background-color: #6497AD;
+}
+
+#contentActionMenus dl.actionMenu .actionMenuContent a,
+#folderDefaultPageDisplay {
+    padding: 0.5em 1em;
+    margin-bottom: 0;
+}
+
+#contentActionMenus dl.actionMenu.activated dd a:hover,
+#contentActionMenus dl.actionMenu.activated dd .actionMenuSelected {
+    background-color: #B3CCD6 !important;
+    color: #222;
+}
+#contentActionMenus dl.actionMenu {
+    line-height: 2em;
+    margin-top: 0;
+    padding-left: 1em;
+    border-left: 1px solid rgba(255,255,255,0.5);
+    margin: 0 12px 0 0;
+}
+
+#folderHeader, #contextHeader {
+    border-bottom: 1px solid #B3CCD6;
+    font-size: 90%;
+    font-weight: bold;
+    margin: 6px 0;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    color: #FCF9CE;
+}
+
+
+/* @end */
+
+#contentActionMenus {
+    background: $editBarMainColor;
+    margin: 0;
+    padding: 3px 0.24em 0 0;
+    float: right;
+    position: relative;
+    right: -2px;
+    top: 1px;
+    height: 2.0em;
+}
+
+#contentActionMenus li {display: inline;}
+
+.actionMenuContent {padding: 0 0.25em;}
+
+.actionMenuContent li {margin-bottom: 3px;}
+
+.actionMenuContent ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  list-style-image: none;}
+
+.actionMenuContent img {margin-left: -2px; margin-right: 3px;}
+
+dl.actionMenu {
+    float: right;
+    white-space: nowrap;
+    position: relative;
+    margin-left: 0.5em;
+}
+
+dl.actionMenu a,
+dl.actionMenu div {
+    display: block;
+    white-space: nowrap;
+}
+
+dl.actionMenu dt {
+    font-weight: normal;
+}
+
+span.arrowDownAlternative {
+    font-size: 80%;
+    display: none;
+}
+
+
+dl.actionMenu.deactivated dd {
+    display: none;
+}
+
+dl.actionMenu.activated dd {
+    position: absolute;
+    width: auto;
+    min-width: 100%;
+}
+
+
+#cmfeditions_version_comment_block {background-color: #f8f8f8; margin: 0 0 1em; border: 1px solid #eee; border-top: 0px;}
+
+.newTagsSection {margin-left: 0px!important;}
