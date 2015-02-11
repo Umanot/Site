@@ -162,15 +162,9 @@
         </div>
     </div>
 
-    <footer id="footer" i18n:domain="plone" tal:condition="not:ajax_load">
-        <div class="container-fluid">
-            <div class="mrow">
-                <div class="col-md-12">
-                    <div tal:replace="structure provider:plone.portalfooter" />
-                </div>
-            </div>
-        </div>
-    </footer>
+    <tal:footer i18n:domain="plone" tal:condition="not:ajax_load">
+      <div tal:replace="structure provider:plone.portalfooter" />
+    </tal:footer>
 
   </div> <!-- visual-wrapper -->
 

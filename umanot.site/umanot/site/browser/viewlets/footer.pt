@@ -1,1 +1,68 @@
-<div id="portal-footer">footer</div>
+<footer id="footer">
+  <section id="section-footer">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="col-md-4">
+            <h6 class="footerTitle">Freschi dal Blog</h6>
+            <ul class="footerList">
+              <li><a href="#">Lorem ipsum dolor sit amet, magnam, molestiae, aliquid<span class="text-muted">07/07/2015</span></a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit accusantium, magnam, molestiae, aliquid<span class="text-muted">07/07/2015</span></a></li>
+              <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit accusantium, magnam, molestiae, aliquid lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="text-muted">07/07/2015</span></a></li>
+            </ul>
+          </div>
+
+          <div class="col-md-4">
+            <h6 class="footerTitle">Chi Siamo</h6>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, modi fugiat ab temporibus facere molestiae eaque neque at eius harum consequuntur adipisci repellat iste nesciunt perferendis est ducimus doloremque eos!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium tempora quasi alias. Repellendus, eveniet, omnis. Aliquam, asperiores, laborum ipsum necessitatibus quas modi ipsa illo fugiat repellendus consequatur distinctio alias dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <a class="ghostButton ghostButtonGray" href="#">Scopri di più</a>
+          </div>
+          
+          <div class="col-md-4">
+            <div id="contact-block">
+              
+              <h6 class="footerTitle">Contattaci</h6>
+              <address>
+                <strong>Lorem Ipsum</strong><br>
+                consectetur adipisicing elit.<br>
+                Quasi, inventore, nesciunt libero<br>
+                <abbr title="Telefono">Tel:</abbr> (+39) 323 7890
+              </address>
+              
+              <address>
+                <a href="mailto:#">staff@umanot.com</a>
+              </address>
+              
+              <div class="socialList">
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-rss"></i></a>
+              </div>
+              
+              <a id="clabLogo" href="#">
+                <span>Powered by</span>
+                <img src="++resource++umanot.site.images/clab_logo.svg" />
+              </a>
+            
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section-colophon">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <p>&copy 2015 UMANOT. All Rights Reserved.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+    <div id="backtotop"><i class="fa fa-angle-up"></i></div>
+</footer>

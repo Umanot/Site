@@ -424,24 +424,131 @@ dd.image-caption {
 
 /* FOOTER */
 
-#portal-footer {
-    font-size: 75%;
-    background: #ddd;
-    padding: 1em;
-    margin: 1em 0;
-    line-height: 2em;
+#section-footer {
+  background-color: #252525;
+  padding: 40px 0;
+  color: #999;
 }
 
-#portal-colophon {
-    font-size: 70%;
+#section-footer p {
+  font-size: 13px;
+  color: #999;
+}
+
+.footerTitle,
+.portletTitle {
+  color: #999;
+  margin: 0 0 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.footerList,
+.portletList {
+  @include noMarker;
+  color: #777;
+  font-size: 13px;
+}
+
+#content-section .portletList {
+  padding-left: 0;
+}
+
+
+.footerList > li {
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.portletList > li {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.footerList > li:last-child,
+.portletList > li:last-child {border-bottom: 0;}
+
+.footerList > li > a,
+.portletList > li > a {
+  color: #aaa;
+  padding: 10px 0;
+  display: block;
+  line-height: 1.3em;
+}
+
+#content-section  .portletList > li > a {color: $colorLeft;}
+
+.footerList > li > a .text-muted,
+.portletList > li >a .text-muted {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+#section-colophon {
+  background-color: #1C1C1C;
+  color: #777;
+  padding: 20px 0;
+}
+
+#section-colophon p {font-size: 12px; margin-bottom: 0; line-height: 22px;}
+
+.socialList > a {
+  color: #777;
+  font-size: 22px;
+  display: inline-block;
+  margin-right: 10px;
+  line-height: 22px;
+}
+
+#section-colophon .socialList {float: right;}
+
+#contact-block {
+  padding-left: 30px;
+  border-left: 1px solid  rgba(255,255,255,0.1);
+  position: relative;
+}
+
+#clabLogo {
+  bottom: -80px;
+  color: #fff;
+  display: block;
+  font-size: 75%;
+  position: absolute;
+  right: 0;
+}
+#clabLogo img {
+  height: 100px;
+}
+
+#clabLogo span {display: block;}
+
+.tagItem {
+  display: inline-block;
+  background-color: #333;
+  color: #fff;
+  padding: 6px 10px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 1px 2px 1px 0;
+  border-radius: 4px;
+}
+
+/* BACK TO TOP */
+
+#backtotop {
+    background-color: #000;
+    bottom: 20px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+    height: 45px;
+    position: fixed;
+    right: 20px;
     text-align: center;
-    margin-bottom: 1em;
+    width: 45px;
+    z-index: 99999;
 }
 
-#portal-colophon li {
-    padding:0 0.75em;
-}
-
-#portal-colophon a {
-    color: #444;
+#backtotop i {
+    font-size: 20px;
+    line-height: 42px;
 }
