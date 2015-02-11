@@ -25,6 +25,9 @@
  <object name="umanot_site_styles"
     meta_type="Filesystem Directory View"
     directory="umanot.site:skins/umanot_site_styles"/>
+ <object name="umanot_site_javascripts"
+    meta_type="Filesystem Directory View"
+    directory="umanot.site:skins/umanot_site_javascripts"/>    
 
  <!-- A skin-path in this file corresponds to a Skin Selection in the
      'Properties' tab of the portal_skins tool, in the ZMI.
@@ -45,6 +48,8 @@
      insert-after="umanot_site_custom_images"/>
   <layer name="umanot_site_styles"
      insert-after="umanot_site_custom_templates"/>
+  <layer name="umanot_site_javascripts"
+     insert-after="umanot_site_styles"/>     
  </skin-path>
 
 </object>

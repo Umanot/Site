@@ -1,53 +1,220 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="umanot.site">
 
-  <!-- 'Umanot - SitePackage' Zope 3 browser layer
-    Register views, viewlets and resources for this layer to make sure
-    they only apply to the 'Umanot - SitePackage' theme.
-    You can also use this layer to override default Plone browser views
-    and viewlets only within the 'Umanot - SitePackage' theme.
-  -->
   <interface
       interface=".interfaces.IThemeSpecific"
       type="zope.publisher.interfaces.browser.IBrowserSkinType"
       name="Umanot - SitePackage"
       />
-  
-  <!-- Viewlets registration -->
-  <!-- EXAMPLE (UNCOMMENT TO MAKE AVAILABLE):
-  <browser:viewlet
-      name="umanot.someviewlet"
-      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
-      class=".viewlets.MyViewlet"
-      layer=".interfaces.IThemeSpecific"
-      permission="zope2.View"
-      />
-  -->
 
-  <!-- Zope 3 browser resources -->
-
-  <!-- Resource directory for images
-    See umanot/site/browser/images/README.txt
-    for more information about registering images as Zope 3 browser
-    resources.
-  -->
   <browser:resourceDirectory
       name="umanot.site.images"
       directory="images"
       layer=".interfaces.IThemeSpecific"
       />
-
-  <!-- Resource directory for stylesheets
-    See umanot/site/browser/stylesheets/README.txt
-    for more information about registering stylesheets as Zope 3 browser
-    resources.
-  -->
+      
   <browser:resourceDirectory
       name="umanot.site.stylesheets"
       directory="stylesheets"
       layer=".interfaces.IThemeSpecific"
       />
+
+  <browser:resourceDirectory
+      name="umanot.site.templates"
+      directory="templates"
+      layer=".interfaces.IThemeSpecific"
+      />
+      
+  <browser:resourceDirectory
+      name="umanot.site.javascripts"
+      directory="javascripts"
+      layer=".interfaces.IThemeSpecific"
+      />
+      
+  <browser:resourceDirectory
+      name="umanot.site.viewlets"
+      directory="viewlets"
+      layer=".interfaces.IThemeSpecific"
+      />
+      
+  <browser:resourceDirectory
+      name="umanot.site.fonts"
+      directory="fonts"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <browser:resourceDirectory
+      name="umanot.site.portlets"
+      directory="portlets"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- resourceregistries -->  
+  <browser:viewlet  
+    name="plone.resourceregistries" 
+    manager="plone.app.layout.viewlets.interfaces.IHtmlHead"
+    template="viewlets/resourceregistries.pt"
+    permission="zope2.View"
+    layer=".interfaces.IThemeSpecific"
+    />
+
+  <!-- The portal header -->
+  <browser:viewlet
+      name="plone.header"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      template="viewlets/portal_header.pt"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- The logo -->
+  <browser:viewlet
+      name="plone.logo"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.LogoViewlet"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+      
+  <!-- The global sections -->
+  <browser:viewlet
+      name="plone.global_sections"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.GlobalSectionsViewlet"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- The personal bar -->
+  <browser:viewlet
+      name="plone.personal_bar"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.PersonalBarViewlet"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- The search box -->
+  <browser:viewlet
+      name="plone.searchbox"
+      manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+      class=".viewlets.SearchBoxViewlet"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- The breadcrumbs -->
+  <browser:viewlet
+      name="plone.path_bar"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+      class=".viewlets.PathBarViewlet"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- Render the document byline -->
+  <browser:viewlet
+      name="plone.belowcontenttitle.documentbyline"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentTitle"
+      class=".viewlets.DocumentBylineViewlet"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+  
+  <!-- Render the keywords -->
+  <browser:viewlet
+      name="plone.belowcontenttitle.keywords"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContent"
+      view="plone.app.layout.globals.interfaces.IViewView"
+      template="viewlets/keywords.pt"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- Render the document actions -->
+  <browser:viewlet
+      name="plone.abovecontenttitle.documentactions"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+      class=".viewlets.DocumentActionsViewlet"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- The related items -->
+  <browser:viewlet
+      name="plone.belowcontentbody.relateditems"
+      manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+      class=".viewlets.ContentRelatedItems"
+      view="plone.app.layout.globals.interfaces.IViewView"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+  <!-- The site actions -->
+  <browser:viewlet
+      name="plone.site_actions"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".viewlets.SiteActionsViewlet"
+      permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
+      />
+  
+  <!-- Footer -->
+  <browser:viewlet
+      name="plone.footer"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".viewlets.FooterViewlet"
+      permission="zope.Public"
+      layer=".interfaces.IThemeSpecific"
+      />
+  
+  <!-- Colophon -->
+  <browser:viewlet
+      name="plone.colophon"
+      for="*"
+      manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+      class=".viewlets.ColophonViewlet"
+      permission="zope.Public"
+      layer=".interfaces.IThemeSpecific"
+      />
+
+
+  <!-- PORTLETS -->
+  <include package="plone.app.portlets" />
+  
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.news.INewsPortlet"
+        layer=".interfaces.IThemeSpecific"
+        template="portlets/news.pt"
+        />
+
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.events.IEventsPortlet"
+        layer=".interfaces.IThemeSpecific"
+        template="portlets/events.pt"
+        />
+
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.calendar.ICalendarPortlet"
+        layer=".interfaces.IThemeSpecific"
+        template="portlets/calendar.pt"
+        />
+        
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.search.ISearchPortlet"
+        layer=".interfaces.IThemeSpecific"
+        template="portlets/search.pt"
+        />
+        
+    <plone:portletRenderer
+        portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
+        class=".viewlets.Renderer"
+        layer=".interfaces.IThemeSpecific"
+        />
+
 
 </configure>

@@ -7,6 +7,7 @@
   <cmf:registerDirectory name="umanot_site_custom_images"/>
   <cmf:registerDirectory name="umanot_site_custom_templates"/>
   <cmf:registerDirectory name="umanot_site_styles"/>
+  <cmf:registerDirectory name="umanot_site_javascripts"/>
 
   <!-- Note: This could also be done for all folders at once
        by replacing the previous lines with this one:

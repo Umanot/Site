@@ -1,0 +1,12 @@
+<tal:resourceregistries>
+  <tal:styles replace="structure provider:plone.resourceregistries.styles" />
+  
+  <tal:cond condition="nothing">
+        <tal:styles replace="structure provider:plone.resourceregistries.kineticstylesheets" />
+  </tal:cond>
+  
+  <tal:cond condition="not: here/portal_membership/isAnonymousUser">
+        <tal:scripts replace="structure provider:plone.resourceregistries.scripts" />
+  </tal:cond>
+  
+</tal:resourceregistries>

@@ -1,0 +1,5 @@
+<div id="portal-colophon">
+    
+    &copy; 2000 - <tal:year tal:content="view/year" />
+    
+</div>

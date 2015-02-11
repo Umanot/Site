@@ -1,32 +1,146 @@
 <?xml version="1.0"?>
-<!-- This file holds the setup configuration for the portal_css tool. -->
+<object name="portal_css" meta_type="Stylesheets Registry">
 
-<object name="portal_css">
+         <stylesheet title="" applyPrefix="False" authenticated="False"
+          cacheable="True" compression="safe" conditionalcomment=""
+          cookable="True" enabled="on" expression="" id="reset.css" media=""
+          rel="stylesheet" rendering="link" remove="true"/>
+            
+ <stylesheet title="" applyPrefix="False" authenticated="False" insert-before="bootstrap.css"
+    cacheable="False" compression="safe" conditionalcomment=""
+    cookable="False" enabled="1" expression="" id="++resource++umanot.site.fonts/css/font-awesome.min.css" media=""
+    rel="stylesheet" rendering="link"/>
+            
+ <stylesheet title="" applyPrefix="False" authenticated="False" insert-before="base.css"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="bootstrap.css" media=""
+    rel="stylesheet" rendering="link"/>
+                
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="base.css" media=""
+    rel="stylesheet" rendering="link"/>
+    
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="public.css" media=""
+    rel="stylesheet" rendering="link"/>
+    
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="columns.css" media=""
+    rel="stylesheet" rendering="link"/>
+    
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="portlets.css" media=""
+    rel="stylesheet" rendering="link"/>
+    
+        <stylesheet title="" applyPrefix="False" authenticated="False"
+           cacheable="True" compression="safe" conditionalcomment=""
+           cookable="True" enabled="0" expression="" id="deprecated.css"
+           media="" rel="stylesheet" rendering="link"/>
+        
+        <stylesheet title="" applyPrefix="False" authenticated="False"
+           cacheable="True" compression="safe" conditionalcomment=""
+           cookable="True" enabled="0" expression="" id="navtree.css" media=""
+           rel="stylesheet" rendering="link"/>
+        
+        <stylesheet title="" applyPrefix="False" authenticated="False"
+           cacheable="True" compression="safe" conditionalcomment=""
+           cookable="True" enabled="0" expression="" id="invisibles.css"
+           media="" rel="stylesheet" rendering="link"/>
+    
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="forms.css" media=""
+    rel="stylesheet" rendering="link"/>
+    
+        <stylesheet title="" applyPrefix="False" authenticated="False"
+           cacheable="True" compression="safe" conditionalcomment=""
+           cookable="True" enabled="0" expression=""
+           id="++resource++plone.app.discussion.stylesheets/discussion.css"
+           media="" rel="stylesheet" rendering="link"/>
+    
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="print.css" media=""
+    rel="stylesheet" rendering="link"/>
+    
+        <stylesheet title="" applyPrefix="False" authenticated="False"
+           cacheable="True" compression="safe" conditionalcomment=""
+           cookable="True" enabled="0" expression="" id="mobile.css"
+           media="handheld, screen and (max-device-width: 480px)" rel="stylesheet"
+           rendering="link"/>
+    
+         <stylesheet title="" applyPrefix="False" authenticated="False"
+            cacheable="True" compression="safe" conditionalcomment=""
+            cookable="True" enabled="0"
+            expression="python:portal.restrictedTraverse('@@plone_portal_state').is_rtl()"
+            id="RTL.css" media="" rel="stylesheet" rendering="link"/>
+    
+        <stylesheet title="" applyPrefix="False" authenticated="False"
+           cacheable="True" compression="safe" conditionalcomment=""
+           cookable="True" enabled="0" expression=""
+           id="++resource++plone.app.jquerytools.overlays.css" media=""
+           rel="stylesheet" rendering="link"/>
+    
+        <stylesheet title="" applyPrefix="False" authenticated="False"
+           cacheable="True" compression="safe" conditionalcomment=""
+           cookable="True" enabled="0" expression=""
+           id="++resource++umanot.site.stylesheets/main.css" media=""
+           rel="stylesheet" rendering="import"/>
+    
+        <stylesheet title="" applyPrefix="False" authenticated="False"
+           cacheable="True" compression="safe" conditionalcomment=""
+           cookable="True" enabled="0" expression=""
+           id="++resource++mediatria.utils.stylesheets/mediatria_utils.css"
+           media="" rel="stylesheet" rendering="import" remove="true"/>
+    
+ <stylesheet title="" applyPrefix="False" authenticated="False"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="umanotCustom.css" media="all"
+    rel="stylesheet" rendering="link"/>
 
- <!-- Stylesheets that will be registered with the portal_css tool are defined
-      here. You can also specify values for existing resources if you need to
-      modify some of their properties.
-      Stylesheet elements accept these parameters:
-      - 'id' (required): it must respect the name of the css or DTML file
-        (case sensitive). '.dtml' suffixes must be ignored.
-      - 'expression' (optional - default: ''): a tal condition.
-      - 'media' (optional - default: ''): possible values: 'screen', 'print',
-        'projection', 'handheld'...
-      - 'rel' (optional - default: 'stylesheet')
-      - 'title' (optional - default: '')
-      - 'rendering' (optional - default: 'import'): 'import', 'link' or
-        'inline'.
-      - 'enabled' (optional - default: True): boolean
-      - 'cookable' (optional - default: True): boolean (aka 'merging allowed')
-      - 'insert_before', 'insert_after' (optional - default: '') resource id
-      See registerStylesheet() arguments in
-      ResourceRegistries/tools/CSSRegistry.py for the latest list of all
-      available keys and default values.
-      -->
- <stylesheet title=""
-    id="++resource++umanot.site.stylesheets/main.css"
-    media="screen" rel="stylesheet" rendering="import"
-    cacheable="True" compression="safe" cookable="True"
-    enabled="1" expression=""/>
+        <stylesheet title="" applyPrefix="False" authenticated="False"
+           cacheable="True" compression="safe" conditionalcomment=""
+           cookable="True" enabled="0" expression="" id="ploneCustom.css" media="all"
+           rel="stylesheet" rendering="link" remove="true"/>
+   
+<!-- AUTH -->
+ 
+ <stylesheet title="" applyPrefix="False" authenticated="True" insert-after="umanotCustom.css"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="member.css" media=""
+    rel="stylesheet" rendering="link"/>
 
+ <stylesheet title="" applyPrefix="False" authenticated="True" insert-after="member.css"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="authoring.css"
+    media="" rel="stylesheet" rendering="link"/>   
+
+ <stylesheet title="" applyPrefix="False" authenticated="True" insert-after="authoring.css"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression="" id="controlpanel.css"
+    media="" rel="stylesheet" rendering="link"/>
+    
+ <stylesheet title="" applyPrefix="False" authenticated="True" insert-after="controlpanel.css"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression=""
+    id="++resource++plone.app.jquerytools.dateinput.css" media=""
+    rel="stylesheet" rendering="link"/>
+    
+ <stylesheet title="" applyPrefix="False" authenticated="True" insert-after="++resource++plone.app.jquerytools.dateinput.css"
+    cacheable="True" compression="safe" conditionalcomment=""
+    cookable="True" enabled="1" expression=""
+    id="++resource++tinymce.stylesheets/tinymce.css" media=""
+    rel="stylesheet" rendering="link"/>
+ 
+<!-- IE -->
+
+ <stylesheet title="" applyPrefix="False" authenticated="False" insert-after="++resource++tinymce.stylesheets/tinymce.css"
+    cacheable="True" compression="safe"
+    conditionalcomment="lt IE 8" cookable="True" enabled="1" expression=""
+    id="IEFixes.css" media="" rel="stylesheet" rendering="link"/>
+    
 </object>

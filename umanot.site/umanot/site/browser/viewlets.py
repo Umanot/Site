@@ -1,21 +1,65 @@
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
+from plone.app.layout.viewlets import common
+from plone.app.layout.viewlets import content
+from datetime import date
 
-# Sample code for a basic viewlet (In order to use it, you'll have to):
-# - Un-comment the following useable piece of code (viewlet python class).
-# - Rename the viewlet template file ('browser/viewlet.pt') and edit the
-#   following python code accordingly.
-# - Edit the class and template to make them suit your needs.
-# - Make sure your viewlet is correctly registered in 'browser/configure.zcml'.
-# - If you need it to appear in a specific order inside its viewlet manager,
-#   edit 'profiles/default/viewlets.xml' accordingly.
-# - Restart Zope.
-# - If you edited any file in 'profiles/default/', reinstall your package.
-# - Once you're happy with your viewlet implementation, remove any related
-#   (unwanted) inline documentation  ;-p
+from plone.app.portlets.portlets import navigation
 
-#class MyViewlet(ViewletBase):
-#    render = ViewPageTemplateFile('viewlet.pt')
-#
-#    def update(self):
-#        self.computed_value = 'any output'
+## LOGO
+class LogoViewlet(common.LogoViewlet):
+    index = ViewPageTemplateFile('viewlets/logo.pt')
+
+## SECTIONS
+class GlobalSectionsViewlet(common.GlobalSectionsViewlet):
+    index = ViewPageTemplateFile('viewlets/sections.pt')
+
+## PERSONALBAR
+class PersonalBarViewlet(common.PersonalBarViewlet):
+    index = ViewPageTemplateFile('viewlets/personal_bar.pt')
+
+## SEARCHBOX
+class SearchBoxViewlet(common.SearchBoxViewlet):
+    index = ViewPageTemplateFile('viewlets/searchbox.pt')
+
+## BREADCRUMBS
+class PathBarViewlet(common.PathBarViewlet):
+    index = ViewPageTemplateFile('viewlets/path_bar.pt')
+
+## BYLINE
+class DocumentBylineViewlet(content.DocumentBylineViewlet):
+    index = ViewPageTemplateFile("viewlets/document_byline.pt")
+
+## DOCUMENT ACTIONS
+class DocumentActionsViewlet(content.DocumentActionsViewlet):
+    index = ViewPageTemplateFile("viewlets/document_actions.pt")
+
+## RELATED ITEMS
+class ContentRelatedItems(content.ContentRelatedItems):
+    index = ViewPageTemplateFile("viewlets/document_relatedItems.pt")
+
+## SITEACTIONS 
+class SiteActionsViewlet(common.SiteActionsViewlet):
+    index = ViewPageTemplateFile('viewlets/site_actions.pt')
+
+## FOOTER 
+class FooterViewlet(common.FooterViewlet):
+    index = ViewPageTemplateFile('viewlets/footer.pt')
+
+    def update(self):
+        super(FooterViewlet, self).update()
+        self.year = date.today().year
+        
+## COLOPHON 
+class ColophonViewlet(ViewletBase):
+    index = ViewPageTemplateFile('viewlets/colophon.pt')
+
+    def update(self):
+        self.year = date.today().year
+
+
+## NAVIGATION Portlet
+class Renderer(navigation.Renderer):
+
+    _template = ViewPageTemplateFile('portlets/navigation.pt')
+    recurse = ViewPageTemplateFile('portlets/navigation_recurse.pt')
