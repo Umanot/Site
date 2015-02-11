@@ -575,7 +575,7 @@ dd.image-caption {
 
 #contact-block {
   padding-left: 30px;
-  border-left: 1px solid  rgba(255,255,255,0.1);
+  border-left: 1px solid rgba(255,255,255,0.1);
   position: relative;
 }
 
@@ -603,6 +603,24 @@ dd.image-caption {
   margin: 1px 2px 1px 0;
   border-radius: 4px;
 }
+
+@media (max-width:992px){
+  #contact-block,
+  .footerBlock {
+    border: 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 30px 0 0;
+    margin-top: 30px;
+  }
+  
+  #clabLogo {bottom: 0;}
+}
+
+
+@media (max-width:460px) {
+  #clabLogo {display: none;}
+}
+
 
 /* BACK TO TOP */
 
