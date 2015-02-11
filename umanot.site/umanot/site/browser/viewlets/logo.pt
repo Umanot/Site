@@ -5,6 +5,8 @@
                    title view/navigation_root_title"
    i18n:domain="plone"
    i18n:attributes="title">
-    <img src="logo.jpg" alt=""
-         tal:replace="structure view/logo_tag" />
+  
+   <img class="neg" src="++resource++umanot.site.images/logo_neg.svg" />
+   <img class="pos" src="++resource++umanot.site.images/logo_pos.svg" />
+
 </a>

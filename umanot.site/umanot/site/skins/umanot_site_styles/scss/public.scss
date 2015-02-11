@@ -99,54 +99,107 @@
 
 /* GLOABALNAV */
 
-#portal-globalnav {
-    clear: both;
-    background: #ddd;
-    margin: 0 0 1em 0;
+/* --------------------------------- NAV ------------------------------ */
+
+#main-nav {
+  font-family: $fontA;
+  float: right;
+  padding-top: 35px;
 }
 
-#portal-globalnav > ul {
-    @include noMarker;   
+.white #main-nav {
+  padding-top: 3px;
 }
 
-#portal-globalnav > ul > li {display: inline-block;}
-
-#portal-globalnav > ul > li > a {
-    display: inline-block;
-    padding: 0.5em 1em 1.8em 1em;
-    background: #ddd;
-    min-width: 6em;
-    white-space: normal;
-    border-right: 0.1em solid white;
+#main-nav ul {
+  @include noMarker;
 }
 
-#portal-globalnav .selected a,
-#portal-globalnav a:hover {
-    background: #205c90;
-    color: White;
-}
-#portal-globalnav .selected a:hover {
-    background: #ddd;
-    color: #205c90;
+#main-nav ul > li {
+  margin: 0;
+  float: left;
+  position: relative;
 }
 
-/* TOOLS */
+#main-nav ul > li:hover .subNav {
+  display: block;
+}
 
-#portal-personaltools {
-    @include noMarker;
-    float: right;
-    background: #e3e3e3;
-    position: relative;
-    z-index: 3;
-    top: 0;
-    right: 0;
-    padding: 3px 10px 5px;
-    font-size: 11px;
+#main-nav ul > li > a {
+  display: block;
+  color: #999;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 30px;
+  padding: 10px;
+  margin: 0 0 0 20px;
+  font-size: 12px;
+  transition: $transition;
 }
-#portal-personaltools #anon-personalbar a {
-    float: left;
-    margin: 0 0.5em;
+
+#main-nav ul > li > a:hover,
+#main-nav ul > li.selected > a {
+  color: #fff;
 }
+
+#main-nav ul > li#portaltab-search > a {
+  font-size: 18px;
+  position: relative;
+  padding: 10px 40px;
+}
+
+#main-nav ul > li#portaltab-search > a:before {
+  background-color: rgba(255, 255, 255, 0.25);;
+  content: " ";
+  height: 20px;
+  left: 10px;
+  position: absolute;
+  top: 15px;
+  width: 1px;
+}
+
+.white #main-nav ul > li#portaltab-search > a:before {
+  background-color: #bbb;
+}
+
+.white #main-nav ul > li > a:hover,
+.white #main-nav ul > li.selected > a {
+  color: $colorRight;
+}
+
+#main-nav ul > li .subNav {
+  position: absolute;
+  left: 10px;
+  top: 50px;
+  min-width: 220px;
+  padding-bottom: 10px;
+  background-color: rgba(0,0,0,0.2);
+  display: none;
+}
+
+.white #main-nav ul > li .subNav {
+  background-color: #fff;
+}
+
+#main-nav ul > li .subNav > li {
+  float: none;
+}
+
+#main-nav ul > li .subNav > li > a {
+  margin: 0;
+  padding: 3px 20px;
+}
+
+#main-nav ul > li .subNav > li > a:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+.white #main-nav ul > li .subNav > li > a:hover {
+  background-color: rgba(0,0,0,0.1);
+  color: #D84458;
+}
+
 
 /* LANGUAGE SELECTOR */
 
@@ -166,100 +219,6 @@
     -moz-border-radius-bottomleft: 0.5em;
     -moz-border-radius-bottomright: 0.5em;
     max-width: 50%;
-}
-
-
-/* SEARCHBOX */
-
-#portal-searchbox {
-    float: right;
-    text-align: left;
-    clear: right;
-    margin: 2em 0 0;
-    font-size: 80%;
-    position: relative;
-}
-
-#portal-searchbox form {
-    white-space: nowrap;
-}
-
-#portal-searchbox label {
-    font-weight: normal;
-}
-
-#searchGadget {
-
-}
-
-#searchGadget,
-.LSBox input.searchButton {}
-
-.LSBox .searchSection {}
-
-#content input.searchField {
-    margin-bottom: 1em;
-}
-
-
-.collapsible .collapser.collapsed {
-    padding-right: 14px;
-    background: url('arrowRight.png') center right no-repeat;
-}
-
-.collapsible .collapser.expanded {
-    padding-right: 14px;
-    background: url('arrowDown.png') center right no-repeat;
-}
-
-/* LIVESEARCH */
-
-#LSResult {
-    position: absolute;
-    right: 0;
-    top: 40px;
-    background: #fff;
-    margin: 0;
-    border: 1px solid #ddd;
-}
-
-.livesearchContainer {
-    padding: 0;
-    margin: 0;
-        
-}
-
-#livesearchLegend {
-    background-color: #ddd;
-    font-size: 12px;
-    padding: 6px;
-    margin: 3px 0;
-}
-
-.LSTable {
-    @include noMarker; 
-}
-
-.LSRow a {
-    font-weight: bold;
-    font-size: 12px;
-}
-
-#LSResult .LSDescr {
-    color: #666;
-    margin-top: 3px;
-}
-
-.LSRow,
-#LSNothingFound {
-    display: block;
-    padding: 0.5em 1em;
-    white-space: normal;
-    width: 48em;
-}
-
-.LSHighlight {
-    background: #ddd;
 }
 
 
