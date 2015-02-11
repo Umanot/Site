@@ -2,12 +2,115 @@
 
 * {outline: none!important;}
 
+body {
+  font-family: $fontB;
+  background-color: #1C1C1C;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $fontA;
+}
+
+a {color: $colorRight;}
+
 a:hover,
 a:active,
 a:focus {text-decoration: none; outline: none;}
 
+/* --------------------------------- GHOST BUTTON ------------------------------ */
 
-body {font-size: 12px;}
+.ghostButton {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #333;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin: 10px 0;
+}
+
+.ghostButtonLg {
+  font-size: 14px;
+  padding: 10px 20px;
+}
+
+.ghostButtonWhite {
+  color: #fff;
+  border-color: #fff;
+}
+
+.ghostButtonWhite:hover {background-color: rgba(255,255,255,0.1); color: #fff;}
+
+.ghostButtonGray {
+  color: #999;
+  border-color: #999;
+}
+
+.ghostButtonGray:hover {background-color: rgba(255,255,255,0.1); color: #999;}
+
+.ghostButtonBlack {
+  color: #333;
+  border-color: #333;
+}
+
+.ghostButtonBlack:hover {background-color: rgba(255,255,255,0.1); color: #fff;}
+
+
+.ghostButtonRight {
+  background-color: $colorRight;
+  border-color: $colorRight;
+  color: #fff;
+}
+
+.ghostButtonLeft {
+  background-color: $colorLeft;
+  border-color: $colorLeft;
+  color: #fff;
+}
+
+.ghostButtonBlock {
+  display: block;
+  margin: 0 auto 30px;
+  max-width: 90%;
+}
+
+
+/* --------------------------------- STRUCTURE ------------------------------ */
+
+#visual-wrapper {
+  max-width: $maxWidth;
+  width: 100%;
+  margin: 0 auto;
+  background-color: #fff;
+  position: relative;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: $maxWidth;
+  z-index: 99999999999;
+}
+
+#portal-header {
+  background-color: rgba(0,0,0,0.2);
+  padding: 0;
+  position: relative;
+  transition: $transition;
+}
+
+#portal-header.white {
+  padding: 0 0 0;
+  background-color: #fff;
+}
+
+#portal-header:after,
+#portal-header:before {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
 
 
 /* Content list styles */

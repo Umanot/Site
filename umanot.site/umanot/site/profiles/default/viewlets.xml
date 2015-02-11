@@ -9,7 +9,7 @@
   </order>
 
   <hidden manager="plone.portalheader" skinname="Umanot - SitePackage">
-
+    <viewlet name="plone.searchbox" />
   </hidden>
 
 </object>

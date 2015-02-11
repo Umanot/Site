@@ -1,14 +1,101 @@
 @import "var";
 
-#portal-header {
-    position: relative;
-    z-index: 2;
+/* --------------------------------- LOGO ------------------------------ */
+
+#logo {display: inline-block; margin-left: 10px;}
+
+#logo img {
+  height: 70px;
+  width: auto;
+  transition: $transition;
+  margin-top: 10px;
 }
 
-#portal-logo {
-    display: inline-block;
-    margin: 1.375em 0;
+.white #logo img {
+  height: 50px;
+  width: auto;
+  margin: 0;
 }
+
+.neg {display: block;}
+.pos {display: none;}
+.white .neg {display: none;}
+.white .pos {display: block;}
+
+
+/* --------------------------------- TOOLS ---------------------------- */
+
+#tools {
+  font-family: $fontA;
+  font-size: 12px;
+  background-color: #000;
+  margin: 0 -15px;
+  padding: 6px 30px;
+  text-align: right;
+}
+
+#tools:after,
+#tools:before {
+  clear: both;
+  display: table;
+  content: " ";
+}
+
+#tools dl {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+
+#tools dt {
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+
+#tools dt > a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+}
+
+#tools dt a:after {
+    content: " ";
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+	  border-right: 5px solid transparent;
+    border-top: 5px solid #999;
+	  position: relative;
+	  top: 11px;
+    left: 5px;
+}
+
+#tools dd {
+    right: -10px;
+    padding: 0;
+    background: #000;
+    min-width: 170px;
+    top: 23px;
+}
+
+#tools dd ul {padding: 0;}
+
+#tools dd li {margin-bottom: 0;}
+
+#tools dd > ul > li > a {
+  display: block;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0;
+  padding: 6px 20px 6px 20px;
+}
+
+#tools dd > ul > li > a:hover {background-color: #555;}
+
 
 /* GLOABALNAV */
 

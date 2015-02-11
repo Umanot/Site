@@ -38,7 +38,7 @@
         <metal:headslot define-slot="head_slot" />
         <metal:styleslot define-slot="style_slot" />
 
-
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,700,900,300' rel='stylesheet' type='text/css'>
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -57,18 +57,14 @@
     tal:attributes="class body_class;
                     dir python:isRTL and 'rtl' or 'ltr'">
 
+  <div id="visual-wrapper">
+
     <header id="header" i18n:domain="plone" tal:condition="not:ajax_load">
-        <div class="container">
-            <div class="mrow">
-                <div class="col-md-12">
-                    <div tal:replace="structure provider:plone.portaltop" />
-                </div>
-            </div>
-        </div>
+      <div tal:replace="structure provider:plone.portaltop" />
     </header>
         
     <div id="portal-columns">
-        <div class="container">
+        <div class="container-fluid">
             <div class="mrow">
             
                 <tal:notajax tal:condition="not:ajax_load">
@@ -166,9 +162,8 @@
         </div>
     </div>
 
-
     <footer id="footer" i18n:domain="plone" tal:condition="not:ajax_load">
-        <div class="container">
+        <div class="container-fluid">
             <div class="mrow">
                 <div class="col-md-12">
                     <div tal:replace="structure provider:plone.portalfooter" />
@@ -177,11 +172,13 @@
         </div>
     </footer>
 
-    <tal:cond condition="here/portal_membership/isAnonymousUser">
-        <tal:scripts replace="structure provider:plone.resourceregistries.scripts" />
-    </tal:cond>
+  </div> <!-- visual-wrapper -->
+
+  <tal:cond condition="here/portal_membership/isAnonymousUser">
+    <tal:scripts replace="structure provider:plone.resourceregistries.scripts" />
+  </tal:cond>
     
-    <metal:javascriptslot define-slot="javascript_head_slot" />
+  <metal:javascriptslot define-slot="javascript_head_slot" />
 
 </body>
 </html>

@@ -1,3 +1,9 @@
 <div id="portal-header">
-    <div tal:replace="structure provider:plone.portalheader" />
+  <div class="container-fluid">
+      <div class="mrow">
+          <div class="col-md-12">
+            <div tal:replace="structure provider:plone.portalheader" />
+          </div>
+      </div>
+  </div>
 </div>

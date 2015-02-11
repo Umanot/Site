@@ -116,21 +116,8 @@ div.field span.required:after {
     display: none;
 }
 
-/* TOOLS */
 
-#portal-personaltools-wrapper {
-  background-color: $editBarMainColor;
-  padding: 8px 15px 0;
-}
 
-#portal-personaltools-wrapper:after,
-#portal-personaltools-wrapper:before {
-  clear: both;
-  display: table;
-  content: " ";
-}
-
-#portal-personaltools,
 #edit-tools {
     float: left;
     background: #fff;
@@ -143,57 +130,11 @@ div.field span.required:after {
     border-top: 0px;
 }
 
-#portal-personaltools {
-  padding: 0;
-}
-
-#portal-personaltools dt,
 #edit-tools dt {
     font-weight: normal;
     padding: 0 10px;
     margin: 0;
 }
-
-#portal-personaltools dt {padding: 5px 16px 5px 13px;}
-
-#portal-personaltools dt.actionMenuHeader a:after {
-    content: " ";
-    width: 0;
-    height: 0;
-    border-left: 5px solid transparent;
-	  border-right: 5px solid transparent;
-    border-top: 5px solid #999;
-	  position: relative;
-	  top: 11px;
-    left: 5px;
-}
-
-#portal-personaltools.actionMenu.activated dt a {margin: 0;}
-
-#portal-personaltools dd {
-    left: -1px;
-    padding: 0;
-    background: #fff;
-    min-width: 170px;
-    top: 26px;
-    border: 1px solid $editBarMainColor;
-    border-top: 0;
-}
-
-#portal-personaltools dd li {margin-bottom: 0;}
-
-#portal-personaltools dd a {
-    line-height: 1.5em;
-    padding: 0.5em 1em;
-}
-#portal-personaltools dd a:hover {
-    background: $editBarMainColor;
-    color: #fff;
-}
-
-#portal-personaltools dd ul {padding: 0;}
-
-#editbarSwitch span {cursor: pointer; font-weight: bold; color: $editBarMainColor;}
 
 #contentActionMenus dl.actionMenu a,
 #contentActionMenus dl.actionMenu.activated dd {
