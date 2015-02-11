@@ -1,7 +1,7 @@
 <footer id="footer">
   <section id="section-footer">
     <div class="container-fluid">
-      <div class="row">
+      <div class="mrow">
           <div class="col-md-4">
             <h6 class="footerTitle">Intelligenza collettiva</h6>
             <ul class="footerList">
@@ -56,7 +56,7 @@
   </section>
   <section id="section-colophon">
     <div class="container-fluid">
-      <div class="row">
+      <div class="mrow">
         <div class="col-md-12">
           <p>&copy 2015 UMANOT. All Rights Reserved.</p>
         </div>
