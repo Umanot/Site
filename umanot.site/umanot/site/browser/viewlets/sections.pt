@@ -10,4 +10,7 @@
             </li>
         </tal:tabs>
     </ul>
+    
 </nav>
+<div id="nav-switch"><i class="fa fa-bars"></i></div>
+

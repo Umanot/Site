@@ -2,7 +2,7 @@
 
 /* --------------------------------- LOGO ------------------------------ */
 
-#portal-logo {display: inline-block; margin-left: 10px;}
+#portal-logo {display: inline-block;}
 
 #portal-logo img {
   height: 70px;
@@ -79,6 +79,7 @@
     background: #000;
     min-width: 170px;
     top: 23px;
+    z-index: 100;
 }
 
 #tools dd ul {padding: 0;}
@@ -198,6 +199,77 @@
 .white #main-nav ul > li .subNav > li > a:hover {
   background-color: rgba(0,0,0,0.1);
   color: #D84458;
+}
+
+#nav-switch {
+  display: none;
+  position: absolute;
+  right: 30px;
+  top: 52px;
+  color: #fff;
+  z-index: 90;
+  font-size: 32px;
+  cursor: pointer;
+}
+
+.white #nav-switch {color: #333; top: 35px;}
+
+@media (max-width:1200px) {
+  #main-nav ul > li > a {margin: 0 0 0 10px;}
+  #portal-logo img {height: 60px;}
+}
+
+
+@media (max-width:1100px) {
+  #portal-logo img {height: 50px; margin-top: 18px;}
+}
+
+@media (max-width:1050px) {
+  #portaltab-index_html {display: none;}
+}
+
+@media (max-width:992px) {
+  
+  body.mobileMenuOn {
+    overflow-y: hidden;
+  }
+  
+  #main-nav {
+    position: fixed;
+    background-color: rgba(0,0,0,0.9);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    padding: 0;
+    z-index: 80;
+    display: none;
+  }
+  
+  .mobileMenuOn #main-nav {display: block;}
+  
+  .white #main-nav {padding: 0;}
+  
+  #main-nav ul {margin: 10% 0 0 0;}
+  
+  #main-nav ul > li {float: none;}
+  
+  #portaltab-index_html {display: block;}
+
+  #main-nav ul > li > a {
+    font-size: 18px;
+    margin: 0;
+    display: block;
+  }
+  
+  #main-nav ul > li > a:hover,
+  .white #main-nav ul > li > a:hover,
+  #main-nav ul > li.selected > a,
+  .white #main-nav ul > li.selected > a {color: #fff;}
+
+  #nav-switch {display: block;}
+  .mobileMenuOn #nav-switch {color: #fff;}
 }
 
 
