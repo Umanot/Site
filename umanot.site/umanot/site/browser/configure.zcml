@@ -217,4 +217,14 @@
         />
 
 
+  <!-- Article View  -->
+  <browser:page
+      for=".article_view.IArticleView"
+      name="document_view"
+      class=".article_view.ArticleView"
+      template="templates/article_view.pt"
+      permission="zope2.View"
+      />
+
+
 </configure>

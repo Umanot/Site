@@ -1,0 +1,20 @@
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.site">
+
+  <head>    
+
+
+  </head>
+  <body>
+    <metal:phil fill-slot="main">
+      <tal:main-macro metal:define-macro="main">
+      
+        <div id="article-view">
+        
+
+
+        </div> <!-- article-view -->
+        
+      </tal:main-macro>
+    </metal:phil>
+  </body>
+</html>
