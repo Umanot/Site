@@ -2,16 +2,16 @@
 
 /* --------------------------------- LOGO ------------------------------ */
 
-#logo {display: inline-block; margin-left: 10px;}
+#portal-logo {display: inline-block; margin-left: 10px;}
 
-#logo img {
+#portal-logo img {
   height: 70px;
   width: auto;
   transition: $transition;
   margin-top: 10px;
 }
 
-.white #logo img {
+.white #portal-logo img {
   height: 50px;
   width: auto;
   margin: 0;

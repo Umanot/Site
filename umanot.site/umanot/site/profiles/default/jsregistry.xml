@@ -167,7 +167,7 @@
 
  <javascript authenticated="False" cacheable="True" insert-after="++resource++search.js"
   compression="safe" conditionalcomment="" cookable="True" enabled="True"
-  expression="" id="umanot.js" inline="False"/>
+  expression="" id="min/umanot.min.js" inline="False"/>
   
 <!-- AUTH -->
   
