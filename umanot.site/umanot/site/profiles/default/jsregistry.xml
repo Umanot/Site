@@ -167,6 +167,14 @@
 
  <javascript authenticated="False" cacheable="True" insert-after="++resource++search.js"
   compression="safe" conditionalcomment="" cookable="True" enabled="True"
+  expression="" id="isotope.min.js" inline="False"/>
+
+ <javascript authenticated="False" cacheable="True" insert-after="isotope.min.js"
+  compression="safe" conditionalcomment="" cookable="True" enabled="True"
+  expression="" id="owl.carousel.min.js" inline="False"/>
+
+ <javascript authenticated="False" cacheable="True" insert-after="owl.carousel.min.js"
+  compression="safe" conditionalcomment="" cookable="True" enabled="True"
   expression="" id="min/umanot.min.js" inline="False"/>
   
 <!-- AUTH -->

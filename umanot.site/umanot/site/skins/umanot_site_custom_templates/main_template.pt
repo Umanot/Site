@@ -62,21 +62,15 @@
     <header id="header" i18n:domain="plone" tal:condition="not:ajax_load">
       <div tal:replace="structure provider:plone.portaltop" />
     </header>
+    
+    <div id="headline-section">
+      <metal:headline define-slot="headline_section_slot"></metal:headline>
+    </div>
         
     <div id="portal-columns">
         <div class="container-fluid">
             <div class="mrow">
-            
-                <tal:notajax tal:condition="not:ajax_load">
-                <div id="portal-column-one" class="col-md-2"
-                    metal:define-slot="column_one_slot"
-                    tal:condition="sl">
-                    <metal:portlets define-slot="portlets_one_slot">
-                        <tal:block replace="structure provider:plone.leftcolumn" />
-                    </metal:portlets>
-                </div>
-                </tal:notajax>
-    
+                
                 <div id="portal-column-content" class="col-md-7" tal:attributes="class python:context.getContentSpanClass(sl, sr)">
         
                     <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" tal:condition="not:ajax_load" />

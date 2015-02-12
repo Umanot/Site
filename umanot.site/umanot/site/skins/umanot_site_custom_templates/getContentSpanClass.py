@@ -9,10 +9,10 @@
 ##
 
 if sr and sl:
-    return 'col-md-7'
+    return 'col-md-9'
 elif sr:
     return 'col-md-9'
 elif sl:
-    return 'col-md-10'
+    return 'col-md-12'
 else:
     return 'col-md-12'
