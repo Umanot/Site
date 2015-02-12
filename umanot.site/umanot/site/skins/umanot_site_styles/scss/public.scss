@@ -58,10 +58,10 @@
   color: #fff;
   text-transform: uppercase;
   font-weight: bold;
-  margin: 0 0 0 40px;
+  margin: 0 0 0 30px;
 }
 
-#tools dt a:after {
+#tools dt a#user-name:after {
     content: " ";
     width: 0;
     height: 0;
