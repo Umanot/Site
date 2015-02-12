@@ -74,7 +74,8 @@
   text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 }
 
-#article-headline .documentFirstHeading {
+#article-headline .documentFirstHeading,
+#article-folder-headline .documentFirstHeading {
   font-size: 48px;
   color: #FFF;
   font-weight: bold;
@@ -83,6 +84,10 @@
   z-index: 4;
   margin: 0px;
   width: 65%;
+}
+
+#article-folder-headline .documentFirstHeading {
+  text-transform: uppercase;
 }
 
 #article-headline .byLine {
@@ -105,20 +110,23 @@
 @media (max-width:1180px){
   
   #article-headline {min-height: 380px;}
-  #article-headline .documentFirstHeading {font-size: 40px;}
+  #article-headline .documentFirstHeading,
+  #article-folder-headline .documentFirstHeading {font-size: 40px;}
   
 }
 
 @media (max-width:992px){
   
   #article-headline {min-height: 318px;}
-  #article-headline .documentFirstHeading {font-size: 34px; width: 100%;}
+  #article-headline .documentFirstHeading,
+  #article-folder-headline .documentFirstHeading {font-size: 34px; width: 100%;}
   
 }
 
 @media (max-width:600px){
   #article-headline {padding-left: 20px; padding-right: 20px;}
-  #article-headline .documentFirstHeading {font-size: 32px;}
+  #article-headline .documentFirstHeading ,
+  #article-folder-headline .documentFirstHeading{font-size: 32px;}
 }
 
 /* ARTICLE CONTENT */
@@ -597,6 +605,17 @@
   }
 }
 
+/* ARTICLE FOLDER VIEW */
 
+#article-folder-headline {
+  position: relative;
+  padding: 140px 50px 30px;
+  min-height: 250px;
+}
+
+#article-folder-headline {
+  background: #000 url(var/intro_internal01.jpg) no-repeat center center;
+  background-size: cover;
+}
 
 

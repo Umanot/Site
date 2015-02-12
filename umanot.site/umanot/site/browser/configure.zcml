@@ -225,6 +225,15 @@
       template="templates/article_view.pt"
       permission="zope2.View"
       />
+  
+  <!-- Article Folder View  -->
+  <browser:page
+      for=".article_folder_view.IArticleFolderView"
+      name="folder_listing"
+      class=".article_folder_view.ArticleFolderView"
+      template="templates/article_folder_view.pt"
+      permission="zope2.View"
+      />    
 
   <!-- Homepage View  -->
   <browser:page
