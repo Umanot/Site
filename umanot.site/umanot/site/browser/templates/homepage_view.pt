@@ -2,7 +2,7 @@
 
   <head>    
     <metal:js fill-slot="javascript_head_slot">
-      <script src="++resource++umanot.site.javacripts/homepage_view.js"></script>
+      <script src="++resource++umanot.site.javascripts/homepage_view.js"></script>
     </metal:js>
 
   </head>
