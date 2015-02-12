@@ -9,6 +9,7 @@
                 <a href="" tal:content="tab/name" tal:attributes="href tab/url; title tab/description|nothing;">Tab Name</a>
             </li>
         </tal:tabs>
+        <li id="portaltab-search"><a href="#"><i class="fa fa-search"></i></a></li>
     </ul>
     
 </nav>
