@@ -579,8 +579,23 @@
   padding-bottom: 10px;
 }
 
+@media (max-width: 992px) {
+  .articleItem {
+    width: 32%;
+  }
+}
 
+@media (max-width: 600px) {
+  .articleItem {
+    width: 49%;
+  }
+}
 
+@media (max-width: 480px) {
+  .articleItem {
+    width: 99%;
+  }
+}
 
 
 
