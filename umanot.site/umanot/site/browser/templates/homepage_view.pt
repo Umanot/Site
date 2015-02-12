@@ -87,7 +87,350 @@
       <tal:main-macro metal:define-macro="main">  
       
         <section id="homepage-content">
-        </section>
+          
+          <section id="service-section">
+              
+              <div class="serviceItem" id="serviceItem01">
+                <h3>Eveniet, asperiores, reprehenderit, </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>
+                <a href="#" class="ghostButton ghostButtonWhite ghostButtonLg">Scopri come</a>
+              </div>
+          
+              <div class="serviceItem" id="serviceItem02">
+                <h3>Eveniet, asperiores, reprehenderit, </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>
+                <a href="#" class="ghostButton ghostButtonWhite ghostButtonLg">Scopri come</a>
+              </div>
+              
+              <div class="serviceItem" id="serviceItem03">
+                <h3>Eveniet, asperiores, reprehenderit, </h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>
+                <a href="#" class="ghostButton ghostButtonWhite ghostButtonLg">Scopri come</a>
+              </div>        
+                  
+          </section>
+          
+          <section id="feature-section">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="featureItem">
+                    <div class="featureIcon">
+                      <i class="fa fa-pencil"></i>
+                    </div>
+                    <div class="featureText">
+                      <h4>Design</h4>
+                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="col-md-4">
+                  <div class="featureItem">
+                    <div class="featureIcon">
+                      <i class="fa fa-cogs"></i>
+                    </div>
+                    <div class="featureText">
+                      <h4>Completamente Customizabile</h4>
+                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                    </div>
+                  </div>
+                </div>
+          
+                <div class="col-md-4">
+                  <div class="featureItem">
+                    <div class="featureIcon">
+                      <i class="fa fa-line-chart"></i>
+                    </div>
+                    <div class="featureText">
+                      <h4>Potente ed efficace</h4>
+                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="featureItem">
+                    <div class="featureIcon">
+                      <i class="fa fa-play-circle"></i>
+                    </div>
+                    <div class="featureText">
+                      <h4>Video tutorial</h4>
+                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="featureItem">
+                    <div class="featureIcon">
+                      <i class="fa fa-coffee"></i>
+                    </div>
+                    <div class="featureText">
+                      <h4>Interfaccia Pulita</h4>
+                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="featureItem">
+                    <div class="featureIcon">
+                      <i class="fa fa-connectdevelop"></i>
+                    </div>
+                    <div class="featureText">
+                      <h4>Supporto e Update gratuiti</h4>
+                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
+                    </div>
+                  </div>
+                </div>          
+              </div>
+            </div>      
+          </section>
+
+          <section id="mosaic-section">
+            <div id="mt01" class="mosaicTile">
+              <div class="mosaicTileInner">
+                <h2>Perché umanot</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
+                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
+              </div>
+              <div class="mosaicTileOverlay"></div>
+            </div>
+            <div id="mt02" class="mosaicTile">
+              <div class="mosaicTileInner">
+                <h2>Servizi</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
+                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
+              </div>
+              <div class="mosaicTileOverlay"></div>
+            </div>
+            <div id="mt03" class="mosaicTile">
+              <div class="mosaicTileInner">
+                <h2>Trading For Life</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
+                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
+              </div>
+              <div class="mosaicTileOverlay"></div>
+            </div>
+            <div id="mt04" class="mosaicTile">
+              <div class="mosaicTileInner">
+                <h2>Intelligenza Collettiva</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
+                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
+              </div>
+              <div class="mosaicTileOverlay"></div>
+            </div>
+          </section>
+
+          <section id="article-section">
+            <h2>Per diventare un Trader Scientifico<sup>&reg;</sup></h2>
+            <div class="isotope">  
+
+                <article class="articleItem">
+                  
+                  <div class="articleInner">
+                    <a href="#" class="articleImage">
+                      <img src="var/img01.jpg" />
+                    </a>
+                    
+                    <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
+                    
+                    <div class="articleByLine">
+                      di Nicola Antonucci | Trading for life | 26 commenti
+                    </div>
+                    
+                    <div class="articledescription">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                    </div>
+                
+                    <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
+                    
+                    <div class="articleData">07/07/2015</div>
+                
+                  </div>
+                
+                </article>
+                  
+                <article class="articleItem">
+                  
+                  <div class="articleInner">
+                    <a href="#" class="articleImage">
+                      <img src="var/img02.jpg" />
+                    </a>
+                    
+                    <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                    
+                    <div class="articleByLine">
+                      di Nicola Antonucci | Trading for life | 26 commenti
+                    </div>
+                    
+                    <div class="articledescription">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto</p>
+                    </div>
+                
+                    <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
+                    
+                    <div class="articleData">07/07/2015</div>
+                
+                  </div>
+                
+                </article>
+                
+                <article class="articleItem">
+                  
+                  <div class="articleInner">
+                    <a href="#" class="articleImage">
+                      <img src="var/img03.jpg" />
+                    </a>
+                    
+                    <h3 class="articleTitle">Magni consectetur repellendus odit culpa harum iure velit qui.</h3>
+                    
+                    <div class="articleByLine">
+                      di Nicola Antonucci | Trading for life | 26 commenti
+                    </div>
+                    
+                    <div class="articledescription">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto.</p>
+                    </div>
+                
+                    <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
+                    
+                    <div class="articleData">07/07/2015</div>
+                
+                  </div>
+                
+                </article>
+                
+                <article class="articleItem">
+                  
+                  <div class="articleInner">
+                    <a href="#" class="articleImage">
+                      <img src="var/img04.jpg" />
+                    </a>
+                    
+                    <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
+                    
+                    <div class="articleByLine">
+                      di Nicola Antonucci | Trading for life | 26 commenti
+                    </div>
+                    
+                    <div class="articledescription">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                    </div>
+                
+                    <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
+                    
+                    <div class="articleData">07/07/2015</div>
+                
+                  </div>
+                
+                </article>
+                
+                <article class="articleItem">
+                  
+                  <div class="articleInner">
+                    <a href="#" class="articleImage">
+                      <img src="var/img05.jpg" />
+                    </a>
+                    
+                    <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
+                    
+                    <div class="articleByLine">
+                      di Nicola Antonucci | Trading for life | 26 commenti
+                    </div>
+                    
+                    <div class="articledescription">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                    </div>
+                
+                    <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
+                    
+                    <div class="articleData">07/07/2015</div>
+                
+                  </div>
+                
+                </article>
+                  
+                <article class="articleItem">
+                  
+                  <div class="articleInner">
+                    <a href="#" class="articleImage">
+                      <img src="var/img06.jpg" />
+                    </a>
+                    
+                    <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                    
+                    <div class="articleByLine">
+                      di Nicola Antonucci | Trading for life | 26 commenti
+                    </div>
+                    
+                    <div class="articledescription">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto</p>
+                    </div>
+                
+                    <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
+                    
+                    <div class="articleData">07/07/2015</div>
+                
+                  </div>
+                
+                </article>
+                
+                <article class="articleItem">
+                  
+                  <div class="articleInner">
+                    <a href="#" class="articleImage">
+                      <img src="var/img07.jpg" />
+                    </a>
+                    
+                    <h3 class="articleTitle">Magni consectetur repellendus odit culpa harum iure velit qui.</h3>
+                    
+                    <div class="articleByLine">
+                      di Nicola Antonucci | Trading for life | 26 commenti
+                    </div>
+                    
+                    <div class="articledescription">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto.</p>
+                    </div>
+                
+                    <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
+                    
+                    <div class="articleData">07/07/2015</div>
+                
+                  </div>
+                
+                </article>
+                
+                <article class="articleItem">
+                  
+                  <div class="articleInner">
+                    <a href="#" class="articleImage">
+                      <img src="var/img08.jpg" />
+                    </a>
+                    
+                    <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
+                    
+                    <div class="articleByLine">
+                      di Nicola Antonucci | Trading for life | 26 commenti
+                    </div>
+                    
+                    <div class="articledescription">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                    </div>
+                
+                    <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
+                    
+                    <div class="articleData">07/07/2015</div>
+                
+                  </div>
+                
+                </article>
+
+
+            </div>
+          </section>          
+          
+        </section> <!-- homepage-content -->
         
       </tal:main-macro>
     </metal:phil>

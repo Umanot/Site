@@ -16,6 +16,9 @@
     padding-top: 0.05em;
 }
 
+.section-homepage #edit-bar,
+.template-homepage_view #edit-bar {margin: 0;}
+
 #edit-bar:after,
 #edit-bar:before {
   content: " ";
