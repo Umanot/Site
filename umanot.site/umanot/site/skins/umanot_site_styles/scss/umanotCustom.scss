@@ -241,3 +241,115 @@
 
 #realted-section .owl-prev {left: 0;}
 #realted-section .owl-next {right: 0;}
+
+
+/* HOMEPAGE */
+
+#intro-section {
+  min-height: 800px;
+  background-color: #000;
+}
+
+#intro-section .overlay {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent url(../img/grid.png) repeat left top;;
+}
+
+.introText {
+  position: absolute;
+  top: 50%;
+  margin-top: -135px;
+  z-index: 3;
+  padding: 10px 0;
+  background-color: rgba(0,0,0,0.7);
+}
+
+
+.heroTitle {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 190px;
+  text-align: center;
+  letter-spacing: -2px;
+  margin: 0 0 0;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+.heroTitle span {color: #999;}
+
+.heroSubTitle {
+  color: $colorLeft;
+  text-align: center;
+  font-weight: 900;
+  margin: 0;
+  font-size: 30px;
+}
+
+.heroSubTitle span {
+  color: $colorRight;
+}
+
+.heroDescr {
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.4em;
+  margin: 20px auto;
+  max-width: 70%;
+  text-align: center;
+}
+
+.slideItem {
+  min-height: 800px;
+  background-color: #000;
+  background-size: cover;
+  position: relative;
+  padding: 1px 0;
+}
+
+#slide01 {background: #000 url(var/intro03.jpg) no-repeat center top;}
+#slide02 {background: #000 url(var/intro02.jpg) no-repeat center top;}
+#slide03 {background: #000 url(var/intro01.jpg) no-repeat center top;}
+
+
+#intro-section .owl-prev,
+#intro-section .owl-next {
+  position: absolute;
+  top: 50%;
+  font-style: 32px;
+  color: #fff;
+  display: block;
+  width: 40px;
+  height: 50px;
+  background-color: rgba(0,0,0,0.4);
+  text-align: center;
+  line-height: 44px;
+  font-size: 32px;
+}
+#intro-section .owl-prev:hover,
+#intro-section .owl-next:hover {background-color: rgba(0,0,0,0.8);}
+
+#intro-section .owl-prev {left: 0;}
+#intro-section .owl-next {right: 0;}
+
+@media (max-width:992px) {
+  .heroTitle {font-size: 150px;}
+}
+
+@media (max-width:768px) {
+  .heroTitle {font-size: 100px;}
+}
+
+@media (max-width:600px) {
+  .heroTitle {font-size: 60px;}
+  .heroSubTitle {font-size: 18px;}
+  .heroDescr {font-size: 12px;}
+}
+

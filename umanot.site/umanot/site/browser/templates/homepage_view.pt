@@ -1,0 +1,95 @@
+<html metal:use-macro="here/fullwidth_main_template/macros/master" i18n:domain="umanot.site">
+
+  <head>    
+    <metal:js fill-slot="javascript_head_slot">
+      <script>
+        
+        var $introSection = $('#intro-section');
+        var $introText = $introSection.find('.introText');
+      
+/*
+        $introText.css({marginTop: ($introSection.height() - $introText.height())/2 });
+        
+        $(window).resize(function(){
+          $introText.css({marginTop: ($introSection.height() - $introText.height())/2 });
+        })
+*/
+
+        $introSection.find('.owl-carousel').owlCarousel({
+            loop:true,
+            items:1,
+            navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+            autoplay:true,
+            autoplayTimeout:3000,
+            autoplayHoverPause:false,
+            responsive:{
+                999:{
+                    nav: false
+                },
+                1000: {
+                  nav : true
+                }
+            },
+        });
+      
+      </script>
+    </metal:js>
+
+  </head>
+  
+  <body>
+    
+    <metal:headline fill-slot="headline_section_slot">
+
+    <section id="intro-section">
+      
+      <div class="owl-carousel">
+        <div class="item">
+          <div id="slide01" class="slideItem">
+            <div class="introText">
+              <h1 class="heroTitle">Uman<span>ot</span></h1>
+              <h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>
+              <h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div id="slide02" class="slideItem">
+            <div class="introText">
+              <h1 class="heroTitle">Uman<span>ot</span></h1>
+              <h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>
+              <h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>      
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </div>
+        
+        <div class="item">
+          <div id="slide03" class="slideItem">
+            <div class="introText">
+              <h1 class="heroTitle">Uman<span>ot</span></h1>
+              <h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>
+              <h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>      
+            </div>
+            <div class="overlay"></div>
+          </div>
+        </div>
+        
+      </div>
+      
+    </section>
+
+    </metal:headline>
+    
+    <metal:phil fill-slot="main">
+      <tal:main-macro metal:define-macro="main">  
+      
+        <section id="homepage-content">
+        </section>
+        
+      </tal:main-macro>
+    </metal:phil>
+  </body>
+</html>

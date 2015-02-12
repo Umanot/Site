@@ -226,5 +226,13 @@
       permission="zope2.View"
       />
 
+  <!-- Homepage View  -->
+  <browser:page
+      for=".homepage_view.IHomepageView"
+      name="document_view"
+      class=".homepage_view.HomepageView"
+      template="templates/homepage_view.pt"
+      permission="zope2.View"
+      />
 
 </configure>
