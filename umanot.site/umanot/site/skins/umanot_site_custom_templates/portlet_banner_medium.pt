@@ -1,0 +1,7 @@
+<div metal:define-macro="portlet">
+  <div class="portlet">
+      <div class="mediumWrapper">
+        <div class="medium"></div>
+      </div>
+  </div>
+</div>

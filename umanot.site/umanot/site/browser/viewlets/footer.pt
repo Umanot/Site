@@ -1,3 +1,13 @@
+<div class="leaderboardWrapper">
+    <div class="container-fluid">
+      <div class="mrow">
+          <div class="col-md-12">
+            <div class="leaderboard"></div>
+          </div>
+      </div>
+    </div>  
+</div>
+
 <footer id="footer">
   <section id="section-footer">
     <div class="container-fluid">

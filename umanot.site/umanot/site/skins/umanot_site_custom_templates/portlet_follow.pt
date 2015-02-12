@@ -1,0 +1,9 @@
+<div metal:define-macro="portlet">
+  <div id="portlet-follow" class="portlet">
+    <div class="text">
+      <h5>Sei Interessato?</h5>
+      <p>Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email.</p>
+    </div>
+    <a class="btn btn-info">Segui questo articolo</a>
+  </div>
+</div>

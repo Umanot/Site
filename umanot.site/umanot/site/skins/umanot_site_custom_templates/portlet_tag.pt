@@ -1,0 +1,7 @@
+<div metal:define-macro="portlet">
+  <div class="portlet">
+    <h6 class="portletTitle">Tag</h6>
+    <span class="tagItem">tag01</span><span class="tagItem">tag02</span><span class="tagItem">tag03</span><span class="tagItem">tag014</span><span class="tagItem">tag05</span><span class="tagItem">tag06</span><span class="tagItem">tag07</span><span class="tagItem">tag08</span><span class="tagItem">tag09</span>
+    <hr/>
+  </div>
+</div>

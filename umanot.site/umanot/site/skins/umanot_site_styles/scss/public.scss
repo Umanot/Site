@@ -605,10 +605,7 @@ dd.image-caption {
   font-size: 13px;
 }
 
-#content-section .portletList {
-  padding-left: 0;
-}
-
+.portletList {font-size: 12px;}
 
 .footerList > li {
   border-bottom: 1px solid rgba(255,255,255,0.1);
@@ -629,7 +626,7 @@ dd.image-caption {
   line-height: 1.3em;
 }
 
-#content-section  .portletList > li > a {color: $colorLeft;}
+#portal-column-two .portletList > li > a {color: $colorLeft; font-weight: bold;}
 
 .footerList > li > a .text-muted,
 .portletList > li >a .text-muted {

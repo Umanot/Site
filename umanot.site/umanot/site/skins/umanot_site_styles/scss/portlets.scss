@@ -1,14 +1,14 @@
 /* @group Portlets */
 
-dl.portlet {
-    margin: 0 0 1em;
+.portlet {
+    margin: 0 0 20px;
     font-size: 80%;
 }
 dl.portletError {
     background-color: #FFA500;
 }
 
-dl.portlet dt {
+.portlet dt {
     padding: 0.42em 1em;
     background: #ddd;
     line-height: normal;
@@ -171,5 +171,29 @@ dl.portlet ul.navTree .navTreeCurrentItem {
 .ploneCalendar .todaynoevent {
     border: 2px solid #205C90;
 }
+
+/* PORTLET FOLLOW */
+
+#portlet-follow {
+  padding: 20px;
+  background-color: #eee;
+  margin-bottom: 30px;
+}
+
+#portlet-follow .btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 12px;
+  padding: 8px 14px 7px;
+}
+
+#portlet-follow p {
+  color: #999;
+  margin-bottom: 10px; 
+  font-size: 11px;
+}
+
+#portlet-follow h5 {margin-top: 0; text-transform: uppercase; font-weight: 900;}
+
 
 /* @end */

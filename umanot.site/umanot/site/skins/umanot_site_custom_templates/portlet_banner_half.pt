@@ -1,0 +1,7 @@
+<div metal:define-macro="portlet">
+  <div class="portlet">
+      <div class="halfWrapper">
+        <div class="half"></div>
+      </div>
+  </div>
+</div>

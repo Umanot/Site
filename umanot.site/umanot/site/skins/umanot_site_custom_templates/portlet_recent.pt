@@ -1,0 +1,10 @@
+<div metal:define-macro="portlet">
+  <div class="portlet">
+    <h6 class="portletTitle">Articoli recenti</h6>
+    <ul class="portletList">
+      <li><a href="#">Lorem ipsum dolor sit amet, magnam, molestiae, aliquid<span class="text-muted">07/07/2015</span></a></li>
+      <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit accusantium, magnam, molestiae, aliquid<span class="text-muted">07/07/2015</span></a></li>
+      <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit accusantium, magnam, molestiae, aliquid lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="text-muted">07/07/2015</span></a></li>
+    </ul>
+  </div>
+</div>

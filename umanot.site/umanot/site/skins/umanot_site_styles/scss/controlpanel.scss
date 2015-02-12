@@ -141,6 +141,9 @@ a.managePortletsFallback {
     background: $editBarMainColor;
     border-radius: 3px;
 }
+
+.managePortletsLink a {color: #fff;}
+
 a.managePortletsFallback {
     display:inline-block; /* in order for our vertical margins to work on inline element */
 }
