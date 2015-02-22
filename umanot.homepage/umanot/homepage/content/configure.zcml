@@ -3,8 +3,7 @@
     xmlns:five="http://namespaces.zope.org/five"
     i18n_domain="umanot.homepage">
 
-  <!-- configure your content components here -->
-  
-  <!-- -*- extra stuff goes here -*- -->
+  <five:deprecatedManageAddDelete class=".homepage.Homepage" />
+  <five:deprecatedManageAddDelete class=".slide.Slide" />
 
 </configure>
