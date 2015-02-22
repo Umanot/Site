@@ -7,8 +7,8 @@ from Products.ATContentTypes.content.image import ATImageSchema
 from Products.Archetypes.utils import DisplayList
 from Products.CMFCore import permissions
 from archetypes.referencebrowserwidget.widget import ReferenceBrowserWidget
-from toshibaclima.homepage.config import PROJECTNAME, TEXT_POSITIONS
-from toshibaclima.homepage.interfaces.slide import ISlide
+from umanot.homepage.config import PROJECTNAME, TEXT_POSITIONS
+from umanot.homepage.interfaces.slide import ISlide
 from zope.interface import implements
 try:
     from Products.LinguaPlone import public as atapi

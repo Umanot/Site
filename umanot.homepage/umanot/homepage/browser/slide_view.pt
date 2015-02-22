@@ -1,4 +1,4 @@
-<html metal:use-macro="here/main_template/macros/master" i18n:domain="toshibaclima.homepage">
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.homepage">
   <body>
     <div metal:fill-slot="main">
       <div id="slide-view" tal:define="info view/info">
