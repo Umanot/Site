@@ -1,0 +1,15 @@
+<configure
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="umanot.article">
+
+  <include package="plone.app.contentmenu"/>
+
+  <browser:page
+    for="..interfaces.article.IArticle"
+    name="article_view"
+    class=".article_view.ArticleView"
+    template="article_view.pt"
+    permission="zope2.View"
+    />
+</configure>

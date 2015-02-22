@@ -1,0 +1,12 @@
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="toshibaclima.article">
+<body>
+  <div metal:fill-slot="content-core">
+    <div id="article-view" tal:define="info view/info">
+      <figure class="articleImageWrapper" tal:condition="info/image">
+        <tal:image condition="info/image" content="structure info/image"></tal:image>
+      </figure>
+      <p tal:replace="structure info/text"></p>
+    </div>
+  </div>
+</body>
+</html>
