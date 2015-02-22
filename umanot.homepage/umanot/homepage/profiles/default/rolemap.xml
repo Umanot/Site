@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<rolemap>
+  <permissions>
+    <permission name="umanot.homepage: Add Homepage" acquire="True">
+      <role name="Contributor" />
+      <role name="Manager" />
+    </permission>
+    <permission name="umanot.homepage: Add Slide" acquire="True">
+      <role name="Contributor" />
+      <role name="Manager" />
+    </permission>
+  </permissions>
+</rolemap>

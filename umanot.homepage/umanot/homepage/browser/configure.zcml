@@ -1,10 +1,24 @@
 <configure
-    xmlns="http://namespaces.zope.org/zope"
-    xmlns:browser="http://namespaces.zope.org/browser"
-    i18n_domain="umanot.homepage">
+  xmlns="http://namespaces.zope.org/zope"
+  xmlns:browser="http://namespaces.zope.org/browser"
+  i18n_domain="umanot.homepage">
 
-  <include package="plone.app.contentmenu" />
+  <include package="plone.app.contentmenu"/>
 
-  <!-- -*- extra stuff goes here -*- -->
+  <browser:page
+    for="..interfaces.homepage.IHomepage"
+    name="homepage_view"
+    class=".homepage_view.HomepageView"
+    template="homepage_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.slide.ISlide"
+    name="slide_view"
+    class=".slide_view.SlideView"
+    template="slide_view.pt"
+    permission="zope2.View"
+    />
 
 </configure>
