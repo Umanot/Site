@@ -111,7 +111,7 @@ class HomepageView(BrowserView):
         return results
 
     @property
-    def mosai(self):
+    def mosaic(self):
         folders = self.portal_catalog(
             portal_type = "Folder",
             object_provides = IHomepageMosaic.__identifier__
