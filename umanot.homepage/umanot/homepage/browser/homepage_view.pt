@@ -102,7 +102,7 @@
               <tal:group define="group view/features">
                 <div class="mrow">
                   <tal:loop repeat="item group">
-                    <div class="col-md-4">
+                    <div class="col-md-4" tal:condition="item">
                       <div class="featureItem">
                         <div class="featureIcon">
                           <i tal:attributes="class string:fa fa-${item/icon}"></i>
@@ -117,84 +117,6 @@
                   </tal:loop>
                 </div>
               </tal:group>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="featureItem">
-                    <div class="featureIcon">
-                      <i class="fa fa-pencil"></i>
-                    </div>
-                    <div class="featureText">
-                      <h4>Design</h4>
-
-                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-4">
-                  <div class="featureItem">
-                    <div class="featureIcon">
-                      <i class="fa fa-cogs"></i>
-                    </div>
-                    <div class="featureText">
-                      <h4>Completamente Customizabile</h4>
-
-                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="col-md-4">
-                  <div class="featureItem">
-                    <div class="featureIcon">
-                      <i class="fa fa-line-chart"></i>
-                    </div>
-                    <div class="featureText">
-                      <h4>Potente ed efficace</h4>
-
-                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-4">
-                  <div class="featureItem">
-                    <div class="featureIcon">
-                      <i class="fa fa-play-circle"></i>
-                    </div>
-                    <div class="featureText">
-                      <h4>Video tutorial</h4>
-
-                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="featureItem">
-                    <div class="featureIcon">
-                      <i class="fa fa-coffee"></i>
-                    </div>
-                    <div class="featureText">
-                      <h4>Interfaccia Pulita</h4>
-
-                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-4">
-                  <div class="featureItem">
-                    <div class="featureIcon">
-                      <i class="fa fa-connectdevelop"></i>
-                    </div>
-                    <div class="featureText">
-                      <h4>Supporto e Update gratuiti</h4>
-
-                      <p>Phasellus enim libero, blandit vel sapien vitae, condimentum ultricies magna et. Quisque euismod orci ut et lobortis aliquam. Aliquam in tortor enim.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </section>
 
