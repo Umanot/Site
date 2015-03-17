@@ -13,5 +13,5 @@ class IHomepageServices(Interface):
     """Marker interface"""
 
 
-class IHomepageSecondLine(Interface):
+class IHomepageFeatures(Interface):
     """Marker interface"""
