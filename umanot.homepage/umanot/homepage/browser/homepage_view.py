@@ -1,7 +1,7 @@
 import itertools
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
-from umanot.site.browser.interfaces import IHomepageServices, IHomepageFeatures
+from umanot.site.browser.interfaces import IHomepageServices, IHomepageFeatures, IHomepageMosaic
 from zope.interface import implements, Interface
 
 
@@ -80,6 +80,41 @@ class HomepageView(BrowserView):
         folders = self.portal_catalog(
             portal_type = "Folder",
             object_provides = IHomepageServices.__identifier__
+        )
+
+        if not folders:
+            return
+
+        folder = folders[0]
+
+        brains = self.portal_catalog(
+            portal_type = "Document",
+            path = folder.getPath(),
+            sort_on = 'getObjPositionInParent',
+        )
+
+        results = []
+
+        for brain in brains:
+            obj = brain.getObject()
+            info = dict(
+                title = brain.Title,
+                description = brain.Description.strip(),
+                text = obj.getText()
+            )
+
+            related = [x for x in obj.getRelatedItems() if x]
+            info['URL'] = related[0].absolute_url() if related else None
+
+            results.append(info)
+
+        return results
+
+    @property
+    def mosai(self):
+        folders = self.portal_catalog(
+            portal_type = "Folder",
+            object_provides = IHomepageMosaic.__identifier__
         )
 
         if not folders:

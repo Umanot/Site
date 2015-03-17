@@ -15,3 +15,6 @@ class IHomepageServices(Interface):
 
 class IHomepageFeatures(Interface):
     """Marker interface"""
+
+class IHomepageMosaic(Interface):
+    """Marker interface"""
