@@ -134,7 +134,7 @@ class HomepageView(BrowserView):
             obj = brain.getObject()
             info = dict(
                 title = brain.Title,
-                icon = brain.Description.strip(),
+                icon = brain.Description.strip().replace('fa-', ''),
                 text = obj.getText()
             )
 

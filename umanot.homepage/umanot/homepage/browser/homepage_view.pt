@@ -105,7 +105,7 @@
                     <div class="col-md-4">
                       <div class="featureItem">
                         <div class="featureIcon">
-                          <i tal:attributes="class string:fa fa-${item/description}"></i>
+                          <i tal:attributes="class string:fa fa-${item/icon}"></i>
                         </div>
                         <div class="featureText">
                           <h4 tal:content="item/title">Design</h4>
