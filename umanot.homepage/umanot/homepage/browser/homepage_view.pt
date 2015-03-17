@@ -99,7 +99,7 @@
 
           <section id="feature-section">
             <div class="container-fluid">
-              <tal:group define="group view/features">
+              <tal:group repeat="group view/features">
                 <div class="mrow">
                   <tal:loop repeat="item group">
                     <div class="col-md-4" tal:condition="item">
