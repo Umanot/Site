@@ -1,5 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
+from umanot.site.browser.interfaces import IHomepageServices
 from zope.interface import implements, Interface
 
 
@@ -72,3 +73,39 @@ class HomepageView(BrowserView):
             news.append(info)
 
         return news
+
+    @property
+    def services(self):
+        folders = self.portal_catalog(
+            portal_type = "Folder",
+            object_provides = IHomepageServices.__identifier__
+        )
+
+        if not folders:
+            return
+
+        folder = folders[0]
+
+        brains = self.portal_catalog(
+            portal_type = "Document",
+            path = folder.getPath(),
+            sort_on = 'getObjPositionInParent',
+        )
+
+        results = []
+
+        for brain in brains:
+            obj = brain.getObject()
+            info = dict(
+                title = brain.Title,
+                description = brain.Description,
+                text = obj.getText()
+            )
+
+            related = [x for x in obj.getRelatedItems() if x]
+            info['URL'] = related[0].absolute_url() if related else None
+
+            results.append(info)
+
+        return results
+

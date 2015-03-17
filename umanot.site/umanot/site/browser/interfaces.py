@@ -1,4 +1,5 @@
 from plone.theme.interfaces import IDefaultPloneLayer
+from zope.interface import Interface
 
 
 class IThemeSpecific(IDefaultPloneLayer):
@@ -7,3 +8,10 @@ class IThemeSpecific(IDefaultPloneLayer):
        "Umanot - SitePackage" theme, this interface must be its layer
        (in site/viewlets/configure.zcml).
     """
+
+class IHomepageServices(Interface):
+    """Marker interface"""
+
+
+class IHomepageSecondLine(Interface):
+    """Marker interface"""
