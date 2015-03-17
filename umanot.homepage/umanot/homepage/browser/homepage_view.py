@@ -98,7 +98,7 @@ class HomepageView(BrowserView):
             obj = brain.getObject()
             info = dict(
                 title = brain.Title,
-                description = brain.Description,
+                description = brain.Description.strip(),
                 text = obj.getText()
             )
 
