@@ -16,17 +16,18 @@ except ImportError:
     # No multilingual support
     from Products.Archetypes import atapi
 
-VideoSchema = document.ATDocumentSchema.copy() + atapi.Schema(( #@UndefinedVariable
-    atapi.TextField(
-        name = 'embed',
-        storage = atapi.AnnotationStorage(migrate=True),
-        languageIndependent = True,
-        widget = atapi.TextAreaWidget(
-            label = u"Codice di incorporamento",
+VideoSchema = document.ATDocumentSchema.copy() + atapi.Schema(
+    (
+        atapi.TextField(
+            name = 'embed',
+            storage = atapi.AnnotationStorage(migrate = True),
+            languageIndependent = True,
+            widget = atapi.TextAreaWidget(
+                label = u"Indirizzo video",
+            )
         )
     )
-))
-
+)
 
 VideoSchema['title'].storage = atapi.AnnotationStorage()
 VideoSchema['title'].required = True
@@ -40,7 +41,7 @@ imageField.validators = None
 
 VideoSchema.addField(imageField)
 
-schemata.finalizeATCTSchema(VideoSchema, folderish=False, moveDiscussion=False)
+schemata.finalizeATCTSchema(VideoSchema, folderish = False, moveDiscussion = False)
 
 
 class Video(document.ATDocument, ATCTImageTransform):
@@ -56,6 +57,7 @@ class Video(document.ATDocument, ATCTImageTransform):
     security = ClassSecurityInfo()
 
     security.declareProtected(permissions.View, 'tag')
+
     def tag(self, **kwargs):
         """Generate image tag using the api of the ImageField
         """
@@ -73,7 +75,7 @@ class Video(document.ATDocument, ATCTImageTransform):
                 scalename = name[len('image_'):]
                 scalename.replace(".jpg", "")
                 if scalename in field.getAvailableSizes(self):
-                    image = field.getScale(self, scale=scalename)
+                    image = field.getScale(self, scale = scalename)
             if image is not None and not isinstance(image, basestring):
                 # image might be None or '' for empty images
                 return image
@@ -88,9 +90,9 @@ class Video(document.ATDocument, ATCTImageTransform):
             if width and height:
                 if mode == 'crop':
                     nu_width, nu_height = self.scale_crop(image.width, image.height, width, height)
-                    image = self.tag(scale=scale, width=nu_width, height=nu_height, css_class=css_class)
+                    image = self.tag(scale = scale, width = nu_width, height = nu_height, css_class = css_class)
             else:
-                image = self.tag(scale=scale)
+                image = self.tag(scale = scale)
         else:
             image = '<img src="default_video.jpg" alt="Sellaronda Hero" />'
 
@@ -105,5 +107,6 @@ class Video(document.ATDocument, ATCTImageTransform):
         )
 
         return info
+
 
 atapi.registerType(Video, PROJECTNAME)
