@@ -43,6 +43,41 @@ class HomepageView(BrowserView):
         return self.context.getInfo()
 
     @property
+    def slides(self):
+        folders = self.portal_catalog(
+            portal_type = "Folder",
+            object_provides = IHomepageServices.__identifier__
+        )
+
+        if not folders:
+            return
+
+        folder = folders[0]
+
+        brains = self.portal_catalog(
+            portal_type = "Document",
+            path = folder.getPath(),
+            sort_on = 'getObjPositionInParent',
+        )
+
+        results = []
+
+        for brain in brains:
+            obj = brain.getObject()
+            info = dict(
+                title = brain.Title,
+                description = brain.Description.strip(),
+                text = obj.getText()
+            )
+
+            related = [x for x in obj.getRelatedItems() if x]
+            info['URL'] = related[0].absolute_url() if related else None
+
+            results.append(info)
+
+        return results
+
+    @property
     def articles(self):
         brains = self.portal_catalog(
             portal_type = "Article",

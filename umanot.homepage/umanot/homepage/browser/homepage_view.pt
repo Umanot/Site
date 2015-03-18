@@ -68,11 +68,33 @@
             <tal:loop repeat="item view/services">
               <div class="serviceItem" id="serviceItem01" tal:attributes="id string:serviceItem0${repeat/item/number}">
                 <h3 tal:content="item/title">Eveniet, asperiores, reprehenderit, </h3>
+
                 <p tal:condition="item/description" tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>
+
                 <p tal:condition="not:item/description" tal:replace="structure item/text"></p>
                 <a tal:condition="item/URL" class="ghostButton ghostButtonWhite ghostButtonLg" tal:attributes="href item/URL">Scopri come</a>
               </div>
+
             </tal:loop>
+
+            <!--?<div class="serviceItem" id="serviceItem01">-->
+            <!--?<h3>Eveniet, asperiores, reprehenderit, </h3>-->
+            <!--?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>-->
+            <!--?<a href="#" class="ghostButton ghostButtonWhite ghostButtonLg">Scopri come</a>-->
+            <!--?</div>-->
+
+            <!--?<div class="serviceItem" id="serviceItem02">-->
+            <!--?<h3>Eveniet, asperiores, reprehenderit, </h3>-->
+            <!--?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>-->
+            <!--?<a href="#" class="ghostButton ghostButtonWhite ghostButtonLg">Scopri come</a>-->
+            <!--?</div>-->
+
+            <!--?<div class="serviceItem" id="serviceItem03">-->
+            <!--?<h3>Eveniet, asperiores, reprehenderit, </h3>-->
+            <!--?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>-->
+            <!--?<a href="#" class="ghostButton ghostButtonWhite ghostButtonLg">Scopri come</a>-->
+            <!--?</div>-->
+
           </section>
 
           <section id="feature-section">
@@ -104,11 +126,47 @@
                 <div class="mosaicTileInner">
                   <h2 tal:content="item/title"></h2>
                   <p tal:content="item/description"></p>
-                  <a class="ghostButton ghostButtonWhite" tal:condition="item/URL" tal:attributes="href item/URL">Scopri di più</a>
+                  <a class="ghostButton ghostButtonWhite" tal:attributes="href item/URL">Scopri di più</a>
                 </div>
                 <div class="mosaicTileOverlay"></div>
               </div>
             </tal:loop>
+            <div id="mt01" class="mosaicTile">
+              <div class="mosaicTileInner">
+                <h2>Perché umanot</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
+                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
+              </div>
+              <div class="mosaicTileOverlay"></div>
+            </div>
+            <div id="mt02" class="mosaicTile">
+              <div class="mosaicTileInner">
+                <h2>Servizi</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
+                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
+              </div>
+              <div class="mosaicTileOverlay"></div>
+            </div>
+            <div id="mt03" class="mosaicTile">
+              <div class="mosaicTileInner">
+                <h2>Trading For Life</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
+                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
+              </div>
+              <div class="mosaicTileOverlay"></div>
+            </div>
+            <div id="mt04" class="mosaicTile">
+              <div class="mosaicTileInner">
+                <h2>Intelligenza Collettiva</h2>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
+                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
+              </div>
+              <div class="mosaicTileOverlay"></div>
+            </div>
           </section>
 
           <section id="article-section">
