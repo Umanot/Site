@@ -4,5 +4,6 @@
     i18n_domain="umanot.article">
 
   <five:deprecatedManageAddDelete class=".article.Article" />
+  <five:deprecatedManageAddDelete class=".video.Video" />
 
 </configure>
