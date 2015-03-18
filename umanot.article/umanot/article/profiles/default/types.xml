@@ -8,4 +8,5 @@
   -->
 <object name="portal_types" meta_type="Plone Types Tool">
   <object name="Article" meta_type="Factory-based Type Information with dynamic views"/>
+  <object name="Video" meta_type="Factory-based Type Information with dynamic views"/>
 </object>

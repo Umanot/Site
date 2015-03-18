@@ -12,4 +12,13 @@
     template="article_view.pt"
     permission="zope2.View"
     />
+
+  <browser:page
+    for="..interfaces.video.IVideo"
+    name="video_view"
+    class=".video_view.VideoView"
+    template="video_view.pt"
+    permission="zope2.View"
+    />
+
 </configure>

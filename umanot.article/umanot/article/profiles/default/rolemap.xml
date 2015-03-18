@@ -6,5 +6,10 @@
       <role name="Manager" />
       <role name="Owner" />
     </permission>
+    <permission name="umanot.article: Add Video" acquire="True">
+      <role name="Contributor" />
+      <role name="Manager" />
+      <role name="Owner" />
+    </permission>
   </permissions>
 </rolemap>
