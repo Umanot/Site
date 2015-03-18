@@ -131,42 +131,7 @@
                 <div class="mosaicTileOverlay"></div>
               </div>
             </tal:loop>
-            <div id="mt01" class="mosaicTile">
-              <div class="mosaicTileInner">
-                <h2>Perché umanot</h2>
 
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
-                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
-              </div>
-              <div class="mosaicTileOverlay"></div>
-            </div>
-            <div id="mt02" class="mosaicTile">
-              <div class="mosaicTileInner">
-                <h2>Servizi</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
-                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
-              </div>
-              <div class="mosaicTileOverlay"></div>
-            </div>
-            <div id="mt03" class="mosaicTile">
-              <div class="mosaicTileInner">
-                <h2>Trading For Life</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
-                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
-              </div>
-              <div class="mosaicTileOverlay"></div>
-            </div>
-            <div id="mt04" class="mosaicTile">
-              <div class="mosaicTileInner">
-                <h2>Intelligenza Collettiva</h2>
-
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure, mollitia, nobis quam illum possimus quidem nemo.</p>
-                <a class="ghostButton ghostButtonWhite" href="#">Scopri di più</a>
-              </div>
-              <div class="mosaicTileOverlay"></div>
-            </div>
           </section>
 
           <section id="article-section">
