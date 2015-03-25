@@ -126,7 +126,7 @@
                 <div class="mosaicTileInner">
                   <h2 tal:content="item/title"></h2>
                   <p tal:content="item/description"></p>
-                  <a class="ghostButton ghostButtonWhite" tal:attributes="href item/URL">Scopri di più</a>
+                  <a class="ghostButton ghostButtonWhite" tal:condition="item/URL" tal:attributes="href item/URL">Scopri di più</a>
                 </div>
                 <div class="mosaicTileOverlay"></div>
               </div>
