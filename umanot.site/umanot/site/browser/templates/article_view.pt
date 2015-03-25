@@ -13,7 +13,7 @@
       <div id="article-headline">
         <div class="gridOverlay"></div>
         <div class="headlineContent">
-          <h1 class="documentFirstHeading">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h1>
+          <h1 class="documentFirstHeading" tal:content="view/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h1>
           <div class="byLine">
             <span class="by">di</span> <a href="#">Nicola Antonucci</a> <span>|</span> <a href="#">Trading for life</a> <span>|</span> <a href="#">26 commenti</a>
           </div>
