@@ -15,7 +15,7 @@
         <div class="headlineContent">
           <h1 class="documentFirstHeading" tal:content="view/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h1>
           <div class="byLine">
-            <span class="by" tal:condition="item/autore">di</span> <tal:autore tal:content="item/autore">Nicola Antonucci</tal:autore><span>|</span> <a href="#">Trading for life</a> <span>|</span> <a href="#">26 commenti</a>
+            <span class="by" tal:condition="info/autore">di</span> <tal:autore tal:content="item/autore">Nicola Antonucci</tal:autore><span>|</span> <a href="#">Trading for life</a> <span>|</span> <a href="#">26 commenti</a>
           </div>
         </div>
       </div>
