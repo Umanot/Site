@@ -31,6 +31,26 @@ class PartnerFolderView(BrowserView):
         return self.context.Description()
         
     @property
-    def info(self):
-        return self.context.getInfo()
+    def contents(self):
+        brains = self.portal_catalog(
+            portal_type = "Image",
+            path = '/'.join(self.context.getPhysicalPath()),
+            sort_on = 'getObjPositionInParent'
+        )
+
+        results = []
+
+        for brain in brains:
+            obj = brain.getObject()
+
+            info = dict(
+                title = brain.Title,
+                description = brain.Description,
+                URL = brain.getURL(),
+                image = obj.tag(scale="preview")
+            )
+
+            results.append(info)
+
+        return results
         

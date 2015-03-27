@@ -21,24 +21,20 @@
       <div id="partner-folder-view">
 
         <div class="mrow">
-          <tal:loop repeat="item view/partners">
+          <tal:loop repeat="item view/contents">
             <div class="col-md-6 col-sm-6">
 
-            <div class="partnerItem">
-              <figure><a href="#"><img src="http://umanot.mediatria.com/partners/complexlab/image_preview"/></a></figure>
-              <h2><a href="">ComplexLab</a></h2>
-            </div>
+              <div class="partnerItem">
+                <figure><a tal:attributes="href item/description">
+                  <tal:image tal:content="structure item/image"></tal:image>
+                </a></figure>
+                <h2><a tal:attributes="href item/description" tal:content="item/title">ComplexLab</a></h2>
+              </div>
 
-          </div>
+            </div>
           </tal:loop>
 
-
-
-
-
         </div>
-
-
       </div>
       <!-- partner-folder-view -->
 
