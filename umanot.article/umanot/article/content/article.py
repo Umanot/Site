@@ -13,7 +13,14 @@ from umanot.article.interfaces.article import IArticle
 from zope.interface import implements
 
 
-ArticleSchema = folder.ATFolderSchema.copy() + atapi.Schema(( #@UndefinedVariable
+ArticleSchema = folder.ATFolderSchema.copy() + atapi.Schema((
+    atapi.StringField(
+        name = 'autore',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Autore",
+        )
+    )
     # atapi.TextField(
     #     name = 'video',
     #     storage = atapi.AnnotationStorage(),
