@@ -1,10 +1,10 @@
 <html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.site">
 
-  <head>    
+  <head>
     <metal:js fill-slot="javascript_head_slot">
       <script src="++resource++umanot.site.javascripts/min/magnificpopup.min.js"></script>
       <script>
-        $(function(){
+        $(function () {
           $('.videoPop').magnificPopup({
             delegate: 'a',
             disableOn: 700,
@@ -20,104 +20,45 @@
 
   </head>
   <body>
-    
+
     <metal:headline fill-slot="headline_section_slot">
 
       <div id="video-folder-headline">
         <div class="gridOverlay"></div>
         <div class="headlineContent">
-          <h1 class="documentFirstHeading">Video</h1>
+          <h1 class="documentFirstHeading" tal:content="view/title">Video</h1>
         </div>
       </div>
 
-    </metal:headline>    
+    </metal:headline>
 
     <metal:phil fill-slot="main">
-      <tal:main-macro metal:define-macro="main">
-      
-        <div id="video-folder-view">
-        
-            <div class="mrow">
-              <div class="col-md-4 col-sm-6">
-                
-                <div class="videoPop">
-                  <figure>
-                    <a href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img src="var/video_default.jpg" /></a>
-                  </figure>
-                  <h2><a href="http://www.youtube.com/watch?v=0O2aH4XLbto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
-                </div>
-                
-              </div>
 
-              <div class="col-md-4 col-sm-6">
-                
-                <div class="videoPop">
-                  <figure>
-                    <a href="#"><img src="var/video_default.jpg" /></a>
-                  </figure>
-                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
-                </div>
-                
-              </div>
-              
-              <div class="col-md-4 col-sm-6">
-                
-                <div class="videoPop">
-                  <figure>
-                    <a href="#"><img src="var/video_default.jpg" /></a>
-                  </figure>
-                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
-                </div>
-                
-              </div>              
-              
-            </div>
+      <div id="video-folder-view">
+        <tal:group tal:repeat="group view/contents">
+          <div class="mrow">
+            <tal:loop repeat="item group">
+              <div class="col-md-4 col-sm-6" tal:condition="item">
 
-            <div class="mrow">
-              <div class="col-md-4 col-sm-6">
-                
                 <div class="videoPop">
                   <figure>
-                    <a href="#"><img src="var/video_default.jpg" /></a>
+                    <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" tal:attributes="href item/embed">
+                      <tal:image content="structure item/image"></tal:image>
+                    </a>
                   </figure>
-                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
-                </div>
-                
-              </div>
+                  <h2><a tal:attributes="href item/embed" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
 
-              <div class="col-md-4 col-sm-6">
-                
-                <div class="videoPop">
-                  <figure>
-                    <a href="#"><img src="var/video_default.jpg" /></a>
-                  </figure>
-                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
+                  <p tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>
                 </div>
-                
-              </div>
-              
-              <div class="col-md-4 col-sm-6">
-                
-                <div class="videoPop">
-                  <figure>
-                    <a href="#"><img src="var/video_default.jpg" /></a>
-                  </figure>
-                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
-                </div>
-                
-              </div>              
-              
-            </div>
 
-        </div> <!-- video-folder-view -->
-        
-      </tal:main-macro>
+              </div>
+            </tal:loop>
+          </div>
+        </tal:group>
+
+      </div>
+      <!-- video-folder-view -->
+
     </metal:phil>
   </body>
 </html>
