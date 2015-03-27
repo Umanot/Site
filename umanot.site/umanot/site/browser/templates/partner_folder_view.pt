@@ -1,0 +1,63 @@
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.site">
+
+  <head>    
+
+
+  </head>
+  <body>
+    
+    <metal:headline fill-slot="headline_section_slot">
+
+      <div id="partner-folder-headline">
+        <div class="gridOverlay"></div>
+        <div class="headlineContent">
+          <h1 class="documentFirstHeading">I Partners di Umanot</h1>
+        </div>
+      </div>
+
+    </metal:headline> 
+    
+    <metal:phil fill-slot="main">
+      <tal:main-macro metal:define-macro="main">
+      
+        <div id="partner-folder-view">
+          
+          <div class="mrow">
+            <div class="col-md-6 col-sm-6">
+              
+              <div class="partnerItem">
+                <figure><a href="#"><img src="http://umanot.mediatria.com/partners/complexlab/image_preview" /></a></figure>
+                <h2><a href="">ComplexLab</a></h2>
+              </div>
+              
+            </div>
+            
+            <div class="col-md-6 col-sm-6">
+              
+              <div class="partnerItem">
+                <figure><a href="#"><img src="http://umanot.mediatria.com/partners/investireoggi/image_preview" /></a></figure>
+                <h2><a href="">Investire oggi</a></h2>
+              </div>
+              
+            </div>
+
+            <div class="col-md-6 col-sm-6">
+              
+              <div class="partnerItem">
+                <figure><a href="#"><img src="http://umanot.mediatria.com/partners/complexlab/image_preview" /></a></figure>
+                <h2><a href="">ComplexLab</a></h2>
+              </div>
+              
+            </div>
+            
+            
+          </div>
+        
+          
+
+        </div> <!-- partner-folder-view -->
+        
+      </tal:main-macro>
+    </metal:phil>
+  </body>
+</html>

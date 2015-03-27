@@ -76,7 +76,8 @@
 
 #article-headline .documentFirstHeading,
 #article-folder-headline .documentFirstHeading,
-#video-folder-headline .documentFirstHeading {
+#video-folder-headline .documentFirstHeading,
+#partner-folder-headline .documentFirstHeading {
   font-size: 48px;
   color: #FFF;
   font-weight: bold;
@@ -88,7 +89,8 @@
 }
 
 #article-folder-headline .documentFirstHeading,
-#video-folder-headline .documentFirstHeading {
+#video-folder-headline .documentFirstHeading,
+#partner-folder-headline .documentFirstHeading {
   text-transform: uppercase;
 }
 
@@ -114,7 +116,8 @@
   #article-headline {min-height: 380px;}
   #article-headline .documentFirstHeading,
   #article-folder-headline .documentFirstHeading,
-  #video-folder-headline .documentFirstHeading {font-size: 40px;}
+  #video-folder-headline .documentFirstHeading,
+  #partner-folder-headline .documentFirstHeading {font-size: 40px;}
   
 }
 
@@ -123,7 +126,8 @@
   #article-headline {min-height: 318px;}
   #article-headline .documentFirstHeading,
   #article-folder-headline .documentFirstHeading,
-  #video-folder-headline .documentFirstHeading {font-size: 34px; width: 100%;}
+  #video-folder-headline .documentFirstHeading,
+  #partner-folder-headline .documentFirstHeading {font-size: 34px; width: 100%;}
   
 }
 
@@ -131,7 +135,8 @@
   #article-headline {padding-left: 20px; padding-right: 20px;}
   #article-headline .documentFirstHeading ,
   #article-folder-headline .documentFirstHeading,
-  #video-folder-headline .documentFirstHeading {font-size: 32px;}
+  #video-folder-headline .documentFirstHeading,
+  #partner-folder-headline .documentFirstHeading {font-size: 32px;}
 }
 
 /* ARTICLE CONTENT */
@@ -610,22 +615,30 @@
   }
 }
 
-/* ARTICLE & VIDEO FOLDER VIEW */
+/* ARTICLE, VIDEO & PARTNER FOLDER VIEW */
 
 #article-folder-headline,
-#video-folder-headline {
+#video-folder-headline,
+#partner-folder-headline {
   position: relative;
   padding: 140px 50px 30px;
   min-height: 250px;
 }
 
-#article-folder-headline {
+#article-folder-headline,
+#partner-folder-headline {
   background: #000 url(var/intro_internal01.jpg) no-repeat center center;
   background-size: cover;
 }
 
-#video-folder-headline {
+#video-folder-headline,
+#partner-folder-headline {
   background: #000 url(var/video_internal.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#partner-folder-headline {
+  background: #000 url(var/partner_internal.jpg) no-repeat center center;
   background-size: cover;
 }
 
@@ -641,4 +654,34 @@
 #content .videoPop h2 {
   font-size: 16px;
   margin: 10px 0 5px;
+}
+
+/* PARTNERS */
+
+.partnerItem {
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.partnerItem figure {
+  margin-bottom: 20px;
+}
+
+.partnerItem figure img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#content .partnerItem h2 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+  text-align: center;
+  color: $colorLeft;
+}
+
+#content .partnerItem h2 a {
+  color: $colorLeft;
 }

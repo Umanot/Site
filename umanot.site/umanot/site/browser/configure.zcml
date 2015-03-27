@@ -264,5 +264,13 @@
     permission="zope2.View"
     />
 
+  <!-- Partner Folder View  -->
+  <browser:page
+    for=".partner_folder_view.IPartnerFolderView"
+    name="folder_listing"
+    class=".partner_folder_view.PartnerFolderView"
+    template="templates/partner_folder_view.pt"
+    permission="zope2.View"
+    />
 
 </configure>
