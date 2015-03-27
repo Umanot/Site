@@ -255,4 +255,14 @@
     permission="zope2.View"
     />
 
+  <!-- Video Folder View  -->
+  <browser:page
+    for=".video_folder_view.IVideoFolderView"
+    name="folder_listing"
+    class=".video_folder_view.VideoFolderView"
+    template="templates/video_folder_view.pt"
+    permission="zope2.View"
+    />
+
+
 </configure>

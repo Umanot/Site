@@ -64,7 +64,7 @@
   z-index: 3;
 }
 
-/* ARTICLE HEADLINE */
+/* ARTICLE & VIDEO HEADLINE */
 
 #article-headline {
   min-height: 450px;
@@ -75,7 +75,8 @@
 }
 
 #article-headline .documentFirstHeading,
-#article-folder-headline .documentFirstHeading {
+#article-folder-headline .documentFirstHeading,
+#video-folder-headline .documentFirstHeading {
   font-size: 48px;
   color: #FFF;
   font-weight: bold;
@@ -86,7 +87,8 @@
   width: 65%;
 }
 
-#article-folder-headline .documentFirstHeading {
+#article-folder-headline .documentFirstHeading,
+#video-folder-headline .documentFirstHeading {
   text-transform: uppercase;
 }
 
@@ -111,7 +113,8 @@
   
   #article-headline {min-height: 380px;}
   #article-headline .documentFirstHeading,
-  #article-folder-headline .documentFirstHeading {font-size: 40px;}
+  #article-folder-headline .documentFirstHeading,
+  #video-folder-headline .documentFirstHeading {font-size: 40px;}
   
 }
 
@@ -119,14 +122,16 @@
   
   #article-headline {min-height: 318px;}
   #article-headline .documentFirstHeading,
-  #article-folder-headline .documentFirstHeading {font-size: 34px; width: 100%;}
+  #article-folder-headline .documentFirstHeading,
+  #video-folder-headline .documentFirstHeading {font-size: 34px; width: 100%;}
   
 }
 
 @media (max-width:600px){
   #article-headline {padding-left: 20px; padding-right: 20px;}
   #article-headline .documentFirstHeading ,
-  #article-folder-headline .documentFirstHeading{font-size: 32px;}
+  #article-folder-headline .documentFirstHeading,
+  #video-folder-headline .documentFirstHeading {font-size: 32px;}
 }
 
 /* ARTICLE CONTENT */
@@ -522,7 +527,7 @@
 }
 
 
-/* ARTICLE FOLDER LISTING */
+/* ARTICLE & VIDEO FOLDER LISTING */
 
 #article-section {
   background-color: #F5F5F5;
@@ -605,9 +610,10 @@
   }
 }
 
-/* ARTICLE FOLDER VIEW */
+/* ARTICLE & VIDEO FOLDER VIEW */
 
-#article-folder-headline {
+#article-folder-headline,
+#video-folder-headline {
   position: relative;
   padding: 140px 50px 30px;
   min-height: 250px;
@@ -618,4 +624,21 @@
   background-size: cover;
 }
 
+#video-folder-headline {
+  background: #000 url(var/video_internal.jpg) no-repeat center center;
+  background-size: cover;
+}
 
+/* VIODE FOLDER */
+.videoPop {margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;}
+.videoPop figure img  {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+#content .videoPop h2 {
+  font-size: 16px;
+  margin: 10px 0 5px;
+}

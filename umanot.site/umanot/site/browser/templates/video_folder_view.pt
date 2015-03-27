@@ -1,0 +1,123 @@
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.site">
+
+  <head>    
+    <metal:js fill-slot="javascript_head_slot">
+      <script src="++resource++umanot.site.javascripts/min/magnificpopup.min.js"></script>
+      <script>
+        $(function(){
+          $('.videoPop').magnificPopup({
+            delegate: 'a',
+            disableOn: 700,
+            type: 'iframe',
+            mainClass: 'mfp-fade',
+            removalDelay: 160,
+            preloader: false,
+            fixedContentPos: false
+          });
+        });
+      </script>
+    </metal:js>
+
+  </head>
+  <body>
+    
+    <metal:headline fill-slot="headline_section_slot">
+
+      <div id="video-folder-headline">
+        <div class="gridOverlay"></div>
+        <div class="headlineContent">
+          <h1 class="documentFirstHeading">Video</h1>
+        </div>
+      </div>
+
+    </metal:headline>    
+
+    <metal:phil fill-slot="main">
+      <tal:main-macro metal:define-macro="main">
+      
+        <div id="video-folder-view">
+        
+            <div class="mrow">
+              <div class="col-md-4 col-sm-6">
+                
+                <div class="videoPop">
+                  <figure>
+                    <a href="http://www.youtube.com/watch?v=0O2aH4XLbto"><img src="var/video_default.jpg" /></a>
+                  </figure>
+                  <h2><a href="http://www.youtube.com/watch?v=0O2aH4XLbto">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
+                </div>
+                
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                
+                <div class="videoPop">
+                  <figure>
+                    <a href="#"><img src="var/video_default.jpg" /></a>
+                  </figure>
+                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
+                </div>
+                
+              </div>
+              
+              <div class="col-md-4 col-sm-6">
+                
+                <div class="videoPop">
+                  <figure>
+                    <a href="#"><img src="var/video_default.jpg" /></a>
+                  </figure>
+                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
+                </div>
+                
+              </div>              
+              
+            </div>
+
+            <div class="mrow">
+              <div class="col-md-4 col-sm-6">
+                
+                <div class="videoPop">
+                  <figure>
+                    <a href="#"><img src="var/video_default.jpg" /></a>
+                  </figure>
+                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
+                </div>
+                
+              </div>
+
+              <div class="col-md-4 col-sm-6">
+                
+                <div class="videoPop">
+                  <figure>
+                    <a href="#"><img src="var/video_default.jpg" /></a>
+                  </figure>
+                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
+                </div>
+                
+              </div>
+              
+              <div class="col-md-4 col-sm-6">
+                
+                <div class="videoPop">
+                  <figure>
+                    <a href="#"><img src="var/video_default.jpg" /></a>
+                  </figure>
+                  <h2><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>                  
+                </div>
+                
+              </div>              
+              
+            </div>
+
+        </div> <!-- video-folder-view -->
+        
+      </tal:main-macro>
+    </metal:phil>
+  </body>
+</html>
