@@ -86,7 +86,6 @@ class Article(folder.ATFolder, ATCTImageTransform):
         return folder.ATFolder.__bobo_traverse__(self, REQUEST, name)
 
     def getInfo(self, scale='large', width=None, height=None, mode='crop', css_class=None):
-        import pdb; pdb.set_trace()
         image = self.getImage()
 
         if image:
