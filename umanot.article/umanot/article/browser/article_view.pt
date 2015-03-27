@@ -1,12 +1,121 @@
-<html metal:use-macro="here/main_template/macros/master" i18n:domain="toshibaclima.article">
-<body>
-  <div metal:fill-slot="content-core">
-    <div id="article-view" tal:define="info view/info">
-      <figure class="articleImageWrapper" tal:condition="info/image">
-        <tal:image condition="info/image" content="structure info/image"></tal:image>
-      </figure>
-      <p tal:replace="structure info/text"></p>
-    </div>
-  </div>
-</body>
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.site">
+
+  <head>    
+    <metal:js fill-slot="javascript_head_slot">
+      <script src="++resource++umanot.site.javascripts/article_view.js"></script>
+    </metal:js>
+
+  </head>
+  
+  <body>
+    
+    <metal:headline fill-slot="headline_section_slot">
+      <div id="article-headline">
+        <div class="gridOverlay"></div>
+        <div class="headlineContent">
+          <h1 class="documentFirstHeading" tal:content="view/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h1>
+          <div class="byLine">
+            <span class="by">di</span> <a href="#">Nicola Antonucci</a> <span>|</span> <a href="#">Trading for life</a> <span>|</span> <a href="#">26 commenti</a>
+          </div>
+        </div>
+      </div>
+    </metal:headline>
+    
+    <metal:phil fill-slot="main">
+
+        <section id="article-content" tal:content="structure info/text">
+        
+            <p>In varius varius justo, eget ultrices mauris rhoncus non. Morbi tristique, mauris eu imperdiet bibendum, velit diam iaculis velit, in ornare massa enim at lorem. Etiam risus diam, porttitor vitae ultrices quis, dapibus id dolor. Morbi venenatis lacinia rhoncus.</p>
+            
+            <h4>Luctus fermentum commodo</h4>
+            <p>Nulla sed mi leo, sit amet molestie nulla. Phasellus lobortis blandit ipsum, at adipiscing eros porta quis. Phasellus in nisi ipsum, quis dapibus magna. Phasellus odio dolor, pretium sit amet aliquam a, gravida eget dui. Pellentesque eu ipsum et quam faucibus scelerisque vitae ut ligula. Ut luctus fermentum commodo. Mauris eget justo turpis, eget fringilla mi. Duis lobortis cursus mi vel tristique. Maecenas eu lorem hendrerit neque dapibus cursus id sit amet nisi. Proin rhoncus semper sem nec aliquet.</p>
+            <blockquote>Nulla facilisi. Vestibulum pretium, dui eu aliquam faucibus, est dui hendrerit nulla, mattis semper turpis mauris eget tellus. Nulla accumsan rutrum nibh, sed eleifend felis blandit.</blockquote>
+            <p>Integer vel libero arcu, egestas tempor ipsum. Vestibulum id dolor aliquet dolor fringilla ornare. Nunc non massa erat. Vivamus odio sem, rhoncus vel bibendum vitae, euismod a urna. Aliquam erat volutpat. Aenean non lorem arcu. Phasellus in neque nulla, sed sodales ipsum. Morbi a massa sed sapien vulputate lacinia. Vivamus et urna vitae felis malesuada aliquet sit amet et metus.</p>
+            <ul>
+              <li>Consectetur adipiscing elit vtae elit libero</li>
+              <li>Nullam id dolor id eget lacinia odio posuere erat a ante</li>
+              <li>Integer posuere erat dapibus posuere velit</li>
+            </ul>
+            <p>Nulla sed mi leo, sit amet molestie nulla. Phasellus lobortis blandit ipsum, at adipiscing eros porta quis. Phasellus in nisi ipsum, quis dapibus magna. Phasellus odio dolor, pretium sit amet aliquam a, gravida eget dui. Pellentesque eu ipsum et quam faucibus scelerisque vitae ut ligula. Ut luctus fermentum commodo. Mauris eget justo turpis, eget fringilla mi. Duis lobortis cursus mi vel tristique. Maecenas eu lorem hendrerit neque dapibus cursus id sit amet nisi. Proin rhoncus semper sem nec aliquet. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non enim ut enim fringilla adipiscing id in lorem. Quisque aliquet neque vitae lectus tempus consectetur. Aliquam erat volutpat. Nunc eu nibh nulla, id cursus arcu.</p>
+            <p><em>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam at velit nisl. Aenean vitae est nisl. Cras molestie molestie nisl vel imperdiet. Donec vel mi sem.</em></p>
+
+            <p>In varius varius justo, eget ultrices mauris rhoncus non. Morbi tristique, mauris eu imperdiet bibendum, velit diam iaculis velit, in ornare massa enim at lorem. Etiam risus diam, porttitor vitae ultrices quis, dapibus id dolor. Morbi venenatis lacinia rhoncus.</p>
+            
+            <h4>Luctus fermentum commodo</h4>
+            <p>Nulla sed mi leo, sit amet molestie nulla. Phasellus lobortis blandit ipsum, at adipiscing eros porta quis. Phasellus in nisi ipsum, quis dapibus magna. Phasellus odio dolor, pretium sit amet aliquam a, gravida eget dui. Pellentesque eu ipsum et quam faucibus scelerisque vitae ut ligula. Ut luctus fermentum commodo. Mauris eget justo turpis, eget fringilla mi. Duis lobortis cursus mi vel tristique. Maecenas eu lorem hendrerit neque dapibus cursus id sit amet nisi. Proin rhoncus semper sem nec aliquet.</p>
+            <blockquote>Nulla facilisi. Vestibulum pretium, dui eu aliquam faucibus, est dui hendrerit nulla, mattis semper turpis mauris eget tellus. Nulla accumsan rutrum nibh, sed eleifend felis blandit.</blockquote>
+            <p>Integer vel libero arcu, egestas tempor ipsum. Vestibulum id dolor aliquet dolor fringilla ornare. Nunc non massa erat. Vivamus odio sem, rhoncus vel bibendum vitae, euismod a urna. Aliquam erat volutpat. Aenean non lorem arcu. Phasellus in neque nulla, sed sodales ipsum. Morbi a massa sed sapien vulputate lacinia. Vivamus et urna vitae felis malesuada aliquet sit amet et metus.</p>
+            <ul>
+              <li>Consectetur adipiscing elit vtae elit libero</li>
+              <li>Nullam id dolor id eget lacinia odio posuere erat a ante</li>
+              <li>Integer posuere erat dapibus posuere velit</li>
+            </ul>
+            <p>Nulla sed mi leo, sit amet molestie nulla. Phasellus lobortis blandit ipsum, at adipiscing eros porta quis. Phasellus in nisi ipsum, quis dapibus magna. Phasellus odio dolor, pretium sit amet aliquam a, gravida eget dui. Pellentesque eu ipsum et quam faucibus scelerisque vitae ut ligula. Ut luctus fermentum commodo. Mauris eget justo turpis, eget fringilla mi. Duis lobortis cursus mi vel tristique. Maecenas eu lorem hendrerit neque dapibus cursus id sit amet nisi. Proin rhoncus semper sem nec aliquet. Aenean lacinia bibendum nulla sed consectetur. Cras mattis consectetur purus sit amet fermentum. Donec id elit non mi porta gravida at eget metus.</p>
+            
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non enim ut enim fringilla adipiscing id in lorem. Quisque aliquet neque vitae lectus tempus consectetur. Aliquam erat volutpat. Nunc eu nibh nulla, id cursus arcu.</p>
+            <p><em>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nam at velit nisl. Aenean vitae est nisl. Cras molestie molestie nisl vel imperdiet. Donec vel mi sem.</em></p>          
+        
+
+
+        </section> <!-- article-content -->
+        
+        <section id="follow-section">
+            <div id="follow-button-wrapper">
+              <a class="btn btn-info">Segui questo articolo</a>
+              <div class="text">
+                <h5>Sei Interessato?</h5>
+                <p>Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email.</p>
+              </div>
+            </div>
+        </section> <!-- follow-section -->
+        
+        <section id="realted-section">
+
+            <h5>Potrebbe interessarti anche</h5>
+            
+            <div id="related-carousel" class="owl-carousel">
+              <div class="item">
+                <div class="relatedItem">
+                  <figure><img class="img-responsive" src="var/img02.jpg" /><div class="gridOverlay"></div></figure>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                  <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="relatedItem">
+                  <figure><img class="img-responsive" src="var/img03.jpg" /><div class="gridOverlay"></div></figure>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                  <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="relatedItem">
+                  <figure><img class="img-responsive" src="var/img05.jpg" /><div class="gridOverlay"></div></figure>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                  <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="relatedItem">
+                  <figure><img class="img-responsive" src="var/img04.jpg" /><div class="gridOverlay"></div></figure>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                  <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
+                </div>
+              </div>
+              <div class="item">
+                <div class="relatedItem">
+                  <figure><img class="img-responsive" src="var/img06.jpg" /><div class="gridOverlay"></div></figure>
+                  <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+                  <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
+                </div>
+              </div>
+            </div>
+
+        </section> <!-- related section -->
+        
+        
+    </metal:phil>
+  </body>
 </html>
