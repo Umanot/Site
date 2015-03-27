@@ -10,7 +10,7 @@
   <body>
     
     <metal:headline fill-slot="headline_section_slot">
-      <div id="article-headline">
+      <div id="article-headline" tal:define="info view/info">
         <div class="gridOverlay"></div>
         <div class="headlineContent">
           <h1 class="documentFirstHeading" tal:content="view/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h1>
