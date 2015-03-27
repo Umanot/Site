@@ -21,7 +21,7 @@
       </div>
     </metal:headline>
     
-    <metal:phil fill-slot="main">
+    <metal:phil fill-slot="main" tal:define="info view/info">
 
         <section id="article-content" tal:content="structure info/text">
         
