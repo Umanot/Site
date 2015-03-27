@@ -77,7 +77,8 @@
 #article-headline .documentFirstHeading,
 #article-folder-headline .documentFirstHeading,
 #video-folder-headline .documentFirstHeading,
-#partner-folder-headline .documentFirstHeading {
+#partner-folder-headline .documentFirstHeading,
+#umanot-document-headline .documentFirstHeading {
   font-size: 48px;
   color: #FFF;
   font-weight: bold;
@@ -90,7 +91,8 @@
 
 #article-folder-headline .documentFirstHeading,
 #video-folder-headline .documentFirstHeading,
-#partner-folder-headline .documentFirstHeading {
+#partner-folder-headline .documentFirstHeading,
+#umanot-document-headline .documentFirstHeading {
   text-transform: uppercase;
 }
 
@@ -117,7 +119,8 @@
   #article-headline .documentFirstHeading,
   #article-folder-headline .documentFirstHeading,
   #video-folder-headline .documentFirstHeading,
-  #partner-folder-headline .documentFirstHeading {font-size: 40px;}
+  #partner-folder-headline .documentFirstHeading,
+  #umanot-document-headline .documentFirstHeading {font-size: 40px;}
   
 }
 
@@ -127,7 +130,8 @@
   #article-headline .documentFirstHeading,
   #article-folder-headline .documentFirstHeading,
   #video-folder-headline .documentFirstHeading,
-  #partner-folder-headline .documentFirstHeading {font-size: 34px; width: 100%;}
+  #partner-folder-headline .documentFirstHeading,
+  #umanot-document-headline .documentFirstHeading {font-size: 34px; width: 100%;}
   
 }
 
@@ -136,7 +140,8 @@
   #article-headline .documentFirstHeading ,
   #article-folder-headline .documentFirstHeading,
   #video-folder-headline .documentFirstHeading,
-  #partner-folder-headline .documentFirstHeading {font-size: 32px;}
+  #partner-folder-headline .documentFirstHeading,
+  #umanot-document-headline .documentFirstHeading {font-size: 32px;}
 }
 
 /* ARTICLE CONTENT */
@@ -615,18 +620,18 @@
   }
 }
 
-/* ARTICLE, VIDEO & PARTNER FOLDER VIEW */
+/* ARTICLE, VIDEO, PARTNER & DOCUMENT FOLDER VIEW */
 
 #article-folder-headline,
 #video-folder-headline,
-#partner-folder-headline {
+#partner-folder-headline,
+#umanot-document-headline {
   position: relative;
   padding: 140px 50px 30px;
   min-height: 250px;
 }
 
-#article-folder-headline,
-#partner-folder-headline {
+#article-folder-headline {
   background: #000 url(var/intro_internal01.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -641,6 +646,13 @@
   background: #000 url(var/partner_internal.jpg) no-repeat center center;
   background-size: cover;
 }
+
+#umanot-document-headline {
+  background: #000 url(var/umanot_document_internal.jpg) no-repeat center center;
+  background-size: cover;  
+}
+
+
 
 /* VIODE FOLDER */
 .videoPop {margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;}

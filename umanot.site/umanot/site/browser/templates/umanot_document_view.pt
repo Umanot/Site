@@ -1,0 +1,32 @@
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.store">
+
+  <head>    
+
+
+  </head>
+  <body>
+    
+    <metal:headline fill-slot="headline_section_slot">
+
+      <div id="umanot-document-headline">
+        <div class="gridOverlay"></div>
+        <div class="headlineContent">
+          <h1 class="documentFirstHeading">Titolo</h1>
+        </div>
+      </div>
+
+    </metal:headline> 
+    
+    <metal:phil fill-slot="main">
+      <tal:main-macro metal:define-macro="main">
+      
+        <div id="umanot-document-view">
+        
+
+
+        </div> <!-- umano-document-view -->
+        
+      </tal:main-macro>
+    </metal:phil>
+  </body>
+</html>

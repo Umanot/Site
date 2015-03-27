@@ -273,4 +273,13 @@
     permission="zope2.View"
     />
 
+  <!-- umanot Document View  -->
+  <browser:page
+    for=".umanot_document_view.IUmanotDocumentView"
+    name="document_view"
+    class=".umanot_document_view.UmanotDocumentView"
+    template="templates/umanot_document_view.pt"
+    permission="zope2.View"
+    />
+
 </configure>
