@@ -19,16 +19,8 @@ ArticleSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
             label = u"Autore",
-        )
+        ),
     )
-    # atapi.TextField(
-    #     name = 'video',
-    #     storage = atapi.AnnotationStorage(),
-    #     languageIndependent = False,
-    #     widget = atapi.TextAreaWidget(
-    #         label = u"Video",
-    #     ),
-    # ),
 ))
 
 ArticleSchema['title'].storage = atapi.AnnotationStorage()
@@ -111,6 +103,7 @@ class Article(folder.ATFolder, ATCTImageTransform):
             URL = self.absolute_url(),
             text = self.getText(),
             image = image,
+            autore = self.getAutore(),
             # video = self.getRawVideo().strip(),
         )
 
