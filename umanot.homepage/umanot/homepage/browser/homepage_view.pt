@@ -17,7 +17,7 @@
           <tal:loop repeat="item view/slides">
             <div class="item">
               <div id="slide01" class="slideItem" tal:attributes="id string:slide0${repeat/item/number}">
-                <div class="introText">
+                <div class="introText" style="width: 100%">
                   <h1 class="heroTitle">Uman<span>ot</span></h1>
 
                   <h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>
