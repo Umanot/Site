@@ -14,44 +14,58 @@
       <section id="intro-section">
 
         <div class="owl-carousel">
-          <div class="item">
-            <div id="slide01" class="slideItem">
-              <div class="introText">
-                <h1 class="heroTitle">Uman<span>ot</span></h1>
+          <tal:loop repeat="item view/slides">
+            <div class="item">
+              <div id="slide01" class="slideItem" tal:attributes="id string:slide0${repeat/item/number}">
+                <div class="introText">
+                  <h1 class="heroTitle">Uman<span>ot</span></h1>
 
-                <h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>
+                  <h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>
 
-                <h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>
+                  <h3 class="heroDescr" tal:content="structure item/text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>
+                </div>
+                <div class="overlay"></div>
               </div>
-              <div class="overlay"></div>
             </div>
-          </div>
+          </tal:loop>
+          <!--?<div class="item">-->
+            <!--?<div id="slide01" class="slideItem">-->
+              <!--?<div class="introText">-->
+                <!--?<h1 class="heroTitle">Uman<span>ot</span></h1>-->
 
-          <div class="item">
-            <div id="slide02" class="slideItem">
-              <div class="introText">
-                <h1 class="heroTitle">Uman<span>ot</span></h1>
+                <!--?<h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>-->
 
-                <h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>
+                <!--?<h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>-->
+              <!--?</div>-->
+              <!--?<div class="overlay"></div>-->
+            <!--?</div>-->
+          <!--?</div>-->
 
-                <h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>
-              </div>
-              <div class="overlay"></div>
-            </div>
-          </div>
+          <!--?<div class="item">-->
+            <!--?<div id="slide02" class="slideItem">-->
+              <!--?<div class="introText">-->
+                <!--?<h1 class="heroTitle">Uman<span>ot</span></h1>-->
 
-          <div class="item">
-            <div id="slide03" class="slideItem">
-              <div class="introText">
-                <h1 class="heroTitle">Uman<span>ot</span></h1>
+                <!--?<h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>-->
 
-                <h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>
+                <!--?<h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>-->
+              <!--?</div>-->
+              <!--?<div class="overlay"></div>-->
+            <!--?</div>-->
+          <!--?</div>-->
 
-                <h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>
-              </div>
-              <div class="overlay"></div>
-            </div>
-          </div>
+          <!--?<div class="item">-->
+            <!--?<div id="slide03" class="slideItem">-->
+              <!--?<div class="introText">-->
+                <!--?<h1 class="heroTitle">Uman<span>ot</span></h1>-->
+
+                <!--?<h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>-->
+
+                <!--?<h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>-->
+              <!--?</div>-->
+              <!--?<div class="overlay"></div>-->
+            <!--?</div>-->
+          <!--?</div>-->
 
         </div>
 
@@ -125,6 +139,7 @@
               <div tal:attributes="id string:mt0${repeat/item/number}" class="mosaicTile">
                 <div class="mosaicTileInner">
                   <h2 tal:content="item/title"></h2>
+
                   <p tal:content="item/description"></p>
                   <a class="ghostButton ghostButtonWhite" tal:condition="item/URL" tal:attributes="href item/URL">Scopri di più</a>
                 </div>
