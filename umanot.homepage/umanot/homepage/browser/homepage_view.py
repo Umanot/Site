@@ -66,6 +66,7 @@ class HomepageView(BrowserView):
         for brain in brains:
             obj = brain.getObject()
             info = obj.getInfo()
+            results.append(info)
 
         return results
 
