@@ -44,7 +44,6 @@ class HomepageView(BrowserView):
 
     @property
     def slides(self):
-        import pdb; pdb.set_trace()
         folders = self.portal_catalog(
             portal_type = "Folder",
             object_provides = IHomepageSlides.__identifier__
