@@ -9,6 +9,7 @@ class IThemeSpecific(IDefaultPloneLayer):
        (in site/viewlets/configure.zcml).
     """
 
+
 class IHomepageServices(Interface):
     """Marker interface"""
 
@@ -16,5 +17,10 @@ class IHomepageServices(Interface):
 class IHomepageFeatures(Interface):
     """Marker interface"""
 
+
 class IHomepageMosaic(Interface):
+    """Marker interface"""
+
+
+class IHomepageSlides(Interface):
     """Marker interface"""

@@ -1,7 +1,7 @@
 import itertools
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
-from umanot.site.browser.interfaces import IHomepageServices, IHomepageFeatures, IHomepageMosaic
+from umanot.site.browser.interfaces import IHomepageServices, IHomepageFeatures, IHomepageMosaic, IHomepageSlides
 from zope.interface import implements, Interface
 
 
@@ -46,7 +46,7 @@ class HomepageView(BrowserView):
     def slides(self):
         folders = self.portal_catalog(
             portal_type = "Folder",
-            object_provides = IHomepageServices.__identifier__
+            object_provides = IHomepageSlides.__identifier__
         )
 
         if not folders:
@@ -55,7 +55,7 @@ class HomepageView(BrowserView):
         folder = folders[0]
 
         brains = self.portal_catalog(
-            portal_type = "Document",
+            portal_type = "Slide",
             path = folder.getPath(),
             sort_on = 'getObjPositionInParent',
         )
@@ -64,16 +64,7 @@ class HomepageView(BrowserView):
 
         for brain in brains:
             obj = brain.getObject()
-            info = dict(
-                title = brain.Title,
-                description = brain.Description.strip(),
-                text = obj.getText()
-            )
-
-            related = [x for x in obj.getRelatedItems() if x]
-            info['URL'] = related[0].absolute_url() if related else None
-
-            results.append(info)
+            info = obj.getInfo()
 
         return results
 
