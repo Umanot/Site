@@ -224,8 +224,12 @@
     <allow interface=".interfaces.IHomepageFeatures"/>
   </class>
 
-    <class class="Products.ATContentTypes.interface.folder.IATFolder">
+  <class class="Products.ATContentTypes.interface.folder.IATFolder">
     <allow interface=".interfaces.IHomepageMosaic"/>
+  </class>
+
+  <class class="Products.ATContentTypes.interface.folder.IATFolder">
+    <allow interface=".interfaces.IHomepageSlides"/>
   </class>
 
   <!-- Article View  -->
