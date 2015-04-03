@@ -28,45 +28,6 @@
               </div>
             </div>
           </tal:loop>
-          <!--?<div class="item">-->
-            <!--?<div id="slide01" class="slideItem">-->
-              <!--?<div class="introText">-->
-                <!--?<h1 class="heroTitle">Uman<span>ot</span></h1>-->
-
-                <!--?<h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>-->
-
-                <!--?<h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>-->
-              <!--?</div>-->
-              <!--?<div class="overlay"></div>-->
-            <!--?</div>-->
-          <!--?</div>-->
-
-          <!--?<div class="item">-->
-            <!--?<div id="slide02" class="slideItem">-->
-              <!--?<div class="introText">-->
-                <!--?<h1 class="heroTitle">Uman<span>ot</span></h1>-->
-
-                <!--?<h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>-->
-
-                <!--?<h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>-->
-              <!--?</div>-->
-              <!--?<div class="overlay"></div>-->
-            <!--?</div>-->
-          <!--?</div>-->
-
-          <!--?<div class="item">-->
-            <!--?<div id="slide03" class="slideItem">-->
-              <!--?<div class="introText">-->
-                <!--?<h1 class="heroTitle">Uman<span>ot</span></h1>-->
-
-                <!--?<h2 class="heroSubTitle"><span>TRADING</span> FOR LIFE</h2>-->
-
-                <!--?<h3 class="heroDescr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ullam, amet, suscipit, cum, optio eligendi perspiciatis laborum accusamus doloremque incidunt vero sit sunt voluptatum eos ab molestiae dolores in nobis eveniet?</h3>-->
-              <!--?</div>-->
-              <!--?<div class="overlay"></div>-->
-            <!--?</div>-->
-          <!--?</div>-->
-
         </div>
 
       </section>
@@ -80,7 +41,7 @@
 
           <section id="service-section">
             <tal:loop repeat="item view/services">
-              <div class="serviceItem" id="serviceItem01" tal:attributes="id string:serviceItem0${repeat/item/number}">
+              <div class="serviceItem" id="serviceItem01" tal:attributes="id string:serviceItem0${repeat/item/number}" style="min-height: 340px;">
                 <h3 tal:content="item/title">Eveniet, asperiores, reprehenderit, </h3>
 
                 <p tal:condition="item/description" tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>
@@ -90,24 +51,6 @@
               </div>
 
             </tal:loop>
-
-            <!--?<div class="serviceItem" id="serviceItem01">-->
-            <!--?<h3>Eveniet, asperiores, reprehenderit, </h3>-->
-            <!--?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>-->
-            <!--?<a href="#" class="ghostButton ghostButtonWhite ghostButtonLg">Scopri come</a>-->
-            <!--?</div>-->
-
-            <!--?<div class="serviceItem" id="serviceItem02">-->
-            <!--?<h3>Eveniet, asperiores, reprehenderit, </h3>-->
-            <!--?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>-->
-            <!--?<a href="#" class="ghostButton ghostButtonWhite ghostButtonLg">Scopri come</a>-->
-            <!--?</div>-->
-
-            <!--?<div class="serviceItem" id="serviceItem03">-->
-            <!--?<h3>Eveniet, asperiores, reprehenderit, </h3>-->
-            <!--?<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>-->
-            <!--?<a href="#" class="ghostButton ghostButtonWhite ghostButtonLg">Scopri come</a>-->
-            <!--?</div>-->
 
           </section>
 
