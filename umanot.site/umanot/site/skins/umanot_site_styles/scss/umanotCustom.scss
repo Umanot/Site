@@ -511,25 +511,31 @@
 }
 
 #mt01 {
-  width: 66.66666%;
+  width: 33.333333%;
   background: transparent url(var/mt05.jpg) no-repeat center center;
   background-size: cover;
 }
 
 #mt02 {
   width: 33.33333%;
-  background: transparent url(var/mt02.jpg) no-repeat center center;
+  background: transparent url(var/mt03.jpg) no-repeat center center;
   background-size: cover;
 }
 
 #mt03 {
   width: 33.33333%;
-  background: transparent url(var/mt04.jpg) no-repeat center center;
+  background: transparent url(var/mt02.jpg) no-repeat center center;
   background-size: cover;
 }
 
 #mt04 {
-  width: 66.66666%;
+  width: 50%;
+  background: transparent url(var/mt04.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+#mt05 {
+  width: 50%;
   background: transparent url(var/mt01.jpg) no-repeat center center;
   background-size: cover;
 }
