@@ -8,7 +8,7 @@ from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 from Products.Archetypes import atapi
 from Products.CMFCore import permissions
 from umanot.article.config import PROJECTNAME
-from umanot.article.interfaces.article import IPlaceholder
+from umanot.article.interfaces.placeholder import IPlaceholder
 from zope.interface import implements
 
 
