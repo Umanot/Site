@@ -33,12 +33,13 @@ imageField.validators = None
 
 PlaceholderSchema.addField(imageField)
 
-PlaceholderSchema.moveField('text', after='description')
-PlaceholderSchema.moveField('image', after='text')
+PlaceholderSchema.moveField('text', after = 'description')
+PlaceholderSchema.moveField('image', after = 'text')
 
-schemata.finalizeATCTSchema(PlaceholderSchema, folderish=False, moveDiscussion=False)
+schemata.finalizeATCTSchema(PlaceholderSchema, folderish = False, moveDiscussion = False)
 
 PlaceholderSchema['relatedItems'].widget.visible = {'edit': 'visible', 'view': 'visible'}
+
 
 class Placeholder(document.ATDocument, ATCTImageTransform):
     """The product unit content type"""
@@ -53,6 +54,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
     security = ClassSecurityInfo()
 
     security.declareProtected(permissions.View, 'tag')
+
     def tag(self, **kwargs):
         """Generate image tag using the api of the ImageField
         """
@@ -70,7 +72,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
                 scalename = name[len('image_'):]
                 scalename.replace(".jpg", "")
                 if scalename in field.getAvailableSizes(self):
-                    image = field.getScale(self, scale=scalename)
+                    image = field.getScale(self, scale = scalename)
             if image is not None and not isinstance(image, basestring):
                 # image might be None or '' for empty images
                 return image
@@ -84,21 +86,21 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
             if width and height:
                 if mode == 'crop':
                     nu_width, nu_height = self.scale_crop(image.width, image.height, width, height)
-                    image = self.tag(scale=scale, width=nu_width, height=nu_height, css_class=css_class)
+                    image = self.tag(scale = scale, width = nu_width, height = nu_height, css_class = css_class)
             elif scale == "original":
                 image = self.tag()
             else:
-                image = self.tag(scale=scale)
+                image = self.tag(scale = scale)
 
         info = dict(
             title = self.Title(),
             description = self.Description(),
             URL = self.absolute_url(),
             image = image,
+            autore = '',
         )
 
         return info
-
 
 
 atapi.registerType(Placeholder, PROJECTNAME)
