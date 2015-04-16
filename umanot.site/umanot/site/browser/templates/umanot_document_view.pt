@@ -1,7 +1,14 @@
 <html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.store">
 
   <head>    
+      
+    <metal:js fill-slot="javascript_head_slot">
+    
+      <!-- Go to www.addthis.com/dashboard to customize your tools -->
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552f91fa389479f4" async="async"></script>
 
+    
+    </metal:js>
 
   </head>
   <body>
@@ -22,8 +29,10 @@
       
         <div id="umanot-document-view">
         
-
-
+          <!-- Go to www.addthis.com/dashboard to customize your tools -->
+          <div class="addthis_sharing_toolbox"></div>
+          
+          
         </div> <!-- umano-document-view -->
         
       </tal:main-macro>
