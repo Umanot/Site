@@ -662,15 +662,13 @@
   background-size: cover;  
 }
 
-
-
 /* VIODE FOLDER */
 .videoPop {margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;}
-.videoPop figure {
+.videoPop figure a {
   position: relative;
 }
 
-.videoPop figure:after {
+.videoPop figure a:after {
   background: transparent url(play_overlay.png) no-repeat center center;
   content: " ";
   position: absolute;
