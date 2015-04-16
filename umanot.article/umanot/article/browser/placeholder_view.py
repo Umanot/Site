@@ -2,16 +2,16 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from zope.interface import implements, Interface
 
-class IArticleView(Interface):
+class IPlaceholderView(Interface):
     """
-    Article view interface
+    Placeholder view interface
     """
 
-class ArticleView(BrowserView):
+class PlaceholderView(BrowserView):
     """
-    Article browser view
+    Placeholder browser view
     """
-    implements(IArticleView)
+    implements(IPlaceholderView)
 
     def __init__(self, context, request):
         self.context = context

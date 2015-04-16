@@ -13,6 +13,14 @@
     permission="zope2.View"
     />
 
+    <browser:page
+    for="..interfaces.placeholder.IPlaceholder"
+    name="article_view"
+    class=".placeholder_view.PlaceholderView"
+    template="article_view.pt"
+    permission="zope2.View"
+    />
+
   <browser:page
     for="..interfaces.video.IVideo"
     name="video_view"
