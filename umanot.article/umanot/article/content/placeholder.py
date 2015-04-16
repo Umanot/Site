@@ -39,8 +39,8 @@ PlaceholderSchema.moveField('image', after = 'text')
 
 schemata.finalizeATCTSchema(PlaceholderSchema, folderish = False, moveDiscussion = False)
 
+PlaceholderSchema['text'].widget.visible = {'edit': 'hidden', 'view': 'hidden'}
 PlaceholderSchema['relatedItems'].widget.visible = {'edit': 'visible', 'view': 'visible'}
-
 
 class Placeholder(document.ATDocument, ATCTImageTransform):
     """The product unit content type"""
