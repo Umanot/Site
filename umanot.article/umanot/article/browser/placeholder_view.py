@@ -26,5 +26,9 @@ class ArticleView(BrowserView):
         return self.context.Title()
 
     @property
+    def description(self):
+        return self.context.Description()
+
+    @property
     def info(self):
         return self.context.getInfo(scale="preview")
