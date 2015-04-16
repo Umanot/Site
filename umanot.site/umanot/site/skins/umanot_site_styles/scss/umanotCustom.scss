@@ -663,7 +663,7 @@
 }
 
 /* VIODE FOLDER */
-.videoPop {margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd;}
+.videoPop {margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #ddd; min-height: 480px;}
 .videoPop figure a {
   position: relative;
   display: block;
@@ -694,7 +694,7 @@
 }
 
 #content .videoPop p {
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* PARTNERS */
