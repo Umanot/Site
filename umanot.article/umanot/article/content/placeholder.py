@@ -96,6 +96,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
             title = self.Title(),
             description = self.Description(),
             URL = self.absolute_url(),
+            text = '',
             image = image,
             autore = '',
         )
