@@ -41,7 +41,7 @@
 
           <section id="service-section">
             <tal:loop repeat="item view/services">
-              <div class="serviceItem" id="serviceItem01" tal:attributes="id string:serviceItem0${repeat/item/number}" style="min-height: 340px;">
+              <div class="serviceItem" id="serviceItem01" tal:attributes="id string:serviceItem0${repeat/item/number}">
                 <h3 tal:content="item/title">Eveniet, asperiores, reprehenderit, </h3>
 
                 <p tal:condition="item/description" tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>

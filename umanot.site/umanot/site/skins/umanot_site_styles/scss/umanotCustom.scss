@@ -389,8 +389,9 @@
   padding: 3%;
   width: 33.33333%;
   float: left;
-  min-height: 200px;
+  min-height: 300px;
   color: #fff;
+  position: relative;
 }
 
 #content .serviceItem p {color: #fff;}
@@ -399,6 +400,12 @@
   text-transform: uppercase;
   font-weight: 900;
   font-size: 15px;
+  margin-top: 0;
+}
+
+.serviceItem .ghostButton {
+  position: absolute;
+  bottom: 30px;
 }
 
 #serviceItem01 {background-color: $colorLeft;}
@@ -411,7 +418,10 @@
   .serviceItem {
     float: none;
     width: 100%;
+    min-height: 1px;
   }
+  
+  .serviceItem .ghostButton {position: static;}
 }
 
 /* FEATURE */
