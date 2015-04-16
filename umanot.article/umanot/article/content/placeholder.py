@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Definition of the Article content type
+"""Definition of the Placeholder content type
 """
 from AccessControl import ClassSecurityInfo
 from Products.ATContentTypes.content import document, schemata
@@ -8,11 +8,11 @@ from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 from Products.Archetypes import atapi
 from Products.CMFCore import permissions
 from umanot.article.config import PROJECTNAME
-from umanot.article.interfaces.article import IArticle
+from umanot.article.interfaces.article import IPlaceholder
 from zope.interface import implements
 
 
-ArticleSchema = document.ATDocumentSchema.copy() + atapi.Schema((
+PlaceholderSchema = document.ATDocumentSchema.copy() + atapi.Schema((
     atapi.StringField(
         name = 'clab_uid',
         storage = atapi.AnnotationStorage(),
@@ -22,30 +22,30 @@ ArticleSchema = document.ATDocumentSchema.copy() + atapi.Schema((
     )
 ))
 
-ArticleSchema['title'].storage = atapi.AnnotationStorage()
-ArticleSchema['title'].required = True
-ArticleSchema['description'].storage = atapi.AnnotationStorage()
+PlaceholderSchema['title'].storage = atapi.AnnotationStorage()
+PlaceholderSchema['title'].required = True
+PlaceholderSchema['description'].storage = atapi.AnnotationStorage()
 
 imageField = ATImageSchema['image'].copy()
 imageField.required = False
 imageField.primary = False
 imageField.validators = None
 
-ArticleSchema.addField(imageField)
+PlaceholderSchema.addField(imageField)
 
-ArticleSchema.moveField('text', after='description')
-ArticleSchema.moveField('image', after='text')
+PlaceholderSchema.moveField('text', after='description')
+PlaceholderSchema.moveField('image', after='text')
 
-schemata.finalizeATCTSchema(ArticleSchema, folderish=False, moveDiscussion=False)
+schemata.finalizeATCTSchema(PlaceholderSchema, folderish=False, moveDiscussion=False)
 
-ArticleSchema['relatedItems'].widget.visible = {'edit': 'visible', 'view': 'visible'}
+PlaceholderSchema['relatedItems'].widget.visible = {'edit': 'visible', 'view': 'visible'}
 
-class Article(document.ATDocument, ATCTImageTransform):
+class Placeholder(document.ATDocument, ATCTImageTransform):
     """The product unit content type"""
-    implements(IArticle)
+    implements(IPlaceholder)
 
-    meta_type = "Article"
-    schema = ArticleSchema
+    meta_type = "Placeholder"
+    schema = PlaceholderSchema
 
     title = atapi.ATFieldProperty('title')
     description = atapi.ATFieldProperty('description')
@@ -101,4 +101,4 @@ class Article(document.ATDocument, ATCTImageTransform):
 
 
 
-atapi.registerType(Article, PROJECTNAME)
+atapi.registerType(Placeholder, PROJECTNAME)
