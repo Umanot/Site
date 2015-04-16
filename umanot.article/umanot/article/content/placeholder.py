@@ -7,6 +7,7 @@ from Products.ATContentTypes.content.image import ATImageSchema
 from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 from Products.Archetypes import atapi
 from Products.CMFCore import permissions
+import requests
 from umanot.article.config import PROJECTNAME
 from umanot.article.interfaces.placeholder import IPlaceholder
 from zope.interface import implements
@@ -82,6 +83,12 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
     def getInfo(self, scale='large', width=None, height=None, mode='crop', css_class=None):
         image = self.getImage()
 
+        url = 'http://www.complexlab.it/api'
+        params = {'page': 'article', 'uid': self.getClab_uid()}
+        remote_data = requests.get(url, params=params)
+
+        remote_info = remote_data.json()
+
         if image:
             if width and height:
                 if mode == 'crop':
@@ -96,7 +103,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
             title = self.Title(),
             description = self.Description(),
             URL = self.absolute_url(),
-            text = '',
+            text = remote_info['text'],
             image = image,
             autore = '',
         )
