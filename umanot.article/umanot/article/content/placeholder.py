@@ -100,7 +100,8 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
                 image = self.tag(scale = scale)
         else:
             self.plone_log("Syncing image for: %s" % self.absolute_url())
-            self.syncImage(remote_info['URL'])
+            if remote_info['image']:
+                self.syncImage(remote_info['URL'])
 
         info = dict(
             title = self.Title(),
