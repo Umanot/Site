@@ -89,6 +89,8 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
 
         remote_info = remote_data.json()
 
+        import pdb; pdb.set_trace()
+
         if image:
             if width and height:
                 if mode == 'crop':
