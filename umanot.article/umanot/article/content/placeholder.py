@@ -115,6 +115,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
 
     def syncImage(self, url):
         image_url = '%s/image' % url
+        self.plone_log(" -> %s" % image_url)
         if image_url:
             image_response = requests.get(image_url, stream=True)
             image_response.raw.decode_content = True
