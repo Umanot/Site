@@ -19,15 +19,17 @@
 
     <metal:phil fill-slot="main">
       <div id="partner-folder-view">
-<h5 style="padding-bottom: 20px; text-align: center"> I Partners di Umanot sono selezionati in ragione di comuni <b>Valori&amp;Obiettivi.</b></h5>
+        <h5 style="padding-bottom: 20px; text-align: center"> I Partners di Umanot sono selezionati in ragione di comuni <b>Valori&amp;Obiettivi.</b></h5>
         <div class="mrow">
           <tal:loop repeat="item view/contents">
             <div class="col-md-6 col-sm-6">
 
               <div class="partnerItem">
-                <figure><a tal:attributes="href item/description">
-                  <tal:image tal:content="structure item/image"></tal:image>
-                </a></figure>
+                <figure>
+                  <a tal:attributes="href item/description">
+                    <tal:image tal:content="structure item/image"></tal:image>
+                  </a>
+                </figure>
                 <h2><a tal:attributes="href item/description" tal:content="item/title">ComplexLab</a></h2>
               </div>
 

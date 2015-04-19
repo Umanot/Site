@@ -40,12 +40,13 @@ imageField.validators = None
 
 ArticleSchema.addField(imageField)
 
-ArticleSchema.moveField('text', after='description')
-ArticleSchema.moveField('image', after='text')
+ArticleSchema.moveField('text', after = 'description')
+ArticleSchema.moveField('image', after = 'text')
 
-schemata.finalizeATCTSchema(ArticleSchema, folderish=False, moveDiscussion=False)
+schemata.finalizeATCTSchema(ArticleSchema, folderish = False, moveDiscussion = False)
 
 ArticleSchema['relatedItems'].widget.visible = {'edit': 'visible', 'view': 'visible'}
+
 
 class Article(folder.ATFolder, ATCTImageTransform):
     """The product unit content type"""
@@ -60,6 +61,7 @@ class Article(folder.ATFolder, ATCTImageTransform):
     security = ClassSecurityInfo()
 
     security.declareProtected(permissions.View, 'tag')
+
     def tag(self, **kwargs):
         """Generate image tag using the api of the ImageField
         """
@@ -77,7 +79,7 @@ class Article(folder.ATFolder, ATCTImageTransform):
                 scalename = name[len('image_'):]
                 scalename.replace(".jpg", "")
                 if scalename in field.getAvailableSizes(self):
-                    image = field.getScale(self, scale=scalename)
+                    image = field.getScale(self, scale = scalename)
             if image is not None and not isinstance(image, basestring):
                 # image might be None or '' for empty images
                 return image
@@ -91,11 +93,11 @@ class Article(folder.ATFolder, ATCTImageTransform):
             if width and height:
                 if mode == 'crop':
                     nu_width, nu_height = self.scale_crop(image.width, image.height, width, height)
-                    image = self.tag(scale=scale, width=nu_width, height=nu_height, css_class=css_class)
+                    image = self.tag(scale = scale, width = nu_width, height = nu_height, css_class = css_class)
             elif scale == "original":
                 image = self.tag()
             else:
-                image = self.tag(scale=scale)
+                image = self.tag(scale = scale)
 
         info = dict(
             title = self.Title(),
@@ -108,5 +110,6 @@ class Article(folder.ATFolder, ATCTImageTransform):
         )
 
         return info
+
 
 atapi.registerType(Article, PROJECTNAME)

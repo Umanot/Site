@@ -98,6 +98,9 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
                 image = self.tag()
             else:
                 image = self.tag(scale = scale)
+        else:
+            self.plone_log("Syncing image for: %s" % self.absolute_url())
+            self.syncImage(remote_info['URL'])
 
         info = dict(
             title = self.Title(),
@@ -109,6 +112,14 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
         )
 
         return info
+
+    def syncImage(self, url):
+        image_url = '%s/image' % url
+        if image_url:
+            image_response = requests.get(image_url, stream=True)
+            image_response.raw.decode_content = True
+            self.setImage(image_response.raw.data)
+            self.plone_log("Image succesfully set for: %s" % self.absolute_url())
 
 
 atapi.registerType(Placeholder, PROJECTNAME)
