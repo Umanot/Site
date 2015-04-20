@@ -7,9 +7,11 @@ from Products.ATContentTypes.content.image import ATImageSchema
 from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 from Products.Archetypes import atapi
 from Products.CMFCore import permissions
+from mediatria.utils.browser.mediatria_utils import IMediatriaUtils
 import requests
 from umanot.article.config import PROJECTNAME
 from umanot.article.interfaces.placeholder import IPlaceholder
+from zope.component import getUtility
 from zope.interface import implements
 
 
@@ -20,6 +22,14 @@ PlaceholderSchema = document.ATDocumentSchema.copy() + atapi.Schema((
         widget = atapi.StringWidget(
             label = u"ID ComplexLab",
         ),
+    ),
+    atapi.DateTimeField(
+        name = 'umanot_date',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.CalendarWidget(
+            label = u"Override data di pubblicaione su CLab",
+            show_hm = False,
+        )
     )
 ))
 
@@ -105,6 +115,11 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
             if remote_info['has_image']:
                 self.syncImage(remote_info['URL'])
 
+        umanot_date = self.getUmanot_date()
+        if umanot_date:
+            mediatria_utils = getUtility(IMediatriaUtils)
+            umanot_date = "%s %s %s" % (umanot_date.strftime('%d'), mediatria_utils.getMonthName(self, umanot_date.month()), umanot_date.strftime('%Y'))
+
         info = dict(
             title = self.Title(),
             description = self.Description(),
@@ -112,7 +127,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
             text = remote_info['text'],
             image = image,
             autore = remote_info['author_fullname'] or remote_info['author'],
-            readable_date = remote_info['effective_readable']
+            readable_date = umanot_date or remote_info['effective_readable']
         )
 
         return info
