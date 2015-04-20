@@ -22,7 +22,7 @@
           </div>
 
           <div class="col-md-4">
-            <div class="footerBlock" tal:define="item view/about">
+            <div class="footerBlock" tal:define="item view/about" tal:condition="item">
               <h6 class="footerTitle">Chi Siamo</h6>
               <p tal:content="item/description"></p>
               <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL" tal:content="item/title">Perché Umanot</a>
