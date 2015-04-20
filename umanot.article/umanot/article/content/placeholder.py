@@ -89,7 +89,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
 
         remote_info = remote_data.json()
 
-        import pdb; pdb.set_trace()
+        #import pdb; pdb.set_trace()
 
         if image:
             if width and height:
@@ -102,8 +102,8 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
                 image = self.tag(scale = scale)
         else:
             self.plone_log("Syncing image for: %s" % self.absolute_url())
-            if remote_info['has_image']:
-                self.syncImage(remote_info['URL'])
+            # if remote_info['has_image']:
+            #     self.syncImage(remote_info['URL'])
 
         info = dict(
             title = self.Title(),
