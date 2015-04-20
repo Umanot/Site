@@ -24,9 +24,8 @@
           <div class="col-md-4">
             <div class="footerBlock">
               <h6 class="footerTitle">Chi Siamo</h6>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, modi fugiat ab temporibus facere molestiae eaque neque at eius harum consequuntur adipisci repellat iste nesciunt perferendis est ducimus doloremque eos!</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium tempora quasi alias. Repellendus, eveniet, omnis. Aliquam, asperiores, laborum ipsum necessitatibus quas modi ipsa illo fugiat repellendus consequatur distinctio alias dignissimos. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-              <a class="ghostButton ghostButtonGray" href="#">Perché Umanot</a>
+              <p tal:content="item/description"></p>
+              <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL" tal:content="item/title">Perché Umanot</a>
             </div>
           </div>
           

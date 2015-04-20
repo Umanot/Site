@@ -24,3 +24,7 @@ class IHomepageMosaic(Interface):
 
 class IHomepageSlides(Interface):
     """Marker interface"""
+
+
+class IAbout(Interface):
+    """Marker interface"""

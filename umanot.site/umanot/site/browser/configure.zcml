@@ -232,6 +232,10 @@
     <allow interface=".interfaces.IHomepageSlides"/>
   </class>
 
+  <class class="Products.ATContentTypes.interface.document.IATDocument">
+    <allow interface=".interfaces.IAbout"/>
+  </class>
+
   <!-- Article View  -->
   <browser:page
     for=".article_view.IArticleView"
