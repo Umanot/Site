@@ -102,8 +102,8 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
                 image = self.tag(scale = scale)
         else:
             self.plone_log("Syncing image for: %s" % self.absolute_url())
-            # if remote_info['has_image']:
-            #     self.syncImage(remote_info['URL'])
+            if remote_info['has_image']:
+                self.syncImage(remote_info['URL'])
 
         info = dict(
             title = self.Title(),
@@ -117,7 +117,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
         return info
 
     def syncImage(self, url):
-        image_url = '%s/image' % url
+        image_url = '%s/leadImage' % url
         self.plone_log(" -> %s" % image_url)
         if image_url:
             image_response = requests.get(image_url, stream=True)
