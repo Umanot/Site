@@ -25,7 +25,21 @@ ArticleSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         widget = atapi.StringWidget(
             label = u"Autore",
         ),
-    )
+    ),
+    atapi.BooleanField(
+        name = 'homepage_featured',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.BooleanWidget(
+            label = u"Manda in homepage"
+        )
+    ),
+    atapi.BooleanField(
+        name = 'featured',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.BooleanWidget(
+            label = u"Primo piano"
+        )
+    ),
 ))
 
 ArticleSchema['title'].storage = atapi.AnnotationStorage()

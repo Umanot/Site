@@ -18,5 +18,13 @@
       handler="umanot.site.setuphandlers.setupVarious">
     <depends name="skins"/>
   </genericsetup:importStep>
+  
+  <genericsetup:importStep
+      name="umanot.site.addCatalogIndexes"
+      title="Umanot - Site Package: catalog indexes import steps"
+      description="Install custom catalog indexes."
+      handler="umanot.site.setuphandlers.addCatalogIndexes">
+    <depends name="skins"/>
+  </genericsetup:importStep>
 
 </configure>

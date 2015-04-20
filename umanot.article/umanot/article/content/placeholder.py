@@ -30,7 +30,21 @@ PlaceholderSchema = document.ATDocumentSchema.copy() + atapi.Schema((
             label = u"Data di pubblicazione su Umanot",
             show_hm = False,
         )
-    )
+    ),
+    atapi.BooleanField(
+        name = 'homepage_featured',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.BooleanWidget(
+            label = u"Manda in homepage"
+        )
+    ),
+    atapi.BooleanField(
+        name = 'featured',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.BooleanWidget(
+            label = u"Primo piano"
+        )
+    ),
 ))
 
 PlaceholderSchema['title'].storage = atapi.AnnotationStorage()
