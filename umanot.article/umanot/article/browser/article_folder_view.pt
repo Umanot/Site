@@ -35,7 +35,7 @@
                 <article class="articleItem">
 
                   <div class="articleInner">
-                    <a class="articleImage" tal:attributes="href item/URL">
+                    <a class="articleImage" tal:condition="item/image" tal:attributes="href item/URL">
                       <tal:image content="structure item/image"></tal:image>
                     </a>
 
