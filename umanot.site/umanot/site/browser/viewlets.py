@@ -1,3 +1,4 @@
+from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.layout.viewlets import common
@@ -7,6 +8,9 @@ from datetime import date
 from plone.app.portlets.portlets import navigation
 
 ## LOGO
+from umanot.site.browser.interfaces import IAbout
+
+
 class LogoViewlet(common.LogoViewlet):
     index = ViewPageTemplateFile('viewlets/logo.pt')
 
@@ -49,6 +53,26 @@ class FooterViewlet(common.FooterViewlet):
     def update(self):
         super(FooterViewlet, self).update()
         self.year = date.today().year
+
+    def about(self):
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog(
+            portal_type = "Document",
+            object_provides = IAbout.__identifier__
+        )
+
+        if not brains:
+            return
+
+        brain = brains[0]
+
+        info = dict(
+            title = brain.Title,
+            description = brain.Description,
+            URL = brain.getURL()
+        )
+
+        return info
         
 ## COLOPHON 
 class ColophonViewlet(ViewletBase):
