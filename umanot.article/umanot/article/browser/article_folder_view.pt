@@ -17,7 +17,7 @@
       <div id="article-folder-headline">
         <div class="gridOverlay"></div>
         <div class="headlineContent">
-          <h1 class="documentFirstHeading">Trading for Life</h1>
+          <h1 class="documentFirstHeading" tal:content="view/title">Trading for Life</h1>
         </div>
       </div>
 
@@ -43,11 +43,10 @@
 
                     <div class="articleByLine">
                       <span tal:condition="item/autore" tal:content="item/autore"></span>
-                        <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
-                        <span tal:content="item/section"></span>
-                        <span>&nbsp;|&nbsp;</span>
-                        <span tal:content="string:26 commenti"></span>
-                      di Nicola Antonucci | Trading for life | 26 commenti
+                      <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
+                      <span tal:content="item/section"></span>
+                      <span>&nbsp;|&nbsp;</span>
+                      <span tal:content="string:26 commenti"></span>
                     </div>
 
                     <div class="articledescription">
