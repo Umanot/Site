@@ -42,6 +42,11 @@
                     <h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
 
                     <div class="articleByLine">
+                      <span tal:condition="item/autore" tal:content="item/autore"></span>
+                        <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
+                        <span tal:content="item/section"></span>
+                        <span>&nbsp;|&nbsp;</span>
+                        <span tal:content="string:26 commenti"></span>
                       di Nicola Antonucci | Trading for life | 26 commenti
                     </div>
 
@@ -53,7 +58,7 @@
 
                     <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Leggi</a>
 
-                    <div class="articleData">07/07/2015</div>
+                    <div class="articleData" tal:content="item/readable_date">07/07/2015</div>
 
                   </div>
 

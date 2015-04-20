@@ -2,14 +2,19 @@
 """Definition of the Article content type
 """
 from AccessControl import ClassSecurityInfo
+from DateTime.DateTime import DateTime
 from Products.ATContentTypes.content import folder, schemata
 from Products.ATContentTypes.content.document import ATDocumentSchema
 from Products.ATContentTypes.content.image import ATImageSchema
 from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 from Products.Archetypes import atapi
 from Products.CMFCore import permissions
+from Products.CMFCore.utils import getToolByName
+from mediatria.utils.browser.mediatria_utils import IMediatriaUtils
 from umanot.article.config import PROJECTNAME
 from umanot.article.interfaces.article import IArticle
+from zope.component import getUtility
+from zope.i18nmessageid import MessageFactory
 from zope.interface import implements
 
 
@@ -87,6 +92,10 @@ class Article(folder.ATFolder, ATCTImageTransform):
         return folder.ATFolder.__bobo_traverse__(self, REQUEST, name)
 
     def getInfo(self, scale='large', width=None, height=None, mode='crop', css_class=None):
+        effective = DateTime(self.Date())
+        mediatria_utils = getUtility(IMediatriaUtils)
+        effective_readable = "%s %s %s" % (effective.strftime('%d'), mediatria_utils.getMonthName(self, effective.month()), effective.strftime('%Y'))
+
         image = self.getImage()
 
         if image:
@@ -106,6 +115,7 @@ class Article(folder.ATFolder, ATCTImageTransform):
             text = self.getText(),
             image = image,
             autore = self.getAutore(),
+            readable_date = effective_readable,
             # video = self.getRawVideo().strip(),
         )
 

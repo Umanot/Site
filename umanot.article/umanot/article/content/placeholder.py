@@ -111,7 +111,8 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
             URL = self.absolute_url(),
             text = remote_info['text'],
             image = image,
-            autore = '',
+            autore = remote_info['author_fullname'] or remote_info['author'],
+            readable_date = remote_info['effective_readable']
         )
 
         return info
