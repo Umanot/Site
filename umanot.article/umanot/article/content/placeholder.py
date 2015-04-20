@@ -27,7 +27,7 @@ PlaceholderSchema = document.ATDocumentSchema.copy() + atapi.Schema((
         name = 'umanot_date',
         storage = atapi.AnnotationStorage(),
         widget = atapi.CalendarWidget(
-            label = u"Override data di pubblicaione su CLab",
+            label = u"Data di pubblicazione su Umanot",
             show_hm = False,
         )
     )
