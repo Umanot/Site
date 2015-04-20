@@ -13,7 +13,7 @@
     permission="zope2.View"
     />
 
-    <browser:page
+  <browser:page
     for="..interfaces.placeholder.IPlaceholder"
     name="article_view"
     class=".placeholder_view.PlaceholderView"
@@ -26,6 +26,14 @@
     name="video_view"
     class=".video_view.VideoView"
     template="video_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for=".article_folder_view.IArticleFolderView"
+    name="folder_listing"
+    class=".article_folder_view.ArticleFolderView"
+    template="article_folder_view.pt"
     permission="zope2.View"
     />
 
