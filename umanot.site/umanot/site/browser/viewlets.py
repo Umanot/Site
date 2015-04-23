@@ -90,7 +90,8 @@ class FooterViewlet(common.FooterViewlet):
             portal_type = ["Article", "Placeholder"],
             path = folder.getPath(),
             sort_on = 'Date',
-            sort_order = 'reverse'
+            sort_order = 'reverse',
+            sort_limit = 3
         )
 
         results = []
