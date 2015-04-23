@@ -111,8 +111,8 @@
                       <span tal:condition="item/autore" tal:content="item/autore"></span>
                       <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
                       <span tal:content="item/section"></span>
-                      <span>&nbsp;|&nbsp;</span>
-                      <span tal:content="string:26 commenti"></span>
+                      <!--?<span>&nbsp;|&nbsp;</span>-->
+                      <!--?<span tal:content="string:26 commenti"></span>-->
                     </div>
 
                     <div class="articledescription">
