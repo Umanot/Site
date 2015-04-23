@@ -1,67 +1,70 @@
 <div class="leaderboardWrapper">
-    <div class="container-fluid">
-      <div class="mrow">
-          <div class="col-md-12">
-            <div class="leaderboard"></div>
-          </div>
+  <div class="container-fluid">
+    <div class="mrow">
+      <div class="col-md-12">
+        <div class="leaderboard"></div>
       </div>
-    </div>  
+    </div>
+  </div>
 </div>
 
 <footer id="footer">
   <section id="section-footer">
     <div class="container-fluid">
       <div class="mrow">
-          <div class="col-md-4">
-            <h6 class="footerTitle">Intelligenza connettiva</h6>
-            <ul class="footerList">
-              <tal:loop repeat="item view/articles">
-                <li><a tal:attributes="href item/URL"><span tal:content="item/title"></span><span class="text-muted" tal:content="item/readable_date"></span></a></li>
-              </tal:loop>
-            </ul>
+        <div class="col-md-4">
+          <h6 class="footerTitle">Intelligenza connettiva</h6>
+          <ul class="footerList">
+            <tal:loop repeat="item view/articles">
+              <li><a tal:attributes="href item/URL"><span tal:content="item/title"></span><span class="text-muted" tal:content="item/readable_date"></span></a></li>
+            </tal:loop>
+          </ul>
+        </div>
+
+        <div class="col-md-4">
+          <div class="footerBlock" tal:define="item view/about" tal:condition="item">
+            <h6 class="footerTitle">Chi Siamo</h6>
+
+            <p tal:content="item/description"></p>
+            <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL" tal:content="item/title">Perché Umanot</a>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div id="contact-block">
+
+            <h6 class="footerTitle">Contattaci</h6>
+            <address>
+              <strong>Umanot Srl</strong><br>
+              sede legale: via del Caravaggio, 5 - 20144 Milano, Italy<br>
+              P.I. / C.F.: 08862510966<br>
+              Numero REA MI - 2054423
+            </address>
+
+            <address>
+              <a href="mailto:staff@umanot.com">staff@umanot.com</a>
+            </address>
+
+            <div class="socialList" tal:condition="nothing">
+              <a href="#"><i class="fa fa-facebook"></i></a>
+              <a href="#"><i class="fa fa-twitter"></i></a>
+              <a href="#"><i class="fa fa-linkedin"></i></a>
+              <a href="#"><i class="fa fa-rss"></i></a>
+            </div>
+
+            <a id="clabLogo" href="#">
+              <span>Powered by</span>
+              <img src="++resource++umanot.site.images/clab_logo.svg"/>
+            </a>
+
           </div>
 
-          <div class="col-md-4">
-            <div class="footerBlock" tal:define="item view/about" tal:condition="item">
-              <h6 class="footerTitle">Chi Siamo</h6>
-              <p tal:content="item/description"></p>
-              <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL" tal:content="item/title">Perché Umanot</a>
-            </div>
-          </div>
-          
-          <div class="col-md-4">
-            <div id="contact-block">
-              
-              <h6 class="footerTitle">Contattaci</h6>
-              <address>
-                <strong>Umanot Srl</strong><br>
-                sede legale: via del Caravaggio, 5 - 20144 Milano, Italy<br>
-                P.I. / C.F.:  08862510966<br>
-                Numero REA MI - 2054423
-              </address>
-              
-              <address>
-                <a href="mailto:staff@umanot.com">staff@umanot.com</a>
-              </address>
-              
-              <div class="socialList" tal:condition="nothing">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-linkedin"></i></a>
-                <a href="#"><i class="fa fa-rss"></i></a>
-              </div>
-              
-              <a id="clabLogo" href="#">
-                <span>Powered by</span>
-                <img src="++resource++umanot.site.images/clab_logo.svg" />
-              </a>
-            
-            </div>
-            
-          </div>
-          
+        </div>
+
       </div>
-      <div class="mrow"><div class="col-md-12"><span>Marchi nazionali registrati: Umanot®, Finanza Scientifica®, Analisi Fisica®, Trader Scientifico®, ComplexTrader®.</span></div></div>
+      <div class="mrow">
+        <div class="col-md-12"><span>Marchi nazionali registrati: Umanot®, Finanza Scientifica®, Analisi Fisica®, Trader Scientifico®, ComplexTrader®.</span></div>
+      </div>
 
     </div>
 
@@ -78,6 +81,6 @@
       </div>
     </div>
   </section>
-  
-    <div id="backtotop"><i class="fa fa-angle-up"></i></div>
+
+  <div id="backtotop"><i class="fa fa-angle-up"></i></div>
 </footer>
