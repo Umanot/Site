@@ -89,6 +89,8 @@ class HomepageView(BrowserView):
 
             results.append(info)
 
+        results.sort(lambda x,y: cmp(y['sortable_date'], x['sortable_date']))
+
         return results
 
     @property

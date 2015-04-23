@@ -130,6 +130,7 @@ class Article(folder.ATFolder, ATCTImageTransform):
             image = image,
             autore = self.getAutore(),
             readable_date = effective_readable,
+            sortable_date = effective.asdatetime().isoformat()
             # video = self.getRawVideo().strip(),
         )
 

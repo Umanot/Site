@@ -128,6 +128,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
                 self.syncImage(remote_info['URL'])
 
         umanot_date = self.getUmanot_date()
+        sortable_date = umanot_date.asdatetime().isoformat() if umanot_date else remote_info['effective_sortable']
         if umanot_date:
             mediatria_utils = getUtility(IMediatriaUtils)
             umanot_date = "%s %s %s" % (umanot_date.strftime('%d'), mediatria_utils.getMonthName(self, umanot_date.month()), umanot_date.strftime('%Y'))
@@ -139,7 +140,8 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
             text = remote_info['text'],
             image = image,
             autore = remote_info['author_fullname'] or remote_info['author'],
-            readable_date = umanot_date or remote_info['effective_readable']
+            readable_date = umanot_date or remote_info['effective_readable'],
+            sortable_date = sortable_date
         )
 
         return info
