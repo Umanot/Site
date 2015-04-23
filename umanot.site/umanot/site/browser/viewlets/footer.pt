@@ -16,7 +16,7 @@
             <h6 class="footerTitle">Intelligenza connettiva</h6>
             <ul class="footerList">
               <tal:loop repeat="item view/articles">
-                <li><a tal:attributes="href item/URL"><span tal:content="item/title"></span><span class="text-muted" tal:content="item/effective_readable"></span></a></li>
+                <li><a tal:attributes="href item/URL"><span tal:content="item/title"></span><span class="text-muted" tal:content="item/readable_date"></span></a></li>
               </tal:loop>
             </ul>
           </div>
