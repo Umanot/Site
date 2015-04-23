@@ -105,7 +105,7 @@
                       <tal:image content="structure item/image"></tal:image>
                     </a>
 
-                    <h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
+                    <a tal:attributes="href item/URL"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
 
                     <div class="articleByLine">
                       <span tal:condition="item/autore" tal:content="item/autore"></span>
