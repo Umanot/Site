@@ -44,9 +44,10 @@
               <div class="serviceItem" id="serviceItem01" tal:attributes="id string:serviceItem0${repeat/item/number}">
                 <h3 tal:content="item/title">Eveniet, asperiores, reprehenderit, </h3>
 
+                <p tal:replace="structure item/text"></p>
+
                 <p tal:condition="item/description" tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>
 
-                <p tal:condition="not:item/description" tal:replace="structure item/text"></p>
                 <a tal:condition="item/URL" class="ghostButton ghostButtonWhite ghostButtonLg" tal:attributes="href item/URL">Scopri come</a>
               </div>
 
