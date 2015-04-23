@@ -69,8 +69,11 @@
   <section id="section-colophon">
     <div class="container-fluid">
       <div class="mrow">
-        <div class="col-md-12">
+        <div class="col-md-4">
           <p>&copy 2015 UMANOT. All Rights Reserved.</p>
+        </div>
+        <div class="col-md-8">
+          <p><a>Informativa sulla privacy</a>&mdash;<a>Disclaimer</a>&mdash;<a>Condizioni di vendita</a>&mdash;<a>Cookies</a></p>
         </div>
       </div>
     </div>
