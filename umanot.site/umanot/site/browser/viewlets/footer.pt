@@ -13,11 +13,11 @@
     <div class="container-fluid">
       <div class="mrow">
           <div class="col-md-4">
-            <h6 class="footerTitle">Intelligenza collettiva</h6>
+            <h6 class="footerTitle">Intelligenza connettiva</h6>
             <ul class="footerList">
-              <li><a href="#">Lorem ipsum dolor sit amet, magnam, molestiae, aliquid<span class="text-muted">07/07/2015</span></a></li>
-              <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit accusantium, magnam, molestiae, aliquid<span class="text-muted">07/07/2015</span></a></li>
-              <li><a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit accusantium, magnam, molestiae, aliquid lorem ipsum dolor sit amet, consectetur adipisicing elit.<span class="text-muted">07/07/2015</span></a></li>
+              <tal:loop repeat="item view/articles">
+                <li><a tal:attributes="href item/URL"><span tal:content="item/title"></span><span class="text-muted" tal:content="item/effective_readable"></span></a></li>
+              </tal:loop>
             </ul>
           </div>
 

@@ -232,6 +232,10 @@
     <allow interface=".interfaces.IHomepageSlides"/>
   </class>
 
+  <class class="Products.ATContentTypes.interface.folder.IATFolder">
+    <allow interface=".interfaces.IIntelligenzaConnettiva"/>
+  </class>
+
   <class class="Products.ATContentTypes.interface.document.IATDocument">
     <allow interface=".interfaces.IAbout"/>
   </class>

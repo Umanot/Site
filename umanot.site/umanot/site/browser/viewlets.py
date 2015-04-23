@@ -8,7 +8,7 @@ from datetime import date
 from plone.app.portlets.portlets import navigation
 
 ## LOGO
-from umanot.site.browser.interfaces import IAbout
+from umanot.site.browser.interfaces import IAbout, IIntelligenzaConnettiva
 
 
 class LogoViewlet(common.LogoViewlet):
@@ -73,6 +73,35 @@ class FooterViewlet(common.FooterViewlet):
         )
 
         return info
+
+    def articles(self):
+        catalog = getToolByName(self.context, 'portal_catalog')
+        folders = catalog(
+            portal_type = "Folder",
+            object_provides = IIntelligenzaConnettiva.__identifier__
+        )
+
+        if not folders:
+            return
+
+        folder = folders[0]
+
+        brains = catalog(
+            portal_type = ["Article", "Placeholder"],
+            path = folder.getPath(),
+            sort_on = 'Date',
+            sort_order = 'reverse'
+        )
+
+        results = []
+
+        for brain in brains:
+            obj = brain.getObject()
+            info = obj.getInfo()
+
+            results.append(info)
+
+        return results
         
 ## COLOPHON 
 class ColophonViewlet(ViewletBase):
