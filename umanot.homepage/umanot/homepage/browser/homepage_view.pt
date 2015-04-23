@@ -97,209 +97,38 @@
             <h2>Per diventare un Trader Scientifico<sup>&reg;</sup></h2>
             <div class="isotope">
 
-              <article class="articleItem">
+              <tal:loop tal:repeat="item view/articles">
+                <article class="articleItem">
 
-                <div class="articleInner">
-                  <a href="#" class="articleImage">
-                    <img src="var/img01.jpg"/>
-                  </a>
+                  <div class="articleInner">
+                    <a class="articleImage" tal:condition="item/image" tal:attributes="href item/URL">
+                      <tal:image content="structure item/image"></tal:image>
+                    </a>
 
-                  <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
+                    <h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
 
-                  <div class="articleByLine">
-                    di Nicola Antonucci | Trading for life | 26 commenti
+                    <div class="articleByLine">
+                      <span tal:condition="item/autore" tal:content="item/autore"></span>
+                      <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
+                      <span tal:content="item/section"></span>
+                      <span>&nbsp;|&nbsp;</span>
+                      <span tal:content="string:26 commenti"></span>
+                    </div>
+
+                    <div class="articledescription">
+                      <p tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni
+                        consectetur repellendus odit
+                        culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                    </div>
+
+                    <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Leggi</a>
+
+                    <div class="articleData" tal:content="item/readable_date">07/07/2015</div>
+
                   </div>
 
-                  <div class="articledescription">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit
-                      culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
-                  </div>
-
-                  <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
-
-                  <div class="articleData">07/07/2015</div>
-
-                </div>
-
-              </article>
-
-              <article class="articleItem">
-
-                <div class="articleInner">
-                  <a href="#" class="articleImage">
-                    <img src="var/img02.jpg"/>
-                  </a>
-
-                  <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-
-                  <div class="articleByLine">
-                    di Nicola Antonucci | Trading for life | 26 commenti
-                  </div>
-
-                  <div class="articledescription">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto</p>
-                  </div>
-
-                  <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
-
-                  <div class="articleData">07/07/2015</div>
-
-                </div>
-
-              </article>
-
-              <article class="articleItem">
-
-                <div class="articleInner">
-                  <a href="#" class="articleImage">
-                    <img src="var/img03.jpg"/>
-                  </a>
-
-                  <h3 class="articleTitle">Magni consectetur repellendus odit culpa harum iure velit qui.</h3>
-
-                  <div class="articleByLine">
-                    di Nicola Antonucci | Trading for life | 26 commenti
-                  </div>
-
-                  <div class="articledescription">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto.</p>
-                  </div>
-
-                  <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
-
-                  <div class="articleData">07/07/2015</div>
-
-                </div>
-
-              </article>
-
-              <article class="articleItem">
-
-                <div class="articleInner">
-                  <a href="#" class="articleImage">
-                    <img src="var/img04.jpg"/>
-                  </a>
-
-                  <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
-
-                  <div class="articleByLine">
-                    di Nicola Antonucci | Trading for life | 26 commenti
-                  </div>
-
-                  <div class="articledescription">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit
-                      culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
-                  </div>
-
-                  <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
-
-                  <div class="articleData">07/07/2015</div>
-
-                </div>
-
-              </article>
-
-              <article class="articleItem">
-
-                <div class="articleInner">
-                  <a href="#" class="articleImage">
-                    <img src="var/img05.jpg"/>
-                  </a>
-
-                  <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
-
-                  <div class="articleByLine">
-                    di Nicola Antonucci | Trading for life | 26 commenti
-                  </div>
-
-                  <div class="articledescription">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit
-                      culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
-                  </div>
-
-                  <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
-
-                  <div class="articleData">07/07/2015</div>
-
-                </div>
-
-              </article>
-
-              <article class="articleItem">
-
-                <div class="articleInner">
-                  <a href="#" class="articleImage">
-                    <img src="var/img06.jpg"/>
-                  </a>
-
-                  <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-
-                  <div class="articleByLine">
-                    di Nicola Antonucci | Trading for life | 26 commenti
-                  </div>
-
-                  <div class="articledescription">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto</p>
-                  </div>
-
-                  <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
-
-                  <div class="articleData">07/07/2015</div>
-
-                </div>
-
-              </article>
-
-              <article class="articleItem">
-
-                <div class="articleInner">
-                  <a href="#" class="articleImage">
-                    <img src="var/img07.jpg"/>
-                  </a>
-
-                  <h3 class="articleTitle">Magni consectetur repellendus odit culpa harum iure velit qui.</h3>
-
-                  <div class="articleByLine">
-                    di Nicola Antonucci | Trading for life | 26 commenti
-                  </div>
-
-                  <div class="articledescription">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto.</p>
-                  </div>
-
-                  <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
-
-                  <div class="articleData">07/07/2015</div>
-
-                </div>
-
-              </article>
-
-              <article class="articleItem">
-
-                <div class="articleInner">
-                  <a href="#" class="articleImage">
-                    <img src="var/img08.jpg"/>
-                  </a>
-
-                  <h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
-
-                  <div class="articleByLine">
-                    di Nicola Antonucci | Trading for life | 26 commenti
-                  </div>
-
-                  <div class="articledescription">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit
-                      culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
-                  </div>
-
-                  <a href="#" class="ghostButton ghostButtonGray">Leggi</a>
-
-                  <div class="articleData">07/07/2015</div>
-
-                </div>
-
-              </article>
+                </article>
+              </tal:loop>
 
 
             </div>

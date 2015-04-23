@@ -72,35 +72,24 @@ class HomepageView(BrowserView):
     @property
     def articles(self):
         brains = self.portal_catalog(
-            portal_type = "Article",
+            portal_type = ["Article", "Placeholder"],
             sort_on = 'Date',
             sort_order = 'reverse',
-            sort_limit = 20
+            sort_limit = 20,
+            getHomepage_featured = True
         )
 
-        news = []
-
-        pt = getToolByName(self.context, 'portal_transforms')
+        results = []
 
         for brain in brains:
-            description = brain.Description
+            obj = brain.getObject()
+            info = obj.getInfo(scale="preview", width=276, height=-1)
 
-            if not description:
-                text = brain.getObject().getText()
-                description = pt.html_to_text.convertTo('text/plain', text)._data.strip()
+            info['section'] = obj.aq_parent.Title()
 
-            if len(description.split(' ')) > 50:
-                description = ' '.join(description.split(' ')[:50])
-                description += '...'
-            info = dict(
-                title = brain.Title,
-                description = description,
-                URL = brain.getURL(),
-            )
+            results.append(info)
 
-            news.append(info)
-
-        return news
+        return results
 
     @property
     def services(self):
