@@ -40,6 +40,14 @@ ArticleSchema = folder.ATFolderSchema.copy() + atapi.Schema((
             label = u"Primo piano"
         )
     ),
+    atapi.BooleanField(
+        name = 'footer_featured',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.BooleanWidget(
+            label = u"Manda nel footer",
+            descrizione = u"Nota: vale solo per articoli inseriti nella sezione Intelligenza connettiva"
+        )
+    ),
 ))
 
 ArticleSchema['title'].storage = atapi.AnnotationStorage()

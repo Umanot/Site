@@ -23,6 +23,7 @@ def addCatalogIndexes(context):
     wanted = (
         ("getFeatured", "BooleanIndex"),
         ("getHomepage_featured", "BooleanIndex"),
+        ("getFooter_featured", "BooleanIndex"),
     )
 
     indexables = []
