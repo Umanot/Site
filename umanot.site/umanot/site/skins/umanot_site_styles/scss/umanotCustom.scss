@@ -627,7 +627,7 @@
 /* FEATURED */
 
 #featured-article.articleItem {width: 99%;}
-#content #featured-article .articleTitle {font-size: 26px; line-height: 1.2em;}
+#content #featured-article .articleTitle {font-size: 26px; line-height: 1em;}
 #featured-article .articleImage {float: left; padding: 5px 20px 0 0; max-width: 250px;}
 .featuredRight {margin-left: 255px;}
 
@@ -638,8 +638,7 @@
 }
 
 @media (max-width: 800px) {
-    #featured-article .articleImage {max-width: 160px;}
-  .featuredRight {margin-left: 165px;}
+  .featuredRight {margin-left: 0;}
 }
 
 @media (max-width: 600px) {
