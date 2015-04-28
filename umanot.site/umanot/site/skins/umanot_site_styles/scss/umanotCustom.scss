@@ -409,7 +409,7 @@
   bottom: 30px;
 }
 
-.serviceItem p.desc {position: absolute; bottom: 83px;}
+.serviceItem .desc {position: absolute; bottom: 83px; font-weight: bold;}
 
 #serviceItem01 {background-color: $colorLeft;}
 
