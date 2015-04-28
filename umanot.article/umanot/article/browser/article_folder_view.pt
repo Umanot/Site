@@ -40,21 +40,25 @@
                   
                 </a>
 
-                <a href="#"><h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
-
-                <div class="articleByLine">
-                  <span>Nicola Antonucci </span>
-                  <span>&nbsp;|&nbsp;</span>
-                  <span> Trading for life</span>
+                <div class="featuredRight">
+                  
+                  <a href="#"><h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
+  
+                  <div class="articleByLine">
+                    <span>Nicola Antonucci </span>
+                    <span>&nbsp;|&nbsp;</span>
+                    <span> Trading for life</span>
+                  </div>
+  
+                  <div class="articledescription">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                  </div>
+  
+                  <a class="ghostButton ghostButtonGray" href="#">Leggi</a>
+  
+                  <div class="articleData">07/07/2015</div>
+                
                 </div>
-
-                <div class="articledescription">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
-                </div>
-
-                <a class="ghostButton ghostButtonGray" href="#">Leggi</a>
-
-                <div class="articleData">07/07/2015</div>
 
               </div>
 
