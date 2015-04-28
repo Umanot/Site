@@ -396,7 +396,7 @@
 
 #content .serviceItem p {color: #fff;}
 
-.serviceItem .desc {position: absolute; top: 83px;}
+.serviceItem p.desc {position: absolute; top: 83px;}
 
 #content .serviceItem h3 {
   text-transform: uppercase;
@@ -424,7 +424,7 @@
   }
   
   .serviceItem .ghostButton,
-  .serviceItem .desc  {position: static;}
+  .serviceItem p.desc  {position: static;}
 }
 
 /* FEATURE */
