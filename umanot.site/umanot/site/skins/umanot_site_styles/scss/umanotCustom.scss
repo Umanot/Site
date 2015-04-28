@@ -637,13 +637,16 @@
   }
 }
 
+@media (max-width: 800px) {
+    #featured-article .articleImage {max-width: 160px;}
+  .featuredRight {margin-left: 165px;}
+}
+
 @media (max-width: 600px) {
   .articleItem {
     width: 49%;
   }
-  
-  #featured-article .articleImage {max-width: 160px;}
-  .featuredRight {margin-left: 165px;}
+
 }
 
 @media (max-width: 480px) {
