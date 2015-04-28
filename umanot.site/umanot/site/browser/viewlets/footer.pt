@@ -69,14 +69,14 @@
   <section id="section-colophon">
     <div class="container-fluid">
       <div class="mrow">
-        <div class="col-md-12"><p class="text-center">Marchi nazionali registrati: Umanot®, Finanza Scientifica®, Analisi Fisica®, Trader Scientifico®, ComplexTrader®.</p></div>
+          <p><a>Informativa sulla privacy</a>&nbsp;&bull;&nbsp;<a>Disclaimer</a>&nbsp;&bull;&nbsp;<a>Condizioni di vendita</a>&nbsp;&bull;&nbsp;<a>Cookies</a></p>
       </div>
       <div class="mrow">
-        <div class="col-md-4">
+        <div class="col-md-12"><p>Marchi nazionali registrati: Umanot®, Finanza Scientifica®, Analisi Fisica®, Trader Scientifico®, ComplexTrader®.</p></div>
+      </div>
+      <div class="mrow">
+        <div class="col-md-12">
           <p>&copy 2015 UMANOT. All Rights Reserved.</p>
-        </div>
-        <div class="col-md-8">
-          <p class="text-right"><a>Informativa sulla privacy</a>&nbsp;&bull;&nbsp;<a>Disclaimer</a>&nbsp;&bull;&nbsp;<a>Condizioni di vendita</a>&nbsp;&bull;&nbsp;<a>Cookies</a></p>
         </div>
       </div>
     </div>
