@@ -629,7 +629,7 @@
 #featured-article.articleItem {width: 99%;}
 #content #featured-article .articleTitle {font-size: 26px; line-height: 1em;}
 #featured-article .articleImage {float: left; margin: 5px 20px 0 0; max-width: 250px;}
-.featuredRight {margin-left: 255px;}
+.featuredRight {margin-left: 270px;}
 
 @media (max-width: 992px) {
   .articleItem {
@@ -639,7 +639,7 @@
 
 @media (max-width: 700px) {
   .featuredRight {margin-left: 0;}
-  #content #featured-article .articleTitle {font-size: 16px;}
+  #content #featured-article .articleTitle {font-size: 22px;}
 }
 
 @media (max-width: 600px) {
