@@ -637,8 +637,9 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .featuredRight {margin-left: 0;}
+  #content #featured-article .articleTitle {font-size: 16px;}
 }
 
 @media (max-width: 600px) {
