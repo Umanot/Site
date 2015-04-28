@@ -46,7 +46,7 @@
 
                 <p tal:replace="structure item/text"></p>
 
-                <p style="position: absolute; bottom: 82px;" tal:condition="item/description" tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>
+                <p class="desc" tal:condition="item/description" tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet, asperiores, reprehenderit, voluptas quidem omnis ipsa quae accusantium sed perferendis nisi magni consectetur vitae soluta. Id, itaque aliquam aliquid minima voluptates.</p>
 
                 <a tal:condition="item/URL" class="ghostButton ghostButtonWhite ghostButtonLg" tal:attributes="href item/URL">Scopri come</a>
               </div>

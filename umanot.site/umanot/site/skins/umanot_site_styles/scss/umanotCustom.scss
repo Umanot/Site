@@ -396,6 +396,8 @@
 
 #content .serviceItem p {color: #fff;}
 
+.serviceItem .desc {position: absolute; top: 83px;}
+
 #content .serviceItem h3 {
   text-transform: uppercase;
   font-weight: 900;
@@ -421,7 +423,8 @@
     min-height: 1px;
   }
   
-  .serviceItem .ghostButton {position: static;}
+  .serviceItem .ghostButton,
+  .serviceItem .desc  {position: static;}
 }
 
 /* FEATURE */
