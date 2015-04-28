@@ -34,7 +34,11 @@
 
               <div class="articleInner">
                 
-                <a href="#" class="articleImage"></a>
+                <a href="#" class="articleImage">
+        
+                  <img src="http://umanot.mediatria.com/it/trading-for-life/finanza-scientifica-r-le-scienze-servono-al-benessere-del-trader/image_preview" alt="Finanza Scientifica®: le Scienze servono al benessere del Trader?" title="Finanza Scientifica®: le Scienze servono al benessere del Trader?" height="172" width="276">
+                  
+                </a>
 
                 <a href="#"><h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
 
