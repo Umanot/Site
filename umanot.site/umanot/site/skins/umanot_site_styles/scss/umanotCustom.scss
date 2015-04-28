@@ -591,7 +591,7 @@
   margin-bottom: 10px;
 }
 
-.articleImage img {width: 100%;}
+.articleImage img {width: 100%; height: auto;}
 
 #content .articleTitle {
   color: $colorRight;
@@ -641,6 +641,9 @@
   .articleItem {
     width: 49%;
   }
+  
+  #featured-article .articleImage {max-width: 160px;}
+  .featuredRight {margin-left: 165px;}
 }
 
 @media (max-width: 480px) {
