@@ -396,7 +396,6 @@
 
 #content .serviceItem p {color: #fff;}
 
-.serviceItem p.desc {position: absolute; top: 83px;}
 
 #content .serviceItem h3 {
   text-transform: uppercase;
@@ -409,6 +408,8 @@
   position: absolute;
   bottom: 30px;
 }
+
+.serviceItem p.desc {position: absolute; bottom: 83px;}
 
 #serviceItem01 {background-color: $colorLeft;}
 
