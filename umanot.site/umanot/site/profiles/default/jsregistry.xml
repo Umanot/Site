@@ -167,9 +167,9 @@
 
  <javascript authenticated="False" cacheable="True" insert-after="++resource++search.js"
   compression="safe" conditionalcomment="" cookable="True" enabled="True"
-  expression="" id="isotope.min.js" inline="False"/>
+  expression="" id="++resource++umanot.site.javascripts/min/masonry.min.js" inline="False"/>
 
- <javascript authenticated="False" cacheable="True" insert-after="isotope.min.js"
+ <javascript authenticated="False" cacheable="True" insert-after="++resource++umanot.site.javascripts/min/masonry.min.js"
   compression="safe" conditionalcomment="" cookable="True" enabled="True"
   expression="" id="owl.carousel.min.js" inline="False"/>
 
