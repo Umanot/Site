@@ -1,19 +1,6 @@
 <html metal:use-macro="here/fullwidth_main_template/macros/master" i18n:domain="umanot.site">
 
-  <head>
-    <metal:js fill-slot="javascript_head_slot">
-      <script src="++resource++umanot.site.javascripts/min/masonry.min.js"></script>
-      <script>
-        var container = document.querySelector('.isotope');
-        var msnry = new Masonry( container, {
-          // options
-          gutter: 10,
-          itemSelector: '.articleItem'
-        });        
-      </script>
-    </metal:js>
-
-  </head>
+  <head></head>
 
   <body>
 

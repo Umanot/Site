@@ -30,17 +30,14 @@ $(function(){
   window.onload = function () {
       window.scrollTo(0, 0);
   };
-  
-/*
-  var $container = $('.isotope').isotope({
-                      itemSelector: '.articleItem',
-                      layoutMode: 'masonry',
-                      masonry : {
 
-                      }
-                   });
-*/
-  
+  var container = document.querySelector('.isotope');
+  var msnry = new Masonry( container, {
+    // options
+    gutter: 10,
+    itemSelector: '.articleItem'
+  });    
+
   //TOOLTIP
   $('[data-toggle="tooltip"]').tooltip();
   
