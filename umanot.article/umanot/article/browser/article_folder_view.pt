@@ -17,48 +17,41 @@
 
     <metal:phil fill-slot="main">
       <tal:main-macro metal:define-macro="main">
-
         <section id="homepage-content">
-
           <section id="article-section">
-
-            <article id="featured-article" class="articleItem">
-
+            <article id="featured-article" class="articleItem" tal:define="item view/featured">
               <div class="articleInner">
-                
-                <a href="#" class="articleImage">
-        
-                  <img src="http://umanot.mediatria.com/it/trading-for-life/finanza-scientifica-r-le-scienze-servono-al-benessere-del-trader/image_preview" alt="Finanza Scientifica®: le Scienze servono al benessere del Trader?" title="Finanza Scientifica®: le Scienze servono al benessere del Trader?" height="172" width="276">
-                  
+                <a class="articleImage" tal:attributes="href item/URL">
+                  <tal:image content="structure item/image"></tal:image>
                 </a>
 
                 <div class="featuredHeadlineRight">
-                  
-                  <a href="#"><h3 class="articleTitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
-  
+                  <a tal:attributes="href item/URL"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
+
                   <div class="articleByLine">
-                    <span>Nicola Antonucci </span>
-                    <span>&nbsp;|&nbsp;</span>
-                    <span> Trading for life</span>
+                    <span tal:condition="item/autore" tal:content="item/autore"></span>
+                      <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
+                      <span tal:content="item/section"></span>
                   </div>
                 </div>
 
                 <div class="featuredDescriptionRight">
 
                   <div class="articledescription">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                    <p tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit
+                      culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
                   </div>
-  
-                  <a class="ghostButton ghostButtonGray" href="#">Leggi</a>
-  
-                  <div class="articleData">07/07/2015</div>
-                
+
+                  <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Leggi</a>
+
+                  <div class="articleData" tal:content="item/readable_date">07/07/2015</div>
+
                 </div>
 
               </div>
 
             </article>
-          
+
             <div class="isotope">
               <tal:loop tal:repeat="item view/contents">
                 <article class="articleItem">

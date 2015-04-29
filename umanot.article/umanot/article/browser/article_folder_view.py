@@ -53,7 +53,7 @@ class ArticleFolderView(BrowserView):
         return results
 
     @property
-    def top(self):
+    def featured(self):
         brains = self.portal_catalog(
             portal_type = ["Article", "Placeholder"],
             path = '/'.join(self.context.getPhysicalPath()),
