@@ -8,7 +8,7 @@
           <tal:groups repeat="group view/contents">
             <div class="mrow">
               <tal:loop repeat="item group">
-                <div class="col-md-4">
+                <div class="col-md-4" tal:condition="item">
                   <div class="serviceBlock">
                     <h3 tal:content="item/title">Coaching su Analisi Fisica<sup>®</sup> e su Umanot</h3>
                     <p tal:content="item/description">Corsi di formazione sui principi, le metodologie e l'operatività dell'Analisi Fisica e sulle caratteristiche dell'innovativo software di trading automatico Umanot.</p>
