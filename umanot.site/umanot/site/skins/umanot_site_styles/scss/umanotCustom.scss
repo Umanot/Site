@@ -566,6 +566,10 @@
   padding: 30px 50px 50px;
 }
 
+@media(max-width:768px) {
+  #article-section {padding: 10px 10px 10px;}
+}
+
 #content #article-section h2 {
     text-align: center;
     font-weight: bold;
