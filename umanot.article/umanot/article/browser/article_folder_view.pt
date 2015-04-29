@@ -19,38 +19,41 @@
       <tal:main-macro metal:define-macro="main">
         <section id="homepage-content">
           <section id="article-section">
-            <article id="featured-article" class="articleItem" tal:define="item view/featured">
-              <div class="articleInner">
-                <a class="articleImage" tal:attributes="href item/URL">
-                  <tal:image content="structure item/image"></tal:image>
-                </a>
+            <tal:featured tal:define="item view/featured" tal:condition="featured">
+              <article id="featured-article" class="articleItem" tal:attributes="class python:'articleItem' if item['image'] else 'articleItem noImage'">
+                <div class="articleInner">
+                  <a class="articleImage" tal:attributes="href item/URL">
+                    <tal:image content="structure item/image"></tal:image>
+                  </a>
 
-                <div class="featuredHeadlineRight">
-                  <a tal:attributes="href item/URL"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
+                  <div class="featuredHeadlineRight">
+                    <a tal:attributes="href item/URL"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
 
-                  <div class="articleByLine">
-                    <span tal:condition="item/autore" tal:content="item/autore"></span>
+                    <div class="articleByLine">
+                      <span tal:condition="item/autore" tal:content="item/autore"></span>
                       <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
                       <span tal:content="item/section"></span>
-                  </div>
-                </div>
-
-                <div class="featuredDescriptionRight">
-
-                  <div class="articledescription">
-                    <p tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni consectetur repellendus odit
-                      culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                    </div>
                   </div>
 
-                  <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Leggi</a>
+                  <div class="featuredDescriptionRight">
 
-                  <div class="articleData" tal:content="item/readable_date">07/07/2015</div>
+                    <div class="articledescription">
+                      <p tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni
+                        consectetur repellendus odit
+                        culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                    </div>
+
+                    <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Leggi</a>
+
+                    <div class="articleData" tal:content="item/readable_date">07/07/2015</div>
+
+                  </div>
 
                 </div>
 
-              </div>
-
-            </article>
+              </article>
+            </tal:featured>
 
             <div class="isotope">
               <tal:loop tal:repeat="item view/contents">
