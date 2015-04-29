@@ -25,7 +25,35 @@
               </div>
               
             </div>
-            
+
+            <div class="col-md-4">
+              
+              <div class="serviceBlock">
+                <h3>Coaching su Analisi Fisica<sup>®</sup> e su Umanot</h3>
+
+                <p>Corsi di formazione sui principi, le metodologie e l'operatività dell'Analisi Fisica e sulle caratteristiche dell'innovativo software di trading automatico Umanot.</p>
+
+                <p class="desc">Servizio a pagamento</p>
+
+                <a class="ghostButton ghostButtonWhite ghostButtonLg" href="http://umanot.mediatria.com/it/servizi/coaching-su-analisi-fisica-e-su-umanot">Scopri come</a>
+              </div>
+              
+            </div>
+
+            <div class="col-md-4">
+              
+              <div class="serviceBlock">
+                <h3>Coaching su Analisi Fisica<sup>®</sup> e su Umanot</h3>
+
+                <p>Corsi di formazione sui principi, le metodologie e l'operatività dell'Analisi Fisica e sulle caratteristiche dell'innovativo software di trading automatico Umanot.</p>
+
+                <p class="desc">Servizio a pagamento</p>
+
+                <a class="ghostButton ghostButtonWhite ghostButtonLg" href="http://umanot.mediatria.com/it/servizi/coaching-su-analisi-fisica-e-su-umanot">Scopri come</a>
+              </div>
+              
+            </div>
+                        
           </div>
 
         </div> <!-- service-folder--view -->
