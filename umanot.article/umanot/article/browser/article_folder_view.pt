@@ -7,7 +7,7 @@
         var container = document.querySelector('.isotope');
         var msnry = new Masonry( container, {
           // options
-          gutter: 10,
+          gutter: '0.5%',
           itemSelector: '.articleItem'
         });        
       </script>
