@@ -638,7 +638,7 @@
 
 .articleItem.noImage .featuredHeadlineRight,
 .articleItem.noImage .featuredDescriptionRight,
-.articleItem.noImage .articleImage {margin: 0;}
+#featured-article.articleItem.noImage .articleImage {margin: 0;}
 
 @media (max-width: 992px) {
   .articleItem {width: calc(33% - 4px);}
