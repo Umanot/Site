@@ -36,7 +36,8 @@ class ArticleFolderView(BrowserView):
             portal_type = ["Article", "Placeholder"],
             path = '/'.join(self.context.getPhysicalPath()),
             sort_on = 'Date',
-            sort_order = 'revese'
+            sort_order = 'revese',
+            getFeatured = False
         )
 
         results = []
@@ -50,3 +51,23 @@ class ArticleFolderView(BrowserView):
             results.append(info)
 
         return results
+
+    @property
+    def top(self):
+        brains = self.portal_catalog(
+            portal_type = ["Article", "Placeholder"],
+            path = '/'.join(self.context.getPhysicalPath()),
+            sort_on = 'Date',
+            sort_order = 'revese',
+            getFeatured = True
+        )
+
+        if not brains:
+            return
+
+        obj = brains[0].getObject()
+        info = obj.getInfo(scale="preview", width=276, height=-1)
+
+        info['section'] = obj.aq_parent.Title()
+
+        return info
