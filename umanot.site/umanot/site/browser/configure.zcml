@@ -286,6 +286,15 @@
     template="templates/partner_folder_view.pt"
     permission="zope2.View"
     />
+    
+  <!-- Service Folder View  -->
+  <browser:page
+    for=".service_folder_view.IServiceFolderView"
+    name="folder_listing"
+    class=".service_folder_view.ServiceFolderView"
+    template="templates/service_folder_view.pt"
+    permission="zope2.View"
+    />
 
   <!-- umanot Document View  -->
   <browser:page
