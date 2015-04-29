@@ -31,6 +31,7 @@ $(function(){
       window.scrollTo(0, 0);
   };
   
+/*
   var $container = $('.isotope').isotope({
                       itemSelector: '.articleItem',
                       layoutMode: 'masonry',
@@ -38,6 +39,7 @@ $(function(){
 
                       }
                    });
+*/
   
   //TOOLTIP
   $('[data-toggle="tooltip"]').tooltip();
