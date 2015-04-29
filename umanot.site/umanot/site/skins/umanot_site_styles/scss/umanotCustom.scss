@@ -580,6 +580,7 @@
     background-color: #fff;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     display: inline-block;
+    width: 25%;
     margin: 0 0% 10px;
     padding: 18px;
     position: relative;
@@ -625,7 +626,7 @@
 
 /* FEATURED */
 
-#featured-article.articleItem {width: 99%;}
+#featured-article.articleItem {width: 100%;}
 #content #featured-article .articleTitle {font-size: 26px; line-height: 1em;}
 #featured-article .articleImage {float: left; margin: 5px 20px 0 0; max-width: 250px;}
 .featuredRight {margin-left: 270px;}
