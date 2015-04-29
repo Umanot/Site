@@ -31,6 +31,22 @@ class ServiceFolderView(BrowserView):
         return self.context.Description()
         
     @property
-    def info(self):
-        return self.context.getInfo()
-        
+    def contents(self):
+        brains = self.portal_catalog(
+            portal_type = ["Document", "Article"],
+            path = '/'.join(self.context.getPhysicalPath()),
+            sort_on = 'getObjPositionInParent',
+        )
+
+        results = []
+
+        for brain in brains:
+            info = dict(
+                title = brain.Title,
+                description = brain.Description,
+                URL = brain.getURL()
+            )
+
+            results.append(info)
+
+        return results
