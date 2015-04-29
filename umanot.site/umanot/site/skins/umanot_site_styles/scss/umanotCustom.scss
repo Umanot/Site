@@ -631,7 +631,7 @@
 /* FEATURED */
 
 #featured-article.articleItem {width: 100%;}
-#content #featured-article .articleTitle {font-size: 26px; line-height: 1em;}
+#content #featured-article .articleTitle {font-size: 26px; line-height: 1.1em;}
 #featured-article .articleImage {float: left; margin: 5px 20px 0 0; max-width: 250px;}
 .featuredHeadlineRight {margin-left: 270px;}
 .featuredDescriptionRight {margin-left: 270px;}
@@ -640,6 +640,8 @@
   .articleItem {
     width: calc(33% - 4px);
   }
+  
+  .featuredDescriptionRight {margin-left: 0; clear: both;}
 }
 
 @media (max-width: 865px){
