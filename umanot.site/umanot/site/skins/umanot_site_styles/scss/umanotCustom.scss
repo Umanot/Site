@@ -633,7 +633,7 @@
 
 @media (max-width: 992px) {
   .articleItem {
-    width: 33%;
+    width: calc(33% - 8px);
   }
 }
 
@@ -644,7 +644,7 @@
 
 @media (max-width: 600px) {
   .articleItem {
-    width: 50%;
+    width: calc(50% - 8px);
   }
 
 }
