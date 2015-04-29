@@ -756,3 +756,41 @@
 #content .partnerItem h2 a {
   color: $colorLeft;
 }
+
+
+.serviceBlock {
+  padding: 25px;
+  width: 33.3333%;
+  min-height: 300px;
+  color: #FFF;
+  position: relative;
+  background-color: #668DA2;
+}
+
+#content .serviceBlock h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 15px;
+    margin-top: 0px;
+}
+
+#content .serviceBlock p {
+    color: #FFF;
+}
+
+#content .serviceBlock .desc {
+    position: absolute;
+    bottom: 93px;
+    font-weight: bold;
+    margin: 0px;
+}
+
+.serviceBlock .ghostButton {
+    position: absolute;
+    bottom: 30px;
+}
+
+@media (max-width:992px) {
+  .serviceItem .ghostButton,
+   #content .serviceItem .desc  {position: static;}
+}
