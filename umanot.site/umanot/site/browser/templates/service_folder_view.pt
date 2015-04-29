@@ -10,8 +10,15 @@
       <tal:main-macro metal:define-macro="main">
       
         <div id="service-folder-view">
-        
-asd
+          
+          <div class="mrow">
+            <div class="col-md-4">
+              
+              <div class=""
+              
+            </div>
+            
+          </div>
 
         </div> <!-- service-folder--view -->
         
