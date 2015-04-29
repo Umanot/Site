@@ -637,16 +637,15 @@
   }
 }
 
-@media (max-width: 700px) {
-  .featuredRight {margin-left: 0;}
-  #content #featured-article .articleTitle {font-size: 22px; line-height: 1.2em;}
-}
-
-@media (max-width: 600px) {
+@media (max-width: 800px){
   .articleItem {
     width: calc(50% - 8px);
   }
+}
 
+@media (max-width: 700px) {
+  .featuredRight {margin-left: 0;}
+  #content #featured-article .articleTitle {font-size: 22px; line-height: 1.2em;}
 }
 
 @media (max-width: 480px) {
