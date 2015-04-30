@@ -544,10 +544,8 @@
   background-size: cover;
 }
 
-@media (max-width:992px) {
-  .mosaicTile {
-    float: none;
-  }
+@media screen and (max-width:992px) {
+  .mosaicTile {float: none;}
   
   .mosaicTileInner {min-height: 210px;}
   
