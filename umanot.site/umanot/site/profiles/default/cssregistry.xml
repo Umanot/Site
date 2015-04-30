@@ -99,17 +99,17 @@
 
  <stylesheet title="" applyPrefix="False" authenticated="False" insert-after="print.css"
     cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="1" expression="" id="owl.carousel.css" media="all"
+    cookable="True" enabled="1" expression="" id="owl.carousel.css" media=""
     rel="stylesheet" rendering="link"/>
     
  <stylesheet title="" applyPrefix="False" authenticated="False" insert-after="owl.carousel.css"
     cacheable="True" compression="safe" conditionalcomment=""
-    cookable="True" enabled="1" expression="" id="umanotCustom.css" media="all"
+    cookable="True" enabled="1" expression="" id="umanotCustom.css" media=""
     rel="stylesheet" rendering="link"/>
 
         <stylesheet title="" applyPrefix="False" authenticated="False"
            cacheable="True" compression="safe" conditionalcomment=""
-           cookable="True" enabled="0" expression="" id="ploneCustom.css" media="all"
+           cookable="True" enabled="0" expression="" id="ploneCustom.css" media=""
            rel="stylesheet" rendering="link" remove="true"/>
    
 <!-- AUTH -->
