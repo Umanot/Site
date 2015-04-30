@@ -32,16 +32,21 @@ $(function(){
   };
   
   //MASONRY INIT
-  var container = document.querySelector('#article-section .isotope');
-  var msnry;
-  // initialize Masonry after all images have loaded
-  imagesLoaded( container, function() {
-    msnry = new Masonry( container , {
-      // options
-      gutter: 10,
-      itemSelector: '.articleItem'
+  
+  if($('#article-section').length != 0 ){
+  
+    var container = document.querySelector('#article-section .isotope');
+    var msnry;
+    // initialize Masonry after all images have loaded
+    imagesLoaded( container, function() {
+      msnry = new Masonry( container , {
+        // options
+        gutter: 10,
+        itemSelector: '.articleItem'
+      });
     });
-  });
+  
+  }
 
   //TOOLTIP
   $('[data-toggle="tooltip"]').tooltip();
