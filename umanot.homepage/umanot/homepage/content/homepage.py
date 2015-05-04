@@ -203,7 +203,7 @@ HomepageSchema = folder.ATFolderSchema.copy() + atapi.Schema(
             storage = atapi.AnnotationStorage(),
             schemata = 'Footer',
             widget = atapi.TextAreaWidget(
-                label = u"Perché noi (footer)"
+                label = u"Perché Umanot (footer)"
             )
         )
     )
