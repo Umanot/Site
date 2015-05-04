@@ -15,7 +15,8 @@
         <div class="headlineContent">
           <h1 class="documentFirstHeading" tal:content="view/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h1>
           <div class="byLine">
-            <span tal:condition="info/autore" tal:content="info/autore"></span>
+            <span class="by" tal:condition="info/autore">di</span>
+            <tal:autore tal:condition="info/autore" tal:content="info/autore"></tal:autore>
             <span tal:condition="info/autore">&nbsp;|&nbsp;</span>
             <a tal:attributes="href info/section_url" tal:content="info/section"></a>
           </div>
