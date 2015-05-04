@@ -61,14 +61,20 @@ class FooterViewlet(common.FooterViewlet):
             object_provides = IAbout.__identifier__
         )
 
-        if not brains:
+        homepage = catalog(
+            portal_type = "Homepage",
+        )
+
+        if not brains or not homepage:
             return
 
         brain = brains[0]
 
+        obj = homepage[0].getObject()
+
         info = dict(
             title = brain.Title,
-            description = brain.Description,
+            description = obj.getAbout_footer(),
             URL = brain.getURL()
         )
 

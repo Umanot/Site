@@ -198,6 +198,14 @@ HomepageSchema = folder.ATFolderSchema.copy() + atapi.Schema(
                 startup_directory = '.'
             ),
         ),
+        atapi.TextField(
+            name = 'about_footer',
+            storage = atapi.AnnotationStorage(),
+            schemata = 'Footer',
+            widget = atapi.TextAreaWidget(
+                label = u"Perché noi (footer)"
+            )
+        )
     )
 )
 
