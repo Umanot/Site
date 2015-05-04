@@ -92,6 +92,8 @@ a:focus {text-decoration: none; outline: none;}
   z-index: 99999999999;
 }
 
+.userrole-authenticated #header {position: relative;} 
+
 #portal-header {
   background-color: rgba(0,0,0,0.8);
   padding: 0;
