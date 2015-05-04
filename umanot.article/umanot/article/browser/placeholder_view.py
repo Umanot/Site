@@ -31,4 +31,9 @@ class PlaceholderView(BrowserView):
 
     @property
     def info(self):
-        return self.context.getInfo(scale="preview")
+        info = self.context.getInfo(scale="preview")
+        section = self.context.aq_parent
+        info['section'] = section.Title()
+        info['section_url'] = section.absolute_url()
+
+        return info
