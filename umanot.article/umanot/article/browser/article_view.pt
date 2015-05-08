@@ -14,7 +14,7 @@
         <div class="gridOverlay"></div>
         <div class="headlineContent">
           <h1 class="documentFirstHeading" tal:content="view/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h1>
-          <div class="byLine">
+          <div class="byLine" tal:condition="info/section">
             <span class="by" tal:condition="info/autore">di</span>
             <tal:autore tal:condition="info/autore" tal:content="info/autore"></tal:autore>
             <span tal:condition="info/autore">&nbsp;|&nbsp;</span>

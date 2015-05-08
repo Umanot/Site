@@ -29,7 +29,10 @@ class ArticleView(BrowserView):
     def info(self):
         info = self.context.getInfo(scale="preview")
         section = self.context.aq_parent
-        info['section'] = section.Title()
-        info['section_url'] = section.absolute_url()
+        if 'documenti-legali' in section.getPhysicalPath():
+            info['section'] = ''
+        else:
+            info['section'] = section.Title()
+            info['section_url'] = section.absolute_url()
 
         return info
