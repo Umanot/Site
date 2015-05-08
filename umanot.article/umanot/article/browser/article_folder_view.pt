@@ -82,7 +82,7 @@
 
                     <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Leggi</a>
 
-                    <div class="articleData" tal:content="item/readable_date">07/07/2015</div>
+                    <div class="articleData" tal:condition="nothing" tal:content="item/readable_date">07/07/2015</div>
 
                   </div>
 
