@@ -1,4 +1,4 @@
-<div class="leaderboardWrapper" tal:condition="nothing">
+<div class="leaderboardWrapper">
   <div class="container-fluid">
     <div class="mrow">
       <div class="col-md-12">
