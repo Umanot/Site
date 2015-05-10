@@ -7,7 +7,7 @@
   <body>
 
     <div metal:fill-slot="main">
-      <tal:main-macro metal:define-macro="main">
+      <tal:main-macro metal:define-macro="main" tal:define="errors view/errors">
 
         <div id="follow-form-view">
 
