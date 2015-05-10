@@ -5,6 +5,7 @@ from zope.interface import implements, Interface
 from Products.Five import BrowserView
 from Products.statusmessages.interfaces import IStatusMessage
 import datetime
+import oursql
 
 
 class IProcessAddFollower(Interface):
