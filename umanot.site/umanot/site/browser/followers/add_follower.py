@@ -17,6 +17,7 @@ class AddFollower(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        self.errors = request.get('fw-errors', [])
 
     @property
     def portal_catalog(self):
