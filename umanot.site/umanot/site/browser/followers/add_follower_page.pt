@@ -2,7 +2,7 @@
       xmlns:tal="http://xml.zope.org/namespaces/tal"
       lang="en"
         metal:use-macro="here/main_template/macros/master"
-        i18n:domain="complexlab.followers">
+        i18n:domain="umanot.site">
 
   <body>
 
@@ -23,15 +23,15 @@
             <p tal:condition="python:view.typology == 'comments'">By filling-in this form, you'll receive updates to this article. Each time a new comment is posted, you'll receive an advise to your email account.</p>
           </tal:en> -->
 
-          <div class="formWrapper formid-follow" tal:define="info view/base_data">
+          <div class="formWrapper formid-follow">
             <form id="follow-subscription-form" method="post" enctype="multipart/form-data"
                     tal:attributes="action string:${context/absolute_url}/process-add-follower">
 
               <input type="hidden" name="typology" value="section" />
 
-              <div tal:attributes="class python:'firstname' in errors and 'form-group error' or  'form-group'">
-                <label tal:condition="not:is_en">Nome</label><label tal:condition="is_en">Name</label><span title="Obbligatorio" class="required">■</span>
-                <input class="form-control" type="text" maxlength="255" size="30" name="firstname" tal:attributes="value python:info.get('firstname', None)"/>
+              <div tal:define="fieldname string:firstname" tal:attributes="class python:'form-group error' if fieldname in errors else 'form-group'">
+                <label>Nome</label><span title="Obbligatorio" class="required">■</span>
+                <input class="form-control" type="text" maxlength="64" size="30" name="firstname" tal:attributes="value python:info.get(fieldname, None)"/>
               </div>
 
               <div>
