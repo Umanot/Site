@@ -56,7 +56,9 @@ class ProcessAddFollower(BrowserView):
 
         cursor = conn.cursor()
 
-        records = cursor.execute("""SELECT id FROM Followers WHERE ContentUID='%(uid)s' AND Typology='%(typology)s' AND Email='%(email)s'""" % sqldata)
+        query = """SELECT id FROM Followers WHERE ContentUID='%(uid)s' AND Typology='%(typology)s' AND Email='%(email)s'""" % sqldata
+
+        records = cursor.execute(query)
 
         if records:
             return
