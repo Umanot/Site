@@ -29,7 +29,7 @@ class ProcessAddFollower(BrowserView):
 
         import pdb; pdb.set_trace()
 
-        conn = oursql.connect(host='172.16.108.11', user='root', passwd='112d24e2', db='ComplexLab')
+        conn = oursql.connect(host='172.16.108.11', user='umanot', passwd='112d24e2', db='ComplexLab')
 
         errors = {}
         data = {}
