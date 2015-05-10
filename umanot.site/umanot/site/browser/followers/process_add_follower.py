@@ -66,7 +66,7 @@ class ProcessAddFollower(BrowserView):
         cursor.execute("""INSERT INTO Followers
                 (ContentUID, Firstname, Lastname, Email, Typology)
             VALUES
-                ('%(uid)s', '%(firstname)s', '%(lastname)s', '%(email)s', '%(typology)s')""")
+                ('%(uid)s', '%(firstname)s', '%(lastname)s', '%(email)s', '%(typology)s')""" % sqldata)
 
         # set cookie
         data_string = '%s||%s||%s' % (sqldata['lastname'], sqldata['firstname'], sqldata['email'])
