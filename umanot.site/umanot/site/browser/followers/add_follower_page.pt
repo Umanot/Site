@@ -29,9 +29,27 @@
 
               <input type="hidden" name="typology" value="page"/>
               <div class="mrow">
-                <div class="col-md-6">
+                <div class="col-md-4">
                   <div tal:define="fieldname string:firstname" tal:attributes="class python:'form-group error' if fieldname in errors else 'form-group'">
                     <label i18n:translate="Nome">Nome</label><span title="Obbligatorio" class="required">■</span>
+                    <input class="form-control" type="text" maxlength="64" size="30" name="firstname" tal:attributes="value python:request.get(fieldname, '')"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mrow">
+                <div class="col-md-4">
+                  <div tal:define="fieldname string:lastname" tal:attributes="class python:'form-group error' if fieldname in errors else 'form-group'">
+                    <label i18n:translate="Cognome">Cognome</label><span title="Obbligatorio" class="required">■</span>
+                    <input class="form-control" type="text" maxlength="64" size="30" name="firstname" tal:attributes="value python:request.get(fieldname, '')"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mrow">
+                <div class="col-md-4">
+                  <div tal:define="fieldname string:email" tal:attributes="class python:'form-group error' if fieldname in errors else 'form-group'">
+                    <label i18n:translate="E-mail">E-mail</label><span title="Obbligatorio" class="required">■</span>
                     <input class="form-control" type="text" maxlength="64" size="30" name="firstname" tal:attributes="value python:request.get(fieldname, '')"/>
                   </div>
                 </div>
