@@ -14,7 +14,7 @@
           <h1 class="documentFirstHeading" i18n:translate="Iscriviti">Iscriviti</h1>
 
           <p>Compilando questo modulo riceverai aggiornamenti riguardo a questa sezione. Ogni volta che verrà inserito un nuovo articolo sul sito riceverai una notifica direttamente nella tua casella email.</p>
-<!--
+          <!--
             <p tal:condition="python:view.typology == 'comments'">Compilando questo modulo riceverai aggiornamenti riguardo a questo articolo. Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email.</p>
 
           <tal:en condition="is_en">
@@ -27,17 +27,20 @@
             <form id="follow-subscription-form" method="post" enctype="multipart/form-data"
                     tal:attributes="action string:${context/absolute_url}/process-add-follower">
 
-              <input type="hidden" name="typology" value="page" />
-
-              <div tal:define="fieldname string:firstname" tal:attributes="class python:'form-group error' if fieldname in errors else 'form-group'">
-                <label i18n:translate="Nome">Nome</label><span title="Obbligatorio" class="required">■</span>
-                <input class="form-control" type="text" maxlength="64" size="30" name="firstname" tal:attributes="value python:request.get(fieldname, '')"/>
+              <input type="hidden" name="typology" value="page"/>
+              <div class="mrow">
+                <div class="col-md-6">
+                  <div tal:define="fieldname string:firstname" tal:attributes="class python:'form-group error' if fieldname in errors else 'form-group'">
+                    <label i18n:translate="Nome">Nome</label><span title="Obbligatorio" class="required">■</span>
+                    <input class="form-control" type="text" maxlength="64" size="30" name="firstname" tal:attributes="value python:request.get(fieldname, '')"/>
+                  </div>
+                </div>
               </div>
 
               <div>
                 <p class="discreet">Con la presente registrazione, accetto e approvo integralmente le norme previste da ComplexLab in merito al Disclaimer e alla Privacy, che dichiaro di avere letto e compreso ai seguenti link:</p>
 
-                  <!--
+                <!--
                 <p class="discreet" tal:condition="is_en">By subscribing (free of charge), I accept and approve all provisions defined by ComplexLab inside below linked Disclaimer and Privacy documents, which I carefully read and understood:</p>
                 <tal:it condition="not:is_en">
                   <p class="discreet">a) <a target="_blank" href="/obiettivo/disclaimer">DISCLAIMER</a></p>
