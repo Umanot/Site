@@ -27,11 +27,11 @@
             <form id="follow-subscription-form" method="post" enctype="multipart/form-data"
                     tal:attributes="action string:${context/absolute_url}/process-add-follower">
 
-              <input type="hidden" name="typology" value="section" />
+              <input type="hidden" name="typology" value="page" />
 
               <div tal:define="fieldname string:firstname" tal:attributes="class python:'form-group error' if fieldname in errors else 'form-group'">
-                <label>Nome</label><span title="Obbligatorio" class="required">■</span>
-                <input class="form-control" type="text" maxlength="64" size="30" name="firstname" tal:attributes="value python:info.get(fieldname, None)"/>
+                <label i18n:translate="Nome">Nome</label><span title="Obbligatorio" class="required">■</span>
+                <input class="form-control" type="text" maxlength="64" size="30" name="firstname" tal:attributes="value python:request.get(fieldname, '')"/>
               </div>
 
               <div>
