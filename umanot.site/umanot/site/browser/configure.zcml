@@ -305,4 +305,19 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    for="*"
+    name="add-follower-page"
+    class=".followers.add_follower.AddFollower"
+    template="followers/add_follower_page.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="process-add-follower"
+    class=".followers.process_add_follower.ProcessAddFollower"
+    permission="zope2.View"
+    />
+
 </configure>
