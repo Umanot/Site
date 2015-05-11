@@ -26,6 +26,8 @@
 
     <metal:phil fill-slot="main" tal:define="info view/info">
 
+      <div class="addthis_sharing_toolbox"></div>
+
       <section id="article-content" tal:content="structure info/text">
 
         <p>In varius varius justo, eget ultrices mauris rhoncus non. Morbi tristique, mauris eu imperdiet bibendum, velit diam iaculis velit, in ornare massa enim at lorem. Etiam risus diam, porttitor vitae ultrices quis, dapibus id dolor. Morbi venenatis lacinia rhoncus.</p>
