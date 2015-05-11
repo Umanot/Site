@@ -3,6 +3,9 @@
   <head>    
     <metal:js fill-slot="javascript_head_slot">
       <script src="++resource++umanot.site.javascripts/article_view.js"></script>
+      <script>
+        $(function(){console.log('asd')})
+      </script>
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552f91fa389479f4" async="async"></script>
     </metal:js>
 
