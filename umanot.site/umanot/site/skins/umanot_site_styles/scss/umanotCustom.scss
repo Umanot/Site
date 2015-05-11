@@ -667,7 +667,8 @@
 #article-folder-headline,
 #video-folder-headline,
 #partner-folder-headline,
-#umanot-document-headline {
+#umanot-document-headline,
+#service-folder-headline {
   position: relative;
   padding: 140px 50px 30px;
   min-height: 250px;
@@ -678,8 +679,7 @@
   background-size: cover;
 }
 
-#video-folder-headline,
-#partner-folder-headline {
+#video-folder-headline {
   background: #000 url(var/intro_internal01.jpg) no-repeat center center;
   background-size: cover;
 }
@@ -692,6 +692,11 @@
 #umanot-document-headline {
   background: #000 url(var/umanot_document_internal.jpg) no-repeat center center;
   background-size: cover;  
+}
+
+#service-folder-headline {
+  background: #000 url(var/intro_internal02.jpg) no-repeat center center;
+  background-size: cover;
 }
 
 /* VIODE FOLDER */

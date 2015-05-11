@@ -2,8 +2,22 @@
   <head>
   </head>
   <body>
+    
+    <metal:headline fill-slot="headline_section_slot">
+
+      <div id="service-folder-headline">
+        <div class="gridOverlay"></div>
+        <div class="headlineContent">
+          <h1 class="documentFirstHeading" tal:content="view/title">Video</h1>
+        </div>
+      </div>
+
+    </metal:headline>
+    
     <metal:phil fill-slot="main">
       <tal:main-macro metal:define-macro="main">
+      
+      
         <div id="service-folder-view">
           <tal:groups repeat="group view/contents">
             <div class="mrow">
