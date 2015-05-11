@@ -27,7 +27,7 @@
             <form id="follow-subscription-form" method="post" enctype="multipart/form-data"
                     tal:attributes="action string:${context/absolute_url}/process-add-follower">
 
-              <input type="hidden" name="typology" value="page"/>
+              <input type="hidden" name="typology" value="area_tematica"/>
               <div class="mrow">
                 <div class="col-md-4">
                   <div tal:define="fieldname string:firstname" tal:attributes="class python:'form-group error' if fieldname in errors else 'form-group'">
@@ -55,7 +55,14 @@
                 </div>
               </div>
 
-              <div>
+                <div class="mrow">
+                  <div class="col-md-12">
+                    <label i18n:translate="Note">Note</label><span class="discreet">(max. 500 caratteri)</span>
+                    <textarea name="notes" maxlength="500">
+                    </textarea>
+                  </div>
+                </div>
+
                 <p class="discreet">Con la presente registrazione, accetto e approvo integralmente le norme previste da ComplexLab in merito al Disclaimer e alla Privacy, che dichiaro di avere letto e compreso ai seguenti link:</p>
 
                 <!--
@@ -71,7 +78,6 @@
                   <p class="discreet">b) <a target="_blank" href="/obiettivo/privacy-policy-en">PRIVACY</a></p>
                 </tal:en>
                 -->
-              </div>
 
               <input class="context" type="submit" value="Submit" i18n:attributes="value Submit"/>
 

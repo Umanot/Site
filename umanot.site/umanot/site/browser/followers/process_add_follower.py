@@ -72,7 +72,7 @@ class ProcessAddFollower(BrowserView):
         data_string = '%s||%s||%s' % (sqldata['lastname'], sqldata['firstname'], sqldata['email'])
         new_cookie = base64.b64encode(data_string)
         expires = (datetime.datetime.now() + datetime.timedelta(60)).strftime("%a, %d-%b-%Y %H:%M:%S GMT")
-        response.setCookie('clabfollow', '%s' % new_cookie, path = '/', expires = '%s' % expires)
+        response.setCookie('umanotfollow', '%s' % new_cookie, path = '/', expires = '%s' % expires)
 
         if fullname:
             redirect = '%s/@@follow-thanks?fullname=%s' % (self.context.absolute_url(), fullname)
