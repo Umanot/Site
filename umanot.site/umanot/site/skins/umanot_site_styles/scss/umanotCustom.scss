@@ -404,7 +404,7 @@
 #content .serviceItem h3 {
   text-transform: uppercase;
   font-weight: 900;
-  font-size: 15px;
+  font-size: 18px;
   margin-top: 0;
 }
 
@@ -432,7 +432,7 @@
    #content .serviceItem .desc  {position: static;}
 }
 
-/* FEATURE */
+/* FEATURES */
 
 #feature-section {
   padding: 80px 30px 50px;
@@ -788,6 +788,30 @@
 #service-folder-view .mrow {margin: 0 -5px;}
 #service-folder-view .col-md-4 {padding: 0 5px;}
 
+#service-folder-view > div:nth-child(1) > div:nth-child(1) > div:nth-child(1) {
+  background-color: #D84458;
+}
+#service-folder-view > div:nth-child(1) > div:nth-child(2) > div:nth-child(1) {
+  background-color: #668DA2;
+}
+#service-folder-view > div:nth-child(1) > div:nth-child(3) > div:nth-child(1) {
+  background-color: #17B7CA;
+}
+
+#service-folder-view > div:nth-child(2) > div:nth-child(1) > div:nth-child(1) {
+  background-color: #17B7CA;
+}
+
+#service-folder-view > div:nth-child(2) > div:nth-child(2) > div:nth-child(1) {
+  background-color: #17B7CA;
+}
+
+#service-folder-view > div:nth-child(2) > div:nth-child(3) > div:nth-child(1) {
+  background-color: #EF664C;
+}
+
+
+
 .serviceBlock {
   padding: 25px;
   min-height: 300px;
@@ -826,3 +850,4 @@
   .serviceItem .ghostButton,
    #content .serviceItem .desc  {position: static;}
 }
+
