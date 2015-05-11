@@ -3,8 +3,7 @@
   <head>
     <metal:js fill-slot="javascript_head_slot">
       <script src="++resource++umanot.site.javascripts/article_view.js"></script>
-      <!-- Go to www.addthis.com/dashboard to customize your tools -->
-      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552f91fa389479f4"></script>
+      <script src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552f91fa389479f4"></script>
     </metal:js>
   </head>
 
