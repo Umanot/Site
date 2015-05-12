@@ -61,6 +61,7 @@ $(function(){
   $('.followModalTrigger').on('click', function(e){
     e.preventDefault();
     
+    $('#follow-modal').modal('show');
     
     
   });  
