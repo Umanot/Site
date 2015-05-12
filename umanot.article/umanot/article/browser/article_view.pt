@@ -77,9 +77,9 @@
       </section>
       <!-- article-content -->
 
-      <section id="follow-section" tal:condition="nothing">
+      <section id="follow-section" style="display: none;">
         <div id="follow-button-wrapper">
-          <a class="btn btn-info">Segui questo articolo</a>
+          <a class="btn btn-info" href="/add-follower-page?ajax_load=1">Segui questo articolo</a>
           <div class="text">
             <h5>Sei Interessato?</h5>
 
