@@ -27,7 +27,11 @@
         
           <div class="addthis_sharing_toolbox"></div>
 
-          <p tal:replace="structure view/text"></p>
+          <div id="article-content">
+
+            <p tal:replace="structure view/text"></p>
+
+          </div>
 
         </div> <!-- umano-document-view -->
         
