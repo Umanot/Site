@@ -31,6 +31,6 @@ class UmanotDocumentView(BrowserView):
         return self.context.Description()
         
     @property
-    def info(self):
-        return self.context.getInfo()
+    def text(self):
+        return self.context.getText()
         
