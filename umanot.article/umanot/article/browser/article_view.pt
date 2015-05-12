@@ -23,7 +23,7 @@
         </div>
       </div>
     </metal:headline>
-
+  
     <metal:phil fill-slot="main" tal:define="info view/info">
 
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
@@ -79,7 +79,7 @@
 
       <section id="follow-section" style="display: none;">
         <div id="follow-button-wrapper">
-          <a class="btn btn-info" href="/add-follower-page?ajax_load=1">Segui questo articolo</a>
+          <a class="btn btn-info followModalTrigger" href="/add-follower-page?ajax_load=1">Segui questo articolo</a>
           <div class="text">
             <h5>Sei Interessato?</h5>
 
@@ -146,5 +146,19 @@
 
 
     </metal:phil>
+    
+    <metal:modal fill-slot="modal-slot">
+    
+      <div class="modal fade" id="" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-body"></div>
+          </div>
+        </div>
+      </div>
+    
+    </metal:modal>
+    
+    
   </body>
 </html>

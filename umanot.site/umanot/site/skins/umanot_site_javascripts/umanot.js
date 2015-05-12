@@ -55,6 +55,14 @@ $(function(){
   $('#nav-switch').on('click', function(){
     $body.toggleClass('mobileMenuOn');
   });
+  
+  
+  //FOLLOW MODAL TRIGGER
+  $('.followModalTrigger').on('click', function(e){
+    e.preventDefault();
     
+    
+    
+  });  
   
 });

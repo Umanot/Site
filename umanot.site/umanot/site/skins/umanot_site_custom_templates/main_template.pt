@@ -162,6 +162,8 @@
 
   </div> <!-- visual-wrapper -->
 
+  <metal:modal define-slot="modal-slot"></metal:modal>
+
   <tal:cond condition="here/portal_membership/isAnonymousUser">
     <tal:scripts replace="structure provider:plone.resourceregistries.scripts" />
   </tal:cond>
