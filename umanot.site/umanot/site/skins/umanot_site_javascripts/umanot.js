@@ -64,7 +64,7 @@ $(function(){
     
     $.ajax({url: $(this).attr('href')}).done(function(data){
       
-      $followModal.find('.modal-content').empty().append('data');
+      $followModal.find('.modal-content').empty().append(data);
     
       $followModal.modal('show');
       
