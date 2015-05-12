@@ -58,10 +58,18 @@ $(function(){
   
   
   //FOLLOW MODAL TRIGGER
+  var $followModal = $('#follow-modal');
   $('.followModalTrigger').on('click', function(e){
     e.preventDefault();
     
-    $('#follow-modal').modal('show');
+    $.ajax({url: $(this).attr('href')}).done(function(data){
+      
+      $followModal.find('.modal-content').empty().append('data');
+    
+      $followModal.modal('show');
+      
+    });
+
     
     
   });  
