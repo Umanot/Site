@@ -63,7 +63,7 @@
       <div tal:replace="structure provider:plone.portaltop" />
     </header>
     
-    <div id="headline-section">
+    <div id="headline-section" tal:condition="not:ajax_load">
       <metal:headline define-slot="headline_section_slot"></metal:headline>
     </div>
         

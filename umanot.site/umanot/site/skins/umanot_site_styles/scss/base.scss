@@ -89,7 +89,7 @@ a:focus {text-decoration: none; outline: none;}
   top: 0;
   width: 100%;
   max-width: $maxWidth;
-  z-index: 99999999999;
+  z-index: 1000;
 }
 
 .userrole-authenticated #header {position: relative;} 
