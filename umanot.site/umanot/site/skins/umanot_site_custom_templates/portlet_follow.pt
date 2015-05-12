@@ -4,6 +4,6 @@
       <h5>Sei Interessato?</h5>
       <p>Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email.</p>
     </div>
-    <a class="btn btn-info">Segui questo articolo</a>
+    <a class="btn btn-info followModalTrigger" href="/add-follower-page?ajax_load=1">Segui questo articolo</a>
   </div>
 </div>

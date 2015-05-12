@@ -164,6 +164,14 @@
 
   <metal:modal define-slot="modal-slot"></metal:modal>
 
+  <div class="modal fade" id="follow-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body"></div>
+      </div>
+    </div>
+  </div>
+
   <tal:cond condition="here/portal_membership/isAnonymousUser">
     <tal:scripts replace="structure provider:plone.resourceregistries.scripts" />
   </tal:cond>

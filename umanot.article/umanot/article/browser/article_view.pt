@@ -77,7 +77,7 @@
       </section>
       <!-- article-content -->
 
-      <section id="follow-section" style="display: none;">
+      <section id="follow-section" tal:condition="nothing">
         <div id="follow-button-wrapper">
           <a class="btn btn-info followModalTrigger" href="/add-follower-page?ajax_load=1">Segui questo articolo</a>
           <div class="text">
@@ -146,18 +146,6 @@
 
 
     </metal:phil>
-    
-    <metal:modal fill-slot="modal-slot">
-    
-      <div class="modal fade" id="follow-modal" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-body"></div>
-          </div>
-        </div>
-      </div>
-    
-    </metal:modal>
     
     
   </body>
