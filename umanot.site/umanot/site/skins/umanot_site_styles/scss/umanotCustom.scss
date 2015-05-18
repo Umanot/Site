@@ -636,9 +636,19 @@
   width: 100%; box-shadow: 0 0 0 transparent;
   border: 0;
   background-color: transparent;
-  padding: 0;
+  padding: 0 0 15px;
+  border-bottom: 1px solid #999;
 }
 #content #featured-article .articleTitle {font-size: 26px; line-height: 1.1em;}
+
+#content #featured-article .articledescription p {
+  font-size: 15px;
+  line-height: 1.5em;
+  color: #333;
+  margin-bottom: 0;
+}
+
+
 #featured-article .articleImage {float: left; margin: 5px 20px 0 0; max-width: 250px;}
 .featuredHeadlineRight {margin-left: 270px;}
 .featuredDescriptionRight {margin-left: 270px;}
