@@ -57,7 +57,7 @@
                     </div>
                     
                     <div class="col-md-2">
-                      <a class="ghostButton ghostButtonBlock ghostButtonWhite" tal:attributes="href item/URL">Scopri di più</a>
+                      <a class="ghostButton ghostButtonBlock" tal:attributes="href item/URL">Scopri di più</a>
                   
                     </div>
                   
