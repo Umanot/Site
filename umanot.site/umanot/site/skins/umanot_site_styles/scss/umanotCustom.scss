@@ -649,6 +649,8 @@
   font-family: $fontA;
 }
 
+#content #featured-article .articledescription p:first-letter {font-size: 20px;}
+
 #content #featured-article .ghostButton {
   margin: 0;
   background-color: #24B7CB;
