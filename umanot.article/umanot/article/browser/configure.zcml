@@ -37,4 +37,12 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    for=".article_forum_folder_view.IArticleForumFolderView"
+    name="folder_listing"
+    class=".article_forum_folder_view.ArticleForumFolderView"
+    template="article_forum_folder_view.pt"
+    permission="zope2.View"
+    />
+
 </configure>
