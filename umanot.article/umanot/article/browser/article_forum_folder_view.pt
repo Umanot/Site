@@ -68,7 +68,7 @@
               </article>
             </tal:featured>
 
-            <div class="isotope">
+            <div class="forumStyle">
               <tal:loop tal:repeat="item view/contents">
                 <article class="articleItem">
 
