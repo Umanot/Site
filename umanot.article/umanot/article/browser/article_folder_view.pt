@@ -27,7 +27,7 @@
                     
                     <div class="col-md-10">
                   
-                          <a class="articleImage" tal:attributes="href item/URL">
+                          <a class="articleImage" tal:attributes="href item/URL" tal:condition="nothing">
                             <tal:image content="structure item/image"></tal:image>
                           </a>
         
