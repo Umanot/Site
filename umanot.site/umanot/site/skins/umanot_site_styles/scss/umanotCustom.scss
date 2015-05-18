@@ -632,7 +632,10 @@
 
 /* FEATURED */
 
-#featured-article.articleItem {width: 100%;}
+#featured-article.articleItem {
+  width: 100%; box-shadow: 0 0 0 transparent;
+  border: 0;
+}
 #content #featured-article .articleTitle {font-size: 26px; line-height: 1.1em;}
 #featured-article .articleImage {float: left; margin: 5px 20px 0 0; max-width: 250px;}
 .featuredHeadlineRight {margin-left: 270px;}

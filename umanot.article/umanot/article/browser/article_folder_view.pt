@@ -27,9 +27,9 @@
                   </a>
 
                   <div class="featuredHeadlineRight">
-                    <a tal:attributes="href item/URL"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
+                    <a tal:attributes="href item/URL" tal:condition="nothing"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
 
-                    <div class="articleByLine">
+                    <div class="articleByLine" tal:condition="nothing">
                       <span tal:condition="item/autore" tal:content="item/autore"></span>
                       <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
                       <span tal:content="item/section"></span>
@@ -44,9 +44,9 @@
                         culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
                     </div>
 
-                    <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Leggi</a>
+                    <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Scopri di più</a>
 
-                    <div class="articleData" tal:content="item/readable_date">07/07/2015</div>
+                    <div class="articleData" tal:content="item/readable_date" tal:condition="nothing">07/07/2015</div>
 
                   </div>
 
