@@ -22,32 +22,45 @@
             <tal:featured tal:define="item view/featured" tal:condition="item">
               <article id="featured-article" class="articleItem" tal:attributes="class python:'articleItem' if item['image'] else 'articleItem noImage'">
                 <div class="articleInner">
-                  <a class="articleImage" tal:attributes="href item/URL" tal:condition="nothing">
-                    <tal:image content="structure item/image"></tal:image>
-                  </a>
-
-                  <div class="featuredHeadlineRight">
-                    <a tal:attributes="href item/URL" tal:condition="nothing"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
-
-                    <div class="articleByLine" tal:condition="nothing">
-                      <span tal:condition="item/autore" tal:content="item/autore"></span>
-                      <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
-                      <span tal:content="item/section"></span>
-                    </div>
-                  </div>
-
-                  <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Scopri di più</a>
                   
-                  <div class="featuredDescriptionRight">
-
-                    <div class="articledescription">
-                      <p tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni
-                        consectetur repellendus odit
-                        culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                  <div class="mrow">
+                    
+                    <div class="col-md-10">
+                  
+                          <a class="articleImage" tal:attributes="href item/URL" tal:condition="nothing">
+                            <tal:image content="structure item/image"></tal:image>
+                          </a>
+        
+                          <div class="featuredHeadlineRight">
+                            <a tal:attributes="href item/URL" tal:condition="nothing"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
+        
+                            <div class="articleByLine" tal:condition="nothing">
+                              <span tal:condition="item/autore" tal:content="item/autore"></span>
+                              <span tal:condition="item/autore">&nbsp;|&nbsp;</span>
+                              <span tal:content="item/section"></span>
+                            </div>
+                          </div>
+        
+                          
+                          <div class="featuredDescriptionRight">
+        
+                            <div class="articledescription">
+                              <p tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, voluptate ipsa id quae ad dicta excepturi nobis sit possimus nesciunt error iusto. Assumenda, esse, vitae qui ullam autem error. Perferendis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas, in, optio officia iusto magni
+                                consectetur repellendus odit
+                                culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
+                            </div>
+        
+                            <div class="articleData" tal:content="item/readable_date" tal:condition="nothing">07/07/2015</div>
+        
+                          </div>
+                          
                     </div>
-
-                    <div class="articleData" tal:content="item/readable_date" tal:condition="nothing">07/07/2015</div>
-
+                    
+                    <div class="col-md-2">
+                      <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Scopri di più</a>
+                  
+                    </div>
+                  
                   </div>
 
                 </div>
