@@ -642,13 +642,16 @@
 #content #featured-article .articleTitle {font-size: 26px; line-height: 1.1em;}
 
 #content #featured-article .articledescription p {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.5em;
   color: #333;
+  margin-bottom: 10px;
+  font-family: $fontA;
 }
 
 #content #featured-article  .ghostButton {
   margin: 0;
+  float: right;
 }
 
 

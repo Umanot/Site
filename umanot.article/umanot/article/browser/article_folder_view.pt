@@ -22,7 +22,7 @@
             <tal:featured tal:define="item view/featured" tal:condition="item">
               <article id="featured-article" class="articleItem" tal:attributes="class python:'articleItem' if item['image'] else 'articleItem noImage'">
                 <div class="articleInner">
-                  <a class="articleImage" tal:attributes="href item/URL">
+                  <a class="articleImage" tal:attributes="href item/URL" tal:condition="nothing">
                     <tal:image content="structure item/image"></tal:image>
                   </a>
 
@@ -36,6 +36,8 @@
                     </div>
                   </div>
 
+                  <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Scopri di più</a>
+                  
                   <div class="featuredDescriptionRight">
 
                     <div class="articledescription">
@@ -43,8 +45,6 @@
                         consectetur repellendus odit
                         culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
                     </div>
-
-                    <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Scopri di più</a>
 
                     <div class="articleData" tal:content="item/readable_date" tal:condition="nothing">07/07/2015</div>
 
