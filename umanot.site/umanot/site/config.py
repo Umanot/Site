@@ -1,5 +1,5 @@
 SQL_HOST = '172.16.108.11'
-SQL_USER = 'root'
+SQL_USER = 'umanot'
 SQL_PASS = '112d24e2'
 SQL_DB = 'ComplexLab'
 
