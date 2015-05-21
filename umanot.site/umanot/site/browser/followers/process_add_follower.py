@@ -60,8 +60,6 @@ class ProcessAddFollower(BrowserView):
 
         self.context.plone_log("Following: %s" % str(self.request.form))
 
-        import pdb; pdb.set_trace()
-
         area = self.umanot_utils.get_area_from_context(self.context)
         if area:
             sqldata['area_title'] = area.Title()
