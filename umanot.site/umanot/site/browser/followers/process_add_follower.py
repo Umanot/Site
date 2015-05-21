@@ -96,7 +96,7 @@ class ProcessAddFollower(BrowserView):
         # notifica via mail
         subject = "[Umanot] Nuovo follower"
 
-        message = '<p>Nuovo follower per: <a href="%s">%s</p><br /><br />' % (self.context.absolute_url(), self.context.Title())
+        message = '<p>Nuovo follower per: <a href="%s">%s</a></p><br />' % (self.context.absolute_url(), self.context.Title())
         message += "<table>"
         message += '<tr><td width="35%%"><strong>Nome</strong></td><td>%s</td></tr>' % sqldata['fullname']
         message += "<tr><td><strong>Email</strong></td><td>%s</td></tr>" % sqldata['email']
