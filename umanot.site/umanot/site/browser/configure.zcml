@@ -315,6 +315,14 @@
 
   <browser:page
     for="*"
+    name="follow-thanks"
+    class=".followers.follow_thanks.FollowThanksView"
+    template="followers/follow_thanks.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
     name="process-add-follower"
     class=".followers.process_add_follower.ProcessAddFollower"
     permission="zope2.View"

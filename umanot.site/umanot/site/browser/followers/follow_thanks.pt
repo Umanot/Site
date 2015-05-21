@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="complexlab.followers">
+  <head>
+  </head>
+  <body>
+  
+    <div metal:fill-slot="main">
+      <tal:main-macro metal:define-macro="main">
+      
+      <div tal:replace="structure provider:plone.abovecontenttitle" />
+      
+      <div id="follow-form-view" tal:define="is_en python:'scientific-spirituality' in context.getPhysicalPath()">
+      
+        <tal:it condition="not:is_en">
+          <p>Grazie<span tal:define="fullname python:context.REQUEST.get('fullname')" tal:condition="fullname" tal:content="string: $fullname"></span>, <br/>
+la tua iscrizione è stata registrata con successo.
+          </p>
+        </tal:it>
+        
+        <tal:en condition="is_en">
+          <p>Thank you<span tal:define="fullname python:context.REQUEST.get('fullname')" tal:condition="fullname" tal:content="string: $fullname"></span>, <br/>
+your subscription has been processed correctly.
+          </p>
+        </tal:en>
+        
+      </div>
+       
+      <div tal:replace="structure provider:plone.belowcontentbody" />
+      
+      </tal:main-macro>
+    </div>
+  </body>
+</html>
