@@ -70,6 +70,7 @@ class ProcessAddFollower(BrowserView):
             sqldata['area_title'] = 'NULL'
             sqldata['area_uid'] = 'NULL'
 
+        sqldata = self.umanot_utils.prepare_data_for_query(sqldata)
         connection = self.umanot_utils.get_sql_connection(self.request.get('URL'))
         cursor = connection.cursor()
 
@@ -80,16 +81,43 @@ class ProcessAddFollower(BrowserView):
         if records:
             return
 
-        cursor.execute("""INSERT INTO Followers
+        query = """INSERT INTO Followers
                 (Website, AreaUID, AreaTitle, ContentUID, ContentTitle, Firstname, Lastname, Email, Notes, Typology, Member, Created)
             VALUES
-                ('umanot', '%(area_uid)s', '%(area_title)s', '%(uid)s', '%(title)s', '%(firstname)s', '%(lastname)s', '%(email)s', '%(notes)s','%(typology)s', %(member)s,  NOW()))""" % sqldata)
+                ('umanot', '%(area_uid)s', '%(area_title)s', '%(uid)s', '%(title)s', '%(firstname)s', '%(lastname)s', '%(email)s', '%(notes)s','%(typology)s', %(member)s,  NOW())""" % sqldata
+
+        cursor.execute(query)
 
         # set cookie
         data_string = '%s||%s||%s' % (sqldata['lastname'], sqldata['firstname'], sqldata['email'])
         new_cookie = base64.b64encode(data_string)
         expires = (datetime.datetime.now() + datetime.timedelta(60)).strftime("%a, %d-%b-%Y %H:%M:%S GMT")
         response.setCookie('umanotfollow', '%s' % new_cookie, path = '/', expires = '%s' % expires)
+
+        # notifica via mail
+        subject = "[Umanot] Nuovo follower"
+
+        message = '<p>Nuovo follower per: <a href="%s">%s</p><br /><br />' % (self.context.absolute_url(), self.context.Title())
+        message += "<table>"
+        message += '<tr><td width="35%%"><strong>Nome</strong></td><td>%s</td></tr>' % sqldata['fullname']
+        message += "<tr><td><strong>Email</strong></td><td>%s</td></tr>" % sqldata['email']
+        message += "<tr><td><strong>Note</strong></td><td>%s</td></tr>" % sqldata['notes']
+        message += "</table>"
+        message += "<hr />"
+
+        if sqldata.get('email') in ['francesco@mediatria.com', 'fsaviano@gmail.com']:
+            emails = ['francesco@mediatria.com']
+        else:
+            emails = ['francesco@mediatria.com']
+
+        for email in emails:
+            info = dict(
+                receiver = email,
+                subject = subject,
+                message = message,
+            )
+
+            self.umanot_utils.notifySingleUser(info)
 
         if fullname:
             redirect = '%s/@@follow-thanks?fullname=%s' % (self.context.absolute_url(), fullname)
