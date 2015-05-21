@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import base64
+from Products.CMFCore.utils import getToolByName
 from umanot.site.browser.umanot_utils import IUmanotUtils
 from zope.component import getUtility
 
@@ -43,12 +44,16 @@ class ProcessAddFollower(BrowserView):
             IStatusMessage(self.request).addStatusMessage(u"Correggi gli errori evidenziati", type = 'error')
             return self.context.restrictedTraverse('@@add-follower-page')()
 
+        mtool = getToolByName(self.context, 'portal_membership')
         sqldata = dict(
             uid = self.context.UID(),
+            title = self.context.Title(),
             typology = self.request.form.get('typology'),
             email = self.request.form['email'],
             firstname = self.request.form['firstname'],
             lastname = self.request.form['lastname'],
+            notes = self.request.form.get('notes', ''),
+            member = not mtool.isAnonymousUser()
         )
 
         fullname = sqldata['firstname'] + ' ' + sqldata['lastname']
@@ -62,8 +67,8 @@ class ProcessAddFollower(BrowserView):
             sqldata['area_title'] = area.Title()
             sqldata['area_uid'] = area.UID()
         else:
-            sqldata['area_title'] = ''
-            sqldata['area_uid'] = ''
+            sqldata['area_title'] = 'NULL'
+            sqldata['area_uid'] = 'NULL'
 
         connection = self.umanot_utils.get_sql_connection(self.request.get('URL'))
         cursor = connection.cursor()
@@ -76,9 +81,9 @@ class ProcessAddFollower(BrowserView):
             return
 
         cursor.execute("""INSERT INTO Followers
-                (ContentUID, Firstname, Lastname, Email, Typology)
+                (Website, AreaUID, AreaTitle, ContentUID, ContentTitle, Firstname, Lastname, Email, Notes, Typology, Member, Created)
             VALUES
-                ('%(uid)s', '%(firstname)s', '%(lastname)s', '%(email)s', '%(typology)s')""" % sqldata)
+                ('umanot', '%(area_uid)s', '%(area_title)s', '%(uid)s', '%(title)s', '%(firstname)s', '%(lastname)s', '%(email)s', '%(notes)s','%(typology)s', %(member)s,  NOW()))""" % sqldata)
 
         # set cookie
         data_string = '%s||%s||%s' % (sqldata['lastname'], sqldata['firstname'], sqldata['email'])
@@ -90,3 +95,5 @@ class ProcessAddFollower(BrowserView):
             redirect = '%s/@@follow-thanks?fullname=%s' % (self.context.absolute_url(), fullname)
         else:
             redirect = '%s/@@follow-thanks' % self.context.absolute_url()
+
+        return response.redirect(redirect)
