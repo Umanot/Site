@@ -158,7 +158,7 @@ class UmanotUtils(object):
             <td class="tdContent" align="left">""" % custom_data
 
         # MESSAGE
-        mail_body += info.get('message', '')
+        mail_body += self.safedecode(info.get('message', ''))
 
         # FOOTER
         mail_footer = u"""
