@@ -87,9 +87,6 @@ class UmanotUtils(object):
             logo_url = 'http://www.umanot.com/++resource++umanot.site.images/logo_pos.svg',
             portal_title = "Umanot"
         )
-
-
-
         # TYPE
         subtype = 'text/html'
 
