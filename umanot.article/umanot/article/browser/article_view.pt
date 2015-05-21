@@ -26,7 +26,7 @@
   
     <metal:phil fill-slot="main" tal:define="info view/info">
 
-      <div class="followMessage" tal:condition="python:context.REQUEST.get('thanks') == 1">
+      <div class="followMessage" tal:condition="python:context.REQUEST.get('thanks') == '1'">
         <p>Grazie<span tal:define="fullname python:context.REQUEST.get('fullname')" tal:condition="fullname" tal:content="string: $fullname"></span>, la tua iscrizione è stata registrata con successo.</p>
       </div>
 
