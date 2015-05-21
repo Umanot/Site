@@ -15,7 +15,6 @@ class UmanotUtils(object):
     implements(IUmanotUtils)
 
     def get_sql_connection(self, url, context=None):
-        import pdb; pdb.set_trace()
         if 'localhost' in url or 'mediatria.com' in url:
             connection = oursql.connect(SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, db=SQL_DB_TEST)
             if context:

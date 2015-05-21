@@ -52,6 +52,7 @@ class ProcessAddFollower(BrowserView):
             email = self.request.form['email'],
             firstname = self.request.form['firstname'],
             lastname = self.request.form['lastname'],
+            fullname = '%s %s' % (self.request.form.get('firstname'), self.request.form.get('lastname')),
             notes = self.request.form.get('notes', ''),
             member = not mtool.isAnonymousUser()
         )
