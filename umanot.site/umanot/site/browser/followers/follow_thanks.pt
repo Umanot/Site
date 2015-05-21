@@ -14,19 +14,13 @@
       
       <div tal:replace="structure provider:plone.abovecontenttitle" />
       
-      <div id="follow-form-view" tal:define="is_en python:'scientific-spirituality' in context.getPhysicalPath()">
+      <div id="follow-form-view">
       
-        <tal:it condition="not:is_en">
           <p>Grazie<span tal:define="fullname python:context.REQUEST.get('fullname')" tal:condition="fullname" tal:content="string: $fullname"></span>, <br/>
 la tua iscrizione è stata registrata con successo.
           </p>
-        </tal:it>
-        
-        <tal:en condition="is_en">
-          <p>Thank you<span tal:define="fullname python:context.REQUEST.get('fullname')" tal:condition="fullname" tal:content="string: $fullname"></span>, <br/>
-your subscription has been processed correctly.
-          </p>
-        </tal:en>
+
+        <p><a class="btn btn-info" tal:attributes="href context/absolute_url">Torna all'articolo</a></p>
         
       </div>
        
