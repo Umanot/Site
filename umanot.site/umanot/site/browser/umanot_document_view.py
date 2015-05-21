@@ -33,4 +33,3 @@ class UmanotDocumentView(BrowserView):
     @property
     def text(self):
         return self.context.getText()
-        

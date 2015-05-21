@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
 import base64
+from umanot.site.browser.umanot_utils import IUmanotUtils
+from zope.component import getUtility
 
 from zope.interface import implements, Interface
 from Products.Five import BrowserView
@@ -23,6 +25,7 @@ class ProcessAddFollower(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        self.umanot_utils = getUtility(IUmanotUtils)
 
     def __call__(self):
         request = self.request
@@ -52,9 +55,18 @@ class ProcessAddFollower(BrowserView):
 
         self.context.plone_log("Following: %s" % str(self.request.form))
 
-        conn = oursql.connect(host='172.16.108.11', user='umanot', passwd='112d24e2', db='ComplexLab')
+        import pdb; pdb.set_trace()
 
-        cursor = conn.cursor()
+        area = self.umanot_utils.get_area_from_context(self.context)
+        if area:
+            sqldata['area_title'] = area.Title()
+            sqldata['area_uid'] = area.UID()
+        else:
+            sqldata['area_title'] = ''
+            sqldata['area_uid'] = ''
+
+        connection = self.umanot_utils.get_sql_connection(self.request.get('URL'))
+        cursor = connection.cursor()
 
         query = """SELECT id FROM Followers WHERE ContentUID='%(uid)s' AND Typology='%(typology)s' AND Email='%(email)s'""" % sqldata
 
