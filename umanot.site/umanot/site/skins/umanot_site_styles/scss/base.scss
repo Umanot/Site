@@ -468,6 +468,14 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 
 #viewlet-below-content div.row {display: none;}
 
+#commenting legend {
+  background-color: #eee;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
 .comment {
     margin-top: 1.5em;
     font-size: 80%;
