@@ -22,7 +22,7 @@
         <h5 style="padding-bottom: 20px; text-align: center"> I Partners di Umanot sono selezionati in ragione di comuni <b>Valori&amp;Obiettivi.</b></h5>
         <div class="mrow">
           <tal:loop repeat="item view/contents">
-            <div class="col-md-6 col-sm-6">
+            <div class="col-md-6 col-sm-6" tal:attributes="class python:'col-md-6 col-sm-6' if repeat['item'].number < 3 else 'col-md-4 col-sm-4'">
 
               <div class="partnerItem">
                 <figure>

@@ -43,11 +43,15 @@ class PartnerFolderView(BrowserView):
         for brain in brains:
             obj = brain.getObject()
 
+            image = obj.getImage()
+            nu_width, nu_height = self.context.scale_crop(image.width, image.height, -1, 100)
+            image_markup = obj.tag(scale = 'preview', width = nu_width, height = nu_height, css_class = 'img-responsive')
+
             info = dict(
                 title = brain.Title,
                 description = brain.Description,
                 URL = brain.getURL(),
-                image = obj.tag(scale="preview")
+                image = image_markup
             )
 
             results.append(info)
