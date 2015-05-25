@@ -513,12 +513,9 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 .commentBody {
     padding: 1em;
     margin: 0.5em 0;
-    border-radius: 0.5em;
-    -webkit-border-radius: 0.5em;
-    -moz-border-radius: 0.5em;
-    box-shadow: 0 0 1em 0 #888;
-    -moz-box-shadow: 0 0 0.5em 0 #888;
-    -webkit-box-shadow: 0 0 0.5em #888;
+    border: 1px solid #ddd;
+    color: #333;
+    font-size: 13px;
 }
 
 .comment h1,
