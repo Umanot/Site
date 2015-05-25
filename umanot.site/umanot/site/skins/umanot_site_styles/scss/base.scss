@@ -469,11 +469,21 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 #viewlet-below-content div.row {display: none;}
 
 #commenting legend {
-  background-color: #eee;
-  border: 1px solid #ddd;
+  background-color: #EEE;
+  border: 1px solid #DDD;
   border-radius: 3px;
   font-size: 12px;
   text-transform: uppercase;
+  padding: 5px 10px;
+  margin: 0;
+  display: inline-block;
+  width: auto;
+}
+
+#commenting .field {
+  margin: 0;
+  padding: 0;
+  border: 0;
 }
 
 .comment {
