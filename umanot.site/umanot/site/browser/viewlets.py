@@ -117,6 +117,13 @@ class ColophonViewlet(ViewletBase):
     def update(self):
         self.year = date.today().year
 
+## LEADERBOARD TOP 
+class LeaderboardTopViewlets(ViewletBase):
+    index = ViewPageTemplateFile('viewlets/leaderboard_top.pt')
+    
+## LEADERBOARD BOTTOM 
+class LeaderboardBottomViewlets(ViewletBase):
+    index = ViewPageTemplateFile('viewlets/leaderboard_bottom.pt')
 
 ## NAVIGATION Portlet
 class Renderer(navigation.Renderer):

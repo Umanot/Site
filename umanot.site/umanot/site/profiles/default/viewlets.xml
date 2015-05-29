@@ -3,9 +3,16 @@
 <object>
 
   <order manager="plone.portalfooter" skinname="Umanot - SitePackage">
+    <viewlet name="umanot.leaderboard_bottom" />
     <viewlet name="plone.site_actions" />
     <viewlet name="plone.footer" />
     <viewlet name="plone.colophon" />
+  </order>
+  
+  <order manager="plone.abovecontent" skinname="Umanot - SitePackage">
+    <viewlet name="umanot.leaderboard_top" />
+    <viewlet name="plone.path_bar" />
+    <viewlet name="plone.path" />
   </order>
 
   <hidden manager="plone.portalheader" skinname="Umanot - SitePackage">

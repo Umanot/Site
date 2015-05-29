@@ -184,6 +184,25 @@
     layer=".interfaces.IThemeSpecific"
     />
 
+  <!-- LEADERBOARD TOP -->
+  <browser:viewlet
+    name="umanot.leaderboad_top"
+    for="*"
+    manager="plone.app.layout.viewlets.interfaces.IAboveContent"
+    class=".viewlets.LeaderboardTopViewlets"
+    permission="zope.Public"
+    layer=".interfaces.IThemeSpecific"
+    />
+    
+  <!-- LEADERBOARD BOTTOM -->
+  <browser:viewlet
+    name="umanot.leaderboard_bottom"
+    for="*"
+    manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+    class=".viewlets.LeaderboardBottomViewlets"
+    permission="zope.Public"
+    layer=".interfaces.IThemeSpecific"
+    />
 
   <!-- PORTLETS -->
   <include package="plone.app.portlets"/>
