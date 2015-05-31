@@ -4,7 +4,7 @@
       <div class="col-md-12">
         <div class="leaderboard">
           <a target="_blank" tal:condition="item/remote_url" tal:attributes="href item/remote_url">
-            <img tal:condition="not:item/remote_url" class="img-responsive" width="728" height="90" tal:attributes="src item/image_url" />
+            <img class="img-responsive" width="728" height="90" tal:attributes="src item/image_url" />
           </a>
           <img tal:condition="not:item/remote_url" class="img-responsive" width="728" height="90" tal:attributes="src item/image_url" />
         </div>
