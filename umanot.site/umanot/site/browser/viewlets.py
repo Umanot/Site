@@ -138,6 +138,9 @@ class LeaderboardTopViewlets(ViewletBase):
         except:
             return
 
+        if not images:
+            return
+
         background = random.choice(images)
 
         catalog = getToolByName(self.context, 'portal_catalog')
@@ -166,6 +169,9 @@ class LeaderboardBottomViewlets(ViewletBase):
                 if data and data.get('bottom'):
                     images = data['bottom']
         except:
+            return
+
+        if not images:
             return
 
         background = random.choice(images)
