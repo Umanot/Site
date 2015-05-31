@@ -14,7 +14,6 @@
                 </label>
               </div>
             </tal:loop>
-            <button class="btn btn-large btn-success">Set</button>
           </fieldset>
           <fieldset>
             <legend>Bottom</legend>
@@ -26,8 +25,8 @@
                 </label>
               </div>
             </tal:loop>
-            <button class="btn btn-large btn-success">Set</button>
           </fieldset>
+          <button class="btn btn-large btn-success">Set</button>
         </form>
 
       </div>

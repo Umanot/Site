@@ -89,7 +89,6 @@ class UmanotUtils(object):
 
         images = catalog(
             portal_type = 'Image',
-            #path = '/fondazione_edison/background',
             path = '/umanot/it/bnr',
             sort_on = 'getObjPositionInParent',
             Language = 'all'
