@@ -129,6 +129,8 @@ class LeaderboardTopViewlets(ViewletBase):
         context = self.context
         images = umanot_utils.getLocalAd(context)
 
+        import pdb; pdb.set_trace()
+
         try:
             while not images:
                 context = context.aq_parent
@@ -136,9 +138,6 @@ class LeaderboardTopViewlets(ViewletBase):
                 if data and data.get('top'):
                     images = data['top']
         except:
-            return
-
-        if not images:
             return
 
         background = random.choice(images)
@@ -169,9 +168,6 @@ class LeaderboardBottomViewlets(ViewletBase):
                 if data and data.get('bottom'):
                     images = data['bottom']
         except:
-            return
-
-        if not images:
             return
 
         background = random.choice(images)
