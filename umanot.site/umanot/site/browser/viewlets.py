@@ -127,9 +127,8 @@ class LeaderboardTopViewlets(ViewletBase):
     def image(self):
         umanot_utils = getUtility(IUmanotUtils)
         context = self.context
-        images = umanot_utils.getLocalAd(context)
-
-        import pdb; pdb.set_trace()
+        tmp = umanot_utils.getLocalAd(context) or {}
+        images = tmp.get('top')
 
         try:
             while not images:
@@ -159,7 +158,8 @@ class LeaderboardBottomViewlets(ViewletBase):
     def image(self):
         umanot_utils = getUtility(IUmanotUtils)
         context = self.context
-        images = umanot_utils.getLocalAd(context)
+        tmp = umanot_utils.getLocalAd(context) or {}
+        images = tmp.get('bottom')
 
         try:
             while not images:
