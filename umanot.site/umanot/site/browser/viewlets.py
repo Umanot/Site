@@ -1,3 +1,4 @@
+import random
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
@@ -9,6 +10,8 @@ from plone.app.portlets.portlets import navigation
 
 ## LOGO
 from umanot.site.browser.interfaces import IAbout, IIntelligenzaConnettiva
+from umanot.site.browser.umanot_utils import IUmanotUtils
+from zope.component import getUtility
 
 
 class LogoViewlet(common.LogoViewlet):
@@ -120,10 +123,62 @@ class ColophonViewlet(ViewletBase):
 ## LEADERBOARD TOP 
 class LeaderboardTopViewlets(ViewletBase):
     index = ViewPageTemplateFile('viewlets/leaderboard_top.pt')
+
+    def image(self):
+        umanot_utils = getUtility(IUmanotUtils)
+        context = self.context
+        images = umanot_utils.getLocalAd(context)
+
+        try:
+            while not images:
+                context = context.aq_parent
+                data = umanot_utils.getLocalAd(context)
+                if data and data.get('top'):
+                    images = data['top']
+        except:
+            return
+
+        background = random.choice(images)
+
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog(
+            UID=background,
+        )
+
+        if not brains:
+            return
+
+        return '%s' % brains[0].getURL()
     
 ## LEADERBOARD BOTTOM 
 class LeaderboardBottomViewlets(ViewletBase):
     index = ViewPageTemplateFile('viewlets/leaderboard_bottom.pt')
+
+    def image(self):
+        umanot_utils = getUtility(IUmanotUtils)
+        context = self.context
+        images = umanot_utils.getLocalAd(context)
+
+        try:
+            while not images:
+                context = context.aq_parent
+                data = umanot_utils.getLocalAd(context)
+                if data and data.get('bottom'):
+                    images = data['bottom']
+        except:
+            return
+
+        background = random.choice(images)
+
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog(
+            UID=background,
+        )
+
+        if not brains:
+            return
+
+        return '%s' % brains[0].getURL()
 
 ## NAVIGATION Portlet
 class Renderer(navigation.Renderer):

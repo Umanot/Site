@@ -1,8 +1,10 @@
-<div class="leaderboardWrapper" tal:condition="nothing">
+<div class="leaderboardWrapper" tal:define="image_url view/image" tal:condition="image_url">
   <div class="container-fluid">
     <div class="mrow">
       <div class="col-md-12">
-        <div class="leaderboard"></div>
+        <div class="leaderboard">
+          <img tal:attributes="image_url image" />
+        </div>
       </div>
     </div>
   </div>
