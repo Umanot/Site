@@ -347,4 +347,19 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    for="*"
+    name="manage-ad"
+    class=".manage_ad.ManageAdView"
+    template="templates/manage_ad.pt"
+    permission="cmf.ManagePortal"
+    />
+
+  <browser:page
+    for="*"
+    name="process-manage-ad"
+    class=".process_manage_ad.ProcessManageAdView"
+    permission="cmf.ManagePortal"
+    />
+
 </configure>

@@ -1,0 +1,37 @@
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.site">
+  <body>
+    <metal:phil fill-slot="main">
+      <div id="manage-ad-view" tal:define="actual view/actual; images view/images">
+
+        <form method="post" tal:attributes="action string:${context/absolute_url}/@@process-manage-ad">
+          <fieldset>
+            <legend>Top</legend>
+            <tal:loop repeat="item images">
+              <div>
+                <label>
+                  <input type="checkbox" tal:attributes="name string:image-top-${item/UID}; checked python:'checked' if actual and item.UID in actual['top'] else None" />
+                  <img tal:attributes="src string:${item/getURL}/image_preview" />
+                </label>
+              </div>
+            </tal:loop>
+            <button class="btn btn-large btn-success">Set</button>
+          </fieldset>
+          <fieldset>
+            <legend>Bottom</legend>
+            <tal:loop repeat="item images">
+              <div>
+                <label>
+                  <input type="checkbox" tal:attributes="name string:image-bottom-${item/UID}; checked python:'checked' if actual and item.UID in actual['bottom'] else None" />
+                  <img tal:attributes="src string:${item/getURL}/image_preview" />
+                </label>
+              </div>
+            </tal:loop>
+            <button class="btn btn-large btn-success">Set</button>
+          </fieldset>
+        </form>
+
+      </div>
+      <!-- set-ad-view -->
+    </metal:phil>
+  </body>
+</html>

@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*-
+import copy
 from Products.CMFCore.utils import getToolByName
+from zope.annotation import IAnnotations
 
 from zope.interface import implements, Interface
 from zope.component.hooks import getSite
@@ -53,6 +55,47 @@ class UmanotUtils(object):
             parent = context.aq_parent
             if parent.portal_type == "Folder":
                 return parent
+            
+    def setLocalAd(self, context, data):
+        KEY = 'umanot.ad'
+        context = context.aq_inner
+        annotations = IAnnotations(context)
+
+        if not data and annotations.get(KEY):
+            del (annotations[KEY])
+            context.plone_log("Ad removed")
+            return
+
+        results = copy.copy(data)
+
+        annotations[KEY] = results
+
+    def getLocalAd(self, context):
+        KEY = 'umanot.ad'
+        context = context.aq_inner
+
+        try:
+            annotations = IAnnotations(context)
+        except TypeError:
+            return
+
+        results = annotations.get(KEY)
+
+        return results
+
+    def getAdImages(self):
+        site = getSite()
+        catalog = getToolByName(site, 'portal_catalog')
+
+        images = catalog(
+            portal_type = 'Image',
+            #path = '/fondazione_edison/background',
+            path = '/umanot/bnr',
+            sort_on = 'getObjPositionInParent',
+            Language = 'all'
+        )
+
+        return images
 
     # def getSector(self, context):
     #     parent = context.aq_inner
