@@ -3,7 +3,7 @@
     <div class="mrow">
       <div class="col-md-12">
         <div class="leaderboard">
-          <img tal:attributes="image_url image" />
+          <img tal:attributes="src image_url" />
         </div>
       </div>
     </div>
