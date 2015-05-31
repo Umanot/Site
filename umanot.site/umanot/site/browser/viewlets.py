@@ -149,7 +149,15 @@ class LeaderboardTopViewlets(ViewletBase):
         if not brains:
             return
 
-        return '%s' % brains[0].getURL()
+        brain = brains[0]
+
+        info = dict(
+            title = brain.Title,
+            remote_url = brain.Description,
+            image_url = brain.getURL()
+        )
+
+        return info
     
 ## LEADERBOARD BOTTOM 
 class LeaderboardBottomViewlets(ViewletBase):
@@ -179,8 +187,16 @@ class LeaderboardBottomViewlets(ViewletBase):
 
         if not brains:
             return
+        
+        brain = brains[0]
 
-        return '%s' % brains[0].getURL()
+        info = dict(
+            title = brain.Title,
+            remote_url = brain.Description,
+            image_url = brain.getURL()
+        )
+
+        return info
 
 ## NAVIGATION Portlet
 class Renderer(navigation.Renderer):
