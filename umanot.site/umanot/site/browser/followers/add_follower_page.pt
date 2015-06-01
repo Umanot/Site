@@ -27,7 +27,7 @@
             <form id="follow-subscription-form" method="post" enctype="multipart/form-data"
                     tal:attributes="action string:${context/absolute_url}/process-add-follower">
 
-              <input type="hidden" name="typology" value="area_tematica"/>
+              <input type="hidden" name="type" value="area_tematica"/>
               <div class="mrow">
                 <div class="col-md-4">
                   <div tal:define="fieldname string:firstname" tal:attributes="class python:'form-group error' if fieldname in errors else 'form-group'">

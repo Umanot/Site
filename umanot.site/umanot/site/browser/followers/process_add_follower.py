@@ -48,7 +48,7 @@ class ProcessAddFollower(BrowserView):
         sqldata = dict(
             uid = self.context.UID(),
             title = self.context.Title(),
-            typology = self.request.form.get('typology'),
+            typology = self.request.form.get('type'),
             email = self.request.form['email'],
             firstname = self.request.form['firstname'],
             lastname = self.request.form['lastname'],
