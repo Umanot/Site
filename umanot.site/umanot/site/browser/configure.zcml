@@ -365,8 +365,8 @@
   <browser:page
     for=".followers.manage_followers.IManageFollowersView"
     name="document_view"
-    class=".manage_followers.ManageFollowersView"
-    template="templates/manage_followers.pt"
+    class=".followers.manage_followers.ManageFollowersView"
+    template="followers/manage_followers.pt"
     permission="cmf.ManagePortal"
     />
 
