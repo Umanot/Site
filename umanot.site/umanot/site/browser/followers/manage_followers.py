@@ -74,7 +74,12 @@ class ManageFollowersView(BrowserView):
 
             contents[tmp['ContentUID']].append(tmp)
 
-        for x in contents:
-            pass
+        for k, v in contents.iteritems():
+            info = dict(
+                title = contents_and_area_map.get(k),
+                contents = v
+            )
+
+            results.append(info)
 
         return results

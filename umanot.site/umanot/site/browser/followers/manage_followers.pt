@@ -10,8 +10,13 @@
   <body>
     <div metal:fill-slot="main">
       <div id="follow-form-view">
-        <tal:loop repeat="">
-
+        <tal:loop repeat="content view/followers">
+            <h3 tal:content="content/title"></h3>
+          <table>
+            <tal:rows repeat="item content/contents">
+              <tr><td tal:content="item/Lastname"></td></tr>
+            </tal:rows>
+          </table>
         </tal:loop>
       </div>
     </div>
