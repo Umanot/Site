@@ -58,8 +58,7 @@
               <div class="mrow">
                 <div class="col-md-12">
                   <label i18n:translate="Note">Note</label><span class="discreet">(max. 500 caratteri)</span>
-                    <textarea name="notes" maxlength="500">
-                    </textarea>
+                    <textarea name="notes" maxlength="500"></textarea>
                 </div>
               </div>
 
