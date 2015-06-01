@@ -63,6 +63,8 @@ class ManageFollowersView(BrowserView):
         contents = {}
         contents_and_area_map = {}
 
+        import pdb; pdb.set_trace()
+
         for record in records:
             tmp = dict(zip(fields, record))
             
