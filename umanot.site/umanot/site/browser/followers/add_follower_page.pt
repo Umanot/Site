@@ -66,8 +66,8 @@
               <p class="discreet">Con la presente registrazione, accetto e approvo integralmente le norme previste da Umanot in merito al Disclaimer e alla Privacy, che dichiaro di avere letto e compreso ai seguenti link:</p>
 
               <p>
-                <a target="_blank" href="/it/documenti-legali/disclaimer">Disclaimer</a><br/>
-                <a target="_blank" href="/it/documenti-legali/informativa-sulla-privacy">Informativa sulla privacy</a>
+                <a class="discreet" target="_blank" href="/it/documenti-legali/disclaimer">Disclaimer</a><br/>
+                <a class="discreet" target="_blank" href="/it/documenti-legali/informativa-sulla-privacy">Informativa sulla privacy</a>
               </p>
 
 
