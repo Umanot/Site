@@ -18,6 +18,8 @@ class AddFollower(BrowserView):
         self.context = context
         self.request = request
         self.errors = request.get('fw-errors', [])
+        import pdb; pdb.set_trace()
+        self.typology = request.get('type') or 'area_tematica'
 
     @property
     def portal_catalog(self):
