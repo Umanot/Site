@@ -43,6 +43,8 @@ class ManageFollowersView(BrowserView):
 
     @property
     def followers(self):
+        import pdb; pdb.set_trace()
+
         fields = ('AreaUID', 'AreaTitle', 'ContentUID', 'ContentTitle', 'Firstname', 'Lastname', 'Email', 'Typology', 'Member')
 
         sqldata = dict(
@@ -62,8 +64,6 @@ class ManageFollowersView(BrowserView):
         results = []
         contents = {}
         contents_and_area_map = {}
-
-        import pdb; pdb.set_trace()
 
         for record in records:
             tmp = dict(zip(fields, record))
