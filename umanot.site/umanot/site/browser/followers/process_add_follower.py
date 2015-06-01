@@ -86,6 +86,7 @@ class ProcessAddFollower(BrowserView):
                 ('umanot', '%(area_uid)s', '%(area_title)s', '%(uid)s', '%(title)s', '%(firstname)s', '%(lastname)s', '%(email)s', '%(notes)s','%(typology)s', %(member)s,  NOW())""" % sqldata
 
         cursor.execute(query)
+        connection.close()
 
         # set cookie
         data_string = '%s||%s||%s' % (sqldata['lastname'], sqldata['firstname'], sqldata['email'])

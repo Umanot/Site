@@ -362,4 +362,12 @@
     permission="cmf.ManagePortal"
     />
 
+  <browser:page
+    for=".followers.manage_followers.IManageFollowersView"
+    name="document_view"
+    class=".manage_followers.ManageFollowersView"
+    template="templates/manage_followers.pt"
+    permission="cmf.ManagePortal"
+    />
+
 </configure>
