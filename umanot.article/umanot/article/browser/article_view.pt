@@ -93,8 +93,6 @@
       </section>
       <!-- follow-section -->
 
-      <div tal:replace="structure provider:plone.belowcontentbody" />
-
       <section id="realted-section" tal:condition="nothing">
 
         <h5>Potrebbe interessarti anche</h5>
