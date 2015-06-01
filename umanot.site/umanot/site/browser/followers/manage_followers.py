@@ -55,7 +55,8 @@ class ManageFollowersView(BrowserView):
 
         query = """SELECT %(fields)s FROM Followers WHERE website='umanot'""" % sqldata
 
-        records = cursor.execute(query)
+        cursor.execute(query)
+        records = cursor.fetch_all()
         connection.close()
 
         results = []
