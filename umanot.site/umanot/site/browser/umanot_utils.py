@@ -89,7 +89,7 @@ class UmanotUtils(object):
 
         images = catalog(
             portal_type = 'Image',
-            path = '/umanot/it/bnr',
+            path = '/umanot/it/risorse/immagini/bnr',
             sort_on = 'getObjPositionInParent',
             Language = 'all'
         )
