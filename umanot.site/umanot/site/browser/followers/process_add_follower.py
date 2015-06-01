@@ -32,6 +32,8 @@ class ProcessAddFollower(BrowserView):
         request = self.request
         response = request.RESPONSE
 
+        import pdb; pdb.set_trace()
+
         required = ['firstname', 'lastname', 'email']
 
         errors = {}
