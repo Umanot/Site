@@ -46,7 +46,7 @@ class ManageFollowersView(BrowserView):
         fields = ('AreaUID', 'AreaTitle', 'ContentUID', 'ContentTitle', 'Firstname', 'Lastname', 'Email', 'Typology', 'Member')
 
         sqldata = dict(
-            fields = fields,
+            fields = ','.join(fields),
         )
 
         sqldata = self.umanot_utils.prepare_data_for_query(sqldata)
