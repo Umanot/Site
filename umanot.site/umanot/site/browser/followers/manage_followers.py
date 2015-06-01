@@ -43,8 +43,6 @@ class ManageFollowersView(BrowserView):
 
     @property
     def followers(self):
-        import pdb; pdb.set_trace()
-
         fields = ('AreaUID', 'AreaTitle', 'ContentUID', 'ContentTitle', 'Firstname', 'Lastname', 'Email', 'Typology', 'Member')
 
         sqldata = dict(
@@ -58,7 +56,7 @@ class ManageFollowersView(BrowserView):
         query = """SELECT %(fields)s FROM Followers WHERE website='umanot'""" % sqldata
 
         cursor.execute(query)
-        records = cursor.fetch_all()
+        records = cursor.fetchall()
         connection.close()
 
         results = []
