@@ -18,7 +18,7 @@ class AddFollower(BrowserView):
         self.context = context
         self.request = request
         self.errors = request.get('fw-errors', [])
-        self.typology = 'comments' in request.get('type') == 'comments' else 'area_tematica'
+        self.typology = 'comments' if request.get('type') == 'comments' else 'area_tematica'
 
     @property
     def portal_catalog(self):
