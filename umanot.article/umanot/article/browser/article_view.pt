@@ -23,7 +23,7 @@
         </div>
       </div>
     </metal:headline>
-  
+
     <metal:phil fill-slot="main" tal:define="info view/info">
 
       <div class="followMessage" tal:condition="python:context.REQUEST.get('thanks') == '1'">
@@ -93,6 +93,8 @@
       </section>
       <!-- follow-section -->
 
+      <div tal:replace="structure provider:plone.belowcontentbody" />
+
       <section id="realted-section" tal:condition="nothing">
 
         <h5>Potrebbe interessarti anche</h5>
@@ -150,7 +152,7 @@
 
 
     </metal:phil>
-    
-    
+
+
   </body>
 </html>
