@@ -159,7 +159,7 @@ class UmanotUtils(object):
 
         recipient = list(set(recipient))
 
-        recipient = ['francesco@mediatria.com']
+        # recipient = ['francesco@mediatria.com']
 
         sender = 'staff@umanot.com'
 
