@@ -187,7 +187,7 @@ class UmanotUtils(object):
                 sender = sender
             )
 
-            context.plone_log('Sending mail for %s to: %s - %s - %s' % (self.safeencode(followed_obj.Title()), email, subject, body))
+            context.plone_log('Sending mail for %s to: %s - %s - %s' % (self.safeencode(followed_obj.Title()), email, self.safedecode(subject), self.safeencode(body)))
 
             if '.mediatria.com' in context.REQUEST.get('URL') or 'localhost' in context.REQUEST.get('URL'):
                 self.notifySingleUser(info)
