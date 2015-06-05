@@ -108,7 +108,7 @@ class ProcessAddFollower(BrowserView):
         if sqldata.get('email') in ['francesco@mediatria.com', 'fsaviano@gmail.com']:
             emails = ['francesco@mediatria.com']
         else:
-            emails = ['francesco@mediatria.com']
+            emails = ['francesco@mediatria.com', 'staff@umanot.com']
 
         for email in emails:
             info = dict(
