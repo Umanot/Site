@@ -167,15 +167,15 @@ class UmanotUtils(object):
             if action == 'update':
                 subject = "[Umanot update] %s" % self.safeencode(followed_obj.Title())
                 body = '<p>È stato modificato il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
-                body += "<hr /><p>Grazie per tuoi commenti e contributi!<br />Lo staff di Umanot</p>"
+                body += "<p>Grazie per tuoi commenti e contributi!</p><p>Lo staff di Umanot</p>"
             else:
                 subject = "[Umanot update] %s" % self.safeencode(followed_obj.Title())
                 body = '<p>È stato aggiunto il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
-                body += "<hr /><p>Grazie per tuoi commenti e contributi!<br />Lo staff di Umanot</p>"
+                body += "<p>Grazie per tuoi commenti e contributi!</p><p>Lo staff di Umanot</p>"
         elif typology == 'comments':
             subject = "[Umanot] %s" % self.safeencode(followed_obj.Title())
             body = '<p>È stato inserito un nuovo commento: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
-            body += "<hr /><p>Grazie per tuoi commenti e contributi!<br />Lo staff di Umanot</p>"
+            body += "<p>Grazie per tuoi commenti e contributi!</p><p>Lo staff di Umanot</p>"
         else:
             context.plone_log('Notification error: wrong typology')
             return
