@@ -193,7 +193,7 @@
     permission="zope.Public"
     layer=".interfaces.IThemeSpecific"
     />
-    
+
   <!-- LEADERBOARD BOTTOM -->
   <browser:viewlet
     name="umanot.leaderboard_bottom"
@@ -305,7 +305,7 @@
     template="templates/partner_folder_view.pt"
     permission="zope2.View"
     />
-    
+
   <!-- Service Folder View  -->
   <browser:page
     for=".service_folder_view.IServiceFolderView"
@@ -362,10 +362,17 @@
     permission="cmf.ManagePortal"
     />
 
-    <browser:page
+  <browser:page
     for="*"
     name="notify_followers"
     class=".followers.notify_followers.NotifyFollowers"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="notify_update"
+    class=".followers.notify_update.NotifyUpdate"
     permission="zope2.View"
     />
 
