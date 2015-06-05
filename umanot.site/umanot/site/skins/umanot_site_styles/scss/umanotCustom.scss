@@ -518,6 +518,11 @@
   z-index: 3;
 }
 
+.mosaicTileInner .ghostButton {
+  position: absolute;
+  bottom: 20px
+}
+
 #mt01 {
   width: 33.333333%;
   background: transparent url(var/mt05.jpg) no-repeat center center;
@@ -558,6 +563,8 @@
   #mt03,
   #mt04,
   #mt05 {width: 100%;}
+  
+  .mosaicTileInner .ghostButton {position: static;}
 }
 
 
