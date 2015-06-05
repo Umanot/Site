@@ -51,7 +51,7 @@ class UmanotUtils(object):
             return True
 
     def get_area_from_context(self, context):
-        if context.portal_type == "Article":
+        if context.portal_type in ["Article", "Placeholder"]:
             parent = context.aq_parent
             if parent.portal_type == "Folder":
                 return parent
@@ -107,13 +107,21 @@ class UmanotUtils(object):
 
     def notifyFollowers(self, context, typology='area_tematica', action='new'):
         # nel caso di commenti il contenuto da notificare è il context, non devo risalire a nulla
-
-        import pdb; pdb.set_trace()
-
         if typology == 'comments':
-            followed_obj = context
+            parent = context
+
+            try:
+                while True:
+                    if hasattr('addComment') or parent.portal_type == 'Discussion Item':
+                        parent = parent.aq_parent
+                    else:
+                        break
+            except:
+                pass
+
+            followed_obj = parent
         elif typology == 'area_tematica':
-            if context.portal_type == "Article":
+            if context.portal_type in ["Article", "Placeholder"]:
                 followed_obj = self.get_area_from_context(context)
             else:
                 followed_obj = None
