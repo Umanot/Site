@@ -108,6 +108,8 @@ class UmanotUtils(object):
     def notifyFollowers(self, context, typology='area_tematica', action='new'):
         # nel caso di commenti il contenuto da notificare è il context, non devo risalire a nulla
 
+        import pdb; pdb.set_trace()
+
         if typology == 'comments':
             followed_obj = context
         elif typology == 'area_tematica':
@@ -154,8 +156,6 @@ class UmanotUtils(object):
         recipient = ['francesco@mediatria.com']
 
         sender = 'staff@umanot.com'
-
-        import pdb; pdb.set_trace()
 
         if typology == 'area_tematica':
             if action == 'update':
