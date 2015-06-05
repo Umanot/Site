@@ -364,8 +364,8 @@
 
     <browser:page
     for="*"
-    name="notify-followers"
-    class=".notify_followers.NotifyFollowers"
+    name="notify_followers"
+    class=".followers.notify_followers.NotifyFollowers"
     permission="zope2.View"
     />
 
