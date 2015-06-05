@@ -153,8 +153,6 @@ class UmanotUtils(object):
 
         recipient = [x[0] for x in records]
 
-        recipient = []
-
         if not recipient:
             context.plone_log('Notification error: no recipient')
             return
@@ -167,16 +165,16 @@ class UmanotUtils(object):
 
         if typology == 'area_tematica':
             if action == 'update':
-                subject = "[Umanot update] %s" % followed_obj.Title()
-                body = '<p>È stato modificato il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), context.Title())
+                subject = "[Umanot update] %s" % self.safeencode(followed_obj.Title())
+                body = '<p>È stato modificato il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
                 body += "<p>Grazie per tuoi commenti e contributi!</p><p>Lo staff di Umanot</p>"
             else:
-                subject = "[Umanot update] %s" % followed_obj.Title()
-                body = '<p>È stato aggiunto il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), context.Title())
+                subject = "[Umanot update] %s" % self.safeencode(followed_obj.Title())
+                body = '<p>È stato aggiunto il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
                 body += "<p>Grazie per tuoi commenti e contributi!</p><p>Lo staff di Umanot</p>"
         elif typology == 'comments':
-            subject = "[Umanot] %s" % followed_obj.Title()
-            body = '<p>È stato inserito un nuovo commento: <a href="%s">%s</a></p>' % (context.absolute_url(), context.Title())
+            subject = "[Umanot] %s" % self.safeencode(followed_obj.Title())
+            body = '<p>È stato inserito un nuovo commento: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
         else:
             context.plone_log('Notification error: wrong typology')
             return
@@ -185,11 +183,11 @@ class UmanotUtils(object):
             info = dict(
                 receiver = email,
                 subject = subject,
-                message = body,
+                message = self.safedecode(body),
                 sender = sender
             )
 
-            context.plone_log('Sending mail for %s to: %s - %s - %s' % (followed_obj.Title(), email, subject, body))
+            context.plone_log('Sending mail for %s to: %s - %s - %s' % (self.safeencode(followed_obj.Title()), email, subject, body))
 
             if '.mediatria.com' in context.REQUEST.get('URL') or 'localhost' in context.REQUEST.get('URL'):
                 self.notifySingleUser(info)
