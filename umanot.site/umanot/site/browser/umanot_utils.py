@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 import copy
+
 from Products.CMFCore.utils import getToolByName
 from zope.annotation import IAnnotations
-
 from zope.interface import implements, Interface
 from zope.component.hooks import getSite
 from umanot.site.config import SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, SQL_DB_TEST, SQL_HOST, SQL_USER, SQL_PASS, SQL_DB
@@ -18,11 +18,11 @@ class UmanotUtils(object):
 
     def get_sql_connection(self, url, context=None):
         if 'localhost' in url or 'mediatria.com' in url:
-            connection = oursql.connect(SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, db=SQL_DB_TEST)
+            connection = oursql.connect(SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, db = SQL_DB_TEST)
             if context:
                 context.plone_log("Test DB connection")
         else:
-            connection = oursql.connect(SQL_HOST, SQL_USER, SQL_PASS, db=SQL_DB)
+            connection = oursql.connect(SQL_HOST, SQL_USER, SQL_PASS, db = SQL_DB)
 
         return connection
 
@@ -55,7 +55,7 @@ class UmanotUtils(object):
             parent = context.aq_parent
             if parent.portal_type == "Folder":
                 return parent
-            
+
     def setLocalAd(self, context, data):
         KEY = 'umanot.ad'
         context = context.aq_inner
@@ -105,6 +105,90 @@ class UmanotUtils(object):
     #     except:
     #         return None
 
+    def notifyFollowers(self, context, typology='area_tematica', action='new'):
+        # nel caso di commenti il contenuto da notificare è il context, non devo risalire a nulla
+
+        if typology == 'comment':
+            followed_obj = context
+        elif typology == 'area_tematica':
+            if context.portal_type == "Article":
+                followed_obj = self.get_area_from_context(context)
+            else:
+                followed_obj = None
+        else:
+            # questo caso non è detto che sia sensato
+            followed_obj = context
+
+        uid = followed_obj.UID()
+
+        sqldata = {
+            'uid': uid,
+            'typology': typology,
+        }
+
+        request = context.REQUEST
+
+        sqldata = self.prepare_data_for_query(sqldata)
+        connection = self.get_sql_connection(request.get('URL'))
+        cursor = connection.cursor()
+
+        if typology == 'area_tematica':
+            query = """SELECT Email FROM Followers WHERE AreaUID='%(uid)s' AND Typology='%(typology)s'""" % sqldata
+        else:
+            query = """SELECT Email FROM Followers WHERE ContentUID='%(uid)s' AND Typology='%(typology)s'""" % sqldata
+
+        cursor.execute(query)
+
+        records = cursor.fetchall()
+
+        recipient = [x[0] for x in records]
+
+        recipient = []
+
+        if not recipient:
+            context.plone_log('Notification error: no recipient')
+            return
+
+        recipient = list(set(recipient))
+
+        recipient = ['francesco@mediatria.com']
+
+        sender = 'staff@umanot.com'
+
+        if typology == 'area_tematica':
+            if action == 'update':
+                subject = "[Umanot update] %s" % followed_obj.Title()
+                body = '<p>È stato modificato il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), context.Title())
+                body += "<p>Grazie per tuoi commenti e contributi!</p><p>Lo staff di Umanot</p>"
+            else:
+                subject = "[Umanot update] %s" % followed_obj.Title()
+                body = '<p>È stato aggiunto il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), context.Title())
+                body += "<p>Grazie per tuoi commenti e contributi!</p><p>Lo staff di Umanot</p>"
+        elif typology == 'comment':
+            subject = "[Umanot] %s" % followed_obj.Title()
+            body = '<p>È stato inserito un nuovo commento: <a href="%s">%s</a></p>' % (context.absolute_url(), context.Title())
+        else:
+            context.plone_log('Notification error: wrong typology')
+            return
+
+        for email in recipient:
+            info = dict(
+                receiver = email,
+                subject = subject,
+                message = body,
+                sender = sender
+            )
+
+            context.plone_log('Sending mail for %s to: %s - %s - %s' % (followed_obj.Title(), email, subject, body))
+
+            if '.mediatria.com' in context.REQUEST.get('URL') or 'localhost' in context.REQUEST.get('URL'):
+                self.notifySingleUser(info)
+                break
+            else:
+                self.notifySingleUser(info)
+
+        return True
+
     def notifySingleUser(self, info):
         """Send message to one or more user.
            The info parameter must contain at least:
@@ -122,7 +206,7 @@ class UmanotUtils(object):
             return
 
         # SENDER/RECEIVER ADDRESSES
-        send_from_address = 'no-reply@umanot.com'
+        send_from_address = info['sender'] if info.get('sender') else 'no-reply@umanot.com'
         send_to_address = info.get('receiver')
 
         custom_data = dict(
@@ -132,7 +216,7 @@ class UmanotUtils(object):
         # TYPE
         subtype = 'text/html'
 
-        #SUBJECT AND BODY
+        # SUBJECT AND BODY
         subject = info['subject']
 
         mail_head = u"""
