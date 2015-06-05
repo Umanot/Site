@@ -32,4 +32,7 @@ class NotifyFollowers(BrowserView):
         request = self.request
         response = request.RESPONSE
 
-        import pdb; pdb.set_trace()
+        if self.context.portal_type in ['Article']:
+            self.umanot_utils.notifyFollowers(self.context, 'area_tematica', 'new')
+        elif self.context.portal_type == 'Discussion Item':
+            self.umanot_utils.notifyFollowers(self.context, 'comments', 'new')

@@ -108,7 +108,7 @@ class UmanotUtils(object):
     def notifyFollowers(self, context, typology='area_tematica', action='new'):
         # nel caso di commenti il contenuto da notificare è il context, non devo risalire a nulla
 
-        if typology == 'comment':
+        if typology == 'comments':
             followed_obj = context
         elif typology == 'area_tematica':
             if context.portal_type == "Article":
@@ -155,6 +155,8 @@ class UmanotUtils(object):
 
         sender = 'staff@umanot.com'
 
+        import pdb; pdb.set_trace()
+
         if typology == 'area_tematica':
             if action == 'update':
                 subject = "[Umanot update] %s" % followed_obj.Title()
@@ -164,7 +166,7 @@ class UmanotUtils(object):
                 subject = "[Umanot update] %s" % followed_obj.Title()
                 body = '<p>È stato aggiunto il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), context.Title())
                 body += "<p>Grazie per tuoi commenti e contributi!</p><p>Lo staff di Umanot</p>"
-        elif typology == 'comment':
+        elif typology == 'comments':
             subject = "[Umanot] %s" % followed_obj.Title()
             body = '<p>È stato inserito un nuovo commento: <a href="%s">%s</a></p>' % (context.absolute_url(), context.Title())
         else:
