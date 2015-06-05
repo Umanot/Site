@@ -362,6 +362,13 @@
     permission="cmf.ManagePortal"
     />
 
+    <browser:page
+    for="*"
+    name="notify-followers"
+    class=".notify_followers.NotifyFollowers"
+    permission="zope2.View"
+    />
+
   <browser:page
     for=".followers.manage_followers.IManageFollowersView"
     name="document_view"
