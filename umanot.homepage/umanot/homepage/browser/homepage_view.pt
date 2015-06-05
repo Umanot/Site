@@ -94,7 +94,7 @@
           </section>
 
           <section id="article-section">
-            <h2>Per diventare un Trader Scientifico<sup>&reg;</sup></h2>
+            <h2 i18n:translate="trader_scientifico">Per diventare un Trader Scientifico<sup>&reg;</sup></h2>
             <div class="isotope">
 
               <tal:loop tal:repeat="item view/articles">
