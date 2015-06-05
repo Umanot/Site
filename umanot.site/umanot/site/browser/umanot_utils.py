@@ -182,7 +182,7 @@ class UmanotUtils(object):
         for email in recipient:
             info = dict(
                 receiver = email,
-                subject = subject,
+                subject = self.safedecode(subject),
                 message = self.safedecode(body),
                 sender = sender
             )
