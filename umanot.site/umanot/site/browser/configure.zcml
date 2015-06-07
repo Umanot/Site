@@ -384,4 +384,11 @@
     permission="cmf.ManagePortal"
     />
 
+  <browser:page
+    for="*"
+    name="translate-contents"
+    class=".translate_contents.TranslateContentsView"
+    permission="cmf.ManagePortal"
+    />
+
 </configure>
