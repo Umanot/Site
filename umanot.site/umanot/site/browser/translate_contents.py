@@ -1,5 +1,6 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
+from Products.statusmessages.interfaces import IStatusMessage
 from zope.interface import implements, Interface
 
 TYPES_WHITE_LIST = ['Folder', 'Image']
@@ -79,7 +80,9 @@ class TranslateContentsView(BrowserView):
                 else:
                     self.context.plone_log("--> %s already exists" % lang)
 
-        self.context.plone_log('Done')
+        IStatusMessage(self.request).addStatusMessage(u"Immagini tradotte correttamente", type = 'info')
+        response = self.request.RESPONSE
+        return response.redirect(self.context.absolute_url())
 
     def getLanguages(self):
         """
