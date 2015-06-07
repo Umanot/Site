@@ -52,8 +52,6 @@ class TranslateContentsView(BrowserView):
 
         for brain in brains:
             processed += 1
-            if processed == 30:
-                import pdb; pdb.set_trace()
             self.context.plone_log('Processing [%s] %s of %s' % (brain.Title, processed, totals))
             obj = brain.getObject()
 
