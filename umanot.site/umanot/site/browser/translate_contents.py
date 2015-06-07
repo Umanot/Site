@@ -24,7 +24,7 @@ class TranslateContentsView(BrowserView):
         self.dig = request.get('dig', True)
 
     def __call__(self):
-
+        import pdb; pdb.set_trace()
         catalog = getToolByName(self.context, 'portal_catalog')
 
         query = dict(
