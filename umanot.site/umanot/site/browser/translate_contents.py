@@ -24,7 +24,6 @@ class TranslateContentsView(BrowserView):
         self.dig = request.get('dig', True)
 
     def __call__(self):
-        import pdb; pdb.set_trace()
         catalog = getToolByName(self.context, 'portal_catalog')
 
         query = dict(
@@ -53,6 +52,8 @@ class TranslateContentsView(BrowserView):
 
         for brain in brains:
             processed += 1
+            if processed == 30:
+                import pdb; pdb.set_trace()
             self.context.plone_log('Processing [%s] %s of %s' % (brain.Title, processed, totals))
             obj = brain.getObject()
 
