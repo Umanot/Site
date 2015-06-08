@@ -87,7 +87,8 @@ class FooterViewlet(common.FooterViewlet):
         catalog = getToolByName(self.context, 'portal_catalog')
         folders = catalog(
             portal_type = "Folder",
-            object_provides = IIntelligenzaConnettiva.__identifier__
+            object_provides = IIntelligenzaConnettiva.__identifier__,
+            getFooter_featured = True
         )
 
         if not folders:
