@@ -1,4 +1,4 @@
-<footer id="footer">
+<footer id="footer" i18n:domain="umanot.site">
   <section id="section-footer">
     <div class="container-fluid">
       <div class="mrow">
