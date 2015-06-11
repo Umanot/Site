@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-06-11 10:09+0000\n"
+"POT-Creation-Date: 2015-06-11 10:17+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,6 +14,10 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+#: ./browser/viewlets/footer.pt:16
+msgid "Chi Siamo"
+msgstr ""
+
 #: ./browser/followers/add_follower_page.pt:43
 msgid "Cognome"
 msgstr "Lastname"
@@ -24,6 +28,10 @@ msgstr "Contact us"
 
 #: ./browser/followers/add_follower_page.pt:52
 msgid "E-mail"
+msgstr ""
+
+#: ./browser/viewlets/footer.pt:6
+msgid "Intelligenza connettiva"
 msgstr ""
 
 #: ./browser/followers/add_follower_page.pt:14
