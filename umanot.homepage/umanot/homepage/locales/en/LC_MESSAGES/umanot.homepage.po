@@ -17,5 +17,5 @@ msgstr ""
 #. Default: "Per diventare un Trader Scientifico<sup>&reg;</sup>"
 #: ./browser/homepage_view.pt:97
 msgid "trader_scientifico"
-msgstr ""
+msgstr "To be a Scientific Trader (or not to be...)"
 
