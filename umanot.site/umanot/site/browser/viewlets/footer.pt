@@ -23,12 +23,12 @@
         <div class="col-md-4">
           <div id="contact-block">
 
-            <h6 class="footerTitle">Contattaci</h6>
+            <h6 class="footerTitle" i18n:translate="Contattaci">Contattaci</h6>
             <address>
               <strong>Umanot Srl</strong><br>
-              sede legale: via del Caravaggio, 5 - 20144 Milano, Italy<br>
-              P.I. / C.F.: 08862510966<br>
-              Numero REA MI - 2054423
+              <span i18n:translate="sede_legale">sede legale: via del Caravaggio, 5 - 20144 Milano, Italy</span><br>
+              <span i18n:translate="piva">P.I. / C.F.: 08862510966</span><br>
+              <span i18n:translate="piva">Numero REA MI - 2054423</span>
             </address>
 
             <address>
