@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-06-11 10:02+0000\n"
+"POT-Creation-Date: 2015-06-11 10:25+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,6 +13,11 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
+
+#. Default: "Scopri di più"
+#: ./browser/homepage_view.pt:88
+msgid "read_more"
+msgstr ""
 
 #. Default: "Per diventare un Trader Scientifico<sup>&reg;</sup>"
 #: ./browser/homepage_view.pt:97
