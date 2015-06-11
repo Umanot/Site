@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-06-11 10:08+0000\n"
+"POT-Creation-Date: 2015-06-11 10:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,6 +16,10 @@ msgstr ""
 
 #: ./browser/followers/add_follower_page.pt:43
 msgid "Cognome"
+msgstr ""
+
+#: ./browser/viewlets/footer.pt:26
+msgid "Contattaci"
 msgstr ""
 
 #: ./browser/followers/add_follower_page.pt:52
@@ -36,5 +40,20 @@ msgstr ""
 
 #: ./browser/followers/add_follower_page.pt:87
 msgid "Submit"
+msgstr ""
+
+#. Default: "P.I. / C.F.: 08862510966"
+#: ./browser/viewlets/footer.pt:30
+msgid "piva"
+msgstr ""
+
+#. Default: "Numero REA MI - 2054423"
+#: ./browser/viewlets/footer.pt:31
+msgid "rea"
+msgstr ""
+
+#. Default: "sede legale: via del Caravaggio, 5 - 20144 Milano, Italy"
+#: ./browser/viewlets/footer.pt:29
+msgid "sede_legale"
 msgstr ""
 
