@@ -87,8 +87,7 @@ class FooterViewlet(common.FooterViewlet):
         catalog = getToolByName(self.context, 'portal_catalog')
         folders = catalog(
             portal_type = "Folder",
-            object_provides = IIntelligenzaConnettiva.__identifier__,
-            getFooter_featured = True
+            object_provides = IIntelligenzaConnettiva.__identifier__
         )
 
         if not folders:
@@ -99,6 +98,7 @@ class FooterViewlet(common.FooterViewlet):
         brains = catalog(
             portal_type = ["Article", "Placeholder"],
             path = folder.getPath(),
+            getFooter_featured = True,
             sort_on = 'Date',
             sort_order = 'reverse',
             sort_limit = 3
