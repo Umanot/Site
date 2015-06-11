@@ -16,7 +16,7 @@ msgstr ""
 
 #: ./browser/viewlets/footer.pt:16
 msgid "Chi Siamo"
-msgstr ""
+msgstr "About"
 
 #: ./browser/followers/add_follower_page.pt:43
 msgid "Cognome"
@@ -32,7 +32,7 @@ msgstr ""
 
 #: ./browser/viewlets/footer.pt:6
 msgid "Intelligenza connettiva"
-msgstr ""
+msgstr "Connective Intelligence"
 
 #: ./browser/followers/add_follower_page.pt:14
 msgid "Iscriviti"
