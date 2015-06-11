@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="mrow">
         <div class="col-md-4">
-          <h6 class="footerTitle">Intelligenza connettiva</h6>
+          <h6 class="footerTitle" i18n:translate="Intelligenza connettiva">Intelligenza connettiva</h6>
           <ul class="footerList">
             <tal:loop repeat="item view/articles">
               <li><a tal:attributes="href item/URL"><span tal:content="item/title"></span><span class="text-muted" tal:content="item/readable_date"></span></a></li>
@@ -13,7 +13,7 @@
 
         <div class="col-md-4">
           <div class="footerBlock" tal:define="item view/about" tal:condition="item">
-            <h6 class="footerTitle">Chi Siamo</h6>
+            <h6 class="footerTitle" i18n:translate="Chi Siamo">Chi Siamo</h6>
 
             <p tal:content="item/description"></p>
             <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL" tal:content="item/title">Perché Umanot</a>
