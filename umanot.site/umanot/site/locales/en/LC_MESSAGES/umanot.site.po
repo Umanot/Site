@@ -16,11 +16,11 @@ msgstr ""
 
 #: ./browser/followers/add_follower_page.pt:43
 msgid "Cognome"
-msgstr ""
+msgstr "Lastname"
 
 #: ./browser/viewlets/footer.pt:26
 msgid "Contattaci"
-msgstr ""
+msgstr "Contact us"
 
 #: ./browser/followers/add_follower_page.pt:52
 msgid "E-mail"
@@ -28,15 +28,15 @@ msgstr ""
 
 #: ./browser/followers/add_follower_page.pt:14
 msgid "Iscriviti"
-msgstr ""
+msgstr "Submit"
 
 #: ./browser/followers/add_follower_page.pt:34
 msgid "Nome"
-msgstr ""
+msgstr "Firstname"
 
 #: ./browser/followers/add_follower_page.pt:60
 msgid "Note"
-msgstr ""
+msgstr "Notes"
 
 #: ./browser/followers/add_follower_page.pt:87
 msgid "Submit"
@@ -45,15 +45,15 @@ msgstr ""
 #. Default: "P.I. / C.F.: 08862510966"
 #: ./browser/viewlets/footer.pt:30
 msgid "piva"
-msgstr ""
+msgstr "VAT code:  08862510966"
 
 #. Default: "Numero REA MI - 2054423"
 #: ./browser/viewlets/footer.pt:31
 msgid "rea"
-msgstr ""
+msgstr "REA MI - 2054423"
 
 #. Default: "sede legale: via del Caravaggio, 5 - 20144 Milano, Italy"
 #: ./browser/viewlets/footer.pt:29
 msgid "sede_legale"
-msgstr ""
+msgstr "Address: via del Caravaggio, 5 - 20144 Milano, Italy"
 
