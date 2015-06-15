@@ -1,5 +1,6 @@
 @import "var";
 /* BANNER */
+
 .leaderboardWrapper {
   padding: 10px 10px 10px;
   background: #F2F2E1;
@@ -9,6 +10,12 @@
 #viewlet-above-content .leaderboardWrapper {
   margin: -20px -45px 20px;
 }
+
+
+.template-homepage_view #viewlet-above-content .leaderboardWrapper {
+  margin: 0;
+}
+
 
 .leaderboard {
   background-color: #FFEFD5;
