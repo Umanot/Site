@@ -241,12 +241,10 @@
   width: 100%;
   position: relative;
 }
-
+#content .relatedItem h3 {line-height: 0.8em; margin: 10px 0 0;}
 #content .relatedItem h3 a {
-  font-size: 13px;
+  font-size: 12px;
   color: $colorRight;
-  margin: 10px 0 10px 0;
-  line-height: 1.3em;
 }
 
 .relatedByLine {
