@@ -157,6 +157,7 @@ class RelatedItemsViewlet(ViewletBase):
 
                 results.append(info)
         elif self.context.portal_type in ['Article', 'Placeholder']:
+            import pdb; pdb.set_trace()
             if self.context.getAuthenticatedMember().getUserName() != 'choco':
                 return []
             results = [x for x in self.context.getRelatedItems() if x and x.portal_type in ['Article', 'Placeholder', 'Video']]
