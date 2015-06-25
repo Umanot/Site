@@ -53,31 +53,6 @@ class DocumentActionsViewlet(content.DocumentActionsViewlet):
 class ContentRelatedItems(content.ContentRelatedItems):
     index = ViewPageTemplateFile("viewlets/document_relatedItems.pt")
 
-    @property
-    def contents(self):
-        import pdb; pdb.set_trace()
-        results = []
-        catalog = getToolByName(self.context, 'portal_catalog')
-
-        if self.context.portal_type == "Video":
-            brains = catalog(
-                portal_type = "Video",
-                sort_on = 'getObjPositionInParent'
-            )
-
-            context_uid = self.context.UID()
-
-            for brain in brains:
-                if brain.UID == context_uid:
-                    continue
-                obj = brain.getObject()
-                info = obj.getInfo()
-
-                results.append(info)
-
-        return results
-
-
 ## SITEACTIONS 
 class SiteActionsViewlet(common.SiteActionsViewlet):
     index = ViewPageTemplateFile('viewlets/site_actions.pt')
@@ -160,6 +135,29 @@ class ColophonViewlet(ViewletBase):
 ## RELATED 
 class RelatedItemsViewlet(ViewletBase):
     index = ViewPageTemplateFile('viewlets/related_items.pt')
+
+    @property
+    def contents(self):
+        results = []
+        catalog = getToolByName(self.context, 'portal_catalog')
+
+        if self.context.portal_type == "Video":
+            brains = catalog(
+                portal_type = "Video",
+                sort_on = 'getObjPositionInParent'
+            )
+
+            context_uid = self.context.UID()
+
+            for brain in brains:
+                if brain.UID == context_uid:
+                    continue
+                obj = brain.getObject()
+                info = obj.getInfo()
+
+                results.append(info)
+
+        return results
 
 
 ## LEADERBOARD TOP 
