@@ -27,5 +27,10 @@ class VideoView(BrowserView):
         
     @property
     def info(self):
-        return self.context.getInfo(scale="preview")
-        
+        info = self.context.getInfo(scale="preview")
+
+        if info['embed'].startswith('http'):
+            video_id = info['embed'].split('v=')[-1]
+            info['embed'] = "https://www.youtube.com/embed/%s" % video_id
+
+        return info
