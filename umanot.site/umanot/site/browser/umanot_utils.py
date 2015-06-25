@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import copy
+from DateTime.DateTime import DateTime
 
 from Products.CMFCore.utils import getToolByName
 from zope.annotation import IAnnotations
@@ -165,8 +166,13 @@ class UmanotUtils(object):
 
         if typology == 'area_tematica':
             if action == 'update':
-                subject = "[Umanot update] %s" % self.safeencode(followed_obj.Title())
-                body = '<p>È stato modificato il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
+                if uid == '943e809ec82e4b0eb9ea803314a1fefd':
+                    subject = "Update Osserva Umanot in azione - %s" % context.toLocalizedTime(DateTime(), long_format=False)
+                    body = '<p>Abbiamo pubblicato un nuovo aggiornamento dei risultati di Umanot.</p>'
+                    body += '<p><a href="http://www.umanot.com/it/servizi/osserva-umanot-in-azione">ACCEDI SUBITO ALLA PAGINA</a></p>'
+                else:
+                    subject = "[Umanot update] %s" % self.safeencode(followed_obj.Title())
+                    body = '<p>È stato modificato il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
                 body += "<p>Grazie per tuoi commenti e contributi!</p><p>Lo staff di Umanot</p>"
             else:
                 subject = "[Umanot update] %s" % self.safeencode(followed_obj.Title())
