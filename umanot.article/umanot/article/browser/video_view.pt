@@ -1,4 +1,11 @@
 <html  metal:use-macro="here/main_template/macros/master" i18n:domain="hero.contents">
+
+<head>
+  <metal:js fill-slot="javascript_head_slot">
+    <script src="http://s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552f91fa389479f4"></script>
+  </metal:js>
+</head>
+
 <body>
   <div metal:fill-slot="content-core">
     <div class="addthis_sharing_toolbox"></div>
