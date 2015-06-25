@@ -1,22 +1,6 @@
 <html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.site">
 
   <head>
-    <metal:js fill-slot="javascript_head_slot">
-      <script src="++resource++umanot.site.javascripts/min/magnificpopup.min.js"></script>
-      <script>
-        $(function () {
-          $('.videoPop').magnificPopup({
-            delegate: 'a',
-            disableOn: 700,
-            type: 'iframe',
-            mainClass: 'mfp-fade',
-            removalDelay: 160,
-            preloader: false,
-            fixedContentPos: false
-          });
-        });
-      </script>
-    </metal:js>
 
   </head>
   <body>
@@ -40,7 +24,7 @@
             <tal:loop repeat="item group">
               <div class="col-md-4 col-sm-6" tal:condition="item">
 
-                <div>
+                <div class="videoPop">
                   <figure>
                     <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" tal:attributes="href item/embed">
                       <tal:image content="structure item/image"></tal:image>
