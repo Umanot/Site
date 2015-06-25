@@ -141,13 +141,13 @@ class RelatedItemsViewlet(ViewletBase):
         results = []
         catalog = getToolByName(self.context, 'portal_catalog')
 
+        context_uid = self.context.UID()
+
         if self.context.portal_type == "Video":
             brains = catalog(
                 portal_type = "Video",
                 sort_on = 'getObjPositionInParent'
             )
-
-            context_uid = self.context.UID()
 
             for brain in brains:
                 if brain.UID == context_uid:
@@ -155,6 +155,25 @@ class RelatedItemsViewlet(ViewletBase):
                 obj = brain.getObject()
                 info = obj.getInfo(scale="large")
 
+                results.append(info)
+        elif self.context.portal_type in ['Article', 'Placeholder']:
+            if self.context.getAuthenticatedMember().getUserName() != 'choco':
+                return []
+            results = [x for x in self.context.getRelatedItems() if x and x.portal_type in ['Article', 'Placeholder', 'Video']]
+            parent = self.context.aq_parent
+            brains = catalog(
+                portal_type = ['Article', 'Placeholder', 'Video'],
+                path = '/'.join(parent.getPhysicalPath()),
+                sort_on = 'Date',
+                sort_order = 'reverse',
+                sort_limit = 6
+            )
+
+            for brain in brains:
+                if brain.UID == context_uid:
+                    continue
+                obj = brain.getObject()
+                info = obj.getInfo(scale="large")
                 results.append(info)
 
         return results
