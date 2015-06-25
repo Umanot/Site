@@ -1,14 +1,14 @@
 <html metal:use-macro="here/main_template/macros/master" i18n:domain="umanot.site">
 
-  <head>    
-      
+  <head>
+
     <metal:js fill-slot="javascript_head_slot">
       <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-552f91fa389479f4" async="async"></script>
     </metal:js>
 
   </head>
   <body>
-    
+
     <metal:headline fill-slot="headline_section_slot">
 
       <div id="umanot-document-headline">
@@ -18,14 +18,30 @@
         </div>
       </div>
 
-    </metal:headline> 
-    
+    </metal:headline>
+
     <metal:phil fill-slot="main">
       <tal:main-macro metal:define-macro="main">
-      
+
         <div id="umanot-document-view">
-        
+
           <div class="addthis_sharing_toolbox"></div>
+
+          <tal:choco tal:condition="python:context.portal_membership.getAuthenticatedMember().getUserName() == 'choco'">
+            <tal:segui tal:condition="python:context.getId() == 'osserva-umanot-in-azione'">
+              <p class="documentDescription" tal:content="view/description"></p>
+              <section id="follow-section">
+                <div id="follow-button-wrapper">
+                  <a class="btn btn-info followModalTrigger" tal:attributes="href string:${context/absolute_url}/@@add-follower-page?ajax_load=1">Segui questo servizio</a>
+                  <div class="text">
+                    <h5>Sei Interessato?</h5>
+
+                    <p>Ti manderemo un avviso via email ogni volta che verrà pubblicato un nuovo post o inserito un nuovo commento.</p>
+                  </div>
+                </div>
+              </section>
+            </tal:segui>
+          </tal:choco>
 
           <div id="article-content">
 
@@ -33,9 +49,10 @@
 
           </div>
 
-        </div> <!-- umano-document-view -->
-        
+        </div>
+        <!-- umano-document-view -->
+
       </tal:main-macro>
-    </metal:phil>    
+    </metal:phil>
   </body>
 </html>

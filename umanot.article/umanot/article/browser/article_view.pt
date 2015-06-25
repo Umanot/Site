@@ -33,23 +33,6 @@
       <!-- Go to www.addthis.com/dashboard to customize your tools -->
       <div class="addthis_sharing_toolbox"></div>
 
-      <tal:choco tal:condition="python:context.REQUEST.get('test')">
-        <p>asd</p>
-        <tal:segui tal:condition="python:context.getId() == 'osserva-umanot-in-azione'">
-          <p class="documentDescription" tal:content="view/description"></p>
-          <section id="follow-section">
-            <div id="follow-button-wrapper">
-              <a class="btn btn-info followModalTrigger" tal:attributes="href string:${context/absolute_url}/@@add-follower-page?ajax_load=1">Segui questo servizio</a>
-              <div class="text">
-                <h5>Sei Interessato?</h5>
-
-                <p>Ti manderemo un avviso via email ogni volta che verrà pubblicato un nuovo post o inserito un nuovo commento.</p>
-              </div>
-            </div>
-          </section>
-        </tal:segui>
-      </tal:choco>
-
       <section id="article-content" tal:content="structure info/text">
 
         <p>In varius varius justo, eget ultrices mauris rhoncus non. Morbi tristique, mauris eu imperdiet bibendum, velit diam iaculis velit, in ornare massa enim at lorem. Etiam risus diam, porttitor vitae ultrices quis, dapibus id dolor. Morbi venenatis lacinia rhoncus.</p>
