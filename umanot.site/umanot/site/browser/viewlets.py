@@ -53,7 +53,8 @@ class DocumentActionsViewlet(content.DocumentActionsViewlet):
 class ContentRelatedItems(content.ContentRelatedItems):
     index = ViewPageTemplateFile("viewlets/document_relatedItems.pt")
 
-## SITEACTIONS 
+
+## SITEACTIONS
 class SiteActionsViewlet(common.SiteActionsViewlet):
     index = ViewPageTemplateFile('viewlets/site_actions.pt')
 
@@ -153,16 +154,38 @@ class RelatedItemsViewlet(ViewletBase):
                 if brain.UID == context_uid:
                     continue
                 obj = brain.getObject()
-                info = obj.getInfo(scale="large")
+                info = obj.getInfo(scale = "large")
 
                 results.append(info)
         elif self.context.portal_type in ['Article', 'Placeholder']:
             if self.context.portal_membership.getAuthenticatedMember().getUserName() != 'choco':
                 return []
-            results = [x.getInfo(scale="large") for x in self.context.getRelatedItems() if x and x.portal_type in ['Article', 'Placeholder', 'Video']]
+            results = [x.getInfo(scale = "large") for x in self.context.getRelatedItems() if x and x.portal_type in ['Article', 'Placeholder', 'Video']]
 
             already = [context_uid]
             already.extend([x['uid'] for x in results])
+
+            limit = 6
+
+            if self.context.Subject():
+                brains = catalog(
+                    portal_type = ['Article', 'Placeholder', 'Video'],
+                    sort_on = 'Date',
+                    sort_order = 'reverse',
+                    sort_limit = 7,
+                    Subject = self.context.Subject()
+                )
+
+                for brain in brains:
+                    if brain.UID in already:
+                        continue
+                    obj = brain.getObject()
+                    info = obj.getInfo(scale = "large")
+                    results.append(info)
+                    already.append(info['uid'])
+
+            if len(results) >= limit:
+                return results
 
             parent = self.context.aq_parent
             brains = catalog(
@@ -177,10 +200,10 @@ class RelatedItemsViewlet(ViewletBase):
                 if brain.UID in already:
                     continue
                 obj = brain.getObject()
-                info = obj.getInfo(scale="large")
+                info = obj.getInfo(scale = "large")
                 results.append(info)
 
-                if len(results) == 6:
+                if len(results) == limit:
                     break
 
         return results
