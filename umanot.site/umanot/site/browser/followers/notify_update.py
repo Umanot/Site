@@ -32,5 +32,5 @@ class NotifyUpdate(BrowserView):
         request = self.request
         response = request.RESPONSE
 
-        if self.context.portal_type in ['Article', 'Placeholder']:
+        if self.context.portal_type in ['Article', 'Placeholder', 'Document']:
             self.umanot_utils.notifyFollowers(self.context, 'area_tematica', 'update')
