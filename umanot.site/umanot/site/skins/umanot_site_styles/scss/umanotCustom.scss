@@ -168,13 +168,13 @@
 /* ARTICLE FOLLOW*/
 
 #follow-button-wrapper {
-  padding: 20px 45px;
+  padding: 20px 20px;
   background-color: #eee;
   margin-bottom: 30px;
 }
 
 #follow-button-wrapper .text {
-  margin-left: 230px;
+  margin-left: 250px;
   border-left: 1px solid #ddd;
   padding-left: 20px;
 }
@@ -584,7 +584,8 @@
 
 /* ARTICLE & VIDEO FOLDER LISTING */
 
-#article-section {
+#article-section,
+#forum-article-section {
   background-color: #F5F5F5;
   padding: 20px 20px 20px;
 }
