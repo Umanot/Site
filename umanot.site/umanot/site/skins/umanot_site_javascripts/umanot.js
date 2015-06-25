@@ -61,17 +61,10 @@ $(function(){
   var $followModal = $('#follow-modal');
   $('.followModalTrigger').on('click', function(e){
     e.preventDefault();
-    
     $.ajax({url: $(this).attr('href')}).done(function(data){
-      
       $followModal.find('.modal-content').empty().append(data);
-    
-      $followModal.modal('show');
-      
+      $followModal.modal('show');      
     });
-
-    
-    
   });  
   
 });
