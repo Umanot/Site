@@ -12,7 +12,11 @@
     <div class="addthis_sharing_toolbox"></div>
     <div id="video-view" tal:define="info view/info">
       <p  tal:condition="python:'iframe' in info['embed']" tal:replace="structure info/embed"></p>
-      <iframe style="margin: 20px auto 0" tal:condition="python:'iframe' not in info['embed']" width="853" height="480" tal:attributes="src info/embed" frameborder="0" allowfullscreen></iframe>
+      
+      <div class="embed-responsive embed-responsive-16by9" style="margin-top: 20px;">
+        <iframe class="embed-responsive-item" tal:condition="python:'iframe' not in info['embed']" width="853" height="480" tal:attributes="src info/embed" frameborder="0" allowfullscreen></iframe>
+      </div>
+      
     </div> <!-- video-view -->
   </div>
 </body>
