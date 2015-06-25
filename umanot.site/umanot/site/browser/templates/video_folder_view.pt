@@ -26,11 +26,11 @@
 
                 <div class="videoPop">
                   <figure>
-                    <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" tal:attributes="href item/embed">
+                    <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" tal:attributes="href item/URL">
                       <tal:image content="structure item/image"></tal:image>
                     </a>
                   </figure>
-                  <h2><a tal:attributes="href item/embed" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
+                  <h2><a tal:attributes="href item/URL" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h2>
 
                   <p tal:content="item/description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint, laudantium odit est facere provident dolorem</p>
                 </div>
