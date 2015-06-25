@@ -159,7 +159,7 @@ class RelatedItemsViewlet(ViewletBase):
         elif self.context.portal_type in ['Article', 'Placeholder']:
             if self.context.portal_membership.getAuthenticatedMember().getUserName() != 'choco':
                 return []
-            results = [x for x in self.context.getRelatedItems() if x and x.portal_type in ['Article', 'Placeholder', 'Video']]
+            results = [x.getInfo(scale="large") for x in self.context.getRelatedItems() if x and x.portal_type in ['Article', 'Placeholder', 'Video']]
             parent = self.context.aq_parent
             brains = catalog(
                 portal_type = ['Article', 'Placeholder', 'Video'],
