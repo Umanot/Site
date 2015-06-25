@@ -160,21 +160,28 @@ class RelatedItemsViewlet(ViewletBase):
             if self.context.portal_membership.getAuthenticatedMember().getUserName() != 'choco':
                 return []
             results = [x.getInfo(scale="large") for x in self.context.getRelatedItems() if x and x.portal_type in ['Article', 'Placeholder', 'Video']]
+
+            already = [context_uid]
+            already.extend([x['uid'] for x in results])
+
             parent = self.context.aq_parent
             brains = catalog(
                 portal_type = ['Article', 'Placeholder', 'Video'],
                 path = '/'.join(parent.getPhysicalPath()),
                 sort_on = 'Date',
                 sort_order = 'reverse',
-                sort_limit = 6
+                sort_limit = 10
             )
 
             for brain in brains:
-                if brain.UID == context_uid:
+                if brain.UID in already:
                     continue
                 obj = brain.getObject()
                 info = obj.getInfo(scale="large")
                 results.append(info)
+
+                if len(results) == 6:
+                    break
 
         return results
 

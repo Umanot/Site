@@ -131,6 +131,7 @@ class Article(folder.ATFolder, ATCTImageTransform):
                 image = self.tag(scale = scale)
 
         info = dict(
+            uid = self.UID(),
             title = self.Title(),
             description = self.Description(),
             URL = self.absolute_url(),

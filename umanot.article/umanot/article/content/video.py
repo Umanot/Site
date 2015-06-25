@@ -97,6 +97,7 @@ class Video(document.ATDocument, ATCTImageTransform):
             image = '<img src="default_video.jpg" alt="Sellaronda Hero" />'
 
         info = dict(
+            uid = self.UID(),
             title = self.Title(),
             description = self.Description(),
             URL = self.absolute_url(),

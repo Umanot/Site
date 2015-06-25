@@ -134,6 +134,7 @@ class Placeholder(document.ATDocument, ATCTImageTransform):
             umanot_date = "%s %s %s" % (umanot_date.strftime('%d'), mediatria_utils.getMonthName(self, umanot_date.month()), umanot_date.strftime('%Y'))
 
         info = dict(
+            uid = self.UID(),
             title = self.Title(),
             description = self.Description(),
             URL = self.absolute_url(),
