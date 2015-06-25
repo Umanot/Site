@@ -55,11 +55,11 @@ class ContentRelatedItems(content.ContentRelatedItems):
 
     @property
     def contents(self):
+        import pdb; pdb.set_trace()
         results = []
         catalog = getToolByName(self.context, 'portal_catalog')
 
         if self.context.portal_type == "Video":
-            import pdb; pdb.set_trace()
             brains = catalog(
                 portal_type = "Video",
                 sort_on = 'getObjPositionInParent'
