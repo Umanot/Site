@@ -40,7 +40,7 @@
             <tal:loop repeat="item group">
               <div class="col-md-4 col-sm-6" tal:condition="item">
 
-                <div class="videoPop">
+                <div>
                   <figure>
                     <a href="http://www.youtube.com/watch?v=0O2aH4XLbto" tal:attributes="href item/embed">
                       <tal:image content="structure item/image"></tal:image>
