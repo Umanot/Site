@@ -33,8 +33,7 @@ $(function(){
   
   //MASONRY INIT
   
-/*
-  if($('#article-section').length != 0 !! ){
+  if($('#article-section').length != 0 ){
   
     var container = document.querySelector('#article-section .isotope');
     var msnry;
@@ -48,7 +47,6 @@ $(function(){
     });
   
   }
-*/
 
   //TOOLTIP
   $('[data-toggle="tooltip"]').tooltip();
