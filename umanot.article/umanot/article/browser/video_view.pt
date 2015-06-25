@@ -3,7 +3,7 @@
   <div metal:fill-slot="content-core">
     <div class="addthis_sharing_toolbox"></div>
     <div id="video-view" tal:define="info view/info">
-      <p tal:replace="structure info/embed"></p>
+      <iframe width="853" height="480" tal:attributes="src info/embed" frameborder="0" allowfullscreen></iframe>
     </div> <!-- video-view -->
   </div>
 </body>
