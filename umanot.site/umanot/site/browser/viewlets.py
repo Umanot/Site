@@ -1,12 +1,13 @@
 import random
+
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.layout.viewlets import common
 from plone.app.layout.viewlets import content
 from datetime import date
-
 from plone.app.portlets.portlets import navigation
+
 
 ## LOGO
 from umanot.site.browser.interfaces import IAbout, IIntelligenzaConnettiva
@@ -17,39 +18,70 @@ from zope.component import getUtility
 class LogoViewlet(common.LogoViewlet):
     index = ViewPageTemplateFile('viewlets/logo.pt')
 
+
 ## SECTIONS
 class GlobalSectionsViewlet(common.GlobalSectionsViewlet):
     index = ViewPageTemplateFile('viewlets/sections.pt')
+
 
 ## PERSONALBAR
 class PersonalBarViewlet(common.PersonalBarViewlet):
     index = ViewPageTemplateFile('viewlets/personal_bar.pt')
 
+
 ## SEARCHBOX
 class SearchBoxViewlet(common.SearchBoxViewlet):
     index = ViewPageTemplateFile('viewlets/searchbox.pt')
+
 
 ## BREADCRUMBS
 class PathBarViewlet(common.PathBarViewlet):
     index = ViewPageTemplateFile('viewlets/path_bar.pt')
 
+
 ## BYLINE
 class DocumentBylineViewlet(content.DocumentBylineViewlet):
     index = ViewPageTemplateFile("viewlets/document_byline.pt")
+
 
 ## DOCUMENT ACTIONS
 class DocumentActionsViewlet(content.DocumentActionsViewlet):
     index = ViewPageTemplateFile("viewlets/document_actions.pt")
 
+
 ## RELATED ITEMS
 class ContentRelatedItems(content.ContentRelatedItems):
     index = ViewPageTemplateFile("viewlets/document_relatedItems.pt")
+
+    @property
+    def contents(self):
+        results = []
+        catalog = getToolByName(self.context, 'portal_catalog')
+        if self.context.portal_type == "Video":
+            brains = catalog(
+                portal_type = "Video",
+                sort_on = 'getObjPositionInParent'
+            )
+
+            context_uid = self.context.UID()
+
+            for brain in brains:
+                if brain.UID == context_uid:
+                    continue
+                obj = brain.getObject()
+                info = obj.getInfo()
+
+                results.append(info)
+
+        return results
+
 
 ## SITEACTIONS 
 class SiteActionsViewlet(common.SiteActionsViewlet):
     index = ViewPageTemplateFile('viewlets/site_actions.pt')
 
-## FOOTER 
+
+## FOOTER
 class FooterViewlet(common.FooterViewlet):
     index = ViewPageTemplateFile('viewlets/footer.pt')
 
@@ -113,14 +145,16 @@ class FooterViewlet(common.FooterViewlet):
             results.append(info)
 
         return results
-        
+
+
 ## COLOPHON 
 class ColophonViewlet(ViewletBase):
     index = ViewPageTemplateFile('viewlets/colophon.pt')
 
     def update(self):
         self.year = date.today().year
-        
+
+
 ## RELATED 
 class RelatedItemsViewlet(ViewletBase):
     index = ViewPageTemplateFile('viewlets/related_items.pt')
@@ -149,7 +183,7 @@ class LeaderboardTopViewlets(ViewletBase):
 
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog(
-            UID=background,
+            UID = background,
         )
 
         if not brains:
@@ -164,7 +198,8 @@ class LeaderboardTopViewlets(ViewletBase):
         )
 
         return info
-    
+
+
 ## LEADERBOARD BOTTOM 
 class LeaderboardBottomViewlets(ViewletBase):
     index = ViewPageTemplateFile('viewlets/leaderboard_bottom.pt')
@@ -188,12 +223,12 @@ class LeaderboardBottomViewlets(ViewletBase):
 
         catalog = getToolByName(self.context, 'portal_catalog')
         brains = catalog(
-            UID=background,
+            UID = background,
         )
 
         if not brains:
             return
-        
+
         brain = brains[0]
 
         info = dict(
@@ -204,8 +239,8 @@ class LeaderboardBottomViewlets(ViewletBase):
 
         return info
 
+
 ## NAVIGATION Portlet
 class Renderer(navigation.Renderer):
-
     _template = ViewPageTemplateFile('portlets/navigation.pt')
     recurse = ViewPageTemplateFile('portlets/navigation_recurse.pt')
