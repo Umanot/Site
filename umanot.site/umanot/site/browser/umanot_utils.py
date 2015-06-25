@@ -125,7 +125,7 @@ class UmanotUtils(object):
             if context.portal_type in ["Article", "Placeholder"]:
                 followed_obj = self.get_area_from_context(context)
             else:
-                followed_obj = None
+                followed_obj = self.context
         else:
             # questo caso non è detto che sia sensato
             followed_obj = context
