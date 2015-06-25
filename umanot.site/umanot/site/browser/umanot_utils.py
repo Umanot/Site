@@ -56,6 +56,8 @@ class UmanotUtils(object):
             parent = context.aq_parent
             if parent.portal_type == "Folder":
                 return parent
+        elif context.portal_type == 'Folder':
+            return context
 
     def setLocalAd(self, context, data):
         KEY = 'umanot.ad'
