@@ -153,7 +153,7 @@ class RelatedItemsViewlet(ViewletBase):
                 if brain.UID == context_uid:
                     continue
                 obj = brain.getObject()
-                info = obj.getInfo(scale="preview", width=280, height=-1)
+                info = obj.getInfo(scale="large")
 
                 results.append(info)
 
