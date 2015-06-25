@@ -1,8 +1,8 @@
 <html  metal:use-macro="here/main_template/macros/master" i18n:domain="hero.contents">
 <body>
   <div metal:fill-slot="content-core">
+    <div class="addthis_sharing_toolbox"></div>
     <div id="video-view" tal:define="info view/info">
-      <tal:image content="structure info/image"></tal:image>
       <p tal:replace="structure info/embed"></p>
     </div> <!-- video-view -->
   </div>
