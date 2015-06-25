@@ -7,10 +7,12 @@
       <div class="item">
         <div class="relatedItem">
           <figure>
-            <tal:image content="structure item/image"></tal:image>
+            <a tal:attributes="href item/URL">
+              <tal:image content="structure item/image"></tal:image>
+            </a>
             <div class="gridOverlay"></div>
           </figure>
-          <h3 tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
+          <h3><a tal:attributes="href item/URL" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
         </div>
       </div>
     </tal:loop>
