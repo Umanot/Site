@@ -34,6 +34,7 @@
       <div class="addthis_sharing_toolbox"></div>
 
       <tal:choco tal:condition="python:context.portal_membership.getAuthenticatedMember().getUserName() == 'choco'">
+        <p>asd</p>
         <tal:segui tal:condition="python:context.getId() == 'osserva-umanot-in-azione'">
           <p class="documentDescription" tal:content="view/description"></p>
           <section id="follow-section">
