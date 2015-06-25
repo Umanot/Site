@@ -120,6 +120,11 @@ class ColophonViewlet(ViewletBase):
 
     def update(self):
         self.year = date.today().year
+        
+## RELATED 
+class RelatedItemsViewlet(ViewletBase):
+    index = ViewPageTemplateFile('viewlets/related_items.pt')
+
 
 ## LEADERBOARD TOP 
 class LeaderboardTopViewlets(ViewletBase):

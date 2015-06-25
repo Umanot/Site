@@ -184,6 +184,16 @@
     layer=".interfaces.IThemeSpecific"
     />
 
+  <!-- Umanot Related Items -->
+  <browser:viewlet
+    name="umanot.relatedItems"
+    for="*"
+    manager="plone.app.layout.viewlets.interfaces.IBelowContentBody"
+    class=".viewlets.RelatedItemsViewlet"
+    permission="zope.Public"
+    layer=".interfaces.IThemeSpecific"
+    />
+
   <!-- LEADERBOARD TOP -->
   <browser:viewlet
     name="umanot.leaderboad_top"

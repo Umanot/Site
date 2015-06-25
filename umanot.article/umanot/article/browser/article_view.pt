@@ -90,63 +90,9 @@
             <p>Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email.</p>
           </div>
         </div>
-      </section>
-      <!-- follow-section -->
+      </section> <!-- follow-section -->
 
-      <section id="realted-section" tal:condition="nothing">
 
-        <h5>Potrebbe interessarti anche</h5>
-
-        <div id="related-carousel" class="owl-carousel">
-          <div class="item">
-            <div class="relatedItem">
-              <figure><img class="img-responsive" src="var/img02.jpg"/>
-                <div class="gridOverlay"></div>
-              </figure>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-              <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="relatedItem">
-              <figure><img class="img-responsive" src="var/img03.jpg"/>
-                <div class="gridOverlay"></div>
-              </figure>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-              <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="relatedItem">
-              <figure><img class="img-responsive" src="var/img05.jpg"/>
-                <div class="gridOverlay"></div>
-              </figure>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-              <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="relatedItem">
-              <figure><img class="img-responsive" src="var/img04.jpg"/>
-                <div class="gridOverlay"></div>
-              </figure>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-              <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
-            </div>
-          </div>
-          <div class="item">
-            <div class="relatedItem">
-              <figure><img class="img-responsive" src="var/img06.jpg"/>
-                <div class="gridOverlay"></div>
-              </figure>
-              <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h3>
-              <div class="relatedByLine"><span>di <a href="#">Nicola Antonucci</a></span><span>Trading for life</span></div>
-            </div>
-          </div>
-        </div>
-
-      </section>
-      <!-- related section -->
 
 
     </metal:phil>
