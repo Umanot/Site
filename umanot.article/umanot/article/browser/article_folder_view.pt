@@ -18,7 +18,7 @@
     <metal:phil fill-slot="main">
       <tal:main-macro metal:define-macro="main">
         <section id="homepage-content">
-          <section id="forum-article-section">
+          <section id="article-section">
             <tal:featured tal:define="item view/featured" tal:condition="item">
               <article id="featured-article" class="articleItem" tal:attributes="class python:'articleItem' if item['image'] else 'articleItem noImage'">
                 <div class="articleInner">
