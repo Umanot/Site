@@ -67,4 +67,10 @@ $(function(){
     });
   });  
   
+  
+  //MESSAGE BOX
+  var $messageBox = $('#message-box');
+  setTimeout(function(){$messageBox.addClass('active');}, 1000);
+  
+  
 });
