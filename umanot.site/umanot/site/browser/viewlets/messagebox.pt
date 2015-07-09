@@ -1,0 +1,10 @@
+<div id="message-box">
+    <div class="messageBoxInner">
+        <h3><span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-info fa-stack-1x fa-inverse"></i>
+            </span> Lorem Ipsum </h3> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, cupiditate, illum ab amet mollitia molestias nesciunt blanditiis tenetur harum enim quisquam quam iste aperiam accusantium natus vitae consequatur architecto similique!</p>
+
+    </div>
+</div>

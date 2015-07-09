@@ -184,6 +184,15 @@
     layer=".interfaces.IThemeSpecific"
     />
 
+  <!-- The Message box -->
+  <browser:viewlet
+    name="umanot.messagebox"
+    manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+    class=".viewlets.MessageViewlet"
+    permission="zope2.View"
+    layer=".interfaces.IThemeSpecific"
+    />
+
   <!-- Umanot Related Items -->
   <browser:viewlet
     name="umanot.relatedItems"

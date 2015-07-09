@@ -133,6 +133,10 @@ class ColophonViewlet(ViewletBase):
         self.year = date.today().year
 
 
+## MESSAGE BOX 
+class MessageViewlet(ViewletBase):
+    index = ViewPageTemplateFile('viewlets/messagebox.pt')
+
 ## RELATED 
 class RelatedItemsViewlet(ViewletBase):
     index = ViewPageTemplateFile('viewlets/related_items.pt')
