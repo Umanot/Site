@@ -952,8 +952,7 @@
     z-index: 99999;
     bottom: -500px;
     right: 15px;
-    border-radius: 10px 10px 0 0;
-    border: 3px solid #E4291D;
+    border: 3px solid #D84458;
     border-width: 4px 4px 0;
     -webkit-transition: all 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1) 0s; transition: all 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1) 0s;
 }
@@ -966,12 +965,12 @@
     bottom: 0;
 }
 
-.helpBoxInner {
+.messageBoxInner {
     padding: 20px;
 }
 
 #message-box h3 {
-    font-family: $fontB;
+    font-family: $fontA;
     font-size: 17px;
     font-weight: normal;
     margin: 0;
@@ -981,7 +980,7 @@
 
 #message-box h3 i.fa-circle {
     margin-right: 10px;
-    color: #E4291D;
+    color: #D84458;
 }
 
 #message-box h3 i.fa-envelope-o {font-size: 16px;}
@@ -995,14 +994,14 @@
 #message-box hr {margin-top: 5px; margin-bottom: 5px;}
 
 #message-box a.link {
-    color: #E4291D;
+    color: #D84458;
     display: block;
     margin-top: 8px;
     padding-top: 5px;
     border-top: 1px solid #ddd;
 }
 
-#message-box a.link:hover {color: #E4291D;}
+#message-box a.link:hover {color: #D84458;}
 
 #message-box a.btn,
 #message-box a.btn:hover {color: #fff;}

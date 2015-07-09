@@ -5,15 +5,22 @@ $(function(){
   var $backtotop =  $('#backtotop');
   var $body = $('body');
   
+  var $messageBox = $('#message-box');
+  
   //Scroll BEHAVIORs
   $window.on('scroll', function(){
     
     if ($(this).scrollTop() > 100) {
   		$header.addClass('white');
-      $backtotop.fadeIn();    
+      $backtotop.fadeIn();
+      
+      $messageBox.addClass('active');      
     } else {
   		$header.removeClass('white');
-      $backtotop.fadeIn();    
+      $backtotop.fadeIn();   
+      
+      $messageBox.removeClass('active');      
+ 
     }
   
   });
@@ -66,11 +73,6 @@ $(function(){
       $followModal.modal('show');      
     });
   });  
-  
-  
-  //MESSAGE BOX
-  var $messageBox = $('#message-box');
-  setTimeout(function(){$messageBox.addClass('active');}, 1000);
-  
+
   
 });
