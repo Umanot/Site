@@ -1,4 +1,4 @@
-<div id="message-box">
+<div id="message-box" tal:condition="python:context.getId()=='osserva-umanot-in-azione'">
     <div class="messageBoxInner">
         <h3><span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
