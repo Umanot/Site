@@ -1,13 +1,15 @@
 <div id="message-box" tal:condition="python:not context.portal_membership.isAnonymousUser()">
-    <div class="messageBoxInner">
-        <h3><span class="fa-stack">
+  <div class="messageBoxInner">
+    <h3><span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-info fa-stack-1x fa-inverse"></i>
-            </span> Lorem Ipsum </h3> 
-        <p>Sei interessato ad approfondire i temi dell'Analisi Fisica e della Finanza Scientifica?<br />
-Vuoi capire meglio come funziona il software di trading automatico UMANOT?<br />
-<a href="mailto:staff@umanot.com?subject=UMANOT: richiesta di approfondimento">CONTATTACI!</a>
-Ti risponderemo entro 24h!</p>
+            </span> &nbsp;DIVENTA UN TRADER SCIENTIFICO </h3>
 
-    </div>
+    <p>Sei interessato ad approfondire i temi dell'Analisi Fisica e della Finanza Scientifica?<br/>
+      Vuoi capire meglio come funziona il software di trading automatico UMANOT?<br/>
+      <a class="btn btn-sm btn-info btn-clock" href="mailto:staff@umanot.com?subject=UMANOT: richiesta di approfondimento">CONTATTACI SUBITO!</a>
+      <br/>
+      Ti risponderemo entro 24h!</p>
+
+  </div>
 </div>
