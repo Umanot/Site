@@ -1,4 +1,4 @@
-<div id="message-box" tal:condition="python:not context.portal_membership.isAnonymousUser()">
+<div id="message-box">
   <div class="messageBoxInner">
     <h3><span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
