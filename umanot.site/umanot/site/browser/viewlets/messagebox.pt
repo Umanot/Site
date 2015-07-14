@@ -1,10 +1,13 @@
-<div id="message-box" tal:condition="nothing">
+<div id="message-box">
     <div class="messageBoxInner">
         <h3><span class="fa-stack">
             <i class="fa fa-circle fa-stack-2x"></i>
             <i class="fa fa-info fa-stack-1x fa-inverse"></i>
             </span> Lorem Ipsum </h3> 
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum, cupiditate, illum ab amet mollitia molestias nesciunt blanditiis tenetur harum enim quisquam quam iste aperiam accusantium natus vitae consequatur architecto similique!</p>
+        <p>Sei interessato ad approfondire i temi dell'Analisi Fisica e della Finanza Scientifica?<br />
+Vuoi capire meglio come funziona il software di trading automatico UMANOT?<br />
+<a href="mailto:staff@umanot.com?subject=UMANOT: richiesta di approfondimento">CONTATTACI!</a>
+Ti risponderemo entro 24h!</p>
 
     </div>
 </div>
