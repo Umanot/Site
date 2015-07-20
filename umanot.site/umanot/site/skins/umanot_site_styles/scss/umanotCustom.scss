@@ -947,7 +947,8 @@
 #message-box {
     background-color: #fff;
     box-shadow: 0 1px 4px -1px rgba(0, 0, 0, 0.3);
-    width: 20%;
+    width: 90%;
+    max-width: 350px;
     position: fixed;
     z-index: 99999;
     bottom: -500px;
@@ -958,6 +959,26 @@
     -webkit-transition: all 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1) 0s; transition: all 0.33s cubic-bezier(0.694, 0.0482, 0.335, 1) 0s;
 }
 
+#message-box-close {
+  font-size: 27px;
+  color: #333;
+  position: absolute;
+  right: -16px;
+  top: -16px;
+  border-radius: 100%;
+  width: 30px;
+  height: 30px;
+  display: block;
+  line-height: 27px;
+  text-align: center;
+  font-weight: bold;
+  background-color: #D84458;
+  color: #FFF;
+  cursor: pointer;
+}
+
+#message-box-close:hover {background-color: #333;}
+
 @media print {
   #message-box {display: none;}
 }
@@ -967,7 +988,7 @@
 }
 
 .messageBoxInner {
-    padding: 20px;
+    padding: 16px 15px 0 ;
 }
 
 #message-box h3 {
@@ -981,7 +1002,7 @@
 
 #message-box h3 i.fa-circle {
     margin-right: 10px;
-    color: #D84458;
+    color: #5BC0DE;
 }
 
 #message-box h3 i.fa-envelope-o {font-size: 16px;}
@@ -1007,16 +1028,13 @@
 #message-box a.btn,
 #message-box a.btn:hover {color: #fff;}
 
-@media (max-width:1124px) {
-  #message-box {width: 30%;}
-}
+@media (max-width:1124px) {}
 
-@media (max-width:768px) {
-  #message-box {width: 40%;}
-}
+@media (max-width:768px) {}
 
 @media (max-width:580px) {
-  #message-box {display: none;}
+  max-width: 280px;
+
 }
 
 
