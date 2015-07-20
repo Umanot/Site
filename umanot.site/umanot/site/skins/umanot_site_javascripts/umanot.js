@@ -67,7 +67,7 @@ $(function(){
   
   $('#message-box-close').on('click', function(){
     $messageBox.removeClass('active');      
-    jQuery.cookie('messageCookieCheck','checked',{path:'/', expires: 30});
+    jQuery.cookie('messageCookieCheck','checked',{path:'/'});
   });
   
   //BACK TO TOP
