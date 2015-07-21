@@ -12,11 +12,9 @@ $(function(){
     if ($(this).scrollTop() > 100) {
   		$header.addClass('white');
       $backtotop.fadeIn();
-      
     } else {
   		$header.removeClass('white');
-      $backtotop.fadeIn();   
-      
+      $backtotop.fadeIn();         
     }
   
   });
@@ -56,17 +54,25 @@ $(function(){
   };
 
   
-    //MESSAGE BOX
+  //MESSAGE BOX
   var $messageBox = $('#message-box');
+
+  $window.on('scroll', function(){
+    
+    if ($(this).scrollTop() > 100) {
+      
+      if(jQuery.cookie('messageCookieCheck') != 'checked') {
+        $messageBox.addClass('active');      
+      }
+
+    } else {
+      $messageBox.removeClass('active');
+    }
   
-  if(jQuery.cookie('messageCookieCheck') != 'checked') {
-    setTimeout(function(){
-      $messageBox.addClass('active');      
-    }, 200);
-  }
+  });
   
   $('#message-box-close').on('click', function(){
-    $messageBox.removeClass('active');      
+    $messageBox.remove();      
     jQuery.cookie('messageCookieCheck','checked',{path:'/'});
   });
   
