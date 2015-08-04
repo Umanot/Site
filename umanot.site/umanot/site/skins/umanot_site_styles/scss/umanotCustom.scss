@@ -405,9 +405,9 @@
 
 .serviceItem {
   padding: 3%;
-  width: 33.33333%;
+  width: 25%;
   float: left;
-  min-height: 300px;
+  min-height: 360px;
   color: #fff;
   position: relative;
 }
@@ -434,6 +434,9 @@
 #serviceItem02 {background-color: #668DA2;}
 
 #serviceItem03 {background-color: $colorRight;}
+
+#serviceItem04 {background-color: #DDBC7F;}
+
 
 @media (max-width:992px) {
   .serviceItem {
@@ -1037,4 +1040,107 @@
 
 }
 
+
+/* NEWS CAROUSEL */
+
+#news-section {
+  padding: 0 30px;
+}
+  
+.ca-container {
+    display: block !important;
+    height: 350px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.ca-nav span {
+    background: url("left-arrow.png") no-repeat scroll center center transparent;
+    cursor: pointer;
+    height: 100px;
+    left: -30px;
+    position: absolute;
+    text-indent: -9999px;
+    top: 40px;
+    width: 78px;
+    z-index: 100;
+}
+
+.ca-nav span.ca-nav-next {
+    background: url("right-arrow.png") no-repeat scroll center center transparent;
+    left: auto;
+    right: -30px;
+}
+
+.ca-container .ca-wrapper {
+    clear: both;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.ca-container .ca-wrapper .ca-item {
+    float: left;
+    height: 100%;
+    position: relative;
+    width: 340px;
+}
+
+.ca-container .ca-wrapper .ca-item .ca-item-inner {
+    padding-right: 15px;
+}
+
+.ca-container .ca-wrapper .ca-item .ca-item-inner a {
+    display: block;
+    height: 175px;
+    width: 330px;
+    margin: 0 0 17px;
+    overflow: hidden;
+}
+
+.ca-container .ca-wrapper .ca-item .ca-item-inner img {
+    clear: both;
+    display: block;
+    height: auto;
+    width: 100%;
+    margin: 0 0 17px;
+    overflow: hidden;
+}
+
+#content .ca-container .ca-wrapper .ca-item .ca-item-inner h3 {
+    clear: both;
+    color: #C13825;
+    display: block;
+    float: left;
+    font-size: 13px;
+    line-height: 1.5em;
+    margin: 0 0 7px;
+    font-weight: 100;
+}
+
+.ca-container .ca-wrapper .ca-item .ca-item-inner h3 a {display: inline; color:#C13825;}
+
+.ca-container .ca-wrapper .ca-item .ca-item-inner p {
+    clear: both;
+    display: block;
+    float: left;
+    height: 120px;
+    overflow: hidden;
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6em;
+}
+
+.newsItem img {
+  float: left;
+  width: 410px;
+  height: 260px;
+  overflow: hidden;
+  margin: 0 30px 0 0;
+}
+
+.newsItem p {font-size: 15px;}
 
