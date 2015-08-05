@@ -2,6 +2,8 @@
 
   <head>    
     <metal:js fill-slot="javascript_head_slot">
+      <script src="++resource++umanot.site.javascripts/min/jquery.easing.min.js"></script>
+      <script src="++resource++umanot.site.javascripts/min/content_carousel.min.js"></script>
       <script src="++resource++umanot.site.javascripts/homepage_view.js"></script>
     </metal:js>
 
@@ -57,6 +59,75 @@
       <tal:main-macro metal:define-macro="main">  
       
         <section id="homepage-content">
+          
+          <section id="news-section">
+
+            <div id="news-carousel" class="homeRow">
+              <h3 class="contentSection">JUST IN</h3>
+              
+              
+              <div class="owl-carousel">
+                
+                  <div class="newsItem">
+                    <a class="newsItemImage" href="#"><img src="var/intro01.jpg"/></a>
+                    <h3><a href="#">Sono il titolo</a></h3>
+                    <p>Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra lacinia vos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, dicta, magnam eius molestias nulla possimus facilis eaque accusamus velit qui reprehenderit voluptatibus suscipit. In, saepe, voluptates numquam amet ea natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dolor architecto fugiat praesentium veniam. Doloremque, quo, odit dignissimos pariatur molestiae minima laborum laboriosam iusto necessitatibus rem ducimus ad iure obcaecati. </p>
+                  </div>
+
+                  <div class="newsItem">
+                    <a class="newsItemImage" href="#"><img src="var/intro01.jpg"/></a>
+                    <h3><a href="#">Sono il titolo</a></h3>
+                    <p>Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra lacinia vos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, dicta, magnam eius molestias nulla possimus facilis eaque accusamus velit qui reprehenderit voluptatibus suscipit. In, saepe, voluptates numquam amet ea natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dolor architecto fugiat praesentium veniam. Doloremque, quo, odit dignissimos pariatur molestiae minima laborum laboriosam iusto necessitatibus rem ducimus ad iure obcaecati.</p>
+                  </div>
+                
+              </div>
+              
+              
+              
+<tal:comment condition="nothing"> <!-- old style -->        
+              <div class="ca-container" id="ca-container">
+                <div class="ca-nav"><span class="ca-nav-prev">Previous</span><span class="ca-nav-next">Next</span></div>
+                <div class="ca-wrapper">
+                
+                    <div class="ca-item">
+                      <div class="ca-item-inner">
+                        <a href="#"><img src="var/intro01.jpg"/></a>
+                        <h3><a href="#">Sono il titolo</a></h3>
+                        <p>Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra lacinia vos.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="ca-item">
+                      <div class="ca-item-inner">
+                        <a href="#"><img src="var/intro02.jpg"/></a>
+                        <h3><a href="#">Sono il titolo</a></h3>
+                        <p>Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra lacinia vos.</p>
+                      </div>
+                    </div>                  
+
+                    <div class="ca-item">
+                      <div class="ca-item-inner">
+                        <a href="#"><img src="var/intro03.jpg"/></a>
+                        <h3><a href="#">Sono il titolo</a></h3>
+                        <p>Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra lacinia vos.</p>
+                      </div>
+                    </div>
+                    
+                    <div class="ca-item">
+                      <div class="ca-item-inner">
+                        <a href="#"><img src="var/intro04.jpg"/></a>
+                        <h3><a href="#">Sono il titolo</a></h3>
+                        <p>Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra lacinia vos.</p>
+                      </div>
+                    </div>                    
+                    
+                </div>
+              </div>
+</tal:comment>
+               
+            </div>
+            
+          </section>
           
           <section id="service-section">
               

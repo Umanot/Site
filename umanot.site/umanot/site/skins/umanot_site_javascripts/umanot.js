@@ -19,7 +19,6 @@ $(function(){
   
   });
   
-  
   // MESSAGE COOKIE
   
   jQuery.cookie = function (key, value, options) {
@@ -124,6 +123,4 @@ $(function(){
       $followModal.modal('show');      
     });
   });  
-
-  
 });
