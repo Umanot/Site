@@ -43,6 +43,37 @@ class HomepageView(BrowserView):
         return self.context.getInfo()
 
     @property
+    def news(self):
+        if not self.context.getShow_news():
+            return []
+
+        brains = self.portal_catalog(
+            portal_type = "News Item",
+            sort_on = 'Date',
+            sort_order = 'reverse',
+        )
+
+        results = []
+
+        for brain in brains:
+            obj = brain.getObject()
+
+            has_image = obj.getImage() and obj.getImage().get_size()
+
+            image = obj.tag() if has_image else ''
+
+            info = dict(
+                title = brain.Title,
+                description = brain.Description,
+                URL = brain.getURL(),
+                image = image
+            )
+
+            results.append(info)
+
+        return results
+
+    @property
     def slides(self):
         folders = self.portal_catalog(
             portal_type = "Folder",

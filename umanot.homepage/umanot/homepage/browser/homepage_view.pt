@@ -39,6 +39,25 @@
 
         <section id="homepage-content">
 
+          <section id="news-section">
+
+            <div id="news-carousel" class="homeRow" tal:define="news view/news" tal:condition="news">
+              <h3 class="contentSection">JUST IN</h3>
+              <div class="owl-carousel">
+                <tal:loop repeat="item news">
+                  <div class="newsItem">
+                    <a class="newsItemImage" tal:condition="item/iamge" tal:attributes="href item/URL">
+                      <tal:image content="structure item/image"></tal:image>
+                    </a>
+                    <h3><a tal:attributes="href item/URL" tal:content="item/title">Sono il titolo</a></h3>
+                    <p tal:content="item/description">Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante, ac egestas est urna sit amet arcu. Class aptent taciti sociosqu ad litora torquent per conubia nostra lacinia vos. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio, dicta, magnam eius molestias nulla possimus facilis eaque accusamus velit qui reprehenderit voluptatibus suscipit. In, saepe, voluptates numquam amet ea natus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum dolor architecto fugiat praesentium veniam. Doloremque, quo, odit dignissimos pariatur molestiae minima laborum laboriosam iusto necessitatibus rem ducimus ad iure obcaecati. </p>
+                  </div>
+                </tal:loop>
+              </div>
+            </div>
+
+          </section>
+
           <section id="service-section">
             <tal:loop repeat="item view/services">
               <div class="serviceItem" id="serviceItem01" tal:attributes="id string:serviceItem0${repeat/item/number}">

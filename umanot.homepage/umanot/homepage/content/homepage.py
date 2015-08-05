@@ -205,6 +205,13 @@ HomepageSchema = folder.ATFolderSchema.copy() + atapi.Schema(
             widget = atapi.TextAreaWidget(
                 label = u"Perché Umanot (footer)"
             )
+        ),
+        atapi.BooleanField(
+            name = 'show_news',
+            storage = atapi.AnnotationStorage(),
+            widget = atapi.BooleanWidget(
+                label = u"Mostra le notizie"
+            )
         )
     )
 )
