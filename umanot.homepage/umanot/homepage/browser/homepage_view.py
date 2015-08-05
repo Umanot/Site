@@ -51,6 +51,7 @@ class HomepageView(BrowserView):
             portal_type = "News Item",
             sort_on = 'Date',
             sort_order = 'reverse',
+            review_state = 'published'
         )
 
         results = []
