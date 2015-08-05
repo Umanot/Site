@@ -46,7 +46,7 @@
               <div class="owl-carousel">
                 <tal:loop repeat="item news">
                   <div class="newsItem">
-                    <a class="newsItemImage" tal:condition="item/iamge" tal:attributes="href item/URL">
+                    <a class="newsItemImage" tal:condition="item/image" tal:attributes="href item/URL">
                       <tal:image content="structure item/image"></tal:image>
                     </a>
                     <h3><a tal:attributes="href item/URL" tal:content="item/title">Sono il titolo</a></h3>
