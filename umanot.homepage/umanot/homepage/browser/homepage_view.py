@@ -60,7 +60,7 @@ class HomepageView(BrowserView):
 
             has_image = obj.getImage() and obj.getImage().get_size()
 
-            image = obj.tag() if has_image else ''
+            image = obj.tag(scale="mini") if has_image else ''
 
             info = dict(
                 title = brain.Title,
