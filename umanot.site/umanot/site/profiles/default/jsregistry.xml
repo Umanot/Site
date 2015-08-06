@@ -175,6 +175,10 @@
 
  <javascript authenticated="False" cacheable="True" insert-after="owl.carousel.min.js"
   compression="safe" conditionalcomment="" cookable="True" enabled="True"
+  expression="" id="++resource++umanot.site.javascripts/min/realperson.min.js" inline="False"/>
+
+ <javascript authenticated="False" cacheable="True" insert-after="++resource++umanot.site.javascripts/min/realperson.min.js" 
+  compression="safe" conditionalcomment="" cookable="True" enabled="True"
   expression="" id="min/umanot.min.js" inline="False"/>
   
 <!-- AUTH -->
