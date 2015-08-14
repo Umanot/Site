@@ -12,13 +12,13 @@
     </div>
   </div>
 </div>
-        <section id="follow-section" tal:condition="python:context.portal_type in ['Folder']">
-        <div id="follow-button-wrapper">
-          <a class="btn btn-info followModalTrigger" tal:attributes="href string:${context/absolute_url}/@@add-follower-page?ajax_load=1" i18n:translate="Segui questo argomento">Segui questo argomento</a>
-          <div class="text">
-            <h5 i18n:translate="Sei interessato?">Sei Interessato?</h5>
+<section id="follow-section" tal:condition="python:context.portal_type in ['Folder']" i18n:domain="umanot.article">
+  <div id="follow-button-wrapper">
+    <a class="btn btn-info followModalTrigger" tal:attributes="href string:${context/absolute_url}/@@add-follower-page?ajax_load=1" i18n:translate="Segui questo argomento">Segui questo argomento</a>
+    <div class="text">
+      <h5 i18n:translate="Sei interessato?">Sei Interessato?</h5>
 
-            <p i18n:translate="notifica_argomento">Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email.</p>
-          </div>
-        </div>
-      </section> <!-- follow-section -->
+      <p i18n:translate="notifica_argomento">Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email.</p>
+    </div>
+  </div>
+</section> <!-- follow-section -->
