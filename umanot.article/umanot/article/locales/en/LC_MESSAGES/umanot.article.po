@@ -16,15 +16,15 @@ msgstr ""
 
 #: ./browser/article_view.pt:86
 msgid "Segui questo articolo"
-msgstr ""
+msgstr "Follow this topic"
 
 #. Default: "Sei Interessato?"
 #: ./browser/article_view.pt:88
 msgid "Sei interessato?"
-msgstr ""
+msgstr "Are you interested?"
 
 #. Default: "Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email."
 #: ./browser/article_view.pt:90
 msgid "notifica_article"
-msgstr ""
+msgstr "You will receive a notification directly to your inbox when a new comment is inserted"
 
