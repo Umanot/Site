@@ -49,7 +49,7 @@ msgstr "Notes"
 #. Default: "Sei Interessato?"
 #: ./browser/templates/umanot_document_view.pt:40
 msgid "Sei interessato?"
-msgstr ""
+msgstr "Are you interested?"
 
 #: ./browser/followers/add_follower_page.pt:87
 msgid "Submit"
@@ -58,7 +58,7 @@ msgstr ""
 #. Default: "Ti manderemo un avviso via email ogni volta che verrà pubblicato un nuovo post o inserito un nuovo commento."
 #: ./browser/templates/umanot_document_view.pt:42
 msgid "notifica_osserva_umanot"
-msgstr ""
+msgstr "You will receive an email alert when a new post is published or a new comment is inserted."
 
 #. Default: "P.I. / C.F.: 08862510966"
 #: ./browser/viewlets/footer.pt:30
