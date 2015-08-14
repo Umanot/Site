@@ -48,7 +48,7 @@ msgstr "Notes"
 
 #: ./browser/viewlets/leaderboard_top.pt:17
 msgid "Segui questo argomento"
-msgstr ""
+msgstr "Follow this topic"
 
 #: ./browser/templates/umanot_document_view.pt:38
 msgid "Segui questo servizio"
@@ -67,7 +67,7 @@ msgstr ""
 #. Default: "Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email."
 #: ./browser/viewlets/leaderboard_top.pt:21
 msgid "notifica_argomento"
-msgstr ""
+msgstr "You will receive a notification directly to your inbox when a new comment is inserted"
 
 #. Default: "Ti manderemo un avviso via email ogni volta che verrà pubblicato un nuovo post o inserito un nuovo commento."
 #: ./browser/templates/umanot_document_view.pt:42
