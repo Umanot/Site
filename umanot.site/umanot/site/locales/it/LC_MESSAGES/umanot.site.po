@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-06-11 10:17+0000\n"
+"POT-Creation-Date: 2015-08-14 09:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,8 +46,18 @@ msgstr ""
 msgid "Note"
 msgstr ""
 
+#. Default: "Sei Interessato?"
+#: ./browser/templates/umanot_document_view.pt:40
+msgid "Sei interessato?"
+msgstr ""
+
 #: ./browser/followers/add_follower_page.pt:87
 msgid "Submit"
+msgstr ""
+
+#. Default: "Ti manderemo un avviso via email ogni volta che verrà pubblicato un nuovo post o inserito un nuovo commento."
+#: ./browser/templates/umanot_document_view.pt:42
+msgid "notifica_osserva_umanot"
 msgstr ""
 
 #. Default: "P.I. / C.F.: 08862510966"
