@@ -18,7 +18,7 @@ msgstr ""
 #: ./browser/article_folder_view.pt:60
 #: ./browser/article_forum_folder_view.pt:59
 msgid "Learn more"
-msgstr ""
+msgstr "Learn more"
 
 #: ./browser/article_view.pt:86
 msgid "Segui questo articolo"
