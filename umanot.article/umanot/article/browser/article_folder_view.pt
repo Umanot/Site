@@ -93,7 +93,7 @@
                         culpa harum iure velit qui. Sint, repellat, laudantium minima aliquid beatae fugiat quam.</p>
                     </div>
 
-                    <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL">Leggi</a>
+                    <a class="ghostButton ghostButtonGray" tal:attributes="href item/URL" i18n:translate="Leggi">Leggi</a>
 
                     <div class="articleData" tal:condition="nothing" tal:content="item/readable_date">07/07/2015</div>
 
