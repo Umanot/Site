@@ -22,7 +22,7 @@ msgstr "Learn more"
 
 #: ./browser/article_folder_view.pt:96
 msgid "Leggi"
-msgstr ""
+msgstr "Read"
 
 #: ./browser/article_view.pt:86
 msgid "Segui questo articolo"
