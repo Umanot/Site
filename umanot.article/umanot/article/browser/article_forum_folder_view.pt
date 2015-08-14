@@ -56,7 +56,7 @@
                     </div>
                     
                     <div class="col-md-2">
-                      <a class="ghostButton" tal:attributes="href item/URL">Scopri di più</a>
+                      <a class="ghostButton" tal:attributes="href item/URL" i18n:translate="Learn mores">Scopri di più</a>
                   
                     </div>
                   
