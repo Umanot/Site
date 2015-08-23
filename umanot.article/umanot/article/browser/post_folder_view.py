@@ -18,7 +18,7 @@ class PostFolderView(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        self.limit = 5
+        self.limit = 2
         self.last_uid = request.get('last_uid')
 
     @property
@@ -64,6 +64,9 @@ class PostFolderView(BrowserView):
             info['section'] = obj.aq_parent.Title()
 
             results['data'].append(info)
+
+            if len(results['data']) == self.limit:
+                break
 
         if results['data']:
             results['last_uid'] = results['data'][-1]['uid']
