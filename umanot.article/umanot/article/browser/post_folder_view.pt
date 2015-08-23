@@ -1,0 +1,43 @@
+<html metal:use-macro="here/fullwidth_main_template/macros/master" i18n:domain="umanot.article">
+
+  <head></head>
+
+  <body>
+
+    <metal:headline fill-slot="headline_section_slot">
+
+      <div id="article-folder-headline">
+        <div class="gridOverlay"></div>
+        <div class="headlineContent">
+          <h1 class="documentFirstHeading" tal:content="view/title">Trading for Life</h1>
+        </div>
+      </div>
+
+    </metal:headline>
+
+    <metal:phil fill-slot="main">
+      <section id="forum-article-section" tal:attributes="data-uid contents/last_uid">
+
+        <div class="forumStyle">
+          <tal:loop tal:repeat="item view/contents">
+            <article class="articleItem">
+
+              <div class="articleInner">
+                <a class="articleImage" tal:condition="item/image" tal:attributes="href item/URL">
+                  <tal:image content="structure item/image"></tal:image>
+                </a>
+
+                <a tal:attributes="href item/URL"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
+
+                <p tal:content="structure item/text"></p>
+
+              </div>
+
+            </article>
+          </tal:loop>
+
+        </div>
+      </section>
+    </metal:phil>
+  </body>
+</html>
