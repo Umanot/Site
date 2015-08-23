@@ -6,7 +6,7 @@
 
     <metal:headline fill-slot="headline_section_slot">
 
-      <div id="article-folder-headline">
+      <div id="article-folder-headline" tal:condition="not:view/last_uid">
         <div class="gridOverlay"></div>
         <div class="headlineContent">
           <h1 class="documentFirstHeading" tal:content="view/title">Trading for Life</h1>

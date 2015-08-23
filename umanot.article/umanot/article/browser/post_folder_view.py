@@ -46,7 +46,7 @@ class PostFolderView(BrowserView):
 
         if self.last_uid:
             try:
-                show_more_index = uids.index(self.last_uid)
+                show_more_index = uids.index(self.last_uid) + 1
             except ValueError:
                 show_more_index = 0
         else:
