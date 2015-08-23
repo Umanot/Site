@@ -35,6 +35,7 @@ class PostFolderView(BrowserView):
 
     @property
     def contents(self):
+        import pdb; pdb.set_trace()
         brains = self.portal_catalog(
             portal_type = ["Post"],
             path = '/'.join(self.context.getPhysicalPath()),

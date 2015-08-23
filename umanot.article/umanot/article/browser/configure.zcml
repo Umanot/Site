@@ -44,6 +44,14 @@
     template="article_folder_view.pt"
     permission="zope2.View"
     />
+  
+  <browser:page
+    for=".post_folder_view.IPostFolderView"
+    name="folder_listing"
+    class=".post_folder_view.PostFolderView"
+    template="post_folder_view.pt"
+    permission="zope2.View"
+    />
 
   <browser:page
     for=".article_forum_folder_view.IArticleForumFolderView"
