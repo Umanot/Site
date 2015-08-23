@@ -5,6 +5,7 @@
 
   <five:deprecatedManageAddDelete class=".article.Article" />
   <five:deprecatedManageAddDelete class=".placeholder.Placeholder" />
+  <five:deprecatedManageAddDelete class=".post.Post" />
   <five:deprecatedManageAddDelete class=".video.Video" />
 
 </configure>

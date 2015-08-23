@@ -12,6 +12,14 @@
     template="article_view.pt"
     permission="zope2.View"
     />
+  
+  <browser:page
+    for="..interfaces.post.IPost"
+    name="post_view"
+    class=".post_view.PostView"
+    template="post_view.pt"
+    permission="zope2.View"
+    />
 
   <browser:page
     for="..interfaces.placeholder.IPlaceholder"
