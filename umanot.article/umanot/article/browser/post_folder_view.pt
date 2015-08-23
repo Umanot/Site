@@ -22,6 +22,8 @@
           <tal:loop tal:repeat="item contents/data">
             <article class="articleItem">
 
+              <span tal:content="item/uid"></span>
+
               <div class="articleInner">
                 <a class="articleImage" tal:condition="item/image" tal:attributes="href item/URL">
                   <tal:image content="structure item/image"></tal:image>
