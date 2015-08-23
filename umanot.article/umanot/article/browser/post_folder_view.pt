@@ -15,11 +15,11 @@
 
     </metal:headline>
 
-    <metal:phil fill-slot="main">
+    <metal:phil fill-slot="main" tal:define="contents view/contents">
       <section id="forum-article-section" tal:attributes="data-uid contents/last_uid">
 
         <div class="forumStyle">
-          <tal:loop tal:repeat="item view/contents">
+          <tal:loop tal:repeat="item contents/data">
             <article class="articleItem">
 
               <div class="articleInner">
