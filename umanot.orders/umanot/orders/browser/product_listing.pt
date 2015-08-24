@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      lang="en"
+        metal:use-macro="here/main_template/macros/master"
+        i18n:domain="complexlab.orders">
+
+  <body>
+
+    <div metal:fill-slot="main">
+      <tal:main-macro metal:define-macro="main">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <div id="products-view">
+
+          <h1 tal:content="view/title"></h1>
+
+          <p class="description" tal:content="view/description"></p>
+
+          <tal:loop repeat="item view/contents">
+            <div class="mrow">
+
+              <div class="col-md-8">
+                <h4><a tal:attributes="href item/URL" tal:content="item/title"></a></h4>
+                <p tal:content=" structure python:view.text_to_html(item['description'])"></p>
+              </div>
+
+              <div class="col-md-4">
+                <div class="priceBox priceBoxFloatRight priceBoxBlock" tal:condition="not:item/consulenza">
+                  <span class="priceBoxLabel">prezzo</span>
+                  <em class="priceBoxPrice" tal:content="structure python:'%d &euro;' % int(item['net'])">205€ </em>&nbsp;<span>  (+ IVA)</span>
+                </div>
+
+                <a tal:condition="item/consulenza" class="btn btn-info priceBoxButton" tal:attributes="href item/URL">Richiedi un preventivo</a>
+                <a tal:condition="not:item/consulenza" class="btn btn-info priceBoxButton" tal:attributes="href item/URL">Acquista</a>
+
+              </div>
+
+            </div>
+            <hr/>
+          </tal:loop>
+
+        </div>
+        <!-- order-view -->
+
+        <!-- <div tal:replace="structure provider:plone.belowcontentbody" /> -->
+
+      </tal:main-macro>
+    </div>
+  </body>
+</html>

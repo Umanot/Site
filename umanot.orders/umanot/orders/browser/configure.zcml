@@ -1,0 +1,101 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="umanot.orders">
+
+  <include package="plone.app.contentmenu" />
+
+  <browser:page
+    for="..interfaces.discount_code.IDiscountCode"
+    name="discount_code_view"
+    class=".discount_code_view.DiscountCodeView"
+    template="discount_code_view.pt"
+    permission="zope2.View"
+    />s
+
+  <browser:page
+    for="..interfaces.order.IOrder"
+    name="order_view"
+    class=".order_view.OrderView"
+    template="order_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.promoter.IPromoter"
+    name="promoter_view"
+    class=".promoter_view.PromoterView"
+    template="promoter_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="..interfaces.product.IProduct"
+    name="product_view"
+    class=".product_view.ProductView"
+    template="product_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="process-order"
+    class=".process_order.ProcessOrder"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="add-order"
+    class=".add_order.AddOrder"
+    permission="zope2.View"
+    />
+
+    <browser:page
+    for="*"
+    name="add-order-view"
+    class=".add_order_view.AddOrderView"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="my-orders"
+    class=".my_orders.MyOrdersView"
+    template="my_orders.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for=".my_orders.IMyOrdersView"
+    name="folder_listing"
+    class=".my_orders.MyOrdersView"
+    template="my_orders.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for=".products_view.IProductsView"
+    name="folder_listing"
+    class=".products_view.ProductsView"
+    template="products_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for=".product_listing.IProductListing"
+    name="folder_listing"
+    class=".product_listing.ProductListing"
+    template="product_listing.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="order-checkout"
+    class=".order_checkout.OrderCheckout"
+    template="order_checkout.pt"
+    permission="zope2.View"
+    />
+
+</configure>

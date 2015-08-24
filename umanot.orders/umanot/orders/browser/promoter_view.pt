@@ -1,0 +1,21 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+        metal:use-macro="here/main_template/macros/master"
+        i18n:domain="complexlab.orders">
+  <head>
+    <!--?<span metal:fill-slot="column_two_slot" />-->
+  </head>
+  <body>
+    <div metal:fill-slot="content-core" tal:define="codes view/codes">
+
+      <ul tal:condition="codes">
+        <tal:loop repeat="item codes">
+          <li><a tal:attributes="href item/URL" tal:content="item/title"></a></li>
+        </tal:loop>
+      </ul>
+      <p tal:condition="not:codes">Nessun codice attivo associato</p>
+      <!-- order-view -->
+
+    </div>
+  </body>
+</html>

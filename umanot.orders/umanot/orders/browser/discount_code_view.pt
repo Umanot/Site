@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      lang="en"
+        metal:use-macro="here/main_template/macros/master"
+        i18n:domain="complexlab.orders">
+  <head>
+    <!--?<span metal:fill-slot="column_two_slot" />-->
+  </head>
+  <body>
+    <div metal:fill-slot="main">
+      <div id="discount-code-view" tal:define="info view/info" tal:condition="view/can_manage">
+        <h1 tal:content="view/title"></h1>
+
+        <p><strong>Promoter: </strong>
+          <span tal:condition="info/promoter" tal:content="info/promoter/Title"></span>
+          <span tal:condition="not:info/promoter">nessuno</span>
+        </p>
+
+
+        <p><strong>Codice: </strong><span tal:content="info/code"></span></p>
+
+        <p><strong>Tipo: </strong><span tal:content="info/typology"></span></p>
+
+        <p tal:condition="python:info['typology'] in ['Prezzo fisso', 'Sconto fisso']"><strong>Importo: </strong><span tal:content="info/amount"></span></p>
+
+        <p tal:condition="python:info['typology'] in ['Sconto percentuale']"><strong>Percentuale di sconto: </strong><span tal:content="string:${info/amount} %"></span></p>
+
+        <hr>
+        <h3>Prodotti</h3>
+        <table class="table listing">
+          <thead>
+            <tr>
+              <th>Prodotto</th>
+              <th>Prezzo netto</th>
+              <th>Prezzo lordo</th>
+              <th>IVA</th>
+              <th>&nbsp;</th>
+              <th>Prezzo netto scontato</th>
+              <th>Prezzo lordo scontato</th>
+            </tr>
+          </thead>
+          <tal:loop repeat="item view/products">
+            <tr>
+              <td><a tal:attributes="href item/URL" tal:content="item/title"></a></td>
+              <td tal:content="python:view.renderMoney(item['prices']['net'])"></td>
+              <td tal:content="python:view.renderMoney(item['prices']['gross'])"></td>
+              <td tal:content="item/prices/tax"></td>
+              <td>&nbsp;</td>
+              <td tal:content="python:view.renderMoney(item['prices']['net_discounted'])"></td>
+              <td tal:content="python:view.renderMoney(item['prices']['gross_discounted'])"></td>
+            </tr>
+          </tal:loop>
+        </table>
+
+      </div>
+      <!-- order-view -->
+    </div>
+  </body>
+</html>

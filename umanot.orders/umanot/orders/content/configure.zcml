@@ -1,0 +1,11 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    i18n_domain="umanot.orders">
+
+  <five:deprecatedManageAddDelete class=".discount_code.DiscountCode" />
+  <five:deprecatedManageAddDelete class=".order.Order" />
+  <five:deprecatedManageAddDelete class=".product.Product" />
+  <five:deprecatedManageAddDelete class=".promoter.Promoter" />
+
+</configure>

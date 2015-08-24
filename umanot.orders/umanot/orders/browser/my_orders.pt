@@ -1,0 +1,49 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="complexlab.orders">
+
+  <body>
+
+    <div metal:fill-slot="main">
+      <tal:main-macro metal:define-macro="main">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <div id="my-orders-view" tal:condition="not:view/is_anonymous">
+
+          <h1>I miei ordini</h1>
+
+          <table class="table listing">
+            <thead>
+              <tr>
+                <th>N. ordine</th>
+                <th>Descrizione</th>
+                <th>Data</th>
+                <th>Importo</th>
+                <th>Stato</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tal:loop repeat="item view/orders">
+                <tr>
+                  <td tal:content="item/number"></td>
+                  <td><a tal:attributes="href item/URL" tal:content="item/title"></a></td>
+                  <td tal:content="item/readable_created"></td>
+                  <td tal:content="python:view.renderMoney(item['gross'])"></td>
+                  <td tal:content="item/status"></td>
+                </tr>
+              </tal:loop>
+            </tbody>
+          </table>
+
+        </div>
+        <!-- order-view -->
+
+        <!-- <div tal:replace="structure provider:plone.belowcontentbody" /> -->
+
+      </tal:main-macro>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      lang="en"
+      metal:use-macro="here/main_template/macros/master"
+      i18n:domain="complexlab.orders">
+
+  <body>
+
+    <div metal:fill-slot="main">
+      <tal:main-macro metal:define-macro="main">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <div id="products-view" tal:define="order view/order" tal:condition="order">
+
+          <h1 tal:content="view/title"></h1>
+
+          <table class="table listing">
+            <thead>
+              <tr><td colspan="2"><strong tal:content="string:${order/title}"></strong></td></tr>
+              <tr>
+                <th>Descrizione</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td colspan="2" tal:content="order/description"></td>
+              </tr>
+              <tr>
+                <td class="alignRight">Subtotale</td>
+                <td tal:content="python:view.renderMoney(order['net'])"></td>
+              </tr>
+              <tr>
+                <td class="alignRight" tal:content="string:IVA (${order/readable_vat}%) "></td>
+                <td tal:content="python:view.renderMoney(order['vat_amount'])"></td>
+              </tr>
+              <tr>
+                <td class="alignRight"><strong>Totale</strong></td>
+                <td><strong tal:content="python:view.renderMoney(order['gross'])"></strong></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <form method="post" tal:attributes="action string:${context/absolute_url}/@@gestpay-checkout">
+            <input type="hidden" name="discount_code" tal:attributes="value view/discount_code" />
+            <input type="hidden" name="order_number" tal:attributes="value view/order_number"/>
+            <input type="hidden" name="amount" tal:attributes="value python:'%.2f' % order['gross']" />
+            <button class="btn btn-info" type="submit">Procedi con l'acquisto</button>
+          </form>
+
+        </div>
+        <!-- order-view -->
+
+        <!-- <div tal:replace="structure provider:plone.belowcontentbody" /> -->
+
+      </tal:main-macro>
+    </div>
+  </body>
+</html>

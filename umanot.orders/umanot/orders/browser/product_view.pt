@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      lang="en"
+        metal:use-macro="here/main_template/macros/master"
+        i18n:domain="complexlab.orders">
+
+  <body>
+
+    <div metal:fill-slot="main">
+      <tal:main-macro metal:define-macro="main">
+
+        <div tal:replace="structure provider:plone.abovecontenttitle" />
+
+        <div id="product-view" tal:define="info view/info; discount view/discount_info">
+
+          <h1 tal:content="info/title"></h1>
+
+          <p tal:replace="structure info/text"></p>
+          <div class="priceBox priceBoxFloatRight" tal:condition="not:info/consulenza">
+            <span class="priceBoxLabel">prezzo</span>
+            <em class="priceBoxPrice" tal:condition="not:discount" tal:content="structure python:'%.2f &euro;' % info['net']">205€ <span>IVA esclusa</span></em>
+            <tal:discount tal:condition="discount">
+              <s class="priceBoxPrice" tal:content="structure python:'%.2f &euro;' % info['net']">205€</s><br/><br/>
+              <em class="priceBoxPrice" tal:content="structure python:'%.2f &euro;' % discount['net_discounted']">205€ <span>IVA esclusa</span></em>
+            </tal:discount>
+          </div>
+
+          <form class="buyForm" method="post" tal:condition="not:info/consulenza" tal:attributes="action string:${context/absolute_url}/@@add-order-view">
+            <label>Codice sconto</label>
+            <input type="text" name="code" tal:attributes="value python:request.get('code')" />
+            <input type="submit" name="form.discount.check" value="Verifica codice"/>
+
+            <tal:code tal:condition="python:request.get('code')">
+              <p tal:condition="discount">Il codice sconto è valido</p>
+
+              <p tal:condition="not:discount">Il codice sconto non è valido</p>
+            </tal:code>
+
+            <input type="hidden" name="uid" tal:attributes="value info/uid" />
+            <input type="hidden" name="amount" tal:attributes="value python:'%.2f' % info['net']" />
+            <input tal:condition="not:info/has_range" type="hidden" name="quantity" value="1"/>
+            <tal:limits tal:condition="info/has_range">
+              <label>Quantità</label>
+              <select name="quantity">
+                <tal:opts repeat="num python:range(info['min'], info['max'] + 1)">
+                  <option tal:attributes="value num" tal:content="num"></option>
+                </tal:opts>
+              </select>
+            </tal:limits>
+            <div class="checkbox" tal:condition="not:view/is_anonymous">
+              <label><input type="checkbox" name="tos"/>Dichiaro di aver letto e di accettare integralmente le condizioni definite nelle <a target="_blank" tal:attributes="href string:/i-nostri-servizi/condizioni-generali-di-uso-e-vendita">Condizioni generali di Uso e di Vendita dei Servizi ComplexLab</a></label>
+            </div>
+            <button tal:condition="not:view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Acquista</button>
+            <button tal:condition="view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Registrati a ComplexLab o autenticati per acquistare</button>
+          </form>
+
+          <a class="btn btn-info btn-block btn-lg" type="submit"
+                  tal:condition="info/consulenza"
+                  tal:attributes="href string:mailto:redazione@complexlab.it?subject=Richiesta preventivo per '${info/title}'">Richiedi un preventivo</a>
+
+
+          <table class="table listing" tal:condition="nothing">
+            <tr>
+              <td><strong>Prezzo</strong></td>
+              <td tal:content="python:view.renderMoney(info['net'])"></td>
+            </tr>
+            <tr>
+              <td><strong>Quantità minima</strong></td>
+              <td tal:content="info/min"></td>
+            </tr>
+            <tr>
+              <td><strong>Quantità massima</strong></td>
+              <td tal:content="info/max"></td>
+            </tr>
+          </table>
+
+        </div>
+        <!-- order-view -->
+
+        <!-- <div tal:replace="structure provider:plone.belowcontentbody" /> -->
+
+      </tal:main-macro>
+    </div>
+  </body>
+</html>

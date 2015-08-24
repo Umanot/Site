@@ -1,12 +1,38 @@
 <html metal:use-macro="here/fullwidth_main_template/macros/master" i18n:domain="umanot.article">
 
-  <head></head>
+  <head>
+    <metal:js fill-slot="javascript_head_slot">
+      <script type="text/javascript">
+        function element_in_scroll(elem) {
+          var docViewTop = $(window).scrollTop();
+          var docViewBottom = docViewTop + $(window).height();
+
+          // console.log(docViewTop + ' ' + docViewBottom);
+
+          var elemTop = $(elem).offset().top;
+          var elemBottom = elemTop + $(elem).height();
+
+          // console.log(elemTop);
+
+          return (elemTop >= docViewTop);
+
+          // return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+        }
+
+        $(document).scroll(function (e) {
+          if (element_in_scroll($(".lastItem"))) {
+            console.log("last item found");
+          };
+        });
+      </script>
+    </metal:js>
+  </head>
 
   <body>
 
-    <metal:headline fill-slot="headline_section_slot">
+    <metal:headline fill-slot="headline_section_slot" tal:condition="not:view/last_uid">
 
-      <div id="article-folder-headline" tal:condition="not:view/last_uid">
+      <div id="article-folder-headline">
         <div class="gridOverlay"></div>
         <div class="headlineContent">
           <h1 class="documentFirstHeading" tal:content="view/title">Trading for Life</h1>
@@ -20,7 +46,7 @@
 
         <div class="forumStyle">
           <tal:loop tal:repeat="item contents/data">
-            <article class="articleItem">
+            <article class="articleItem" tal:attributes="class python:'articleItem lastItem' if item['uid'] == contents['last_uid'] else 'articleItem'">
 
               <span tal:content="item/uid"></span>
 
