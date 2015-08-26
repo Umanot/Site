@@ -39,7 +39,7 @@ class PostFolderView(BrowserView):
             portal_type = ["Post"],
             path = '/'.join(self.context.getPhysicalPath()),
             sort_on = 'Date',
-            sort_order = 'revese',
+            sort_order = 'reverse',
         )
 
         uids = [brain.UID for brain in brains]
@@ -57,7 +57,9 @@ class PostFolderView(BrowserView):
 
         results = {'data': [], 'last_uid': None}
 
+        counter = 0
         for brain in brains:
+            counter += 1
             obj = brain.getObject()
             info = obj.getInfo(scale = "preview", width = 276, height = -1)
 
@@ -68,7 +70,11 @@ class PostFolderView(BrowserView):
             if len(results['data']) == self.limit:
                 break
 
+        total_brains = len(brains)
         if results['data']:
-            results['last_uid'] = results['data'][-1]['uid']
+            if counter == total_brains:
+                results['last_uid'] = -1
+            else:
+                results['last_uid'] = results['data'][-1]['uid']
 
         return results
