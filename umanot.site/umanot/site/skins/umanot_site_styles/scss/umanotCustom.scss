@@ -624,9 +624,10 @@
     display: inline-block;
     width: calc(25% - 8px);
     margin: 0 0% 10px;
-    padding: 18px;
     position: relative;
 }
+
+.articleInner {padding: 18px;}
 
 .articleImage {
   display: block;
@@ -640,6 +641,11 @@
   font-size: 16px;
   line-height: 1.3em;
   margin: 0 0 0;
+}
+
+#content .forumStyle h3.articleTitle {
+  font-size: 22px;
+  padding-bottom: 20px;
 }
 
 .articleByLine {
@@ -672,13 +678,14 @@
 }
 
 .forumStyle .articleImage {
-  float: left;
   display: inline-block;
-  margin: 0 20px 0 0;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .forumStyle .articleImage img {
-  max-width: 140px;
+  width: 100%;
+  height: auto;
 }
 
 .forumStyle .articleItem .ghostButton {
@@ -692,6 +699,37 @@
 }
 
 .forumStyle .articleByLine {margin: 3px 0;}
+
+.articleTableW {background-color: #1F364E; width:100%;}
+.articleTableW tbody tr td{
+  padding: 10px;
+  color: rgba(255,255,255,0.8);
+  border-bottom: 1px solid rgba(79, 107, 140, 0.19);
+  font-size: 13px;
+  font-weight: 100;
+}
+.articleTableW tbody tr td:first-child {
+  width: 200px;
+  font-weight: 400;
+  text-align: right;
+}
+.articleTableW tbody tr:nth-child(6) td:first-child{
+  color: palevioletred;
+}
+
+.articlePrefooter {
+  text-align: center;
+  padding: 20px 0;}
+
+.articleFooter {
+  background-color: #F9F9CD;
+  padding: 18px;
+}
+
+.articleFooter p {
+  font-size: 12px;
+  line-height: 1.35em;
+}
 
 /* FEATURED */
 
