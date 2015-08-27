@@ -61,13 +61,16 @@
             <article class="articleItem" tal:attributes="class python:'articleItem lastItem' if item['uid'] == contents['last_uid'] else 'articleItem'">
 
               <div class="articleInner">
-                <a tal:attributes="href item/URL"><h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3></a>
-
+                <div class="articleTWrp">
+                  <a tal:attributes="href item/URL">
+                    <h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
+                  </a>
+                </div>
                 <a class="articleImage" tal:condition="item/image" tal:attributes="href item/URL">
                   <tal:image content="structure item/image"></tal:image>
                 </a>
                 <div class="mrow">
-                  <div class="col-md-6">
+                  <div class="col-md-7">
                     <table class="articleTableW">
 
                   <tbody>
@@ -92,14 +95,13 @@
                     <td>UMANOT  Versione 1.5*</td>
                   </tr>
                   <tr>
-                    <td>NOTE</td>
-                    <td>*IMPORTANTE: è in rilascio la versione 1.7 con significative novità e performance!</td>
+                    <td colspan="2">*IMPORTANTE: è in rilascio la versione 1.7 con significative novità e performance!</td>
                   </tr>
                   </tbody>
 
                 </table>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-5">
                     <h4>COMMENTO:</h4>
                     <p>Brutta rottura ribassista oggi, 19 agosto, della recente Isteresi Isteresi (13660 - 13860)...UMANOT rimane Long ma... all'erta!</p>
                   </div>

@@ -627,7 +627,7 @@
     position: relative;
 }
 
-.articleInner {padding: 18px;}
+.articleInner {padding: 30px 18px 18px;}
 
 .articleImage {
   display: block;
@@ -643,9 +643,23 @@
   margin: 0 0 0;
 }
 
+.articleTWrp {
+  text-align: center;
+  background: url('dot_title.jpg') repeat-x 0 15px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.articleTWrp a {
+  display: inline-block;
+  padding: 0 15px;
+  background-color: #fff;
+}
+
 #content .forumStyle h3.articleTitle {
-  font-size: 22px;
-  padding-bottom: 20px;
+  font-size: 26px;
+  padding-bottom: 15px;
+  display:inline-block;
 }
 
 .articleByLine {
@@ -713,8 +727,11 @@
   font-weight: 400;
   text-align: right;
 }
-.articleTableW tbody tr:nth-child(6) td:first-child{
+.articleTableW tbody tr:nth-child(6) td{
   color: palevioletred;
+  text-align: left;
+  font-size: 11px;
+  background-color: #132A40;
 }
 
 .articlePrefooter {
@@ -723,7 +740,7 @@
 
 .articleFooter {
   background-color: #F9F9CD;
-  padding: 18px;
+  padding: 18px 18px 5px;
 }
 
 .articleFooter p {

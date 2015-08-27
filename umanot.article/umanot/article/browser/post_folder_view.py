@@ -61,7 +61,7 @@ class PostFolderView(BrowserView):
         for brain in brains:
             counter += 1
             obj = brain.getObject()
-            info = obj.getInfo(scale = "preview", width = 276, height = -1)
+            info = obj.getInfo(scale = "original")
 
             info['section'] = obj.aq_parent.Title()
 
