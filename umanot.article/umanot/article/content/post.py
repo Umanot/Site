@@ -9,6 +9,7 @@ from Products.ATContentTypes.content.image import ATImageSchema
 from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 from Products.Archetypes import atapi
 from Products.CMFCore import permissions
+from Products.CMFCore.utils import getToolByName
 from mediatria.utils.browser.mediatria_utils import IMediatriaUtils
 from umanot.article.config import PROJECTNAME
 from umanot.article.interfaces.post import IPost
@@ -174,6 +175,22 @@ class Post(folder.ATFolder, ATCTImageTransform):
         )
 
         return info
+
+    def other_images(self):
+        catalog = getToolByName(self, 'portal_catalog')
+        brains = catalog(
+            portal_type = "Image",
+            path = '/'.join(self.getPhysicalPath()),
+            sort_on = 'getObjPositionInParent',
+        )
+
+        results = []
+
+        for brain in brains:
+            tag = brain.getObject().tag()
+            results.append(tag)
+
+        return results
 
 
 atapi.registerType(Post, PROJECTNAME)

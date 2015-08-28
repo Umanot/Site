@@ -64,6 +64,7 @@ class PostFolderView(BrowserView):
             info = obj.getInfo(scale = "original")
 
             info['section'] = obj.aq_parent.Title()
+            info['other_images'] = obj.other_images()
 
             results['data'].append(info)
 
