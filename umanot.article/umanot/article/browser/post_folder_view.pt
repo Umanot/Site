@@ -56,16 +56,18 @@
     <metal:phil fill-slot="main" tal:define="contents view/contents">
       <section id="forum-article-section" tal:attributes="data-uid contents/last_uid; data-url context/absolute_url">
 
-        <div id="post-listing" class="forumStyle">
+        <div id="post-listing" class="forumStyle" tal:define="can_edit view/can_edit">
           <tal:loop tal:repeat="item contents/data">
             <article class="articleItem" tal:attributes="class python:'articleItem lastItem' if item['uid'] == contents['last_uid'] else 'articleItem'">
 
               <div class="articleInner">
                 <div class="articleTWrp">
-                  <a tal:attributes="href item/URL">
+                  <a tal:attributes="href item/URL" tal:condition="can_edit">
                     <h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
                   </a>
+                  <h3 class="articleTitle" tal:condition="not:can_edit" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
                 </div>
+
                 <div class="mrow">
                   <div class="col-md-12 articleImage">
                     <tal:image content="structure item/image"></tal:image>

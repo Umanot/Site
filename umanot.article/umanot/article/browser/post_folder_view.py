@@ -1,6 +1,7 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from zope.interface import implements, Interface
+from zope.security import checkPermission
 
 
 class IPostFolderView(Interface):
@@ -32,6 +33,10 @@ class PostFolderView(BrowserView):
     @property
     def description(self):
         return self.context.Description()
+
+    @property
+    def can_edit(self):
+        return checkPermission('cmf.ModifyPortalContent', self.context)
 
     @property
     def contents(self):
