@@ -89,6 +89,10 @@
                           <td>TITOLO</td>
                           <td tal:content="item/titolo">FCA (Fiat Chrysler Automobiles)</td>
                         </tr>
+                        <tr tal:condition="item/intervallo">
+                          <td>DATI</td>
+                          <td tal:content="item/intervallo">dal ... al ...</td>
+                        </tr>
                         <tr tal:condition="item/operazioni">
                           <td>OPERAZIONI</td>
                           <td tal:content="item/operazioni">10 = 8 Buy + 2 Sell</td>

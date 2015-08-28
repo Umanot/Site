@@ -43,14 +43,14 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         name = 'operazioni_12',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
-            label = u"Operazioni in vincita / perdita",
+            label = u"Operazioni in profitto / perdita",
         )
     ),
     atapi.StringField(
         name = 'operazioni_1x2',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
-            label = u"Operazioni in vincita / perdita / pareggio",
+            label = u"Operazioni in profitto / perdita / pareggio",
         )
     ),
     atapi.StringField(
@@ -166,6 +166,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             readable_date = effective_readable,
             sortable_date = effective.asdatetime().isoformat(),
             titolo = self.getTitolo(),
+            intervallo = self.getIntervallo(),
             operazioni = self.getOperazioni(),
             operazioni_12 = self.getOperazioni_12(),
             operazioni_1x2 = self.getOperazioni_1x2(),
