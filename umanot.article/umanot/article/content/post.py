@@ -17,6 +17,55 @@ from zope.interface import implements
 
 
 PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
+    atapi.StringField(
+        name = 'titolo',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Titolo",
+        )
+    ),
+    atapi.StringField(
+        name = 'operazioni',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Titolo",
+        )
+    ),
+    atapi.StringField(
+        name = 'operazioni_12',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Operazioni in vincita / perdita",
+        )
+    ),
+    atapi.StringField(
+        name = 'operazioni_1x2',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Operazioni in vincita / perdita / pareggio",
+        )
+    ),
+    atapi.StringField(
+        name = 'metodologia',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Metodologia",
+        )
+    ),
+    atapi.StringField(
+        name = 'software',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Software",
+        )
+    ),
+    atapi.TextField(
+        name = 'notes',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.TextAreaWidget(
+            label = u"Note",
+        )
+    )
 ))
 
 PostSchema['title'].storage = atapi.AnnotationStorage()
@@ -107,7 +156,14 @@ class Post(folder.ATFolder, ATCTImageTransform):
             text = self.getText(),
             image = image,
             readable_date = effective_readable,
-            sortable_date = effective.asdatetime().isoformat()
+            sortable_date = effective.asdatetime().isoformat(),
+            titolo = self.getTitolo(),
+            operazioni = self.getOperazioni(),
+            operazioni_12 = self.getOperazioni_12(),
+            operazioni_1x2 = self.getOperazioni_1x2(),
+            metodologia = self.getMetodologia(),
+            software = self.getSoftware(),
+            notes = self.getNotes()
         )
 
         return info
