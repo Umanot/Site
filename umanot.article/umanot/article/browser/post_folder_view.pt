@@ -82,7 +82,7 @@
                 </tal:images>
 
                 <div class="mrow">
-                  <div class="col-md-6">
+                  <div class="col-md-5">
                     <table class="articleTableW">
                       <tbody>
                         <tr tal:condition="item/titolo">
@@ -120,7 +120,7 @@
 
                     </table>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col-md-7">
                     <h4>COMMENTO:</h4>
 
                     <p tal:replace="structure item/text">Brutta rottura ribassista oggi, 19 agosto, della recente Isteresi Isteresi (13660 - 13860)...UMANOT rimane Long ma... all'erta!</p>
