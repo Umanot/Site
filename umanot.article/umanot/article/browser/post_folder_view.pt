@@ -33,7 +33,8 @@
               ready = true;
 
             });
-          };
+          }
+          ;
         });
       </script>
     </metal:js>
@@ -64,6 +65,7 @@
                   <a tal:attributes="href item/URL" tal:condition="can_edit">
                     <h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
                   </a>
+
                   <h3 class="articleTitle" tal:condition="not:can_edit" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
                 </div>
 
@@ -79,6 +81,14 @@
                     </div>
                   </div>
                 </tal:images>
+
+                <div class="mrow" tal:define="text item/importante" tal:condition="text">
+                  <div class="col-md-12">
+                    <div class="postAlert">
+                      <p tal:replace="structure text"></p>
+                    </div>
+                  </div>
+                </div>
 
                 <div class="mrow">
                   <div class="col-md-5">
