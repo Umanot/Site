@@ -84,7 +84,7 @@
 
                 <div class="mrow" tal:define="text item/importante" tal:condition="text">
                   <div class="col-md-12">
-                    <div class="postAlert">
+                    <div class="postAlert alert">
                       <p tal:replace="structure text"></p>
                     </div>
                   </div>
