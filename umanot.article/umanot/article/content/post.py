@@ -25,10 +25,17 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         )
     ),
     atapi.StringField(
+        name = 'intervallo',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Intervallo dati",
+        )
+    ),
+    atapi.StringField(
         name = 'operazioni',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
-            label = u"Titolo",
+            label = u"Operazioni",
         )
     ),
     atapi.StringField(
