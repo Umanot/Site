@@ -14,6 +14,8 @@
         $(document).scroll(function (e) {
           var elem = $(".lastItem");
 
+          console.log(elem);
+
           if (ready && elem.length && element_in_scroll(elem)) {
             ready = false;
             var url = $('#forum-article-section').attr('data-url');
@@ -33,8 +35,7 @@
               ready = true;
 
             });
-          }
-          ;
+          };
         });
       </script>
     </metal:js>
