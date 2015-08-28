@@ -125,21 +125,12 @@
                     <p tal:replace="structure item/text">Brutta rottura ribassista oggi, 19 agosto, della recente Isteresi Isteresi (13660 - 13860)...UMANOT rimane Long ma... all'erta!</p>
                   </div>
                 </div>
-                <div class="articlePrefooter">
-                  <div>La tua metodologia (Analisi tecnica? Quale combinazione di indicatori? Quale serie storica di dati?) cosa avrebbe fatto in questo contesto?</div>
-                  <div>Condividilo con noi a: <strong><a href="mailto:staff@umanot.com" class="email-link">staff@umanot.com</a></strong></div>
-                  <br>
-                  <div>Grazie per il tuo contributo!</div>
-                  <div><strong>Per lo sviluppo e il benessere dei Traders</strong></div>
+                <div class="articlePrefooter" tal:define="text view/get_post_pre_footer" tal:condition="text">
+                  <tal:prefooter tal:content="structure text"></tal:prefooter>
                 </div>
               </div>
-              <div class="articleFooter">
-                <p>Nel grafico, Umanot opera sempre con quantità 1000, poiché non applica ancora criteri ottimizzanti di Money Management (qualora tu volessi operare, fai molta attenzione a tale aspetto per il tuo personale Money Management!)
-                  Inoltre, per ogni eventuale operazione che il Lettore deciderà autonomamente e responsabilmente, Umanot Srl verrà considerata indenne da qualsiasi coinvolgimento, responsabilità e condizionamento.</p>
-
-                <p>IMPORTANTE: raccomandiamo a ciascun Lettore di questa pagina di adattare eventuali investimenti, che deciderà autonomamente e senza alcuna indicazione in merito da parte di Umanot Srl, al proprio profilo di rischio.</p>
-
-                <p>La lettura di questa pagina comporta l'accettazione integrale da parte del lettore del documento "DISCLAIMER" di UMANOT SRL, che potrà essere consultato al seguente <a href="#">LINK.</a></p>
+              <div class="articleFooter" tal:define="text view/get_post_footer" tal:condition="text">
+                <tal:footer tal:content="structure text"></tal:footer>
               </div>
             </article>
           </tal:loop>

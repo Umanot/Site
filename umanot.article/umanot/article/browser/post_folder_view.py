@@ -1,5 +1,7 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
+from plone.memoize.instance import memoize
+from umanot.article.browser.interfaces import IPostPreFooter, IPostFooter
 from zope.interface import implements, Interface
 from zope.security import checkPermission
 
@@ -37,6 +39,30 @@ class PostFolderView(BrowserView):
     @property
     def can_edit(self):
         return checkPermission('cmf.ModifyPortalContent', self.context)
+
+    @memoize
+    def get_post_pre_footer(self):
+        brains = self.portal_catalog(
+            portal_type = "Document",
+            object_provides = IPostPreFooter.__identifier__,
+        )
+
+        if not brains:
+            return
+
+        return brains[0].getObject().getText()
+
+    @memoize
+    def get_post_pre_footer(self):
+        brains = self.portal_catalog(
+            portal_type = "Document",
+            object_provides = IPostFooter.__identifier__,
+        )
+
+        if not brains:
+            return
+
+        return brains[0].getObject().getText()
 
     @property
     def contents(self):

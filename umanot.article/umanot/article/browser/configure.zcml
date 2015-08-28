@@ -61,4 +61,13 @@
     permission="zope2.View"
     />
 
+  <class class="Products.ATContentTypes.interface.folder.IATDocument">
+    <allow interface=".interfaces.IPostPreFooter"/>
+  </class>
+
+  <class class="Products.ATContentTypes.interface.folder.IATDocument">
+    <allow interface=".interfaces.IPostFooter"/>
+  </class>
+
+
 </configure>
