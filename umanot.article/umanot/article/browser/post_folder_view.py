@@ -53,7 +53,7 @@ class PostFolderView(BrowserView):
         return brains[0].getObject().getText()
 
     @memoize
-    def get_post_pre_footer(self):
+    def get_post_footer(self):
         brains = self.portal_catalog(
             portal_type = "Document",
             object_provides = IPostFooter.__identifier__,
