@@ -79,7 +79,7 @@ class PostFolderView(BrowserView):
         total_brains = len(brains)
         if results['data']:
             if counter == total_brains:
-                results['last_uid'] = None
+                results['last_uid'] = -1
             else:
                 results['last_uid'] = results['data'][-1]['uid']
 
