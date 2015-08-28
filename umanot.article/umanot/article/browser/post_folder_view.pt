@@ -14,9 +14,8 @@
         $(document).scroll(function (e) {
           var elem = $(".lastItem");
 
-          console.log(elem);
-
           if (ready && elem.length && element_in_scroll(elem)) {
+            console.log(elem);
             ready = false;
             var url = $('#forum-article-section').attr('data-url');
             var last_uid = $('#forum-article-section').attr('data-uid');
