@@ -17,7 +17,7 @@
           if (ready && elem.length && element_in_scroll(elem)) {
             ready = false;
             var url = $('#forum-article-section').attr('data-url');
-            var last_uid = elem[0].attr('data-uid');
+            var last_uid = elem.attr('data-uid');
 
             $.ajax({
               url: url,
