@@ -71,6 +71,13 @@
                     <tal:image content="structure item/image"></tal:image>
                   </div>
                 </div>
+                <tal:images repeat="tag item/other_images">
+                  <div class="mrow">
+                    <div class="col-md-12 articleImage">
+                      <tal:image content="structure tag"></tal:image>
+                    </div>
+                  </div>
+                </tal:images>
 
                 <div class="mrow">
                   <div class="col-md-5">
