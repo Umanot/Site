@@ -69,5 +69,9 @@
     <allow interface=".interfaces.IPostFooter"/>
   </class>
 
+  <class class="Products.ATContentTypes.interface.document.IATDocument">
+    <allow interface=".interfaces.ILegenda"/>
+  </class>
+
 
 </configure>
