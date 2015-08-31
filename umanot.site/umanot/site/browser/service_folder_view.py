@@ -42,6 +42,9 @@ class ServiceFolderView(BrowserView):
         results = []
 
         for brain in brains:
+            if brain.exclude_from_nav:
+                continue
+
             info = dict(
                 title = brain.Title,
                 description = brain.Description,
