@@ -69,19 +69,7 @@
         </div>
         <div class="legendaInner">
           <h5>LEGENDA</h5>
-          Acquisti: frecce blu con scritte "Buy 1000" (1000 azioni, sempre, poiché UMANOT non gestisce ancora un efficace Money Management, previsto nella prossima versione).
-          - Vendite:  frecce rosse con scritte "Short 1000".
-          - ogni Short, nella attuale versione senza Money Management, chiude tutte le operazioni Buy precedenti e apre a mercato una operazione Short.  E viceversa, per ogni Buy.
-          - UMANOT, pertanto, in questa versione,  è sempre "a mercato"; in una prossima versione, invece, sarà solo parzialmente "a mercato" in funzione di avanzati criteri, coerenti all'Analisi Fisica, di StopLoss, di Trailing Stop, di Money Management.
-          IMPORTANTE: le immagini e le operazioni qui mostrate sono effettuate SENZA ALCUN INSERIMENTO DI STOP-LOSS O TRAILING-STOP, lasciati esclusivamente alla cura e alle pratiche operative del lettore.
-          - Operazioni positive / negative: evidenziate dalle linee oblique puntinate (verdi: operazioni chiuse in guadagno; rosse: operazioni chiuse in perdita; assenza di linea obliqua puntinata: operazione ancora aperta con potenziali guadagno o perdite).
-          - Linee tratteggiate orizzontali: 4 tipologie di Attrattori (vedi: Analisi Fisica) quali: Attrattore-Long (tratteggio blu), -Short (rosso), Gap aperto (viola), PseudoGap aperto (giallo).  N.B.: gli Attrattori "puri" (verde) non sono qui evidenziati.
-          - Simboli Comportamentali (per es.: B, AE, S, ecc... - vedi: Analisi Fisica): UMANOT osserva e registra, scrivendo 9 Simboli Comportamentali (qui ne sono mostrati solo 5), il comportamento "qui&ora" della barra delle quotazioni intorno agli Attrattori, senza alcuna elaborazione numerica su dati passati.  Dalla lettura di tali Simboli (ancora parziale nell'attuale versione), UMANOT comprende e impara le complesse evoluzioni delle Azioni -  "qui&ora", senza distorsioni algoritmiche, né condizionamenti massmediatici.
-          - "Glitch": con tale termine si intende una discontinuità dei Volumi, in una delle 4 tipologie classificate (vedi: Analisi Fisica, nella quale i Volumi rappresentano l'Informazione più decisiva, misurando l'Energia del "fenomeno fisico" osservato).
-          IMPORTANTE: Per una conoscenza completa della terminologia, dei criteri operativi e dei principi fisici dell'Analisi Fisica azionaria, puoi:
-          * acquistare il Libro "Dalle balle alle bolle - come cavalcare l'imprevedibilità dei mercati finanziari" - con elementi di Analisi Fisica
-          * richiedere  una Consulenza online "Web Studio" (alcuni slot sono gratuiti!)
-          * partecipare a una sessione di Coaching (anche online)
+          <p tal:define="item view/legenda"  tal:condition="item" tal:replace="structure item/text"></p>
         </div>
       </div>
       <section id="forum-article-section" tal:attributes="data-uid contents/last_uid; data-url context/absolute_url">

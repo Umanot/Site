@@ -7,3 +7,6 @@ class IPostPreFooter(Interface):
 
 class IPostFooter(Interface):
     """Marker interface"""
+
+class ILegenda(Interface):
+    """Marker interface"""
