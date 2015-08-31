@@ -69,7 +69,7 @@
         </div>
         <div class="legendaInner">
           <h5>LEGENDA</h5>
-          <p tal:define="item view/legenda"  tal:condition="item" tal:replace="structure item/text"></p>
+          <p tal:define="item view/legenda"  tal:condition="item" tal:replace="structure item"></p>
         </div>
       </div>
       <section id="forum-article-section" tal:attributes="data-uid contents/last_uid; data-url context/absolute_url">
