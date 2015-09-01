@@ -194,12 +194,10 @@ class UmanotUtils(object):
         connection = self.get_sql_connection(request.get('URL'))
         cursor = connection.cursor()
 
-        if typology == 'area_tematica':
+        if typology == 'area_tematica' and uid != '943e809ec82e4b0eb9ea803314a1fefd':  # TODO: sistemare, in pratica quando si fa il follow d osserva umanot esce area uid = NULL ma la tipologia dovrebbe essere area_tematica. Fixare o il follow (che imposti anche l'area UID) o qui in qualche modo
             query = """SELECT Email FROM Followers WHERE AreaUID='%(uid)s' AND Typology='%(typology)s'""" % sqldata
         else:
             query = """SELECT Email FROM Followers WHERE ContentUID='%(uid)s' AND Typology='%(typology)s'""" % sqldata
-
-        import pdb; pdb.set_trace()
 
         cursor.execute(query)
 
