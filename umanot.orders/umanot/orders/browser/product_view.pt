@@ -15,31 +15,6 @@
 
         <p tal:replace="structure info/text"></p>
 
-        <fieldset>
-          <legend>Prezzi (admin)</legend>
-          <table class="table listing">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Netto</th>
-                <th>Lordo</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><strong>Euro</strong></td>
-                <td tal:content="structure python:'%.2f &euro;' % info['net']"></td>
-                <td tal:content="structure python:'%.2f &euro;' % info['gross']"></td>
-              </tr>
-              <tr>
-                <td><strong>Dollaro</strong></td>
-                <td tal:content="structure python:'%.2f $' % info['dollars']['net']"></td>
-                <td tal:content="structure python:'%.2f $' % info['dollars']['gross']"></td>
-              </tr>
-            </tbody>
-          </table>
-        </fieldset>
-
         <div class="priceBox priceBoxFloatRight" tal:condition="not:info/consulenza">
           <span class="priceBoxLabel">prezzo</span>
 
@@ -84,6 +59,31 @@
         <a class="btn btn-info btn-block btn-lg" type="submit"
                 tal:condition="info/consulenza"
                 tal:attributes="href string:mailto:redazione@complexlab.it?subject=Richiesta preventivo per '${info/title}'">Richiedi un preventivo</a>
+
+        <tal:prezi tal:condition="view/can_manage">
+          <h5>Prezzi</h5>
+          <table class="table listing">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Netto</th>
+                <th>Lordo</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Euro</strong></td>
+                <td tal:content="structure python:'%.2f &euro;' % info['net']"></td>
+                <td tal:content="structure python:'%.2f &euro;' % info['gross']"></td>
+              </tr>
+              <tr>
+                <td><strong>Dollaro</strong></td>
+                <td tal:content="structure python:'%.2f $' % info['dollars']['net']"></td>
+                <td tal:content="structure python:'%.2f $' % info['dollars']['gross']"></td>
+              </tr>
+            </tbody>
+          </table>
+        </tal:prezi>
 
       </div>
       <!-- order-view -->
