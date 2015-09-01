@@ -19,7 +19,6 @@
           <span class="priceBoxLabel">prezzo</span>
 
           <em class="priceBoxPrice" tal:condition="not:discount" tal:content="structure python:'%.2f &euro;' % info['net']">205€</em>
-          <em class="priceBoxPrice" tal:condition="not:discount" tal:content="structure python:'%.2f $;' % info['dollars']['net']"></em>
 
           <tal:discount tal:condition="discount">
             <em class="priceBoxPrice" tal:content="structure python:'%.2f &euro;' % info['net']">205€</em><br/><br/>
