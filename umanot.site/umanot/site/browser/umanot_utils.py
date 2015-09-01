@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import copy
+from decimal import Decimal
 from DateTime.DateTime import DateTime
 
 from Products.CMFCore.utils import getToolByName
@@ -197,6 +198,8 @@ class UmanotUtils(object):
             query = """SELECT Email FROM Followers WHERE AreaUID='%(uid)s' AND Typology='%(typology)s'""" % sqldata
         else:
             query = """SELECT Email FROM Followers WHERE ContentUID='%(uid)s' AND Typology='%(typology)s'""" % sqldata
+
+        import pdb; pdb.set_trace()
 
         cursor.execute(query)
 
