@@ -98,4 +98,17 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    name="umanot-ecom-panel"
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    class=".panel.EcomControlPanel"
+    permission="cmf.ManagePortal"
+    />
+
+  <adapter
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    provides="umanot.orders.browser.interfaces.IEcomSettings"
+    factory=".panel.ecom_settings"
+    />
+
 </configure>

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<componentregistry>
+  <utilities>
+    <utility
+      name="umanot.ecom_settings"
+      interface="umanot.orders.browser.interfaces.IEcomSettings"
+      factory="umanot.orders.cookie_settings.EcomSettings"/>
+    <utility
+      interface="five.customerize.interfaces.IViewTemplateContainer"
+      object="portal_view_customizations"/>
+  </utilities>
+</componentregistry>
