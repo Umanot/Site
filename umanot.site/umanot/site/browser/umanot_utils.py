@@ -17,6 +17,54 @@ class IUmanotUtils(Interface):
 class UmanotUtils(object):
     implements(IUmanotUtils)
 
+    def money_from_float(self, float_value, show_currency=True, show_decimals=True, show_plus=False):
+        if not float_value:
+            results = '0,00' if show_decimals else '0'
+
+            if show_currency:
+                results += ' €'
+
+            return results
+
+        money = '%.2f' % float_value
+        money = money.replace('.', ',')
+
+        money = money[:-6] + '.' + money[-6:] if abs(float_value) >= 1000 else money
+
+        if not show_decimals:
+            money = money.split(',')[0]
+
+        if show_currency:
+            money += ' €'
+
+        if show_plus and float_value > 0:
+            money = '+%s' % money
+
+        return money
+
+    def float_from_money(self, money, decimal=False, null_is_zero=False):
+        if null_is_zero and not money:
+            return 0
+
+        WHITELIST = '0123456789,.'
+        money = ''.join([x for x in money if x in WHITELIST])
+
+        if '.' in money and ',' in money:
+            if money.find('.') < money.find(','):
+                money = money.replace('.', '')
+            else:
+                money = money.replace(',', '')
+
+        if ',' in money:
+            money = money.replace(',', '.')
+
+        float_value = float(money)
+
+        if decimal:
+            return Decimal(str(float_value)).quantize(Decimal('.01'))
+        else:
+            return float_value
+
     def get_sql_connection(self, url, context=None):
         if 'localhost' in url or 'mediatria.com' in url:
             connection = oursql.connect(SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, db = SQL_DB_TEST)

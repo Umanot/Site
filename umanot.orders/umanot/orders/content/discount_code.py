@@ -2,11 +2,11 @@
 """Definition of the Products content type
 """
 from decimal import Decimal
+
 from archetypes.referencebrowserwidget import ReferenceBrowserWidget
 from umanot.orders.interfaces.discount_code import IDiscountCode
 from umanot.site.browser.umanot_utils import IUmanotUtils
 from zope.component import getUtility
-
 from zope.interface import implements
 from AccessControl import ClassSecurityInfo
 from Products.Archetypes import atapi
@@ -166,8 +166,8 @@ class DiscountCode(ATDocument):
 
     def get_net_from_gross(self, gross, tax, decimal=False, safe_float=False):
         if safe_float:
-            clab_utils = getUtility(IComplexLabUtils)
-            gross = clab_utils.float_from_money(gross)
+            utils = getUtility(IUmanotUtils)
+            gross = utils.float_from_money(gross)
 
         if decimal:
             return Decimal(gross * (1 - tax / 100.)).quantize(Decimal('.01'))
@@ -176,8 +176,8 @@ class DiscountCode(ATDocument):
 
     def get_gross_from_net(self, net, tax, decimal=False, safe_float=False):
         if safe_float:
-            clab_utils = getUtility(IComplexLabUtils)
-            net = clab_utils.float_from_money(net)
+            utils = getUtility(IUmanotUtils)
+            net = utils.float_from_money(net)
 
         if decimal:
             return Decimal(net / (1 - tax / 100.)).quantize(Decimal('.01'))

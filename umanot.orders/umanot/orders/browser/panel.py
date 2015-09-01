@@ -10,6 +10,6 @@ def ecom_settings(context):
 class EcomControlPanel(ControlPanelForm):
     form_fields = form.FormFields(IEcomSettings)
 
-    form_name = u"ecom"
+    form_name = u"Configurazioni"
     label = u"E-Commerce"
     description = u""
