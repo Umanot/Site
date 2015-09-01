@@ -4,7 +4,7 @@
     <utility
       name="umanot.ecom_settings"
       interface="umanot.orders.browser.interfaces.IEcomSettings"
-      factory="umanot.orders.cookie_settings.EcomSettings"/>
+      factory="umanot.orders.ecom_settings.EcomSettings"/>
     <utility
       interface="five.customerize.interfaces.IViewTemplateContainer"
       object="portal_view_customizations"/>
