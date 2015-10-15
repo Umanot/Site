@@ -116,7 +116,7 @@ class Article(folder.ATFolder, ATCTImageTransform):
     def getInfo(self, scale='large', width=None, height=None, mode='crop', css_class=None):
         effective = DateTime(self.Date())
         mediatria_utils = getUtility(IMediatriaUtils)
-        effective_readable = "%s %s %s" % (effective.strftime('%d'), mediatria_utils.getMonthName(self, effective.month()), effective.strftime('%Y'))
+        effective_readable = "%s %s %s" % (effective.strftime('%d'), mediatria_utils.getMonthName(self, effective.month(), language=self.REQUEST.get('Language')), effective.strftime('%Y'))
 
         image = self.getImage()
 
