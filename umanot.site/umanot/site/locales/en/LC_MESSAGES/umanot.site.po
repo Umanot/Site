@@ -48,7 +48,7 @@ msgstr "Notes"
 
 #: ./browser/templates/service_folder_view.pt:32
 msgid "Scopri come"
-msgstr ""
+msgstr "Find out how"
 
 #: ./browser/viewlets/leaderboard_top.pt:17
 msgid "Segui questo argomento"
