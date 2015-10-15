@@ -92,6 +92,17 @@
         </div>
       </section> <!-- follow-section -->
 
+      <section id="follow-section" tal:condition="python:context.getId() != 'observe-umanot-in-action'">
+        <div id="follow-button-wrapper">
+          <a class="btn btn-info followModalTrigger" tal:attributes="href string:${context/absolute_url}/@@add-follower-page?ajax_load=1" i18n:translate="Segui questo articolo">Segui questo articolo</a>
+          <div class="text">
+            <h5 i18n:translate="Sei interessato?">Sei Interessato?</h5>
+
+            <p i18n:translate="notifica_article">Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email.</p>
+          </div>
+        </div>
+      </section> <!-- follow-section -->
+
 
         <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
 
