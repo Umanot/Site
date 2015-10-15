@@ -1,6 +1,6 @@
 <section id="realted-section" tal:define="contents view/contents" tal:condition="contents">
 
-  <h5>Potrebbe interessarti anche</h5>
+  <h5 i18n:translate="Potrebbe interessarti anche">Potrebbe interessarti anche</h5>
 
   <div id="related-carousel" class="owl-carousel">
     <tal:loop repeat="item contents">
