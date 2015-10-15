@@ -31,7 +31,7 @@
 
           <div id="article-content">
 
-            <tal:segui tal:condition="python:context.getId() == 'osserva-umanot-in-azione'">
+            <tal:segui tal:condition="python:context.getId() in ['osserva-umanot-in-azione', 'observe-umanot-in-action']">
               <p class="documentDescription" tal:content="view/description"></p>
               <section id="follow-section">
                 <div id="follow-button-wrapper">
