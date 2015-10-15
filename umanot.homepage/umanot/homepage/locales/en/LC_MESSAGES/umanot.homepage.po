@@ -16,7 +16,7 @@ msgstr ""
 
 #: ./browser/homepage_view.pt:143
 msgid "Leggi"
-msgstr ""
+msgstr "Read"
 
 #. Default: "Scopri di più"
 #: ./browser/homepage_view.pt:107
