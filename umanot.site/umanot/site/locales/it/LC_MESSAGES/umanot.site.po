@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-08-14 09:59+0000\n"
+"POT-Creation-Date: 2015-10-15 15:23+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -44,6 +44,10 @@ msgstr ""
 
 #: ./browser/followers/add_follower_page.pt:60
 msgid "Note"
+msgstr ""
+
+#: ./browser/templates/service_folder_view.pt:32
+msgid "Scopri come"
 msgstr ""
 
 #: ./browser/viewlets/leaderboard_top.pt:17
