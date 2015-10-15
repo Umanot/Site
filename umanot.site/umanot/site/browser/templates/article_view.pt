@@ -80,7 +80,7 @@
         
         <section id="realted-section">
 
-            <h5>Potrebbe interessarti anche</h5>
+            <h5 i18n:translate="Potrebbe interessarti anche">Potrebbe interessarti anche</h5>
             
             <div id="related-carousel" class="owl-carousel">
               <div class="item">
