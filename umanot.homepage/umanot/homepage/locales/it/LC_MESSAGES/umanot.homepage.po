@@ -17,7 +17,7 @@ msgstr ""
 #. Default: "Scopri di più"
 #: ./browser/homepage_view.pt:88
 msgid "read_more"
-msgstr ""
+msgstr "Leggi"
 
 #. Default: "Per diventare un Trader Scientifico<sup>&reg;</sup>"
 #: ./browser/homepage_view.pt:97
