@@ -48,7 +48,7 @@ msgstr "Notes"
 
 #: ./browser/templates/article_view.pt:83
 msgid "Potrebbe interessarti anche"
-msgstr ""
+msgstr "You may be also interested in"
 
 #: ./browser/templates/service_folder_view.pt:32
 msgid "Scopri come"
