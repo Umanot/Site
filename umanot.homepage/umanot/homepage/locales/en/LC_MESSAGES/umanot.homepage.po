@@ -20,7 +20,7 @@ msgstr "Read"
 
 #: ./browser/homepage_view.pt:70
 msgid "Scopri come"
-msgstr ""
+msgstr "Find out how"
 
 #. Default: "Scopri di più"
 #: ./browser/homepage_view.pt:107
