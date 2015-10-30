@@ -24,7 +24,7 @@ msgstr "TIME FRAME"
 
 #: ./browser/post_folder_view.pt:71
 msgid "LEGENDA"
-msgstr ""
+msgstr "LEGEND"
 
 #. Default: "Scopri di più"
 #: ./browser/article_folder_view.pt:60
