@@ -1,4 +1,4 @@
-<div id="message-box">
+<div id="message-box" tal:condition="python:context.REQUEST.get('LANGUAGE') == 'it'">
   <div id="message-box-close">&times;</div>
   
   <div class="messageBoxInner">
