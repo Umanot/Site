@@ -68,7 +68,8 @@
           <i class="fa fa-times"></i>
         </div>
         <div class="legendaInner">
-          <h5 i18n:translate="LEGENDA">LEGENDA</h5>
+          <h5 tal:condition="python:context.REQUEST.get('it')">LEGENDA</h5>
+          <h5 tal:condition="python:context.REQUEST.get('en')">LEGEND</h5>
           <p tal:define="item view/legenda"  tal:condition="item" tal:replace="structure item"></p>
         </div>
       </div>
