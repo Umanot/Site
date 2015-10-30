@@ -16,11 +16,11 @@ msgstr ""
 
 #: ./browser/post_folder_view.pt:152
 msgid "COMMENTO:"
-msgstr ""
+msgstr "COMMENT:"
 
 #: ./browser/post_folder_view.pt:121
 msgid "DATI"
-msgstr ""
+msgstr "TIME FRAME"
 
 #. Default: "Scopri di più"
 #: ./browser/article_folder_view.pt:60
@@ -34,23 +34,23 @@ msgstr "Read"
 
 #: ./browser/post_folder_view.pt:137
 msgid "METODOLOGIA"
-msgstr ""
+msgstr "METHODOLOGY"
 
 #: ./browser/post_folder_view.pt:125
 msgid "OPERAZIONI"
-msgstr ""
+msgstr "OPERATIONS"
 
 #: ./browser/post_folder_view.pt:129
 msgid "OPERAZIONI in PROFITTO - PERDITA"
-msgstr ""
+msgstr "OPERATIONS WITH PROFITS/LOSSES"
 
 #: ./browser/post_folder_view.pt:133
 msgid "OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO"
-msgstr ""
+msgstr "OPERATIONS WITH PROFITS/LOSSES/BREAKEVEN"
 
 #: ./browser/post_folder_view.pt:141
 msgid "SW"
-msgstr ""
+msgstr "SOFTWARE"
 
 #: ./browser/article_view.pt:86
 msgid "Segui questo articolo"
@@ -63,7 +63,7 @@ msgstr "Are you interested?"
 
 #: ./browser/post_folder_view.pt:117
 msgid "TITOLO"
-msgstr ""
+msgstr "STOCK"
 
 #. Default: "Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email."
 #: ./browser/article_view.pt:90
