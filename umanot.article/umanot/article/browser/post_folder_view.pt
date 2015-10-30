@@ -80,7 +80,7 @@
             <article class="articleItem" tal:attributes="class python:'articleItem lastItem' if item['uid'] == contents['last_uid'] else 'articleItem'; data-uid item/uid">
 
               <div class="articleInner">
-                <div class="legendaModalBtn">Legenda</div>
+                <div class="legendaModalBtn" i18n:translate="LEGENDA">LEGENDA</div>
                 <div class="articleTWrp">
                   <a tal:attributes="href item/URL" tal:condition="can_edit">
                     <h3 class="articleTitle" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, expedita autem nobis nisi fugiat excepturi</h3>
