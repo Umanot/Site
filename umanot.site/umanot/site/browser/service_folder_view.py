@@ -35,7 +35,7 @@ class ServiceFolderView(BrowserView):
     def contents(self):
         brains = self.portal_catalog(
             portal_type = ["Document", "Article", "Folder"],
-            path = '/'.join(self.context.getPhysicalPath()),
+            path = {'query':'/'.join(self.context.getPhysicalPath()) ,'depth': 1},
             sort_on = 'getObjPositionInParent',
             review_state = 'published'
         )
