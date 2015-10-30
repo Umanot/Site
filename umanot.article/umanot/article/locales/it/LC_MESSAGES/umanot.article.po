@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-08-14 10:09+0000\n"
+"POT-Creation-Date: 2015-10-30 11:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,6 +14,14 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
+#: ./browser/post_folder_view.pt:152
+msgid "COMMENTO:"
+msgstr ""
+
+#: ./browser/post_folder_view.pt:121
+msgid "DATI"
+msgstr ""
+
 #. Default: "Scopri di più"
 #: ./browser/article_folder_view.pt:60
 #: ./browser/article_forum_folder_view.pt:59
@@ -24,6 +32,26 @@ msgstr "Scopri di più"
 msgid "Leggi"
 msgstr ""
 
+#: ./browser/post_folder_view.pt:137
+msgid "METODOLOGIA"
+msgstr ""
+
+#: ./browser/post_folder_view.pt:125
+msgid "OPERAZIONI"
+msgstr ""
+
+#: ./browser/post_folder_view.pt:129
+msgid "OPERAZIONI in PROFITTO - PERDITA"
+msgstr ""
+
+#: ./browser/post_folder_view.pt:133
+msgid "OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO"
+msgstr ""
+
+#: ./browser/post_folder_view.pt:141
+msgid "SW"
+msgstr ""
+
 #: ./browser/article_view.pt:86
 msgid "Segui questo articolo"
 msgstr ""
@@ -31,6 +59,10 @@ msgstr ""
 #. Default: "Sei Interessato?"
 #: ./browser/article_view.pt:88
 msgid "Sei interessato?"
+msgstr ""
+
+#: ./browser/post_folder_view.pt:117
+msgid "TITOLO"
 msgstr ""
 
 #. Default: "Ogni volta che verrà inserito un nuovo commento riceverai una notifica direttamente nella tua casella email."
