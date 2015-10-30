@@ -282,7 +282,7 @@
     float: right;
     background: #000;
     position: absolute;
-    top: 0;
+    top: 3px;
     right: 1px;
     z-index: 3;
     padding: 0.25em 0.5em;
@@ -305,6 +305,7 @@
 #portal-languageselector a {
   text-transform: uppercase;
   color: #fff;
+  margin: 0 10px;
 }
 
 
