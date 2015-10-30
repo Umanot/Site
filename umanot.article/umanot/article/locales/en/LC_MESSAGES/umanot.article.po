@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-10-30 11:24+0000\n"
+"POT-Creation-Date: 2015-10-30 11:34+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,6 +21,10 @@ msgstr "COMMENT:"
 #: ./browser/post_folder_view.pt:121
 msgid "DATI"
 msgstr "TIME FRAME"
+
+#: ./browser/post_folder_view.pt:71
+msgid "LEGENDA"
+msgstr ""
 
 #. Default: "Scopri di più"
 #: ./browser/article_folder_view.pt:60
