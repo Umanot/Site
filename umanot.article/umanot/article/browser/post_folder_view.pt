@@ -114,31 +114,31 @@
                     <table class="articleTableW">
                       <tbody>
                         <tr tal:condition="item/titolo">
-                          <td>TITOLO</td>
+                          <td i18n:translate="TITOLO">TITOLO</td>
                           <td tal:content="item/titolo">FCA (Fiat Chrysler Automobiles)</td>
                         </tr>
                         <tr tal:condition="item/intervallo">
-                          <td>DATI</td>
+                          <td i18n:translate="DATI">DATI</td>
                           <td tal:content="item/intervallo">dal ... al ...</td>
                         </tr>
                         <tr tal:condition="item/operazioni">
-                          <td>OPERAZIONI</td>
+                          <td i18n:translate="OPERAZIONI">OPERAZIONI</td>
                           <td tal:content="item/operazioni">10 = 8 Buy + 2 Sell</td>
                         </tr>
                         <tr tal:condition="item/operazioni_12">
-                          <td>OPERAZIONI in PROFITTO - PERDITA</td>
+                          <td i18n:translate="OPERAZIONI in PROFITTO - PERDITA">OPERAZIONI in PROFITTO - PERDITA</td>
                           <td tal:content="item/operazioni_12"> 7 - 2 - 1</td>
                         </tr>
                         <tr tal:condition="item/operazioni_1x2">
-                          <td>OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO</td>
+                          <td i18n:translate="OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO">OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO</td>
                           <td tal:content="item/operazioni_1x2"> 7 - 2 - 1</td>
                         </tr>
                         <tr tal:condition="item/metodologia">
-                          <td>METODOLOGIA</td>
+                          <td i18n:translate="METODOLOGIA">METODOLOGIA</td>
                           <td tal:content="item/metodologia">ANALISI FISICA®</td>
                         </tr>
                         <tr tal:condition="item/software">
-                          <td>SW</td>
+                          <td i18n:translate="SW">SW</td>
                           <td tal:content="item/software">UMANOT Versione 1.5*</td>
                         </tr>
                         <tr tal:condition="item/notes">
@@ -149,7 +149,7 @@
                     </table>
                   </div>
                   <div class="col-md-7">
-                    <h4>COMMENTO:</h4>
+                    <h4 i18n:translate="COMMENTO:">COMMENTO:</h4>
 
                     <p tal:replace="structure item/text">Brutta rottura ribassista oggi, 19 agosto, della recente Isteresi Isteresi (13660 - 13860)...UMANOT rimane Long ma... all'erta!</p>
                   </div>
