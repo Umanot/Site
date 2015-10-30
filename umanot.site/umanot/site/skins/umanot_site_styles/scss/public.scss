@@ -280,8 +280,8 @@
 
 #portal-languageselector {
     float: right;
-    background: #e3e3e3;
-    position: relative;
+    background: #000;
+    position: absolute;
     top: 0;
     right: 1px;
     z-index: 3;
@@ -294,7 +294,16 @@
     -moz-border-radius-bottomleft: 0.5em;
     -moz-border-radius-bottomright: 0.5em;
     max-width: 50%;
-    display: none;
+    display: block;
+}
+
+#portal-languageselector li {
+  display: inline-block;
+}
+
+#portal-languageselector a {
+  text-transform: uppercase;
+  color: #fff;
 }
 
 
