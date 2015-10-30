@@ -30,7 +30,7 @@
   font-size: 12px;
   background-color: #000;
   margin: 0 -15px;
-  padding: 6px 30px;
+  padding: 6px 170px 6px 0px;
   height: 29px;
   text-align: right;
 }
@@ -295,6 +295,7 @@
     -moz-border-radius-bottomright: 0.5em;
     max-width: 50%;
     display: block;
+    list-style: none;
 }
 
 #portal-languageselector li {
