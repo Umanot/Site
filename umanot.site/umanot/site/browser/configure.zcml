@@ -404,6 +404,14 @@
     />
 
   <browser:page
+    for=".portfolio_view.IPortfolioView"
+    name="document_view"
+    class=".portfolio_view.IPortfolioView"
+    template="followers/portfolio_view.pt"
+    permission="zope2.View"
+    />
+
+  <browser:page
     for="*"
     name="translate-contents"
     class=".translate_contents.TranslateContentsView"

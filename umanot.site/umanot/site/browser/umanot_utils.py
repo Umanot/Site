@@ -1,14 +1,17 @@
 # -*- coding: utf-8 -*-
 import copy
+import xml
 from decimal import Decimal
-from DateTime.DateTime import DateTime
-
-from Products.CMFCore.utils import getToolByName
-from zope.annotation import IAnnotations
-from zope.interface import implements, Interface
-from zope.component.hooks import getSite
-from umanot.site.config import SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, SQL_DB_TEST, SQL_HOST, SQL_USER, SQL_PASS, SQL_DB
+import json
 import oursql
+
+import requests
+from DateTime.DateTime import DateTime
+from Products.CMFCore.utils import getToolByName
+from umanot.site.config import SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, SQL_DB_TEST, SQL_HOST, SQL_USER, SQL_PASS, SQL_DB
+from zope.annotation import IAnnotations
+from zope.component.hooks import getSite
+from zope.interface import implements, Interface
 
 
 class IUmanotUtils(Interface):
@@ -17,6 +20,23 @@ class IUmanotUtils(Interface):
 
 class UmanotUtils(object):
     implements(IUmanotUtils)
+
+    def get_posts_by_portfolio(self, portfolio):
+        url = "http://5.189.150.24/umanot_ws/WebPost.asmx/BindGrid"
+
+        params = {'Portfolio': portfolio}
+
+        response = requests.get(url, params = params)
+
+        #if response.status_code == '200':
+
+        data = xml.etree.ElementTree.fromstring(response.text)
+
+        import pdb; pdb.set_trace()
+
+        tmp = data.itertext()
+        results = json.loads(tmp.next())
+
 
     def money_from_float(self, float_value, show_currency=True, show_decimals=True, show_plus=False):
         if not float_value:
@@ -218,7 +238,7 @@ class UmanotUtils(object):
         if typology == 'area_tematica':
             if action == 'update':
                 if uid == '943e809ec82e4b0eb9ea803314a1fefd':
-                    subject = "Update Osserva Umanot in azione - %s" % context.toLocalizedTime(DateTime(), long_format=False)
+                    subject = "Update Osserva Umanot in azione - %s" % context.toLocalizedTime(DateTime(), long_format = False)
                     body = '<p>Abbiamo pubblicato un nuovo aggiornamento dei risultati di Umanot.</p>'
                     body += '<p><a href="http://www.umanot.com/it/servizi/osserva-umanot-in-azione">ACCEDI SUBITO ALLA PAGINA</a></p>'
                 else:
