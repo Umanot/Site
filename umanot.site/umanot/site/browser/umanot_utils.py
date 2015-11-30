@@ -1,8 +1,9 @@
 # -*- coding: utf-8 -*-
 import copy
-import xml
-from decimal import Decimal
 import json
+from decimal import Decimal
+from xml.etree.ElementTree import fromstring
+
 import oursql
 
 import requests
@@ -30,12 +31,14 @@ class UmanotUtils(object):
 
         #if response.status_code == '200':
 
-        data = xml.etree.ElementTree.fromstring(response.text)
-
-        import pdb; pdb.set_trace()
+        data = fromstring(response.text)
 
         tmp = data.itertext()
         results = json.loads(tmp.next())
+
+        import pdb; pdb.set_trace()
+
+        return results
 
 
     def money_from_float(self, float_value, show_currency=True, show_decimals=True, show_plus=False):
