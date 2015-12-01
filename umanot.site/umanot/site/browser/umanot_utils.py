@@ -31,12 +31,12 @@ class UmanotUtils(object):
 
         #if response.status_code == '200':
 
+        import pdb; pdb.set_trace()
+
         data = fromstring(response.text)
 
         tmp = data.itertext()
         results = json.loads(tmp.next())
-
-        import pdb; pdb.set_trace()
 
         return results
 
