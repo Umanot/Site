@@ -35,4 +35,4 @@ class PortfolioView(BrowserView):
         return self.context.Description()
 
     def get_data(self):
-        self.umanot_utils.get_posts_by_portfolio(self.portfolio)
+        return self.umanot_utils.get_posts_by_portfolio(self.portfolio)

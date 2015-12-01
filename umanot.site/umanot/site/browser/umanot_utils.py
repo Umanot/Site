@@ -13,7 +13,7 @@ from umanot.site.config import SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, SQL_
 from zope.annotation import IAnnotations
 from zope.component.hooks import getSite
 from zope.interface import implements, Interface
-
+from lxml import objectify
 
 class IUmanotUtils(Interface):
     """sol utility"""
@@ -29,14 +29,29 @@ class UmanotUtils(object):
 
         response = requests.get(url, params = params)
 
-        #if response.status_code == '200':
-
-        import pdb; pdb.set_trace()
-
         data = fromstring(response.text)
+        json_data = json.loads(data.text)
 
-        tmp = data.itertext()
-        results = json.loads(tmp.next())
+        results = []
+
+        base_path = 'http://5.189.150.24/umanot/UmanotImage/'
+
+        has_image = bool(item['destimage'])
+
+        for item in json_data:
+            info = dict(
+                symbol = item['Symbol'],
+                share = item['Share'],
+                mode = item['Mode'],
+                date = DateTime(item['Date']),
+                has_image = has_image,
+                image = base_path + '/' + item['destimage'] if has_image else '',
+                post = item['Post']
+            )
+
+            results.append(info)
+
+        results.sort(lambda x,y:cmp(y['date'], x['date']))
 
         return results
 
