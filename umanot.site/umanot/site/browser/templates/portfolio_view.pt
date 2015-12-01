@@ -30,6 +30,7 @@
             </div>
             <div class="col-md-4">
               <ul class="visualNoMarker">
+                <li><strong tal:content="item/readable_date"></strong></li>
                 <li tal:condition="item/share" tal:content="item/share"></li>
                 <li tal:condition="item/post" tal:content="item/post"></li>
               </ul>

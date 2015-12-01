@@ -38,14 +38,16 @@ class UmanotUtils(object):
 
         for item in json_data:
             has_image = bool(item['destimage'])
+            dt = DateTime(item['Date'])
             info = dict(
                 symbol = item['Symbol'],
                 share = item['Share'],
                 mode = item['Mode'],
-                date = DateTime(item['Date']),
+                date = dt,
                 has_image = has_image,
                 image = base_path + '/' + item['destimage'] if has_image else '',
-                post = item['Post']
+                post = item['Post'],
+                readable_date = '%02d/%02d/%d' % (dt.day(), dt.month(), dt.year())
             )
 
             results.append(info)
