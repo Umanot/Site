@@ -47,7 +47,7 @@ class UmanotUtils(object):
                 has_image = has_image,
                 image = base_path + '/' + item['destimage'] if has_image else '',
                 post = item['Post'],
-                readable_date = '%02d/%02d/%d' % (dt.day(), dt.month(), dt.year())
+                readable_date = '%02d/%02d/%d %02d:%02d:%02d' % (dt.day(), dt.month(), dt.year(), dt.hour(), dt.minute(), dt.second())
             )
 
             results.append(info)
