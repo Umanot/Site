@@ -35,6 +35,7 @@
               </ul>
             </div>
           </div>
+          <hr tal:condition="not:repeat/item/end" />
         </tal:loop>
       </div>
     </metal:phil>

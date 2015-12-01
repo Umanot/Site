@@ -13,7 +13,7 @@ from umanot.site.config import SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, SQL_
 from zope.annotation import IAnnotations
 from zope.component.hooks import getSite
 from zope.interface import implements, Interface
-from lxml import objectify
+
 
 class IUmanotUtils(Interface):
     """sol utility"""
@@ -36,9 +36,8 @@ class UmanotUtils(object):
 
         base_path = 'http://5.189.150.24/umanot/UmanotImage/'
 
-        has_image = bool(item['destimage'])
-
         for item in json_data:
+            has_image = bool(item['destimage'])
             info = dict(
                 symbol = item['Symbol'],
                 share = item['Share'],
@@ -51,10 +50,9 @@ class UmanotUtils(object):
 
             results.append(info)
 
-        results.sort(lambda x,y:cmp(y['date'], x['date']))
+        results.sort(lambda x, y: cmp(y['date'], x['date']))
 
         return results
-
 
     def money_from_float(self, float_value, show_currency=True, show_decimals=True, show_plus=False):
         if not float_value:
