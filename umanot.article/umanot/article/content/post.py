@@ -181,7 +181,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             metodologia = self.getMetodologia(),
             software = self.getSoftware(),
             notes = self.getNotes(),
-            importante = self.getImportante(),
+            importante = self.getRawImportante(),
         )
 
         return info

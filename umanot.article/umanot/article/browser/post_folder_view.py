@@ -106,8 +106,6 @@ class PostFolderView(BrowserView):
             obj = brain.getObject()
             info = obj.getInfo(scale = "original")
 
-            import pdb; pdb.set_trace()
-
             info['section'] = obj.aq_parent.Title()
             info['other_images'] = obj.other_images()
 
