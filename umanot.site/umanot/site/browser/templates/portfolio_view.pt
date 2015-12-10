@@ -23,7 +23,7 @@
 
     <metal:phil fill-slot="main" tal:define="data view/get_data">
       <div class="container">
-        <table>
+        <table class="table">
           <thead>
             <tr>
               <th>Data</th>
