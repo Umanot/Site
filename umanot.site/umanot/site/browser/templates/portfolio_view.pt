@@ -23,21 +23,152 @@
 
     <metal:phil fill-slot="main" tal:define="data view/get_data">
       <div class="container">
-        <tal:loop tal:repeat="item data">
-          <div class="mrow">
-            <div class="col-md-4">
-              <figure tal:condition="item/has_image"><img class="img-responsive" tal:attributes="src item/image"></figure>
-            </div>
-            <div class="col-md-4">
-              <ul class="visualNoMarker">
-                <li><strong tal:content="item/readable_date"></strong></li>
-                <li tal:condition="item/share" tal:content="item/share"></li>
-                <li tal:condition="item/post" tal:content="item/post"></li>
-              </ul>
-            </div>
-          </div>
-          <hr tal:condition="not:repeat/item/end" />
-        </tal:loop>
+        <table>
+          <thead>
+            <tr>
+              <th>Data</th>
+              <th>Operazione</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+            <tr>
+              <td>10/12/2015 10:05:15</td>
+              <td>buy@555.55</td>
+            </tr>
+          </tbody>
+        </table>
+        <!--?<tal:loop tal:repeat="item data">-->
+          <!--?<div class="mrow">-->
+            <!--?<div class="col-md-4">-->
+              <!--?<figure tal:condition="item/has_image"><img class="img-responsive" tal:attributes="src item/image"></figure>-->
+            <!--?</div>-->
+            <!--?<div class="col-md-4">-->
+              <!--?<ul class="visualNoMarker">-->
+                <!--?<li><strong tal:content="item/readable_date"></strong></li>-->
+                <!--?<li tal:condition="item/share" tal:content="item/share"></li>-->
+                <!--?<li tal:condition="item/post" tal:content="item/post"></li>-->
+              <!--?</ul>-->
+            <!--?</div>-->
+          <!--?</div>-->
+          <!--?<hr tal:condition="not:repeat/item/end" />-->
+        <!--?</tal:loop>-->
       </div>
     </metal:phil>
   </body>
