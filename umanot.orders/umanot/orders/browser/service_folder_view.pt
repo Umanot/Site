@@ -1,10 +1,10 @@
-<html metal:use-macro="here/fullwidth_main_template/macros/master" i18n:domain="complexlab5.site">
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="complexlab5.site">
   <head>
 
 
   </head>
   <body>
-    <metal:phil fill-slot="content" tal:define="contents view/contents">
+    <metal:phil fill-slot="main" tal:define="contents view/contents">
 
       <div id="content" class="serviceFolderView">
         <p>Intro text</p>
