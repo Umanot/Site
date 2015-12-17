@@ -22,12 +22,8 @@ class IUmanotUtils(Interface):
 class UmanotUtils(object):
     implements(IUmanotUtils)
 
-    def get_posts_by_portfolio(self, portfolio):
+    def get_posts_by_portfolio(self, portfolio, limit, min_date):
         url = "http://5.189.150.24/umanot_ws/WebPost.asmx/BindGrid"
-
-        limit = 50
-        min_date = DateTime() - 30
-
         params = {'Portfolio': portfolio, 'Limit': limit, 'MinDate': min_date}
 
         response = requests.get(url, params = params)

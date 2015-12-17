@@ -20,6 +20,8 @@ class PortfolioView(BrowserView):
         self.context = context
         self.request = request
         self.portfolio = request.get('portfolio')
+        self.limit = request.get('limit', '')
+        self.min_date = request.get('min_date', '')
         self.umanot_utils = getUtility(IUmanotUtils)
 
     @property
@@ -35,4 +37,4 @@ class PortfolioView(BrowserView):
         return self.context.Description()
 
     def get_data(self):
-        return self.umanot_utils.get_posts_by_portfolio(self.portfolio)
+        return self.umanot_utils.get_posts_by_portfolio(self.portfolio, self.limit, self.min_date)
