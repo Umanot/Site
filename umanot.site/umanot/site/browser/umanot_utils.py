@@ -5,11 +5,11 @@ from decimal import Decimal
 from xml.etree.ElementTree import fromstring
 
 import oursql
+from umanot.site.config import SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, SQL_DB_TEST, SQL_HOST, SQL_USER, SQL_PASS, SQL_DB
 
 import requests
 from DateTime.DateTime import DateTime
 from Products.CMFCore.utils import getToolByName
-from umanot.site.config import SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, SQL_DB_TEST, SQL_HOST, SQL_USER, SQL_PASS, SQL_DB
 from zope.annotation import IAnnotations
 from zope.component.hooks import getSite
 from zope.interface import implements, Interface
@@ -25,7 +25,10 @@ class UmanotUtils(object):
     def get_posts_by_portfolio(self, portfolio):
         url = "http://5.189.150.24/umanot_ws/WebPost.asmx/BindGrid"
 
-        params = {'Portfolio': portfolio}
+        limit = 50
+        min_date = DateTime() - 30
+
+        params = {'Portfolio': portfolio, 'Limit': limit, 'MinDate': min_date}
 
         response = requests.get(url, params = params)
 
