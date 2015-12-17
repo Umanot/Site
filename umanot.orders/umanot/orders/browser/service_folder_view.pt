@@ -1,4 +1,4 @@
-<html metal:use-macro="here/main_template/macros/master" i18n:domain="complexlab5.site">
+<html metal:use-macro="here/fullwidth_main_template/macros/master" i18n:domain="complexlab5.site">
   <head>
 
 
