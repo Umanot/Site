@@ -1,0 +1,44 @@
+<html metal:use-macro="here/nocol_main_template/macros/master" i18n:domain="complexlab5.site">
+  <head>
+
+
+  </head>
+  <body>
+    <metal:phil fill-slot="content" tal:define="contents view/contents">
+
+      <div id="content" class="serviceFolderView">
+        <p>Intro text</p>
+
+        <tal:sections repeat="section view/contents">
+          <div id="digital-content-curation" tal:attributes="id section/id"></div>
+          <h2 tal:content="section/title"></h2>
+
+          <p tal:content="section/description"></p>
+          <tal:products repeat="group section/contents">
+            <div class="mrow">
+              <tal:loop repeat="item group">
+                <div class="col-lg-3 col-md-6" tal:condition="item">
+                  <div class="serviceBox">
+                    <h3 tal:content="item/title">PUBLISHING</h3>
+
+                    <p tal:content="item/description"></p>
+
+                    <a tal:attributes="href string:${item/URL}?ajax_load=1" class="more btn btn-info ajaxModalTrigger" data-modaltype="huge">Scopri di più</a>
+                  </div>
+
+                </div>
+              </tal:loop>
+            </div>
+          </tal:products>
+        </tal:sections>
+
+        <div class="mrow">
+          <div class="col-md-12">
+            <p>Termini e link</p>
+          </div>
+        </div>
+      </div> <!-- service-folder-view -->
+
+    </metal:phil>
+  </body>
+</html>

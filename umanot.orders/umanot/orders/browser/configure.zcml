@@ -111,4 +111,12 @@
     factory=".panel.ecom_settings"
     />
 
+  <browser:page
+    for=".service_folder_view.IServiceFolderView"
+    name="folder_listing"
+    class=".service_folder_view.ServiceFolderView"
+    template="service_folder_view.pt"
+    permission="zope2.View"
+  />
+
 </configure>
