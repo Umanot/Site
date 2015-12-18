@@ -679,18 +679,21 @@
   margin: 12px auto 0;
 }
 
-.articleTWrp a {
+#content .forumStyle h3.articleTitle,
+#content .articleTitle.articleLive {
   display: inline-block;
   padding: 0 15px;
   background-color: #fff;
 }
-
-#content .forumStyle h3.articleTitle {
+#content .articleTitle.articleLive {
+  margin-bottom: 15px;
+}
+#content .forumStyle h3.articleTitle,
+#content .articleTitle.articleLive {
   font-size: 26px;
   padding-bottom: 15px;
   display:inline-block;
 }
-
 .articleByLine {
   font-size: 90%;
   color: #999;
@@ -1267,3 +1270,10 @@
 
 .newsItem p {font-size: 15px;}
 
+/* livebox */
+#livebox{
+  text-align: center;
+}
+#livebox iframe {
+  margin-bottom: 30px;
+}

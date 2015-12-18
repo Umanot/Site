@@ -63,12 +63,15 @@
     </metal:headline>
 
     <metal:phil fill-slot="main" tal:define="contents view/contents">
+      <div class="articleTWrp">
+        <h3 class="articleTitle articleLive">Umanot live</h3>
+      </div>
       <div id="livebox" tal:define="item view/get_live_comment" tal:condition="item">
         <div class="mrow">
-          <div class="col-md-7">
+          <div class="col-md-12">
             <iframe width="560" height="340" src="http://cdn.livestream.com/embed/umanot?layout=4&color=0x000000&autoPlay=true&mute=true&iconColorOver=0xe7e7e7&iconColor=0xcccccc&allowchat=true&height=340&width=560" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>
           </div>
-          <div class="col-md-5">
+          <div class="col-md-12">
             <table class="articleTableW">
               <tbody>
                 <tr tal:condition="item/titolo">
