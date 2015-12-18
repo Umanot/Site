@@ -679,6 +679,8 @@
   margin: 12px auto 0;
 }
 
+
+
 #content .forumStyle h3.articleTitle,
 #content .articleTitle.articleLive {
   display: inline-block;
@@ -693,6 +695,55 @@
   font-size: 26px;
   padding-bottom: 15px;
   display:inline-block;
+}
+
+@media (max-width:991px) {
+  .forumStyle .articleTWrp {
+    width:300px;
+  }
+}
+@media (max-width:767px) {
+  #content .forumStyle h3.articleTitle {
+    font-size: 18px;
+  }
+  .forumStyle .articleTWrp {
+    background: url("dot_title.jpg") repeat-x 0 10px;
+  }
+}
+@media (max-width:767px) {
+  .forumStyle .articleTWrp {
+    background: transparent none;
+  }
+}
+@media (max-width:510px) {
+  #livebox .articleTWrp {
+    width: 300px;
+  }
+  #content .articleTitle.articleLive {
+    font-size: 20px;
+  }
+}
+@media (max-width:480px) {
+  .forumStyle .articleTWrp {
+    text-align: left;
+    margin-right:inherit;
+    margin-left: inherit;
+    margin-top:8px;
+  }
+  #content .forumStyle h3.articleTitle{
+    padding-left: 0;
+  }
+  #content .forumStyle h3.articleTitle {
+    font-size: 16px;
+  }
+}
+@media (max-width:400px) {
+  #content .forumStyle h3.articleTitle {
+    font-size: 14px;
+  }
+  .articleTWrp {
+    margin-top:5px;
+  }
 }
 .articleByLine {
   font-size: 90%;
