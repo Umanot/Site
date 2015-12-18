@@ -1277,3 +1277,19 @@
 #livebox iframe {
   margin-bottom: 30px;
 }
+
+.tablePaddingWrp {
+  padding-left: 36px;
+}
+.commentPaddingWrp {
+  padding-right: 36px;
+  text-align: left;
+}
+@media (max-width:991px) {
+  .tablePaddingWrp {
+    padding-right: 36px;
+  }
+  .commentPaddingWrp {
+    padding-left: 36px;
+  }
+}
