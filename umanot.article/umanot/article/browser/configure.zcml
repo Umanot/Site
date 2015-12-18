@@ -73,5 +73,9 @@
     <allow interface=".interfaces.ILegenda"/>
   </class>
 
+  <class class="..interfaces.post.IPost">
+    <allow interface=".interfaces.ILiveComment"/>
+  </class>
+
 
 </configure>

@@ -10,3 +10,7 @@ class IPostFooter(Interface):
 
 class ILegenda(Interface):
     """Marker interface"""
+
+class ILiveComment(Interface):
+    """Marker interface"""
+

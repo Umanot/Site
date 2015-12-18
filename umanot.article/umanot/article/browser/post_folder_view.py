@@ -1,7 +1,7 @@
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from plone.memoize.instance import memoize
-from umanot.article.browser.interfaces import IPostPreFooter, IPostFooter, ILegenda
+from umanot.article.browser.interfaces import IPostPreFooter, IPostFooter, ILegenda, ILiveComment
 from zope.interface import implements, Interface
 from zope.security import checkPermission
 
@@ -122,3 +122,14 @@ class PostFolderView(BrowserView):
                 results['last_uid'] = results['data'][-1]['uid']
 
         return results
+
+    def get_live_comment(self):
+        brains = self.portal_catalog(
+            portal_type = "Post",
+            object_provides = ILiveComment.__identifier__
+        )
+
+        if not brains:
+            return
+
+        return brains[0].getObject().getInfo()
