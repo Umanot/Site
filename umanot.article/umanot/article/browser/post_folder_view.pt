@@ -71,7 +71,7 @@
           <div class="col-md-12">
             <iframe width="560" height="340" src="http://cdn.livestream.com/embed/umanot?layout=4&color=0x000000&autoPlay=true&mute=true&iconColorOver=0xe7e7e7&iconColor=0xcccccc&allowchat=true&height=340&width=560" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>
           </div>
-          <div class="col-md-12">
+          <div class="col-md-5">
             <table class="articleTableW">
               <tbody>
                 <tr tal:condition="item/titolo">
@@ -109,13 +109,14 @@
 
             </table>
           </div>
-        </div>
-        <div class="mrow">
-          <div class="col-md-12">
+          <div class="col-md-7">
             <h4 i18n:translate="COMMENTO:">COMMENTO:</h4>
 
             <p tal:replace="structure item/text">Brutta rottura ribassista oggi, 19 agosto, della recente Isteresi Isteresi (13660 - 13860)...UMANOT rimane Long ma... all'erta!</p>
           </div>
+        </div>
+        <div class="mrow">
+
         </div>
       </div>
       <div class="legendaModal">
