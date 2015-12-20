@@ -104,6 +104,8 @@ class FooterViewlet(common.FooterViewlet):
         if not folders:
             return
 
+        self.context.plone_log('\n'.join([x.getURL() for x in folders]))
+
         folder = folders[0]
 
         brains = catalog(
