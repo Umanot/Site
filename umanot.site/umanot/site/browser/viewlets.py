@@ -94,6 +94,7 @@ class FooterViewlet(common.FooterViewlet):
         return info
 
     def articles(self):
+        import pdb; pdb.set_trace()
         catalog = getToolByName(self.context, 'portal_catalog')
         folders = catalog(
             portal_type = "Folder",
@@ -103,8 +104,6 @@ class FooterViewlet(common.FooterViewlet):
 
         if not folders:
             return
-
-        self.context.plone_log('\n'.join([x.getURL() for x in folders]))
 
         folder = folders[0]
 
