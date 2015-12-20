@@ -95,9 +95,9 @@ class FooterViewlet(common.FooterViewlet):
         return info
 
     def articles(self):
-        auth = api.user.get_current()
-        if auth.getId() == 'choco':
-            import pdb; pdb.set_trace()
+        # auth = api.user.get_current()
+        # if auth.getId() == 'choco':
+        #     import pdb; pdb.set_trace()
         catalog = getToolByName(self.context, 'portal_catalog')
         folders = catalog(
             portal_type = "Folder",
