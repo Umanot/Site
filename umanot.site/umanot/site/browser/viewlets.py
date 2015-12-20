@@ -2,6 +2,7 @@ import random
 
 from Products.CMFCore.utils import getToolByName
 from Products.Five.browser.pagetemplatefile import ViewPageTemplateFile
+from plone import api
 from plone.app.layout.viewlets.common import ViewletBase
 from plone.app.layout.viewlets import common
 from plone.app.layout.viewlets import content
@@ -94,7 +95,9 @@ class FooterViewlet(common.FooterViewlet):
         return info
 
     def articles(self):
-        import pdb; pdb.set_trace()
+        auth = api.user.get_current()
+        if auth.getId() == 'choco':
+            import pdb; pdb.set_trace()
         catalog = getToolByName(self.context, 'portal_catalog')
         folders = catalog(
             portal_type = "Folder",
