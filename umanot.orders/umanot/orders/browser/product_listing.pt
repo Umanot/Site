@@ -27,7 +27,7 @@
 
               <div class="col-md-4">
                 <div class="priceBox priceBoxFloatRight priceBoxBlock" tal:condition="not:item/consulenza">
-                  <span class="priceBoxLabel">prezzo</span>
+                  <span class="priceBoxLabel">prezzo (IVA esclusa)</span>
                   <em class="priceBoxPrice" tal:content="structure python:'%d &euro;' % int(item['net'])">205€ </em>&nbsp;<span>  (+ IVA)</span>
                 </div>
 

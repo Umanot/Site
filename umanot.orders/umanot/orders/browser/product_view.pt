@@ -16,7 +16,7 @@
         <p tal:replace="structure info/text"></p>
 
         <div class="priceBox priceBoxFloatRight" tal:condition="not:info/consulenza">
-          <span class="priceBoxLabel">prezzo</span>
+          <span class="priceBoxLabel">prezzo (IVA esclusa)</span>
 
           <em class="priceBoxPrice" tal:condition="not:discount" tal:content="structure python:'%.2f &euro;' % info['net']">205€</em>
 
