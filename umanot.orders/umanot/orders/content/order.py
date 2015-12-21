@@ -263,7 +263,7 @@ class Order(ATDocument):
             #header img {margin:-10px 0 0 30px;}
             #content {margin:0 30px 60px;}
         </style>
-        <title>ComplexLab</title>
+        <title>Umanot</title>
         </head>
         """
 
@@ -291,7 +291,7 @@ class Order(ATDocument):
         customer_message = mail_head + mail_body + customer_intro + '' + message + '' + footer
 
         # email subject
-        subject = 'ComplexLab [%s]' % self.getId()
+        subject = 'Umanot [%s]' % self.getId()
         subject = subject.strip()
 
         try:

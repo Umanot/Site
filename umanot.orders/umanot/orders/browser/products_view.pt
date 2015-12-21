@@ -35,10 +35,10 @@
                   </select>
                 </tal:limits>
                 <div class="checkbox" tal:condition="not:view/is_anonymous">
-                    <label><input type="checkbox" name="tos"/>Dichiaro di aver letto e di accettare integralmente le condizioni definite nelle <a target="_blank" tal:attributes="href string:/i-nostri-servizi/condizioni-generali-di-uso-e-vendita">Condizioni generali di Uso e di Vendita dei Servizi ComplexLab</a></label>
+                    <label><input type="checkbox" name="tos"/>Dichiaro di aver letto e di accettare integralmente le condizioni definite nelle <a target="_blank" tal:attributes="href string:/i-nostri-servizi/condizioni-generali-di-uso-e-vendita">Condizioni generali di Uso e di Vendita dei Servizi Umanot</a></label>
                 </div>
                 <button tal:condition="not:view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Acquista</button>
-                <button tal:condition="view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Registrati a ComplexLab o autenticati per acquistare</button>
+                <button tal:condition="view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Registrati a Umanot o autenticati per acquistare</button>
               </form>
 
               <hr tal:condition="not:repeat/item/end" />
