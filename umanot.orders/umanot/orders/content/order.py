@@ -269,11 +269,11 @@ class Order(ATDocument):
 
         mail_body = """<body>
         <div id="header">
-                 <img width="170" height="158" title="" alt="" src="http://complexlab.it/logo.png">
+                 <img width="170" height="158" title="" alt="" src="http://www.umanot.it/logo.png">
            </div><div id="content">
         """
-        warehouseman_intro = '<h2>Hai ricevuto un nuovo ordine su www.complexlab.it</h2><br />'
-        customer_intro = '<h2>Hai effettuato un ordine su www.complexlab.it</h2><br />'
+        warehouseman_intro = '<h2>Hai ricevuto un nuovo ordine su www.umanot.it</h2><br />'
+        customer_intro = '<h2>Hai effettuato un ordine su www.umanot.it</h2><br />'
 
         message = """
         """

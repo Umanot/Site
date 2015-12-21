@@ -39,7 +39,9 @@ class AddOrderView(BrowserView):
             response.redirect(self.context.absolute_url())
             return u""
 
-        order_folder = self.context.restrictedTraverse('/complexlab/orders')
+        lang = self.request.get('LANGUAGE')
+
+        order_folder = self.context.restrictedTraverse('/umanot/%s/orders' % lang)
 
         today = DateTime()
         year = '%d' % today.year()

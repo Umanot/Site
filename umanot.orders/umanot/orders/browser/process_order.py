@@ -26,9 +26,11 @@ class ProcessOrder(BrowserView):
 
         catalog = getToolByName(self.context, 'portal_catalog')
 
+        lang = self.request.get('LANGUAGE')
+
         brain = catalog.unrestrictedSearchResults(
             portal_type = 'Order',
-            path = '/complexlab/orders',
+            path = '/umanot/%s/orders' % lang,
             getId = self.order_number,
         )
 
