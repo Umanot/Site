@@ -126,6 +126,9 @@
             <div class="articlePrefooter" tal:define="text view/get_post_pre_footer" tal:condition="text">
               <tal:prefooter tal:content="structure text"></tal:prefooter>
             </div>
+            <div class="articleFooter" tal:define="text view/get_post_footer" tal:condition="text">
+                <tal:footer tal:content="structure text"></tal:footer>
+              </div>
           </div>
         </div>
         <div class="mrow">
