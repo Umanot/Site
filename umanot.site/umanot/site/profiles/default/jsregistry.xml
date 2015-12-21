@@ -164,8 +164,12 @@
  <javascript authenticated="False" cacheable="True" insert-after="++resource++jsi18n.js"
   compression="safe" conditionalcomment="" cookable="True" enabled="True"
   expression="" id="++resource++search.js" inline="False"/>
+  
+ <javascript authenticated="False" cacheable="True" insert-after="++resource++search.js" 
+  compression="safe" conditionalcomment="" cookable="True" enabled="True"
+  expression="" id="++resource++umanot.site.javascripts/min/modal.min.js" inline="False"/>  
 
- <javascript authenticated="False" cacheable="True" insert-after="++resource++search.js"
+ <javascript authenticated="False" cacheable="True" insert-after="++resource++umanot.site.javascripts/min/modal.min.js"
   compression="safe" conditionalcomment="" cookable="True" enabled="True"
   expression="" id="++resource++umanot.site.javascripts/min/masonry.min.js" inline="False"/>
 

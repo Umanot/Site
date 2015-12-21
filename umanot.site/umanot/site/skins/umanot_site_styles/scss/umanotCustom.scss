@@ -1344,3 +1344,24 @@
     padding-left: 36px;
   }
 }
+
+/* servizi umanot */
+.serviceBox {
+  background-color: #668DA4;
+  padding: 15px;
+  min-height: 300px;
+  margin-bottom:30px;
+  position: relative;
+}
+.serviceBox a {
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+.serviceBox h3 {
+  margin-top: 0;
+  color: #FFFFFF;
+}
+#content .serviceBox p {
+  color: #FFFFFF;
+}
