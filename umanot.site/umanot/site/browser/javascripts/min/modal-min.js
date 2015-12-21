@@ -1,0 +1,1 @@
+$(document).ready(function(){$(".simple-ajax-popup-align-top").magnificPopup({type:"ajax",alignTop:!0,overflowY:"scroll"})});
