@@ -164,25 +164,26 @@ class DiscountCode(ATDocument):
 
         return info
 
-    def get_net_from_gross(self, gross, tax, decimal=False, safe_float=False):
-        if safe_float:
-            utils = getUtility(IUmanotUtils)
-            gross = utils.float_from_money(gross)
-
-        if decimal:
-            return Decimal(gross * (1 - tax / 100.)).quantize(Decimal('.01'))
-        else:
-            return gross * (1 - tax / 100.)
-
     def get_gross_from_net(self, net, tax, decimal=False, safe_float=False):
         if safe_float:
             utils = getUtility(IUmanotUtils)
             net = utils.float_from_money(net)
 
         if decimal:
-            return Decimal('%.15g' % (net / (1 - tax / 100.))).quantize(Decimal('.01'))
+            return Decimal(net * (1 + tax / 100.)).quantize(Decimal('.01'))
         else:
-            return net / (1 - tax / 100.)
+            return net * (1 + tax / 100.)
+
+    def get_net_from_gross(self, gross, tax, decimal=False, safe_float=False):
+        if safe_float:
+            utils = getUtility(IUmanotUtils)
+            gross = utils.float_from_money(gross)
+
+        tax_adj = 1 + tax / 100.
+        if decimal:
+            return Decimal('%.15g' % (gross / tax_adj)).quantize(Decimal('.01'))
+        else:
+            return gross / tax_adj
 
 
 atapi.registerType(DiscountCode, PROJECTNAME)
