@@ -134,7 +134,6 @@ class Product(ATDocument):
 
 
     def get_gross_from_net(self, net, tax, decimal=False, safe_float=False):
-        import pdb; pdb.set_trace()
         if safe_float:
             utils = getUtility(IUmanotUtils)
             net = utils.float_from_money(net)
