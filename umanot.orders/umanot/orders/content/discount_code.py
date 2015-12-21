@@ -180,7 +180,7 @@ class DiscountCode(ATDocument):
             net = utils.float_from_money(net)
 
         if decimal:
-            return Decimal(net / (1 - tax / 100.)).quantize(Decimal('.01'))
+            return Decimal('%.15g' % (net / (1 - tax / 100.))).quantize(Decimal('.01'))
         else:
             return net / (1 - tax / 100.)
 

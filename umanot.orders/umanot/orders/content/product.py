@@ -149,10 +149,16 @@ class Product(ATDocument):
             utils = getUtility(IUmanotUtils)
             gross = utils.float_from_money(gross)
 
+        tax_adj = 1 + tax / 100.
         if decimal:
-            return Decimal(gross * (1 - tax / 100.)).quantize(Decimal('.01'))
+            return Decimal('%.15g' % (gross / tax_adj)).quantize(Decimal('.01'))
         else:
-            return gross * (1 - tax / 100.)
+            return gross / tax_adj
+
+        # if decimal:
+        #     return Decimal(gross * (1 - tax / 100.)).quantize(Decimal('.01'))
+        # else:
+        #     return gross * (1 - tax / 100.)
 
 
 
