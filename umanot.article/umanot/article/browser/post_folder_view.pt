@@ -64,6 +64,15 @@
 
     <metal:phil fill-slot="main" tal:define="contents view/contents">
       <div id="livebox" tal:define="item view/get_live_comment" tal:condition="item">
+        <div class="legendaModal">
+          <div class="legendaClsBtn">
+            <i class="fa fa-times"></i>
+          </div>
+          <div class="legendaInner">
+            <h5 i18n:translate="LEGENDA">LEGENDA</h5>
+            <p tal:define="item view/legenda"  tal:condition="item" tal:replace="structure item"></p>
+          </div>
+        </div>
         <div class="articleTWrp">
           <h3 class="articleTitle articleLive">Umanot live</h3>
         </div>
@@ -127,8 +136,8 @@
               <tal:prefooter tal:content="structure text"></tal:prefooter>
             </div>
             <div class="articleFooter" tal:define="text view/get_post_footer" tal:condition="text">
-                <tal:footer tal:content="structure text"></tal:footer>
-              </div>
+              <tal:footer tal:content="structure text"></tal:footer>
+            </div>
           </div>
         </div>
         <div class="mrow">
