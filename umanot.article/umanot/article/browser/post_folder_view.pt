@@ -120,8 +120,12 @@
               <p tal:replace="structure item/text">Brutta rottura ribassista oggi, 19 agosto, della recente Isteresi Isteresi (13660 - 13860)...UMANOT rimane Long ma... all'erta!</p>
             </div>
           </div>
-          <div class="articlePrefooter" tal:define="text view/get_post_pre_footer" tal:condition="text">
-            <tal:prefooter tal:content="structure text"></tal:prefooter>
+        </div>
+        <div class="mrow">
+          <div class="col-md-12">
+            <div class="articlePrefooter" tal:define="text view/get_post_pre_footer" tal:condition="text">
+              <tal:prefooter tal:content="structure text"></tal:prefooter>
+            </div>
           </div>
         </div>
         <div class="mrow">
