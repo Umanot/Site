@@ -10,8 +10,6 @@ $(document).ready(function () {
 
     var ajaxModalInit = function () {
 
-        console.log('asd');
-
         //AJAX MODALS
         $ajaxModal = $('#follow-modal');
 
@@ -41,5 +39,6 @@ $(document).ready(function () {
         });
     };
 
+    ajaxModalInit();
 
 });
