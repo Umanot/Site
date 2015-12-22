@@ -10,8 +10,11 @@ $(document).ready(function () {
 
     var ajaxModalInit = function () {
 
+        console.log('asd');
+
         //AJAX MODALS
         $ajaxModal = $('#follow-modal');
+
         $ajaxModalBody = $('.modal-body', $ajaxModal);
         $('.ajaxModalTrigger').on('click', function (e) {
             e.preventDefault();
