@@ -14,16 +14,18 @@ $(document).ready(function () {
         $ajaxModal = $('#follow-modal');
 
         $ajaxModalBody = $('.modal-body', $ajaxModal);
+
         $('.ajaxModalTrigger').on('click', function (e) {
             e.preventDefault();
             var modalType = $(this).attr('data-modaltype');
+
             var url = $(this).attr('href');
 
             $.ajax({
                 url: url
-            }).done(function (data) {
+            }).done(function (risultato_della_chiamata_ajax) {
                 $ajaxModal.addClass(modalType);
-                $ajaxModalBody.append(data);
+                $ajaxModalBody.append(risultato_della_chiamata_ajax);
                 $ajaxModal.modal('show');
             });
 
