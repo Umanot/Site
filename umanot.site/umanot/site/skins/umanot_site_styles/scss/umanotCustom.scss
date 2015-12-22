@@ -1365,3 +1365,10 @@
 #content .serviceBox p {
   color: #FFFFFF;
 }
+
+@media (min-width: 769px) {
+  .huge .modal-dialog {
+    width: 100%;
+    max-width: 1200px;
+  }
+}
