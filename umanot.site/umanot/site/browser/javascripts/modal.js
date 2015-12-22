@@ -38,5 +38,6 @@ $(document).ready(function () {
         });
     };
 
+    ajaxModalInit();
 
 });
