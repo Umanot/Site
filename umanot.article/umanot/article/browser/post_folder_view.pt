@@ -103,7 +103,7 @@
                     <td tal:content="item/metodologia">ANALISI FISICA®</td>
                   </tr>
                   <tr tal:condition="item/software">
-                    <td i18n:translate="SW">SW</td>
+                    <td i18n:translate="SW e Dati">SW e Dati</td>
                     <td tal:content="item/software">UMANOT Versione 1.5*</td>
                   </tr>
                   <tr tal:condition="item/notes">
@@ -211,7 +211,7 @@
                           <td tal:content="item/metodologia">ANALISI FISICA®</td>
                         </tr>
                         <tr tal:condition="item/software">
-                          <td i18n:translate="SW">SW</td>
+                          <td i18n:translate="SW e Dati">SW e Dati</td>
                           <td tal:content="item/software">UMANOT Versione 1.5*</td>
                         </tr>
                         <tr tal:condition="item/notes">
