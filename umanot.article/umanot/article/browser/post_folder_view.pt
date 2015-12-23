@@ -95,7 +95,7 @@
                     <td tal:content="item/operazioni_12"> 7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/operazioni_1x2">
-                    <td i18n:translate="OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO">OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO</td>
+                    <td i18n:translate="Operazioni pendenti da chiudere">Operazioni pendenti da chiudere</td>
                     <td tal:content="item/operazioni_1x2"> 7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/metodologia">
@@ -203,7 +203,7 @@
                           <td tal:content="item/operazioni_12"> 7 - 2 - 1</td>
                         </tr>
                         <tr tal:condition="item/operazioni_1x2">
-                          <td i18n:translate="OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO">OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO</td>
+                          <td i18n:translate="Operazioni pendenti da chiudere">Operazioni pendenti da chiudere</td>
                           <td tal:content="item/operazioni_1x2"> 7 - 2 - 1</td>
                         </tr>
                         <tr tal:condition="item/metodologia">
