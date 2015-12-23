@@ -102,6 +102,8 @@ class PostFolderView(BrowserView):
 
         counter = 0
         for brain in brains:
+            if brain.exclude_from_nav:
+                continue
             counter += 1
             obj = brain.getObject()
             info = obj.getInfo(scale = "original")
