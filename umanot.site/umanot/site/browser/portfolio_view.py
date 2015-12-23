@@ -47,7 +47,7 @@ class PortfolioView(BrowserView):
             if not brains:
                 continue
 
-            obj = brains.getObject()
+            obj = brains[0].getObject()
 
             portfolio_sql_id = portfolio.split('-')[:-1]
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
