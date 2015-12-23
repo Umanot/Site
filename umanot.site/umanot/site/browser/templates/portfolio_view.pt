@@ -23,6 +23,50 @@
 
     <metal:phil fill-slot="main" tal:define="data view/get_data">
       <div class="container">
+        <tal:loop repeat="portfolio data">
+          <h2 tal:content="portfolio/title"></h2>
+          <p class="documentDescription" tal:content="portfolio/description"></p>
+          <p tal:replace="structure portfolio/text"></p>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Operazione</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>10/12/2015 10:05:15</td>
+                <td>buy@555.55</td>
+              </tr>
+              <tr>
+                <td>10/12/2015 10:05:15</td>
+                <td>buy@555.55</td>
+              </tr>
+              <tr>
+                <td>10/12/2015 10:05:15</td>
+                <td>buy@555.55</td>
+              </tr>
+              <tr>
+                <td>10/12/2015 10:05:15</td>
+                <td>buy@555.55</td>
+              </tr>
+              <tr>
+                <td>10/12/2015 10:05:15</td>
+                <td>buy@555.55</td>
+              </tr>
+              <tr>
+                <td>10/12/2015 10:05:15</td>
+                <td>buy@555.55</td>
+              </tr>
+              <tr>
+                <td>10/12/2015 10:05:15</td>
+                <td>buy@555.55</td>
+              </tr>
+            </tbody>
+          </table>
+          <hr tal:condition="not:repeat/portfolio/end" />
+        </tal:loop>
         <table class="table" tal:condition="nothing">
           <thead>
             <tr>

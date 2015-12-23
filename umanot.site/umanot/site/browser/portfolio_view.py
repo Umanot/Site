@@ -19,7 +19,6 @@ class PortfolioView(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        self.portfolio = request.get('portfolio')
         self.limit = request.get('limit', '')
         self.min_date = request.get('min_date', '')
         self.umanot_utils = getUtility(IUmanotUtils)
@@ -37,4 +36,29 @@ class PortfolioView(BrowserView):
         return self.context.Description()
 
     def get_data(self):
-        return self.umanot_utils.get_posts_by_portfolio(self.portfolio, self.limit, self.min_date)
+        portfolios = ['portfolio-1', 'portfolio-2', 'portfolio-3']
+
+        results = []
+
+        for portfolio in portfolios:
+
+            brains = self.portfolio(portal_type="Post", getId=portfolio)
+
+            if not brains:
+                continue
+
+            obj = brains.getObject()
+
+            portfolio_sql_id = portfolio.split('-')[:-1]
+            data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
+
+            info = dict(
+                title = obj.Title(),
+                description = obj.Description(),
+                text = obj.getText(),
+                data = data
+            )
+
+            results.append(info)
+
+        return results
