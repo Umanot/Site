@@ -49,7 +49,7 @@ class PortfolioView(BrowserView):
 
             obj = brains[0].getObject()
 
-            portfolio_sql_id = portfolio.split('-')[:-1]
+            portfolio_sql_id = portfolio.split('-')[-1]
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
             info = dict(
@@ -60,7 +60,5 @@ class PortfolioView(BrowserView):
             )
 
             results.append(info)
-
-        import pdb; pdb.set_trace()
 
         return results
