@@ -40,41 +40,17 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td>10/12/2015 10:05:15</td>
-                    <td>buy@555.55</td>
-                    <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
-                  </tr>
-                  <tr>
-                    <td>10/12/2015 10:05:15</td>
-                    <td>buy@555.55</td>
-                    <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
-                  </tr>
-                  <tr>
-                    <td>10/12/2015 10:05:15</td>
-                    <td>buy@555.55</td>
-                    <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
-                  </tr>
-                  <tr>
-                    <td>10/12/2015 10:05:15</td>
-                    <td>buy@555.55</td>
-                    <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
-                  </tr>
-                  <tr>
-                    <td>10/12/2015 10:05:15</td>
-                    <td>buy@555.55</td>
-                    <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
-                  </tr>
-                  <tr>
-                    <td>10/12/2015 10:05:15</td>
-                    <td>buy@555.55</td>
-                    <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
-                  </tr>
-                  <tr>
-                    <td>10/12/2015 10:05:15</td>
-                    <td>buy@555.55</td>
-                    <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
-                  </tr>
+                  <tal:data_loop tal:repeat="item portfolio/data">
+                    <tr>
+                      <td tal:content="item/readable_date">10/12/2015 10:05:15</td>
+                      <td tal:content="item/post">buy@555.55</td>
+                      <td class="icon-td">
+                        <i class="fa fa-arrow-down" tal:condition="python:item['symbol'] == -1"></i>
+                        <i class="fa fa-arrow-up" tal:condition="python:item['symbol'] == 1"></i>
+                        <i class="fa fa-minus" tal:condition="python:item['symbol'] == 0"></i>
+                      </td>
+                    </tr>
+                  </tal:data_loop>
                 </tbody>
               </table>
               <hr tal:condition="not:repeat/portfolio/end" />
