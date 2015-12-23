@@ -22,9 +22,12 @@
     </metal:headline>
 
     <metal:phil fill-slot="main" tal:define="data view/get_data">
-      <div class="container">
+      <div class="portfolio-wrp">
+        <div class="container">
         <tal:loop repeat="portfolio data">
-          <h2 tal:content="portfolio/title"></h2>
+          <div class="articleTWrp">
+            <h3 tal:content="portfolio/title" class="articleTitle articleLive">Umanot live</h3>
+          </div>
           <p class="documentDescription" tal:content="portfolio/description"></p>
           <p tal:replace="structure portfolio/text"></p>
           <table class="table">
@@ -32,36 +35,44 @@
               <tr>
                 <th>Data</th>
                 <th>Operazione</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>10/12/2015 10:05:15</td>
                 <td>buy@555.55</td>
+                <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
               </tr>
               <tr>
                 <td>10/12/2015 10:05:15</td>
                 <td>buy@555.55</td>
+                <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
               </tr>
               <tr>
                 <td>10/12/2015 10:05:15</td>
                 <td>buy@555.55</td>
+                <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
               </tr>
               <tr>
                 <td>10/12/2015 10:05:15</td>
                 <td>buy@555.55</td>
+                <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
               </tr>
               <tr>
                 <td>10/12/2015 10:05:15</td>
                 <td>buy@555.55</td>
+                <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
               </tr>
               <tr>
                 <td>10/12/2015 10:05:15</td>
                 <td>buy@555.55</td>
+                <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
               </tr>
               <tr>
                 <td>10/12/2015 10:05:15</td>
                 <td>buy@555.55</td>
+                <td class="icon-td"><i class="fa fa-arrow-down"></i><i class="fa fa-arrow-up"></i><i class="fa fa-minus"></i></td>
               </tr>
             </tbody>
           </table>
@@ -213,6 +224,7 @@
           <!--?</div>-->
           <!--?<hr tal:condition="not:repeat/item/end" />-->
         <!--?</tal:loop>-->
+      </div>
       </div>
     </metal:phil>
   </body>

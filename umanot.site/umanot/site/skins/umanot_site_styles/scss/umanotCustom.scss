@@ -698,12 +698,14 @@
 }
 
 @media (max-width:991px) {
-  .forumStyle .articleTWrp {
+  .forumStyle .articleTWrp,
+  .portfolio-wrp .articleTWrp {
     width:300px;
   }
 }
 @media (max-width:767px) {
-  #content .forumStyle h3.articleTitle {
+  #content .forumStyle h3.articleTitle,
+  .portfolio-wrp h3.articleTitle {
     font-size: 18px;
   }
   .forumStyle .articleTWrp {
@@ -743,6 +745,11 @@
   }
   .articleTWrp {
     margin-top:5px;
+  }
+}
+@media (max-width:340px) {
+  .portfolio-wrp .articleTWrp {
+    width:280px;
   }
 }
 .articleByLine {
@@ -1371,4 +1378,28 @@
     width: 100%;
     max-width: 1200px;
   }
+}
+
+/* portfolio */
+.portfolio-wrp p.documentDescription,
+.portfolio-wrp p {
+  //text-align: center;
+}
+.portfolio-wrp .documentDescription {
+  margin-bottom: 0.6em;
+}
+.icon-td {
+  text-align: right;
+}
+.icon-td i {
+  font-size: 20px;
+}
+.icon-td i.fa-arrow-up {
+  color: #4FC77D;
+}
+.icon-td i.fa-arrow-down {
+  color: #EE6060;
+}
+.icon-td i.fa-minus {
+  color: #666;
 }
