@@ -38,6 +38,14 @@ class UmanotUtils(object):
         for item in json_data:
             has_image = bool(item['destimage'])
             dt = DateTime(item['Date'])
+
+            if item['Symbol'] == -1:
+                css_class = 'alert alert-danger'
+            elif item['Symbol'] == 1:
+                css_class = 'alert alert-success'
+            else:
+                css_class = None
+
             info = dict(
                 symbol = item['Symbol'],
                 share = item['Share'],
@@ -46,7 +54,8 @@ class UmanotUtils(object):
                 has_image = has_image,
                 image = base_path + '/' + item['destimage'] if has_image else '',
                 post = item['Post'],
-                readable_date = '%02d/%02d/%d %02d:%02d:%02d' % (dt.day(), dt.month(), dt.year(), dt.hour(), dt.minute(), dt.second())
+                readable_date = '%02d/%02d/%d %02d:%02d:%02d' % (dt.day(), dt.month(), dt.year(), dt.hour(), dt.minute(), dt.second()),
+                css_class = css_class
             )
 
             results.append(info)
