@@ -42,7 +42,7 @@ class PortfolioView(BrowserView):
 
         for portfolio in portfolios:
 
-            brains = self.portfolio(portal_type="Post", getId=portfolio)
+            brains = self.portal_catalog(portal_type="Post", getId=portfolio)
 
             if not brains:
                 continue
@@ -50,7 +50,6 @@ class PortfolioView(BrowserView):
             obj = brains.getObject()
 
             portfolio_sql_id = portfolio.split('-')[:-1]
-            import pdb; pdb.set_trace()
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
             info = dict(
