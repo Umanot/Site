@@ -23,7 +23,7 @@ class UmanotUtils(object):
     implements(IUmanotUtils)
 
     def get_posts_by_portfolio(self, portfolio, limit, min_date):
-        url = "http://5.189.150.24/umanot_ws/WebPost.asmx/BindGrid"
+        url = "http://5.189.133.164/umanot_ws/WebPost.asmx/BindGrid"
         params = {'Portfolio': portfolio, 'Limit': limit, 'MinDate': min_date}
 
         response = requests.get(url, params = params)
@@ -33,7 +33,7 @@ class UmanotUtils(object):
 
         results = []
 
-        base_path = 'http://5.189.150.24/umanot/UmanotImage/'
+        base_path = 'http://5.189.133.164/umanot/UmanotImage/'
 
         for item in json_data:
             has_image = bool(item['destimage'])
