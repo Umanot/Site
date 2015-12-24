@@ -57,6 +57,7 @@
               </table>
               <hr tal:condition="not:repeat/portfolio/end" />
             </tal:has_data>
+            <br />
           </tal:loop>
         </div>
       </div>
