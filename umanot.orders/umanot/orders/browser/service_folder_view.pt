@@ -6,10 +6,10 @@
 
   </head>
   <body>
-    <metal:phil fill-slot="main" tal:define="contents view/contents">
+    <metal:phil fill-slot="main" tal:define="contents view/contents; placeholder view/get_placeholder_text">
 
       <div id="content" class="serviceFolderView">
-        <p>Intro text</p>
+        <p tal:replace="structure placeholder/intro">Intro text</p>
 
         <tal:sections repeat="section view/contents">
           <div id="digital-content-curation" tal:attributes="id section/id"></div>
@@ -36,7 +36,7 @@
 
         <div class="mrow">
           <div class="col-md-12">
-            <p>Termini e link</p>
+            <p tal:replace="structure placeholder/footer">Footer text</p>
           </div>
         </div>
       </div> <!-- service-folder-view -->

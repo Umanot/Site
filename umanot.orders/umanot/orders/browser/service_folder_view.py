@@ -33,6 +33,25 @@ class ServiceFolderView(BrowserView):
     def description(self):
         return self.context.Description()
 
+    def get_placeholder_text(self):
+        try:
+            intro = self.context.restrictedTraverse('/umanot/it/listino-servizi/intro')
+        except:
+            intro = ''
+
+        try:
+            footer = self.context.restrictedTraverse('/umanot/it/listino-servizi/footer')
+        except:
+            footer = ''
+
+        info = dict(
+            intro = intro.getText() if intro else '',
+            footer = footer.getText() if footer else ''
+        )
+
+        return info
+
+
     @property
     def contents(self):
         brains = self.portal_catalog(
