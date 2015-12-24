@@ -35,6 +35,7 @@
                 <thead>
                   <tr>
                     <th>Data</th>
+                    <th>Titolo</th>
                     <th>Operazione</th>
                     <th></th>
                   </tr>
@@ -43,6 +44,7 @@
                   <tal:data_loop tal:repeat="item portfolio/data">
                     <tr tal:attributes="class item/css_class">
                       <td tal:content="item/readable_date">10/12/2015 10:05:15</td>
+                      <td tal:content="item/share"></td>
                       <td tal:content="item/post">buy@555.55</td>
                       <td class="icon-td">
                         <i class="fa fa-arrow-down" tal:condition="python:item['symbol'] == -1"></i>
