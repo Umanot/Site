@@ -2,6 +2,8 @@ import itertools
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from umanot.site.browser.interfaces import IHomepageServices, IHomepageFeatures, IHomepageMosaic, IHomepageSlides
+
+from plone import api
 from zope.interface import implements, Interface
 
 
@@ -194,6 +196,51 @@ class HomepageView(BrowserView):
             results.append(info)
 
         return results
+
+    @property
+    def services(self):
+        folders = self.portal_catalog(
+            portal_type = "Folder",
+            object_provides = IHomepageServices.__identifier__
+        )
+
+        if not folders:
+            return
+
+        folder = folders[0]
+
+        brains = self.portal_catalog(
+            portal_type = "Document",
+            path = folder.getPath(),
+            sort_on = 'getObjPositionInParent',
+        )
+
+        results = []
+
+        for brain in brains:
+            obj = brain.getObject()
+
+            info = dict(
+                id = brain.getId,
+                title = brain.Title,
+                icon = brain.Description.strip().replace('fa-', ''),
+                text = obj.getText(),
+            )
+
+            related = [x for x in obj.getRelatedItems() if x]
+
+            info['URL'] = '#'
+            if related:
+                related_obj = related[0]
+                parent = related_obj.aq_parent
+                info['URL'] = '%s#%s' % (parent.absolute_url(), related_obj.getId())
+
+            results.append(info)
+
+        return results
+
+    def is_choco(self):
+        return api.user.get_current().getUserName() == 'choco'
 
     @property
     def features(self):
