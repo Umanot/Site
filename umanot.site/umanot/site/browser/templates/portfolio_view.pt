@@ -42,7 +42,7 @@
                 </thead>
                 <tbody>
                   <tal:data_loop tal:repeat="item portfolio/data">
-                    <tr tal:attributes="class item/css_class">
+                    <tr>
                       <td tal:content="item/readable_date">10/12/2015 10:05:15</td>
                       <td tal:content="item/share"></td>
                       <td tal:content="item/post">buy@555.55</td>
