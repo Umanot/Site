@@ -86,9 +86,9 @@ $(function () {
     });
 
     //PREVENT SCROLL DOWN ON REFRESH
-    window.onload = function () {
-        window.scrollTo(0, 0);
-    };
+    //window.onload = function () {
+    //    window.scrollTo(0, 0);
+    //};
 
     //MASONRY INIT
 
@@ -145,7 +145,5 @@ $(function () {
         });
     };
 
-    console.log('asd');
-
-    anchorOnClick;
+    anchorOnClick();
 });
