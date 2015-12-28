@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-10-15 15:09+0000\n"
+"POT-Creation-Date: 2015-12-28 17:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,21 +14,22 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./browser/homepage_view.pt:143
+#: ./browser/homepage_view.pt:153
 msgid "Leggi"
 msgstr "Read"
 
-#: ./browser/homepage_view.pt:70
-msgid "Scopri come"
-msgstr "Find out how"
+#. Default: "COSA PUÒ FARE UMANOT PER TE"
+#: ./browser/homepage_view.pt:65
+msgid "cosa_puo_fare_umanot"
+msgstr ""
 
 #. Default: "Scopri di più"
-#: ./browser/homepage_view.pt:107
+#: ./browser/homepage_view.pt:117
 msgid "read_more"
 msgstr "Read more"
 
 #. Default: "Per diventare un Trader Scientifico<sup>&reg;</sup>"
-#: ./browser/homepage_view.pt:116
+#: ./browser/homepage_view.pt:126
 msgid "trader_scientifico"
 msgstr "To be a Scientific Trader (or not to be...)"
 
