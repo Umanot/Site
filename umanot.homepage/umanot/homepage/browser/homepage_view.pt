@@ -42,7 +42,7 @@
           <section id="news-section">
 
             <div id="news-carousel" class="homeRow" tal:define="news view/news" tal:condition="news">
-              <h3 class="contentSection">What's Happening</h3>
+              <h3 class="contentSection">WHAT'S HAPPENING</h3>
               <div class="owl-carousel">
                 <tal:loop repeat="item news">
                   <div class="newsItem">
