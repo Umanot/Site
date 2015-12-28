@@ -62,7 +62,7 @@
 
           <section id="service-section" class="homeSection">
             <div class="container-fluid">
-              <h3 class="sectionTitle">COSA PUÒ FARE UMANOT PER TE</h3>
+              <h3 class="sectionTitle" i18n:translate="cosa_puo_fare_umanot">COSA PUÒ FARE UMANOT PER TE</h3>
 
               <tal:loop repeat="item view/services">
                 <div class="serviceItem">
