@@ -73,7 +73,7 @@
                     <h3 tal:condition="item/URL"><a tal:attributes="href item/URL" tal:content="item/title">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</a></h3>
 
 
-                    <div style="max-width:90%"><p tal:replace="structure item/text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, dolor, qui, reiciendis, aperiam expedita ullam possimus sapiente illum vel facilis saepe rerum voluptate consequuntur voluptates aut pariatur eveniet dignissimos numquam? </p></div>
+                    <div><p tal:replace="structure item/text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, dolor, qui, reiciendis, aperiam expedita ullam possimus sapiente illum vel facilis saepe rerum voluptate consequuntur voluptates aut pariatur eveniet dignissimos numquam? </p></div>
                   </div>
                   <div class="serviceItemActions">
                     <a class="ghostButton ghostButtonWhite" tal:condition="item/URL" tal:attributes="href item/URL"> Scopri</a>

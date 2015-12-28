@@ -1664,3 +1664,17 @@
 .icon-td i.fa-minus {
   color: #666;
 }
+
+.serviceItemContent {
+  width:80%;
+}
+@media (max-width:767px) {
+  #service-section .serviceItem .ghostButton {
+    position: static;
+  }
+}
+@media (max-width:514px) {
+  .serviceItemContent {
+    width:100%;
+  }
+}
