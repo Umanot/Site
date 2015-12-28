@@ -369,12 +369,13 @@
   z-index: 3;
   padding: 10px 0;
   background-color: rgba(0, 0, 0, 0.7);
+  height:200px;
 }
 
 .heroTitle {
   color: #fff;
   text-transform: uppercase;
-  font-size: 190px;
+  font-size: 80px;
   text-align: center;
   letter-spacing: -2px;
   margin: 0 0 0;
@@ -465,6 +466,11 @@
   right: 0;
 }
 
+#intro-section .owl-prev,
+#intro-section .owl-next {
+  margin-top: -56px;
+}
+
 #news-section .owl-prev,
 #news-section .owl-next {
   margin-top: -40px;
@@ -472,22 +478,22 @@
 
 @media (max-width: 992px) {
   .heroTitle {
-    font-size: 80px;
+    font-size: 70px;
   }
 }
 
 @media (max-width: 768px) {
   .heroTitle {
-    font-size: 100px;
+    font-size: 60px;
   }
 }
 
 @media (max-width: 600px) {
   .heroTitle {
-    font-size: 60px;
+    font-size: 50px;
   }
   .heroSubTitle {
-    font-size: 18px;
+    font-size: 15px;
   }
   .heroDescr {
     font-size: 12px;
