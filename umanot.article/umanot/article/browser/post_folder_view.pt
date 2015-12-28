@@ -108,7 +108,7 @@
                     <td i18n:translate="SW e Dati">SW e Dati</td>
                     <td tal:content="item/software">UMANOT Versione 1.5*</td>
                   </tr>
-                  <tr tal:condition="item/notes">
+                  <tr tal:condition="item/notes" id="comment-row">
                     <td colspan="2" tal:content="item/notes">*IMPORTANTE: è in rilascio la versione 1.7 con significative novità e performance!</td>
                   </tr>
                 </tbody>
