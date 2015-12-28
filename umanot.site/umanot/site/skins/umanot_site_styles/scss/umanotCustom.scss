@@ -346,7 +346,7 @@
 /* HOMEPAGE */
 
 #intro-section {
-  min-height: 500px;
+  min-height: 400px;
   background-color: #000;
 }
 
@@ -391,7 +391,7 @@
   text-align: center;
   font-weight: 900;
   margin: 0;
-  font-size: 30px;
+  font-size: 18px;
 }
 
 .heroSubTitle span {
@@ -408,7 +408,7 @@
 }
 
 .slideItem {
-  min-height: 500px;
+  min-height: 400px;
   background-color: #000;
   background-size: cover;
   position: relative;
@@ -472,7 +472,7 @@
 
 @media (max-width: 992px) {
   .heroTitle {
-    font-size: 150px;
+    font-size: 80px;
   }
 }
 
