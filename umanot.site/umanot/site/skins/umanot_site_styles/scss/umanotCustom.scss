@@ -738,6 +738,12 @@
 
 /* ARTICLE & VIDEO FOLDER LISTING */
 
+.iframe-wrapper {
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #article-section,
 #forum-article-section {
   background-color: #F5F5F5;
