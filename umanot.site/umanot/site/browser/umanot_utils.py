@@ -5,7 +5,7 @@ from decimal import Decimal
 from xml.etree.ElementTree import fromstring
 
 import oursql
-from umanot.site.config import SQL_HOST_TEST, SQL_USER_TEST, SQL_PASS_TEST, SQL_DB_TEST, SQL_HOST, SQL_USER, SQL_PASS, SQL_DB
+from umanot.site.config import *
 
 import requests
 from DateTime.DateTime import DateTime
@@ -21,6 +21,12 @@ class IUmanotUtils(Interface):
 
 class UmanotUtils(object):
     implements(IUmanotUtils)
+
+    def getGestPayInfo(self, request):
+        if '.mediatria.com' in request.get('URL') or 'localhost' in request.get('URL'):
+            return {'user': GP_USER_TEST, 'host': GP_HOST_TEST, 'config': 'test', 'host_s2s': GP_HOST_S2S}
+
+        return {'user': GP_USER, 'host': GP_HOST, 'config': 'production', 'host_s2s': GP_HOST_S2S}
 
     def get_posts_by_portfolio(self, portfolio, limit, min_date):
         url = "http://5.189.133.164/umanot_ws/WebPost.asmx/BindGrid"
@@ -210,7 +216,7 @@ class UmanotUtils(object):
 
             try:
                 while True:
-                    if hasattr('addComment') or parent.portal_type == 'Discussion Item':
+                    if hasattr(parent, 'addComment') or parent.portal_type == 'Discussion Item':
                         parent = parent.aq_parent
                     else:
                         break

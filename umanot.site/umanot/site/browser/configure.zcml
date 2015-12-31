@@ -418,4 +418,32 @@
     permission="cmf.ManagePortal"
     />
 
+  <browser:page
+    for="*"
+    name="gestpay-checkout"
+    class=".gestpay_checkout.GestpayCheckout"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="gp-fail"
+    class=".gestpay_fail.GestpayFail"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="gp-ok"
+    class=".gestpay_ok.GestpayOk"
+    permission="zope2.View"
+    />
+
+  <browser:page
+    for="*"
+    name="gp-s2s"
+    class=".gestpay_s2s.GestpayS2S"
+    permission="zope2.View"
+    />
+
 </configure>
