@@ -9,10 +9,13 @@ SQL_PASS_TEST = 'root'
 SQL_DB_TEST = 'ComplexLab'
 
 GP_USER = '9093060'
-GP_USER_TEST = 'GESPAY60871'
+GP_USER_TEST = 'GESPAY64895'
 GP_HOST = 'ecomm.sella.it'
 GP_HOST_S2S = 'ecomms2s.sella.it'
 GP_HOST_TEST = 'testecomm.sella.it'
+
 GP_TID = '00667058'
+GP_PIVA = '08862510966'
+
 
 GP_ORDER_KEY = 'complexlab.site.gp_order_key'

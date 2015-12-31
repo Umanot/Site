@@ -1,11 +1,11 @@
 # -*- coding: utf-8 -*-
 import logging
-from complexlab3.site.browser.complexlab_utils import IComplexLabUtils
+from umanot.site.browser.umanot_utils import IUmanotUtils
 from zope.component import getUtility
 
 from Products.Five import BrowserView
 
-from complexlab3.site.browser.gestpay_soap import GestPaySoap
+from umanot.site.browser.gestpay_soap import GestPaySoap
 
 
 class GestpayFail(BrowserView):
@@ -14,7 +14,7 @@ class GestpayFail(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        self.utils = getUtility(IComplexLabUtils)
+        self.utils = getUtility(IUmanotUtils)
 
     def __call__(self):
         response = self.request.RESPONSE

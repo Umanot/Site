@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 import logging
-from Products.CMFCore.utils import getToolByName
-from complexlab.orders.browser.process_order import ProcessOrder
-from complexlab3.site.config import GP_ORDER_KEY
 
-from zope.component import getUtility
+from umanot.orders.browser.process_order import ProcessOrder
+from umanot.site.browser.gestpay_soap import GestPaySoap
+from umanot.site.config import GP_ORDER_KEY
+from umanot.site.browser.umanot_utils import IUmanotUtils
+
+from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
-from complexlab3.site.browser.gestpay_soap import GestPaySoap
-from complexlab3.site.browser.complexlab_utils import IComplexLabUtils
+from zope.component import getUtility
 
 
 class GestpayOk(BrowserView):
@@ -16,7 +17,7 @@ class GestpayOk(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        self.utils = getUtility(IComplexLabUtils)
+        self.utils = getUtility(IUmanotUtils)
 
     def __call__(self):
         response = self.request.RESPONSE
@@ -77,8 +78,6 @@ class GestpayOk(BrowserView):
 
             subject = "[ComplexLab] Ordine numero %s" % order_number
 
-            clab_utils = getUtility(IComplexLabUtils)
-
             for email in ['francesco@mediatria.com', 'redazione@complexlab.it', 'angela.chirico@complexlab.it']:
                 info = dict(
                     receiver = email,
@@ -86,7 +85,7 @@ class GestpayOk(BrowserView):
                     message = message,
                 )
 
-                clab_utils.notifySingleUser(info)
+                self.utils.notifySingleUser(info)
 
 
             #order.notifyCustomer()

@@ -3,12 +3,11 @@ from AccessControl.SecurityManagement import newSecurityManager
 from Products.CMFCore.tests.base.security import OmnipotentUser
 from Products.CMFCore.utils import getToolByName
 from Products.statusmessages.interfaces import IStatusMessage
-from complexlab3.site.browser.complexlab_utils import IComplexLabUtils
+from umanot.site.browser.umanot_utils import IUmanotUtils
 from zope.component import getUtility
 
 from Products.Five import BrowserView
 
-from complexlab3.site.browser.gestpay_soap import GestPaySoap
 
 
 class GestpayCheckout(BrowserView):
@@ -17,7 +16,7 @@ class GestpayCheckout(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        self.clab_utils = getUtility(IComplexLabUtils)
+        self.umanot_utils = getUtility(IUmanotUtils)
 
     def __call__(self):
         response = self.request.RESPONSE
@@ -47,7 +46,7 @@ class GestpayCheckout(BrowserView):
             IStatusMessage(self.request).addStatusMessage(u"Correggi gli errori evidenziati", type='error')
             return self.context.restrictedTraverse('@@order-checkout')()
 
-        gpinfo = self.clab_utils.getGestPayInfo(self.request)
+        gpinfo = self.umanot_utils.getGestPayInfo(self.request)
 
         catalog = getToolByName(self.context, 'portal_catalog')
 
