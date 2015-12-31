@@ -45,19 +45,21 @@ class GestpayS2S(BrowserView):
         if not order_number:
             pass
 
-        import pdb; pdb.set_trace()
+        if results['result'] == 'OK':
+            self.utils.processOrder(self.context, order_number, 'confermato')
 
-        self.utils.processOrder(self.context, order_number, 'confermato')
+            brain = self.context.portal_catalog.unrestrictedSearchResults(
+                portal_type = 'Order',
+                getId = order_number,
+            )
 
-        brain = self.context.portal_catalog.unrestrictedSearchResults(
-            portal_type = 'Order',
-            getId = order_number,
-        )
+            if len(brain) == 1:
+                order = self.context.unrestrictedTraverse(brain[0].getPath())
+                order.saveData({'xml': results['xml']}, GP_ORDER_KEY)
 
-        if len(brain) == 1:
-            order = self.context.unrestrictedTraverse(brain[0].getPath())
-            order.saveData({'xml': results['xml']}, GP_ORDER_KEY)
+                order.notifyCustomer()
+        else:
+            self.utils.processOrder(self.context, order_number, 'annullato')
 
-            order.notifyCustomer()
 
         return "<HTML></HTML>"
