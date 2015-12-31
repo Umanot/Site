@@ -45,6 +45,8 @@ class GestpayS2S(BrowserView):
         if not order_number:
             pass
 
+        import pdb; pdb.set_trace()
+
         self.utils.processOrder(self.context, order_number, 'confermato')
 
         brain = self.context.portal_catalog.unrestrictedSearchResults(
