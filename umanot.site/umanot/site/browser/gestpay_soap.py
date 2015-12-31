@@ -62,8 +62,6 @@ class GestPaySoap(SoapService):
         # 3-get the result
         response = doc.getElementsByTagName('TransactionResult')[0].firstChild.data
 
-        import pdb; pdb.set_trace()
-
         if response != 'OK':
             return 'SOAP Error: %s' % doc.getElementsByTagName('ErrorCode')[0].firstChild.data
 

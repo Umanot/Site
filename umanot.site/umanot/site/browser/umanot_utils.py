@@ -8,7 +8,9 @@ import oursql
 from umanot.site.config import *
 
 import requests
+from AccessControl.SecurityManagement import newSecurityManager
 from DateTime.DateTime import DateTime
+from Products.CMFCore.tests.base.security import OmnipotentUser
 from Products.CMFCore.utils import getToolByName
 from zope.annotation import IAnnotations
 from zope.component.hooks import getSite
@@ -27,6 +29,37 @@ class UmanotUtils(object):
             return {'user': GP_USER_TEST, 'host': GP_HOST_TEST, 'config': 'test', 'host_s2s': GP_HOST_S2S}
 
         return {'user': GP_USER, 'host': GP_HOST, 'config': 'production', 'host_s2s': GP_HOST_S2S}
+
+    def processOrder(self, context, order_id, action):
+        if not order_id or not action:
+            return 'Error: missing data'
+
+        mtool = getToolByName(context, 'portal_membership')
+        user = mtool.getAuthenticatedMember()
+        omnipotent_user = OmnipotentUser()
+        newSecurityManager(None, omnipotent_user)
+
+        catalog = getToolByName(context, 'portal_catalog')
+
+        lang = context.REQUEST.get('LANGUAGE')
+
+        brain = catalog.unrestrictedSearchResults(
+            portal_type = 'Order',
+            path = '/umanot/%s/orders' % lang,
+            getId = order_id,
+        )
+
+        if len(brain) != 1:
+            newSecurityManager(None, user)
+            return 'Error: no brain retrieved'
+
+        order = context.unrestrictedTraverse(brain[0].getPath())
+
+        order.processAction(action)
+
+        newSecurityManager(None, user)
+
+        return True
 
     def get_posts_by_portfolio(self, portfolio, limit, min_date):
         url = "http://5.189.133.164/umanot_ws/WebPost.asmx/BindGrid"
