@@ -4,6 +4,8 @@ from Products.CMFCore.tests.base.security import OmnipotentUser
 from Products.CMFCore.utils import getToolByName
 from Products.statusmessages.interfaces import IStatusMessage
 from umanot.site.browser.umanot_utils import IUmanotUtils
+
+from umanot.site.browser.gestpay_soap import GestPaySoap
 from zope.component import getUtility
 
 from Products.Five import BrowserView
@@ -26,7 +28,7 @@ class GestpayCheckout(BrowserView):
         for k, v in self.request.form.iteritems():
             self.request.form[k] = v.strip()
 
-        mandatory = ['lastname', 'address', 'zip_code', 'city', 'country', 'email', 'phone']
+        mandatory = [] # ['lastname', 'address', 'zip_code', 'city', 'country', 'email', 'phone']
 
         for k in mandatory:
             if not self.request.form.get(k, '').strip():

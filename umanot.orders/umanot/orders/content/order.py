@@ -117,6 +117,76 @@ OrderSchema = document.ATDocumentSchema.copy() + atapi.Schema((
             startup_directory = '',
         ),
     ),
+    atapi.StringField(
+        name = 'invoice_lastname',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Cognome / Ragione Sociale"
+        )
+    ),
+    atapi.StringField(
+        name = 'invoice_firstname',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Nome"
+        )
+    ),
+    atapi.StringField(
+        name = 'invoice_email',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Email (fatturazione)"
+        )
+    ),
+    atapi.StringField(
+        name = 'invoice_phone',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Telefono"
+        )
+    ),
+    atapi.StringField(
+        name = 'invoice_address',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Indirizzo"
+        )
+    ),
+    atapi.StringField(
+        name = 'invoice_city',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Città"
+        )
+    ),
+    atapi.StringField(
+        name = 'invoice_zip_code',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"CAP"
+        )
+    ),
+    atapi.StringField(
+        name = 'invoice_province',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Provincia"
+        )
+    ),
+    atapi.StringField(
+        name = 'invoice_country',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Paese"
+        )
+    ),
+    atapi.StringField(
+        name = 'invoice_tax',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Partita IVA"
+        )
+    ),
     # atapi.FloatField(
     # name = 'gross',
     #     required = True,
@@ -181,6 +251,16 @@ class Order(ATDocument):
             readable_created = self.created().strftime('%d/%m/%Y'),
             status = self.getStatus(),
             readable_status = status_map.get(self.getStatus()),
+            invoice_lastname = self.getInvoice_lastname(),
+            invoice_firstname = self.getInvoice_firstname(),
+            invoice_phone = self.getInvoice_phone(),
+            invoice_email = self.getInvoice_email(),
+            invoice_address = self.getInvoice_address(),
+            invoice_zip_code = self.getInvoice_zip_code(),
+            invoice_province = self.getInvoice_province(),
+            invoice_city = self.getInvoice_city(),
+            invoice_country = self.getInvoice_country(),
+            invoice_tax = self.getInvoice_tax()
         )
 
         return info
