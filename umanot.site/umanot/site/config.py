@@ -17,5 +17,4 @@ GP_HOST_TEST = 'testecomm.sella.it'
 GP_TID = '00667058'
 GP_PIVA = '08862510966'
 
-
 GP_ORDER_KEY = 'complexlab.site.gp_order_key'
