@@ -861,6 +861,10 @@
   background-color: #fff;
 }
 
+#content .forumStyle h3.articleTitle {
+  padding: 0;
+}
+
 #content .articleTitle.articleLive {
   margin-bottom: 15px;
 }
@@ -966,7 +970,16 @@
 .forumStyle .articleImage {
   display: inline-block;
   margin-bottom: 20px;
-  width: 100%;
+  width: 40%;
+  height: 100%;
+  float: left;
+  padding-right: 30px;
+}
+
+.forumStyle .articleTextInner {
+  width:60%;
+  float:left; 
+  margin-bottom: 20px;
 }
 
 .forumStyle .articleImage img {
@@ -986,6 +999,22 @@
 
 .forumStyle .articleByLine {
   margin: 3px 0;
+}
+
+.forumStyle .articledescription p {
+  overflow: hidden;
+}
+
+@media (max-width:600px) {
+  .forumStyle .articleImage {
+    width: 100%;
+    float:none;
+    padding-right: 0;
+  }
+  .forumStyle .articleTextInner {
+    width:100%;
+    float: none;
+  }
 }
 
 .articleTableW {
