@@ -63,7 +63,7 @@ class UmanotUtils(object):
 
     def get_posts_by_portfolio(self, portfolio, limit, min_date):
         url = "http://5.189.133.164/umanot_ws/WebPost.asmx/BindGrid"
-        params = {'Portfolio': portfolio, 'Limit': limit, 'MinDate': min_date, 'Name': 'JOHN', 'SurName': 'SMITH'}
+        params = {'Portfolio': portfolio, 'Limit': limit, 'MinDate': min_date, 'Name': 'JòHN', 'SurName': 'SMITH'}
 
         response = requests.get(url, params = params)
 
