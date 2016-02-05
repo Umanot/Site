@@ -76,7 +76,8 @@
                     <div><p tal:replace="structure item/text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro, dolor, qui, reiciendis, aperiam expedita ullam possimus sapiente illum vel facilis saepe rerum voluptate consequuntur voluptates aut pariatur eveniet dignissimos numquam? </p></div>
                   </div>
                   <div class="serviceItemActions">
-                    <a class="ghostButton ghostButtonWhite" tal:condition="item/URL" tal:attributes="href item/URL"> Scopri</a>
+                    <a class="ghostButton ghostButtonWhite" tal:condition="python:request.get('LANGUAGE') == 'it'" tal:condition="item/URL" tal:attributes="href item/URL"> Scopri</a>
+                    <a class="ghostButton ghostButtonWhite" tal:condition="python:request.get('LANGUAGE') != 'it'" tal:condition="item/URL" tal:attributes="href item/URL"> Find Out</a>
                     <!--?<span class="ghostButton shareButton" tal:condition="item/URL" tal:attributes="data-url item/URL" data-url=""><i class="fa fa-share-alt"></i> Condividi</span>-->
                   </div>
                 </div>
