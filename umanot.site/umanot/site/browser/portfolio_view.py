@@ -70,6 +70,15 @@ class PortfolioView(BrowserView):
                 performance['hit_rate'] = '%0.2f' % hit_rate if hit_rate else ''
                 performance['profit_factor'] = latest['profit_factor']
 
+                counter = 0
+                for x in data:
+                    counter += 1
+                    prev = counter - 1
+                    if prev:
+                        x['css_class'] = 'green' if float(x['net_profit']) >= float(data[prev]['net_profit']) else 'red'
+                    else:
+                        x['css_class'] = 'green'
+
             info = dict(
                 title = obj.Title(),
                 description = obj.Description(),
