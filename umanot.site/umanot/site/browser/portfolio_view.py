@@ -89,6 +89,4 @@ class PortfolioView(BrowserView):
 
             results.append(info)
 
-        import pdb; pdb.set_trace()
-
         return results
