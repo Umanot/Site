@@ -95,7 +95,7 @@ class UmanotUtils(object):
                 post = item['Post'],
                 readable_date = '%02d/%02d/%d %02d:%02d:%02d' % (dt.day(), dt.month(), dt.year(), dt.hour(), dt.minute(), dt.second()),
                 css_class = css_class,
-                net_profit = item['NetProfit'],
+                net_profit = item['NetProfit'] or 0,
                 drawdown = item['DD'],
                 win_op = item['WinOp'],
                 los_op = item['LosOp'],
