@@ -94,7 +94,12 @@ class UmanotUtils(object):
                 image = base_path + '/' + item['destimage'] if has_image else '',
                 post = item['Post'],
                 readable_date = '%02d/%02d/%d %02d:%02d:%02d' % (dt.day(), dt.month(), dt.year(), dt.hour(), dt.minute(), dt.second()),
-                css_class = css_class
+                css_class = css_class,
+                net_profit = item['NetProfit'],
+                drawdown = item['DD'],
+                win_op = item['WinOp'],
+                los_op = item['LosOp'],
+                profit_factor = item['ProfitFactor']
             )
 
             results.append(info)

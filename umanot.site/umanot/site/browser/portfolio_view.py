@@ -63,14 +63,14 @@ class PortfolioView(BrowserView):
 
                 latest = data[0]
                 try:
-                    hit_rate = float(latest['WinOp']) / (float(latest['LosOp']) + float(latest['WinOp'])) * 100
+                    hit_rate = float(latest['win_op']) / (float(latest['los_op']) + float(latest['win_op'])) * 100
                 except:
                     hit_rate = 0
 
-                performance['profit'] = latest['NetProfit']
-                performance['drawdown'] = latest['DD']
+                performance['net_profit'] = latest['net_profit']
+                performance['drawdown'] = latest['drawdown']
                 performance['hit_rate'] = '%0.2f' % hit_rate if hit_rate else ''
-                performance['profit_factor'] = latest['ProfitFactor']
+                performance['profit_factor'] = latest['profit_factor']
 
             info = dict(
                 title = obj.Title(),
