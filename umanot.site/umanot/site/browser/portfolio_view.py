@@ -1,8 +1,10 @@
+from umanot.site.browser.umanot_utils import IUmanotUtils
+
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
-from umanot.site.browser.umanot_utils import IUmanotUtils
 from zope.component import getUtility
 from zope.interface import implements, Interface
+
 
 class IPortfolioView(Interface):
     """
@@ -26,11 +28,11 @@ class PortfolioView(BrowserView):
     @property
     def portal_catalog(self):
         return getToolByName(self.context, 'portal_catalog')
-        
+
     @property
     def title(self):
         return self.context.Title()
-        
+
     @property
     def description(self):
         return self.context.Description()
@@ -42,7 +44,10 @@ class PortfolioView(BrowserView):
 
         for portfolio in portfolios:
 
-            brains = self.portal_catalog(portal_type="Post", getId=portfolio)
+            brains = self.portal_catalog(
+                portal_type = "Post",
+                getId = portfolio
+            )
 
             if not brains:
                 continue
@@ -52,11 +57,27 @@ class PortfolioView(BrowserView):
             portfolio_sql_id = portfolio.split('-')[-1]
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
+            performance = {'profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
+            if data:
+                import pdb; pdb.set_trace()
+
+                latest = data[0]
+                try:
+                    hit_rate = float(latest['WinOp']) / (float(latest['LosOp']) + float(latest['WinOp'])) * 100
+                except:
+                    hit_rate = 0
+
+                performance['profit'] = latest['NetProfit']
+                performance['drawdown'] = latest['DD']
+                performance['hit_rate'] = '%0.2f' % hit_rate if hit_rate else ''
+                performance['profit_factor'] = latest['ProfitFactor']
+
             info = dict(
                 title = obj.Title(),
                 description = obj.Description(),
                 text = obj.getText(),
-                data = data
+                data = data,
+                performance = performance
             )
 
             results.append(info)
