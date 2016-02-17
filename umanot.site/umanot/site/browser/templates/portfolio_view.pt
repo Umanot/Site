@@ -41,17 +41,17 @@
                   <tr>
                     <td><strong>% DD Max </strong></td>
                     <td><span condition="item/drawdown" tal:content="item/drawdown"></span></td>
-                    <td><p class="discreet">variazione massima del valore subito nel periodo analizzato</p></td>
+                    <td class="discreet">variazione massima del valore subito nel periodo analizzato</td>
                   </tr>
                   <tr>
                     <td><strong>Profit Factor:</strong></td>
                     <td><span condition="item/profit_factor" tal:content="item/profit_factor"></span></td>
-                    <td>rapporto tra guadagni e perdite, in valore</td>
+                    <td class="discreet">rapporto tra guadagni e perdite, in valore</td>
                   </tr>
                   <tr>
                     <td><strong>Hit Rate:</strong></td>
                     <td><span condition="item/hit_rate" tal:content="item/hit_rate"></span></td>
-                    <td>numero operazioni WIN sul totale di operazioni completate</td>
+                    <td class="discreet">numero operazioni WIN sul totale di operazioni completate</td>
                   </tr>
                 </tbody>
               </table>
