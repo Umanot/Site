@@ -72,7 +72,7 @@
           <div class="col-md-12">
             <div class="iframe-wrapper">
               <div class="embed-responsive embed-responsive-16by9">
-                <iframe class="embed-responsive-item"  width="900" height="541" src="http://cdn.livestream.com/embed/umanot?layout=4&color=0x000000&autoPlay=true&mute=true&iconColorOver=0xe7e7e7&iconColor=0xcccccc&allowchat=true&height=340&width=560" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>
+                <iframe class="embed-responsive-item" quality="high" width="900" height="541" src="http://cdn.livestream.com/embed/umanot?layout=4&color=0x000000&autoPlay=true&mute=true&iconColorOver=0xe7e7e7&iconColor=0xcccccc&allowchat=true&height=340&width=560" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>
               </div>
             </div>
           </div>
