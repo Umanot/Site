@@ -59,8 +59,6 @@ class PortfolioView(BrowserView):
 
             performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
             if data:
-                import pdb; pdb.set_trace()
-
                 latest = data[0]
                 try:
                     hit_rate = float(latest['win_op']) / (float(latest['los_op']) + float(latest['win_op'])) * 100
@@ -81,5 +79,7 @@ class PortfolioView(BrowserView):
             )
 
             results.append(info)
+
+        import pdb; pdb.set_trace()
 
         return results
