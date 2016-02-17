@@ -76,7 +76,7 @@
                       <td tal:content="item/share"></td>
                       <td tal:content="item/post">buy@555.55</td>
                       <td>
-                        <span tal:attributes="style python:'color: %s' % item/css_class" tal:content="item/net_profit"></span>
+                        <span tal:attributes="style python:'color: %s' % item['css_class']" tal:content="item/net_profit"></span>
                       </td>
                       <!--?<td class="icon-td align-right">-->
                       <!--?<i class="fa fa-arrow-down" tal:condition="python:item['symbol'] == -1"></i>-->
