@@ -34,6 +34,8 @@ class GestpayOk(BrowserView):
 
         order_number = results.get('order_number')
 
+        import pdb; pdb.set_trace()
+
         if not order_number:
             pass
 
@@ -78,7 +80,7 @@ class GestpayOk(BrowserView):
 
             subject = "[ComplexLab] Ordine numero %s" % order_number
 
-            for email in ['francesco@mediatria.com', 'redazione@complexlab.it', 'angela.chirico@complexlab.it']:
+            for email in ['francesco@mediatria.com']:
                 info = dict(
                     receiver = email,
                     subject = subject,
