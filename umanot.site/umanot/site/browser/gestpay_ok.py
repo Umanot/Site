@@ -34,8 +34,6 @@ class GestpayOk(BrowserView):
 
         order_number = results.get('order_number')
 
-        import pdb; pdb.set_trace()
-
         if not order_number:
             pass
 
