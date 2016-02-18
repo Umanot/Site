@@ -2,6 +2,8 @@
 from AccessControl import Unauthorized
 from Products.CMFCore.utils import getToolByName
 from umanot.site.browser.umanot_utils import IUmanotUtils
+
+from umanot.orders.config import COUNTRIES
 from zope.component import getUtility
 from zope.interface import implements, Interface
 
@@ -72,3 +74,12 @@ class OrderCheckout(BrowserView):
 
     def renderMoney(self, value):
         return self.utils.money_from_float(value)
+
+    @property
+    def countries(self):
+        data = COUNTRIES.items()
+        data.sort(lambda x, y: cmp(x[1], y[1]))
+
+        #data = [x for x in data if x[0] != 'IT']
+
+        return data
