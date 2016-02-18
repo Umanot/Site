@@ -25,7 +25,8 @@ class OrderCheckout(BrowserView):
         self.request = request
         self.order_number = request.get('order_number')
         self.discount_code = request.get('discount_code')
-        self.clab_utils = getUtility(IUmanotUtils)
+        self.utils = getUtility(IUmanotUtils)
+        self.errors = request.get('co-errors', [])
 
     @property
     def title(self):
@@ -70,4 +71,4 @@ class OrderCheckout(BrowserView):
         return info
 
     def renderMoney(self, value):
-        return self.clab_utils.money_from_float(value)
+        return self.utils.money_from_float(value)
