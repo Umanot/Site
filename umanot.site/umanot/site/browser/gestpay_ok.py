@@ -59,7 +59,7 @@ class GestpayOk(BrowserView):
             mtool = getToolByName(self.context, 'portal_membership')
             auth = mtool.getAuthenticatedMember()
 
-            message = '<p>Hai inserito un nuovo ordine su complexlab.it</p>'
+            message = '<p>Hai inserito un nuovo ordine su umanot.com</p>'
             message += "<p><strong>Dettagli ordine</strong></h3>"
             message += "<p>Ordine numero: %s</p>" % self.utils.safeencode(order_number)
             message += "<p>Nome e cognome: %s</p>" % self.utils.safeencode(auth.getProperty('fullname') or auth.getProperty('username'))
@@ -78,7 +78,7 @@ class GestpayOk(BrowserView):
             message += "Paese: %s<br />" % order_info['invoice_country']
             message += "Partita IVA o codice fiscale: %s</p>" % self.utils.safeencode(order_info['invoice_tax'])
 
-            subject = "[ComplexLab] Ordine numero %s" % order_number
+            subject = "[Umanot] Ordine numero %s" % order_number
 
             for email in ['francesco@mediatria.com']:
                 info = dict(

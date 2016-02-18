@@ -1,60 +1,139 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      lang="en"
-      metal:use-macro="here/main_template/macros/master"
-      i18n:domain="complexlab.orders">
-
+<html metal:use-macro="here/main_template/macros/master" i18n:domain="complexlab.orders">
+  <head></head>
   <body>
-
     <div metal:fill-slot="main">
-      <tal:main-macro metal:define-macro="main">
+      <div tal:replace="structure provider:plone.abovecontenttitle" />
 
-        <div tal:replace="structure provider:plone.abovecontenttitle" />
+      <div id="products-view" tal:define="order view/order" tal:condition="order">
 
-        <div id="products-view" tal:define="order view/order" tal:condition="order">
+        <h1 tal:content="view/title"></h1>
 
-          <h1 tal:content="view/title"></h1>
+        <table class="table listing">
+          <thead>
+            <tr>
+              <td colspan="2"><strong tal:content="string:${order/title}"></strong></td>
+            </tr>
+            <tr>
+              <th>Descrizione</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td colspan="2" tal:content="order/description"></td>
+            </tr>
+            <tr>
+              <td class="alignRight">Subtotale</td>
+              <td tal:content="python:view.renderMoney(order['net'])"></td>
+            </tr>
+            <tr>
+              <td class="alignRight" tal:content="string:IVA (${order/readable_vat}%) "></td>
+              <td tal:content="python:view.renderMoney(order['vat_amount'])"></td>
+            </tr>
+            <tr>
+              <td class="alignRight"><strong>Totale</strong></td>
+              <td><strong tal:content="python:view.renderMoney(order['gross'])"></strong></td>
+            </tr>
+          </tbody>
+        </table>
 
-          <table class="table listing">
-            <thead>
-              <tr><td colspan="2"><strong tal:content="string:${order/title}"></strong></td></tr>
-              <tr>
-                <th>Descrizione</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colspan="2" tal:content="order/description"></td>
-              </tr>
-              <tr>
-                <td class="alignRight">Subtotale</td>
-                <td tal:content="python:view.renderMoney(order['net'])"></td>
-              </tr>
-              <tr>
-                <td class="alignRight" tal:content="string:IVA (${order/readable_vat}%) "></td>
-                <td tal:content="python:view.renderMoney(order['vat_amount'])"></td>
-              </tr>
-              <tr>
-                <td class="alignRight"><strong>Totale</strong></td>
-                <td><strong tal:content="python:view.renderMoney(order['gross'])"></strong></td>
-              </tr>
-            </tbody>
-          </table>
+        <form method="post" tal:define="data view/get_data; errors view/errors" tal:attributes="action string:${context/absolute_url}/@@gestpay-checkout">
 
-          <form method="post" tal:attributes="action string:${context/absolute_url}/@@gestpay-checkout">
-            <input type="hidden" name="discount_code" tal:attributes="value view/discount_code" />
-            <input type="hidden" name="order_number" tal:attributes="value view/order_number"/>
-            <input type="hidden" name="amount" tal:attributes="value python:'%.2f' % order['gross']" />
-            <button class="btn btn-info" type="submit">Procedi con l'acquisto</button>
-          </form>
+          <h3 class="mainSubHeading mainSubHeadingBlue"><span>Dati di fatturazione</span></h3>
 
-        </div>
-        <!-- order-view -->
+          <div class="mrow">
+            <div class="col-md-6">
+              <div tal:define="field_name string:lastname" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                <label>Cognome o Ragione Sociale / Lastname or company *</label>
+                <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div tal:define="field_name string:firstname" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                <label>Nome</label>
+                <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
+              </div>
+            </div>
+          </div>
 
-        <!-- <div tal:replace="structure provider:plone.belowcontentbody" /> -->
+          <div class="mrow">
+            <div class="col-md-6">
+              <div tal:define="field_name string:email" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                <label>E-mail *</label>
+                <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div tal:define="field_name string:phone" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                <label>Telefono / Phone *</label>
+                <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
+              </div>
+            </div>
+          </div>
 
-      </tal:main-macro>
+          <div class="mrow">
+            <div class="col-md-8">
+              <div tal:define="field_name string:address" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                <label>Indirizzo / Address *</label>
+                <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div tal:define="field_name string:city" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                <label>Città / City *</label>
+                <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
+              </div>
+            </div>
+          </div>
+
+          <div class="mrow">
+            <div class="col-md-2">
+              <div tal:define="field_name string:zip_code" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                <label>CAP / Zip code *</label>
+                <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div tal:define="field_name string:province" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                <label>Provincia</label>
+                <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div tal:define="field_name string:country" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                <label>Stato *</label>
+                <select class="form-control" tal:attributes="name field_name">
+                  <option value="">--</option>
+                  <tal:loop repeat="item view/countries">
+                    <option tal:attributes="value python:item[0]; selected python:'selected' if item[0] == data.get('country') else None" tal:content="python:item[1]"></option>
+                  </tal:loop>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="mrow">
+            <div class="col-md-6">
+              <div class="form-group">
+                <div tal:define="field_name string:tax_code" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
+                  <label>Partita IVA o Codice Fiscale / Tax code</label>
+                  <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <input type="hidden" name="discount_code" tal:attributes="value view/discount_code" />
+          <input type="hidden" name="order_number" tal:attributes="value view/order_number"/>
+          <input type="hidden" name="amount" tal:attributes="value python:'%.2f' % order['gross']" />
+          <button class="btn btn-info" type="submit">Conferma e acquista</button>
+        </form>
+
+      </div>
+      <!-- order-view -->
+
+      <!-- <div tal:replace="structure provider:plone.belowcontentbody" /> -->
+
     </div>
   </body>
 </html>

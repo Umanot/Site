@@ -31,6 +31,20 @@ class OrderCheckout(BrowserView):
     def title(self):
         return self.context.Title()
 
+    def get_data(self):
+        results = {}
+
+        for k in ['lastname', 'firstname', 'address', 'zip_code', 'province', 'city', 'country', 'tax_code']:
+            results[k] = self.request.get(k)
+
+        if 'email' not in self.request.form:
+            mtool = getToolByName(self.context, 'portal_membership')
+            auth = mtool.getAuthenticatedMember()
+
+            results['email'] = auth.getProperty('email')
+
+        return results
+
     @property
     def order(self):
         catalog = getToolByName(self.context, 'portal_catalog')
