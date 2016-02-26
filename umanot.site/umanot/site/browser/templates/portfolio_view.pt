@@ -67,7 +67,7 @@
                     <th width="25%">Data</th>
                     <th width="25%">Titolo</th>
                     <th width="25%">Operazione</th>
-                    <th width="25%" tal:condition="python:request.get('show_data')">Net profit</th>
+                    <th width="25%">Net profit</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -76,7 +76,7 @@
                       <td tal:content="item/readable_date">10/12/2015 10:05:15</td>
                       <td tal:content="item/share"></td>
                       <td tal:content="item/post">buy@555.55</td>
-                      <td tal:condition="python:request.get('show_data')">
+                      <td>
                         <span tal:attributes="style python:'color: %s' % item['css_class']" tal:content="item/net_profit"></span>
                       </td>
                       <!--?<td class="icon-td align-right">-->
