@@ -31,7 +31,7 @@
               </div>
               <p class="documentDescription" tal:content="portfolio/description"></p>
 
-              <div tal:condition="python:request.get('show_data')">
+              <div>
                 <h3>Performance</h3>
                 <table class="table" tal:define="item portfolio/performance">
                   <tbody>
@@ -60,6 +60,7 @@
               </div>
 
               <p tal:replace="structure portfolio/text"></p>
+
               <table class="table">
                 <thead>
                   <tr>

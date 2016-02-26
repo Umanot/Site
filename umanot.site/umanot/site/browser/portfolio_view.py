@@ -66,7 +66,7 @@ class PortfolioView(BrowserView):
                     hit_rate = 0
 
                 performance['net_profit'] = latest['net_profit']
-                performance['drawdown'] = latest['drawdown']
+                performance['drawdown'] = obj.Location # latest['drawdown']
                 performance['hit_rate'] = '%0.2f' % hit_rate if hit_rate else ''
                 performance['profit_factor'] = latest['profit_factor']
 
