@@ -76,7 +76,6 @@ class PortfolioView(BrowserView):
                     prev = counter - 1
                     if prev:
                         self.context.plone_log("%s / %s" % (float(x['net_profit']), float(data[prev]['net_profit'])))
-                        import pdb; pdb.set_trace()
                         x['css_class'] = 'green' if float(x['net_profit']) >= float(data[prev]['net_profit']) else 'red'
                     else:
                         x['css_class'] = 'green'
