@@ -70,16 +70,15 @@ class PortfolioView(BrowserView):
                 performance['hit_rate'] = '%0.2f' % hit_rate if hit_rate else ''
                 performance['profit_factor'] = latest['profit_factor']
 
-                counter = 1
-                prev = 0
+                last_value = 0
+                counter = 0
                 for x in data:
-                    if prev:
-                        self.context.plone_log("%s / %s" % (float(x['net_profit']), float(data[prev]['net_profit'])))
-                        x['css_class'] = 'green' if float(x['net_profit']) >= float(data[prev]['net_profit']) else 'red'
+                    if counter:
+                        x['css_class'] = 'green' if float(x['net_profit']) >= last_value else 'red'
+                        last_value = float(x['net_profit'])
                     else:
                         x['css_class'] = 'green'
                     counter += 1
-                    prev += 1
 
             info = dict(
                 title = obj.Title(),
