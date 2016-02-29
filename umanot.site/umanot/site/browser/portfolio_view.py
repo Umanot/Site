@@ -72,6 +72,9 @@ class PortfolioView(BrowserView):
 
                 last_value = 0
                 counter = 0
+
+                data.reverse()
+
                 for x in data:
                     if counter:
                         self.context.plone_log("%s | %s" % (x['net_profit'], last_value))
@@ -80,6 +83,8 @@ class PortfolioView(BrowserView):
                     else:
                         x['css_class'] = 'green'
                     counter += 1
+
+                data.reverse()
 
             info = dict(
                 title = obj.Title(),
