@@ -74,6 +74,7 @@ class PortfolioView(BrowserView):
                 counter = 0
                 for x in data:
                     if counter:
+                        self.context.plone_log("%s | %s" % (x['net_profit'], last_value))
                         x['css_class'] = 'green' if float(x['net_profit']) >= last_value else 'red'
                         last_value = float(x['net_profit'])
                     else:
