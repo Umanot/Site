@@ -42,7 +42,8 @@ class PortfolioView(BrowserView):
         portfolios = ['portfolio-1', 'portfolio-2', 'portfolio-3']
 
         user = api.user.get_current()
-        import pdb; pdb.set_trace()
+
+        user_data = user.getProperty('description')
 
         results = []
 
