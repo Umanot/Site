@@ -44,14 +44,18 @@ class PortfolioView(BrowserView):
         user = api.user.get_current()
 
         user_data = user.getProperty('description')
+        if not user_data:
+            return
+
+        portfolios = user_data.split('\n')
 
         results = []
 
         for portfolio in portfolios:
-
+            portfolio_id, portfolio_title = portfolio.split('|')
             brains = self.portal_catalog(
                 portal_type = "Post",
-                getId = portfolio
+                getId = portfolio_id
             )
 
             if not brains:
@@ -91,7 +95,7 @@ class PortfolioView(BrowserView):
                 data.reverse()
 
             info = dict(
-                title = obj.Title(),
+                title = portfolio_title,
                 description = obj.Description(),
                 text = obj.getText(),
                 data = data,
