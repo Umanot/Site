@@ -2,6 +2,7 @@ from umanot.site.browser.umanot_utils import IUmanotUtils
 
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
+from plone import api
 from zope.component import getUtility
 from zope.interface import implements, Interface
 
@@ -39,6 +40,9 @@ class PortfolioView(BrowserView):
 
     def get_data(self):
         portfolios = ['portfolio-1', 'portfolio-2', 'portfolio-3']
+
+        user = api.user.get_current()
+        import pdb; pdb.set_trace()
 
         results = []
 
