@@ -65,6 +65,10 @@ class UmanotUtils(object):
         url = "http://5.189.133.164/umanot_ws/WebPost.asmx/BindGrid"
         params = {'Portfolio': portfolio, 'Limit': limit, 'MinDate': min_date, 'Name': 'JOHN', 'SurName': 'SMITH'}
 
+        site = getSite()
+        site.plone_log(url)
+        site.plone_log(params)
+
         response = requests.get(url, params = params)
 
         data = fromstring(response.text)
