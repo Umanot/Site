@@ -60,6 +60,12 @@ class GestpayOk(BrowserView):
             message = '<p>Hai inserito un nuovo ordine su umanot.com</p>'
             message += "<p><strong>Dettagli ordine</strong></h3>"
             message += "<p>Ordine numero: %s</p>" % self.utils.safeencode(order_number)
+
+            try:
+                message += "<p>Servizio acquistato: %s</p>" % self.utils.safeencode(order.getProduct().Title if order.getProduct() else '')
+            except:
+                pass
+
             message += "<p>Nome e cognome: %s</p>" % self.utils.safeencode(auth.getProperty('fullname') or auth.getProperty('username'))
             message += "<p>Indirizzo email: %s</p>" % self.utils.safeencode(auth.getProperty('email'))
             # message += '<p><a href="http://www.umanot.com/my-orders">Guarda i dettagli dei tuoi ordini</a></p>'
@@ -78,7 +84,7 @@ class GestpayOk(BrowserView):
 
             subject = "[Umanot] Ordine numero %s" % order_number
 
-            for email in ['francesco@mediatria.com']:
+            for email in [auth.getProperty('email'), 'francesco@mediatria.com', 'staff@umanot.com']:
                 info = dict(
                     receiver = email,
                     subject = subject,
