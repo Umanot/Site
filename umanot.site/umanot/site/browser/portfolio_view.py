@@ -95,6 +95,9 @@ class PortfolioView(BrowserView):
                 data.reverse()
 
             text = obj.getText()
+
+            import pdb; pdb.set_trace()
+
             text = text.replace('$NET_PROFIT', performance['net_profit'])
             text = text.replace('DD_MAX', performance['drawdown'])
             text = text.replace('$HIT_RATE', performance['hit_rate'])
