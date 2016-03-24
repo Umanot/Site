@@ -229,11 +229,18 @@ class HomepageView(BrowserView):
 
             related = [x for x in obj.getRelatedItems() if x]
 
-            info['URL'] = '#'
-            if related:
+            if brain.getId == 'osserva-umanot-in-azione':
+                url = '/it/servizi/osserva-umanot'
+            elif brain.getId == 'monitor-umanot-in-action':
+                url = '/en/services/observe-umanot-in-action-1'
+            elif related:
                 related_obj = related[0]
                 parent = related_obj.aq_parent
-                info['URL'] = '%s#%s' % (parent.absolute_url(), related_obj.getId())
+                url = '%s#%s' % (parent.absolute_url(), related_obj.getId())
+            else:
+                url = '#'
+
+            info['URL'] = url
 
             results.append(info)
 
