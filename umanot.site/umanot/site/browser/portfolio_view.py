@@ -97,7 +97,7 @@ class PortfolioView(BrowserView):
             text = obj.getText()
 
             text = text.replace('$NET_PROFIT', performance['net_profit'])
-            text = text.replace('DD_MAX', performance['drawdown'])
+            text = text.replace('$DD_MAX', performance['drawdown'])
             text = text.replace('$HIT_RATE', performance['hit_rate'])
             text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
 
