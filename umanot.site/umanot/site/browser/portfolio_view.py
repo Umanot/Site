@@ -74,7 +74,7 @@ class PortfolioView(BrowserView):
                 except:
                     hit_rate = 0
 
-                performance['net_profit'] = int(latest['net_profit'])
+                performance['net_profit'] = str(latest['net_profit']).split('.')[0]
                 performance['drawdown'] = obj.getLocation()  # latest['drawdown']
                 performance['hit_rate'] = '%0.2f' % hit_rate if hit_rate else ''
                 performance['profit_factor'] = latest['profit_factor']
@@ -94,10 +94,16 @@ class PortfolioView(BrowserView):
 
                 data.reverse()
 
+            text = obj.getText()
+            text = text.replace('$NET_PROFIT', performance['net_profit'])
+            text = text.replace('DD_MAX', performance['drawdown'])
+            text = text.replace('$HIT_RATE', performance['hit_rate'])
+            text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
+
             info = dict(
                 title = portfolio_title,
                 description = obj.Description(),
-                text = obj.getText(),
+                text = text,
                 data = data,
                 performance = performance
             )
