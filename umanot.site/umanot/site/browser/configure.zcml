@@ -446,4 +446,20 @@
     permission="zope2.View"
     />
 
+  <browser:page
+    name="register"
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    class=".register.RegistrationForm"
+    layer=".interfaces.IThemeSpecific"
+    permission="cmf.AddPortalMember"
+    />
+
+  <browser:page
+    name="new-user"
+    for="plone.app.layout.navigation.interfaces.INavigationRoot"
+    class=".register.AddUserForm"
+    layer=".interfaces.IThemeSpecific"
+    permission="plone.app.controlpanel.UsersAndGroups"
+    />
+
 </configure>
