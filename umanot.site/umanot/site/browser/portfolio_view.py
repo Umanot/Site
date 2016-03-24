@@ -96,12 +96,10 @@ class PortfolioView(BrowserView):
 
             text = obj.getText()
 
-            import pdb; pdb.set_trace()
-
             text = text.replace('$NET_PROFIT', performance['net_profit'])
             text = text.replace('DD_MAX', performance['drawdown'])
             text = text.replace('$HIT_RATE', performance['hit_rate'])
-            text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
+            text = text.replace('$PROFIT_FACTOR', str(performance['profit_factor']))
 
             info = dict(
                 title = portfolio_title,
