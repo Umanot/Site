@@ -38,7 +38,7 @@
                     <tr>
                       <td><strong>Net profit:</strong></td>
                       <td><span condition="item/net_profit" tal:content="item/net_profit"></span></td>
-                      <td></td>
+                      <td class="discreet">risultato cumulativo netto nel periodo di investimento</td>
                     </tr>
                     <tr>
                       <td><strong>% DD Max </strong></td>
