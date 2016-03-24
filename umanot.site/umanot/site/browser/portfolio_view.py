@@ -74,7 +74,7 @@ class PortfolioView(BrowserView):
                 except:
                     hit_rate = 0
 
-                performance['net_profit'] = latest['net_profit'].split('.')[0]
+                performance['net_profit'] = int(latest['net_profit'])
                 performance['drawdown'] = obj.getLocation()  # latest['drawdown']
                 performance['hit_rate'] = '%0.2f' % hit_rate if hit_rate else ''
                 performance['profit_factor'] = latest['profit_factor']
