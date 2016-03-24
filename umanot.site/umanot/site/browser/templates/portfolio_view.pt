@@ -41,9 +41,9 @@
                       <td class="discreet">risultato cumulativo netto nel periodo di investimento</td>
                     </tr>
                     <tr>
-                      <td><strong>% DD Max </strong></td>
+                      <td><strong>% DD Max:</strong></td>
                       <td><span condition="item/drawdown" tal:content="item/drawdown"></span></td>
-                      <td class="discreet">variazione massima del valore subito nel periodo analizzato</td>
+                      <td class="discreet">oscillazione negativa massima in percentuale rispetto alla capitalizzazione raggiunta</td>
                     </tr>
                     <tr>
                       <td><strong>Profit Factor:</strong></td>
