@@ -33,7 +33,7 @@
 
               <div>
                 <h3>Performance</h3>
-                <table class="table" tal:define="item portfolio/performance">
+                <table class="table" tal:define="item portfolio/performance" tal:condition="nothing">
                   <tbody>
                     <tr>
                       <td><strong>Net profit:</strong></td>
