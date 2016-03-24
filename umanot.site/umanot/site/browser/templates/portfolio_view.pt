@@ -52,8 +52,8 @@
                     </tr>
                     <tr>
                       <td><strong>Hit Rate:</strong></td>
-                      <td><span condition="item/hit_rate" tal:content="item/hit_rate"></span></td>
-                      <td class="discreet">numero operazioni WIN sul totale di operazioni completate</td>
+                      <td><span condition="item/hit_rate" tal:content="string:${item/hit_rate}%"></span></td>
+                      <td class="discreet">rapporto percentuale del numero delle operazioni chiuse con profitto rispetto al numero totale di operazioni completate (non considerate, quindi, le operazioni ancora aperte)</td>
                     </tr>
                   </tbody>
                 </table>
