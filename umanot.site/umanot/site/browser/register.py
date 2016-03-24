@@ -1,7 +1,7 @@
 # coding=utf-8
 import logging
 
-from complexlab3.site.browser.complexlab_utils import IComplexLabUtils
+from umanot.site.browser.umanot_utils import IUmanotUtils
 from zope.interface import Interface
 from zope.component import getUtility, getAdapter
 from zope.schema import getFieldNamesInOrder
@@ -404,7 +404,7 @@ class BaseRegistrationForm(PageForm):
 
             subject = "[Umanot] Nuova iscrizione al sito"
 
-            clab_utils = getUtility(IComplexLabUtils)
+            umanot_utils = getUtility(IUmanotUtils)
 
             for email in ['francesco@mediatria.com']: # ['francesco@mediatria.com', 'staff@umanot.com']:
                 info = dict(
@@ -413,7 +413,7 @@ class BaseRegistrationForm(PageForm):
                     message = message,
                 )
 
-                clab_utils.notifySingleUser(info)
+                umanot_utils.notifySingleUser(info)
 
         if data.get('mail_me') or (portal.validate_email and not data.get('password')):
             # We want to validate the email address (users cannot
