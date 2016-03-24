@@ -48,7 +48,7 @@
                     <tr>
                       <td><strong>Profit Factor:</strong></td>
                       <td><span condition="item/profit_factor" tal:content="item/profit_factor"></span></td>
-                      <td class="discreet">rapporto tra guadagni e perdite, in valore</td>
+                      <td class="discreet">rapporto assoluto tra il valore totale delle operazioni con profitto rispetto al valore totale delle operazioni con perdite</td>
                     </tr>
                     <tr>
                       <td><strong>Hit Rate:</strong></td>
