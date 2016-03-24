@@ -406,7 +406,7 @@ class BaseRegistrationForm(PageForm):
 
             umanot_utils = getUtility(IUmanotUtils)
 
-            for email in ['francesco@mediatria.com']: # ['francesco@mediatria.com', 'staff@umanot.com']:
+            for email in ['francesco@mediatria.com', 'staff@umanot.com']:
                 info = dict(
                     receiver = email,
                     subject = subject,
