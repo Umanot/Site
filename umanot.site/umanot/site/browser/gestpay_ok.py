@@ -62,7 +62,7 @@ class GestpayOk(BrowserView):
             message += "<p>Ordine numero: %s</p>" % self.utils.safeencode(order_number)
 
             try:
-                message += "<p>Servizio acquistato: %s</p>" % self.utils.safeencode(order.getProduct().Title if order.getProduct() else '')
+                message += "<p>Servizio acquistato: %s</p>" % self.utils.safeencode(order.getProduct().Title() if order.getProduct() else '')
             except:
                 pass
 
