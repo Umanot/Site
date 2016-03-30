@@ -109,4 +109,6 @@ class GestpayCheckout(BrowserView):
 
         redirect = gps.encrypt(gpinfo['user'], '242', amount, self.request.form['order_number'])
 
+        import pdb; pdb.set_trace()
+
         return response.redirect(redirect)
