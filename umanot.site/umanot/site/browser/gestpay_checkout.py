@@ -110,5 +110,12 @@ class GestpayCheckout(BrowserView):
         redirect = gps.encrypt(gpinfo['user'], '242', amount, self.request.form['order_number'])
 
         # TODO: gestire redirect = "SOAP Error: 1146"
+        try:
+            # gestione di errori SOAP
+            if "SOAP Error" in str(redirect):
+                IStatusMessage(self.request).addStatusMessage(u"Si è verificato un errore durante l'acquisto", type = 'error')
+                return self.context.restrictedTraverse('@@order-checkout')()
+        except:
+            pass
 
         return response.redirect(redirect)
