@@ -35,4 +35,4 @@ class NotifyUpdate(BrowserView):
         if self.context.portal_type in ['Article', 'Placeholder', 'Document']:
             self.umanot_utils.notifyFollowers(self.context, 'area_tematica', 'update')
 
-        self.context.plone_log("Notifica inviata per: %s" % self.context.Title())
+            self.context.plone_log("Notifica inviata per: %s" % self.context.Title())
