@@ -293,9 +293,6 @@ class UmanotUtils(object):
         else:
             query = """SELECT Email FROM Followers WHERE ContentUID='%(uid)s' AND Typology='%(typology)s'""" % sqldata
 
-        import pdb;
-        pdb.set_trace()
-
         cursor.execute(query)
 
         records = cursor.fetchall()
@@ -314,10 +311,10 @@ class UmanotUtils(object):
 
         if typology == 'area_tematica':
             if action == 'update':
-                if uid == '943e809ec82e4b0eb9ea803314a1fefd':
+                if uid == '8f765e65a79b4f1eba52983acaf98276':
                     subject = "Update Osserva Umanot in azione - %s" % context.toLocalizedTime(DateTime(), long_format = False)
                     body = '<p>Abbiamo pubblicato un nuovo aggiornamento dei risultati di Umanot.</p>'
-                    body += '<p><a href="http://www.umanot.com/it/servizi/osserva-umanot-in-azione">ACCEDI SUBITO ALLA PAGINA</a></p>'
+                    body += '<p><a href="http://www.umanot.com/it/servizi/osserva-umanot">ACCEDI SUBITO ALLA PAGINA</a></p>'
                 else:
                     subject = "[Umanot update] %s" % self.safeencode(followed_obj.Title())
                     body = '<p>È stato modificato il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
