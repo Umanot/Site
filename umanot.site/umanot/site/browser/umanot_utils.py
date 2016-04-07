@@ -293,6 +293,9 @@ class UmanotUtils(object):
         else:
             query = """SELECT Email FROM Followers WHERE ContentUID='%(uid)s' AND Typology='%(typology)s'""" % sqldata
 
+        import pdb;
+        pdb.set_trace()
+
         cursor.execute(query)
 
         records = cursor.fetchall()
