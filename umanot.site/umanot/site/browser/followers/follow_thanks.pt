@@ -11,8 +11,9 @@
       <div id="follow-form-view">
       
           <p>Grazie<span tal:define="fullname python:context.REQUEST.get('fullname')" tal:condition="fullname" tal:content="string: $fullname"></span>, <br/>
-la tua iscrizione è stata registrata con successo.
-          </p>
+la tua iscrizione è stata registrata con successo.</p>
+
+        <p>Ogni volta che verrà inserito un nuovo aggiornamento riceverai una notifica direttamente nella tua casella email.</p>
 
         <p><a class="btn btn-info" tal:attributes="href context/absolute_url">Torna all'articolo</a></p>
         
