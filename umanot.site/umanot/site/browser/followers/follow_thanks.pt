@@ -15,7 +15,7 @@ la tua iscrizione è stata registrata con successo.</p>
 
         <p>Ogni volta che verrà inserito un nuovo aggiornamento riceverai una notifica direttamente nella tua casella email.</p>
 
-        <p><a class="btn btn-info" tal:attributes="href context/absolute_url">Torna all'articolo</a></p>
+        <p><a class="btn btn-info" tal:attributes="href context/absolute_url">Torna indietro</a></p>
         
       </div>
        
