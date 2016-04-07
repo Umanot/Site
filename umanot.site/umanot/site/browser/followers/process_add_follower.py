@@ -120,8 +120,8 @@ class ProcessAddFollower(BrowserView):
             self.umanot_utils.notifySingleUser(info)
 
         if fullname:
-            redirect = '%s?thanks=1&fullname=%s' % (self.context.absolute_url(), fullname)
+            redirect = '%s?follow-thanks=1&fullname=%s' % (self.context.absolute_url(), fullname)
         else:
-            redirect = '%s?thanks=1' % self.context.absolute_url()
+            redirect = '%s?follow-thanks=1' % self.context.absolute_url()
 
         return response.redirect(redirect)
