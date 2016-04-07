@@ -16,7 +16,18 @@ la tua iscrizione è stata registrata con successo.</p>
         <p>Ogni volta che verrà inserito un nuovo aggiornamento riceverai una notifica direttamente nella tua casella email.</p>
 
         <p><a class="btn btn-info" tal:attributes="href context/absolute_url">Torna indietro</a></p>
-        
+
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
       </div>
        
       <div tal:replace="structure provider:plone.belowcontentbody" />
