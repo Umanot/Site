@@ -32,7 +32,7 @@ class NotifyUpdate(BrowserView):
         request = self.request
         response = request.RESPONSE
 
-        if self.context.portal_type in ['Article', 'Placeholder', 'Document']:
+        if self.context.portal_type in ['Article', 'Placeholder', 'Document'] or self.context.UID() == '8f765e65a79b4f1eba52983acaf98276':
             self.umanot_utils.notifyFollowers(self.context, 'area_tematica', 'update')
 
             self.context.plone_log("Notifica inviata per: %s" % self.context.Title())
