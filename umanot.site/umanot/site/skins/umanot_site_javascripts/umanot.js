@@ -148,7 +148,6 @@ $(function () {
     anchorOnClick();
 
     var $elem = $('#' + window.location.hash.replace('#', ''));
-    console.log('asd ', $elem);
     if($elem.length > 0) {
         $('html,body').animate({scrollTop: $elem.offset().top - 81}, 500);
     }
