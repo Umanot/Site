@@ -150,6 +150,6 @@ $(function () {
     var $elem = $('#' + window.location.hash.replace('#', ''));
     console.log('asd ', $elem);
     if($elem) {
-        $('html,body').animate({scrollTop: $elem.offset().top - 51}, 500);
+        $('html,body').animate({scrollTop: $elem.offset().top - 81}, 500);
     }
 });
