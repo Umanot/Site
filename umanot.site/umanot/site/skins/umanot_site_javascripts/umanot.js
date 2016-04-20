@@ -137,7 +137,7 @@ $(function () {
 
             if (target.length > 0) {
                 event.preventDefault();
-                $('html,body').animate({scrollTop: target.offset().top - 51}, 500);
+                $('html,body').animate({scrollTop: target.offset().top - 81}, 500);
             }
             else {
 
