@@ -143,10 +143,13 @@ $(function () {
 
             }
         });
-        
-        $url = window.location;
-        console.log($url);
     };
 
     anchorOnClick();
+
+    var $elem = $('#' + window.location.hash.replace('#', ''));
+    console.log('asd ', $elem);
+    if($elem) {
+        $('html,body').animate({scrollTop: $elem.offset().top - 51}, 500);
+    }
 });
