@@ -32,13 +32,16 @@ class ProcessAddFollower(BrowserView):
         request = self.request
         response = request.RESPONSE
 
-        required = ['firstname', 'lastname', 'email']
+        required_input = ['firstname', 'lastname', 'email']
 
         errors = {}
 
         if errors:
             self.request.form['fw-errors'] = errors
+
             for k, v in self.request.form.iteritems():
+                if k in required_input and not v.strip():
+                    errors[k] = u"Questo campo è obbligatorio"
                 self.request.form[k] = v
 
             IStatusMessage(self.request).addStatusMessage(u"Correggi gli errori evidenziati", type = 'error')
