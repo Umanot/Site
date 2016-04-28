@@ -44,7 +44,7 @@ class ProcessAddFollower(BrowserView):
         if errors:
             self.request.form['fw-errors'] = errors
 
-            IStatusMessage(self.request).addStatusMessage(u"Correggi gli errori evidenziati", type = 'error')
+            IStatusMessage(self.request).addStatusMessage(u"Compila i campi obbligatori", type = 'error')
             return self.context.restrictedTraverse('@@add-follower-page')()
 
         mtool = getToolByName(self.context, 'portal_membership')
