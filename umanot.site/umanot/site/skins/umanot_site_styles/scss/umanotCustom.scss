@@ -1730,3 +1730,38 @@
   display: block;
   margin-top: 5px;
 }
+
+/*tools bar social network*/
+#tools-social-wrapper {
+  position: absolute;
+  top:5.5px;
+  left: 15px;
+}
+#tools-social-wrapper a.socialCircle {
+  height: 20px;
+  width:20px;
+  background-color: rgba(255,255,255,0.9);
+  border-radius: 20px;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  margin-right: 3px;
+}
+#tools-social-wrapper a.socialCircle:hover {
+  text-decoration: none;
+  color: #000;
+  background-color: rgba(255,255,255,1);
+}
+#tools-social-wrapper a.socialCircle i {
+  color: #000;
+  position: relative;
+  top: 1px;
+}
+#tools-social-wrapper a.socialCircle:first-child i {
+  top:2px;
+}
+@media (max-width: 370px) {
+  #tools-social-wrapper {
+    display: none;
+  }
+}

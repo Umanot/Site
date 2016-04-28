@@ -1,4 +1,13 @@
 <div id="tools" i18n:domain="plone">
+  
+  <div id="tools-social-wrapper">
+    <a href="https://www.facebook.com/Umanot-1221157487894708/" class="socialCircle">
+      <i class="fa fa-facebook" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.linkedin.com/company/umanot" class="socialCircle">
+      <i class="fa fa-linkedin" aria-hidden="true"></i>
+    </a>
+  </div>
 
   <dl class="actionMenu deactivated"
       tal:condition="python:view.user_actions and not view.anonymous">
