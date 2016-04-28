@@ -36,13 +36,13 @@ class ProcessAddFollower(BrowserView):
 
         errors = {}
 
+        for k, v in self.request.form.iteritems():
+            if k in required_input and not v.strip():
+                errors[k] = u"Questo campo è obbligatorio"
+            self.request.form[k] = v
+
         if errors:
             self.request.form['fw-errors'] = errors
-
-            for k, v in self.request.form.iteritems():
-                if k in required_input and not v.strip():
-                    errors[k] = u"Questo campo è obbligatorio"
-                self.request.form[k] = v
 
             IStatusMessage(self.request).addStatusMessage(u"Correggi gli errori evidenziati", type = 'error')
             return self.context.restrictedTraverse('@@add-follower-page')()
