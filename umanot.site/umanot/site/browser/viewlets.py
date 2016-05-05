@@ -11,7 +11,7 @@ from plone.app.portlets.portlets import navigation
 
 
 ## LOGO
-from umanot.site.browser.interfaces import IAbout, IIntelligenzaConnettiva
+from umanot.site.browser.interfaces import IAbout, IIntelligenzaConnettiva, IMessageBox
 from umanot.site.browser.umanot_utils import IUmanotUtils
 from zope.component import getUtility
 
@@ -141,6 +141,22 @@ class ColophonViewlet(ViewletBase):
 ## MESSAGE BOX 
 class MessageViewlet(ViewletBase):
     index = ViewPageTemplateFile('viewlets/messagebox.pt')
+
+    def get_content(self):
+        catalog = getToolByName(self.context, 'portal_catalog')
+        brains = catalog(
+            portal_type = "Document",
+            object_provides = IMessageBox.__identifier__,
+            review_state = 'published'
+        )
+
+        if brains:
+            obj = brains[0].getObject()
+            info = dict(
+                title = obj.Title(),
+                text = obj.getText()
+            )
+            return info
 
 ## RELATED 
 class RelatedItemsViewlet(ViewletBase):

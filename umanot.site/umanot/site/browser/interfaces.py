@@ -29,5 +29,10 @@ class IHomepageSlides(Interface):
 class IAbout(Interface):
     """Marker interface"""
 
+
 class IIntelligenzaConnettiva(Interface):
+    """Marker interface"""
+
+
+class IMessageBox(Interface):
     """Marker interface"""

@@ -280,6 +280,10 @@
     <allow interface=".interfaces.IAbout"/>
   </class>
 
+  <class class="Products.ATContentTypes.interface.document.IATDocument">
+    <allow interface=".interfaces.IMessageBox"/>
+  </class>
+
   <!-- Article View  -->
   <browser:page
     for=".article_view.IArticleView"
