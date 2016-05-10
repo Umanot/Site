@@ -1,11 +1,14 @@
 <div id="tools" i18n:domain="plone">
   
   <div id="tools-social-wrapper">
-    <a href="https://www.facebook.com/Umanot-1221157487894708/" class="socialCircle">
+    <a href="https://www.facebook.com/Umanot-1221157487894708/" class="socialCircle" target="_blank">
       <i class="fa fa-facebook" aria-hidden="true"></i>
     </a>
-    <a href="https://www.linkedin.com/company/umanot" class="socialCircle">
+    <a href="https://www.linkedin.com/company/umanot" class="socialCircle" target="_blank">
       <i class="fa fa-linkedin" aria-hidden="true"></i>
+    </a>
+    <a href="https://www.youtube.com/channel/UCzIpv8Ci-Iw53TR-qESuzSg" class="socialCircle" target="_blank">
+      <i class="fa fa-youtube" aria-hidden="true"></i>
     </a>
   </div>
 
