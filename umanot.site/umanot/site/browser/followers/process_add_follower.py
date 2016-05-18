@@ -36,7 +36,7 @@ class ProcessAddFollower(BrowserView):
 
         errors = {}
 
-        if 'url=' in self.request.form.get('notes', ''):
+        if 'url=' in self.request.form.get('notes', '') or 'http' in self.request.form.get('notes', ''):
             self.context.plone_log("Skipping spam")
             return
 
