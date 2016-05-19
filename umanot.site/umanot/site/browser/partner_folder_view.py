@@ -57,4 +57,14 @@ class PartnerFolderView(BrowserView):
             results.append(info)
 
         return results
+
+    def get_claim(self):
+        brains = self.portal_catalog(
+            portal_type = "Document",
+            path = '/'.join(self.context.getPhysicalPath()),
+            sort_on = 'getObjPositionInParent'
+        )
+
+        if brains:
+            return brains[0].getObject().getText()
         
