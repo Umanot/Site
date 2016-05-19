@@ -187,11 +187,9 @@ class PostFolderView(BrowserView):
             performance = performance
         )
 
-
-
         placeholder.update(info)
 
-        return
+        return placeholder
 
     def get_data(self):
         portfolio_sql_id = 'portfolio-0'
