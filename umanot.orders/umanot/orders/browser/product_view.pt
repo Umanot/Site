@@ -6,7 +6,7 @@
 
   <body>
 
-    <div metal:fill-slot="main">
+    <div metal:fill-slot="main" tal:define="lang python:request.get('LANGUAGE')">
       <div tal:replace="structure provider:plone.abovecontenttitle" />
 
       <div id="product-view" tal:define="info view/info; discount view/discount_info">
@@ -16,18 +16,20 @@
         <p tal:replace="structure info/text"></p>
 
         <div class="priceBox priceBoxFloatRight" tal:condition="not:info/consulenza">
-          <span class="priceBoxLabel">prezzo (IVA esclusa)</span>
+          <span class="priceBoxLabel" tal:condition="python:lang=='it'">prezzo (IVA esclusa)</span>
+          <span class="priceBoxLabel" tal:condition="python:lang!='it'">price without VAT</span>
 
           <em class="priceBoxPrice" tal:condition="not:discount" tal:content="structure python:'%.2f &euro;' % info['net']">205€</em>
 
           <tal:discount tal:condition="discount">
             <em class="priceBoxPrice" tal:content="structure python:'%.2f &euro;' % info['net']">205€</em><br/><br/>
-            <em class="priceBoxPrice" tal:content="structure python:'%.2f &euro;' % discount['net_discounted']">205€ <span>IVA esclusa</span></em>
+            <em class="priceBoxPrice" tal:content="structure python:'%.2f &euro;' % discount['net_discounted']">205€ <span tal:condition="python:lang=='it'">IVA esclusa</span><span tal:condition="python:lang!='it'">without VAT</span></em>
           </tal:discount>
         </div>
 
         <form class="buyForm" method="post" tal:condition="not:info/consulenza" tal:attributes="action string:${context/absolute_url}/@@add-order-view">
-          <label>Codice sconto</label>
+          <label tal:condition="python:lang=='it'">Codice sconto</label>
+          <label tal:condition="python:lang!='it'">Discount code</label>
           <input type="text" name="code" tal:attributes="value python:request.get('code')" />
           <input type="submit" name="form.discount.check" value="Verifica codice"/>
 
@@ -49,10 +51,17 @@
             </select>
           </tal:limits>
           <div class="checkbox" tal:condition="not:view/is_anonymous">
-            <label><input type="checkbox" name="tos"/>Dichiaro di aver letto e di accettare integralmente le condizioni definite nelle <a target="_blank" tal:attributes="href string:/it/documenti-legali/condizioni-generali-di-uso-e-vendita">Condizioni generali di Uso e di Vendita dei Servizi Umanot</a></label>
+            <label tal:condition="python:lang=='it'"><input type="checkbox" name="tos"/>Dichiaro di aver letto e di accettare integralmente le condizioni definite nelle <a target="_blank" tal:attributes="href string:/it/documenti-legali/condizioni-generali-di-uso-e-vendita">Condizioni generali di Uso e di Vendita dei Servizi Umanot</a></label>
+            <label tal:condition="python:lang!='it'"><input type="checkbox" name="tos"/>I expressly declare to fully accept Terms and Conditions of the <a target="_blank" tal:attributes="href string:/en/legal-documents/general-conditions-of-use-and-sale">General Conditions of Use and Sale</a></label>
           </div>
-          <button tal:condition="not:view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Acquista</button>
-          <button tal:condition="view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Registrati a Umanot o autenticati per acquistare</button>
+          <tal:it tal:condition="python:lang=='it'">
+            <button tal:condition="not:view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Acquista</button>
+            <button tal:condition="view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Registrati a Umanot o autenticati per acquistare</button>
+          </tal:it>
+          <tal:en  tal:condition="python:lang!='it'">
+            <button tal:condition="not:view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Buy</button>
+            <button tal:condition="view/is_anonymous" class="btn btn-info btn-block btn-lg" type="submit">Register to Umanot or login to buy</button>
+          </tal:en>
         </form>
 
         <a class="btn btn-info btn-block btn-lg" type="submit"
