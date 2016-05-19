@@ -62,7 +62,7 @@
 
     </metal:headline>
 
-    <metal:phil fill-slot="main" tal:define="contents view/contents">
+    <metal:phil fill-slot="main" tal:define="contents view/contents; data view/get_data">
       <div id="livebox" tal:define="item view/get_live_comment" tal:condition="item">
         <div class="legendaModalBtn" i18n:translate="LEGENDA">LEGENDA</div>
         <div class="articleTWrp">
