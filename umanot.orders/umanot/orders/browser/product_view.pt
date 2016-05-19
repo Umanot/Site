@@ -31,7 +31,8 @@
           <label tal:condition="python:lang=='it'">Codice sconto</label>
           <label tal:condition="python:lang!='it'">Discount code</label>
           <input type="text" name="code" tal:attributes="value python:request.get('code')" />
-          <input type="submit" name="form.discount.check" value="Verifica codice"/>
+          <input tal:condition="python:lang=='it'" type="submit" name="form.discount.check" value="Verifica codice"/>
+          <input tal:condition="python:lang!='it'" type="submit" name="form.discount.check" value="Code validation"/>
 
           <tal:code tal:condition="python:request.get('code')">
             <p tal:condition="discount">Il codice sconto è valido</p>
