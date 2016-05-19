@@ -8,7 +8,7 @@
   <body>
     <metal:phil fill-slot="main" tal:define="contents view/contents; placeholder view/get_placeholder_text">
 
-      <div id="content" class="serviceFolderView">
+      <div id="content" class="serviceFolderView" tal:define="lang python:request.get('LANGUAGE')">
         <p tal:replace="structure placeholder/intro">Intro text</p>
 
         <tal:sections repeat="section view/contents">
@@ -25,7 +25,8 @@
 
                     <p tal:content="item/description"></p>
 
-                    <a tal:attributes="href string:${item/URL}?ajax_load=1" class="product-modal more btn btn-info ajaxModalTrigger" data-modaltype="huge">Scopri di più</a>
+                    <a tal:condition="python:lang=='it'" tal:attributes="href string:${item/URL}?ajax_load=1" class="product-modal more btn btn-info ajaxModalTrigger" data-modaltype="huge">Scopri di più</a>
+                    <a tal:condition="python:lang!='it' tal:attributes="href string:${item/URL}?ajax_load=1" class="product-modal more btn btn-info ajaxModalTrigger" data-modaltype="huge">Scopri di più</a>
                   </div>
 
                 </div>

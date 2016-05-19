@@ -20,6 +20,7 @@ class ServiceFolderView(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        self.language = request.get('LANGUAGE')
 
     @property
     def portal_catalog(self):
@@ -35,12 +36,18 @@ class ServiceFolderView(BrowserView):
 
     def get_placeholder_text(self):
         try:
-            intro = self.context.restrictedTraverse('/umanot/it/listino-servizi/intro')
+            if self.language == 'it':
+                intro = self.context.restrictedTraverse('/umanot/it/listino-servizi/intro')
+            else:
+                intro = self.context.restrictedTraverse('/umanot/en/services-menu/intro')
         except:
             intro = ''
 
         try:
-            footer = self.context.restrictedTraverse('/umanot/it/listino-servizi/footer')
+            if self.language == 'it':
+                footer = self.context.restrictedTraverse('/umanot/it/listino-servizi/footer')
+            else:
+                footer = self.context.restrictedTraverse('/umanot/en/services-menu/footer')
         except:
             footer = ''
 
