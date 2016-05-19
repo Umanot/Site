@@ -313,8 +313,12 @@ class UmanotUtils(object):
             if action == 'update':
                 if uid == '8f765e65a79b4f1eba52983acaf98276':
                     subject = "Update Osserva Umanot in azione - %s" % context.toLocalizedTime(DateTime(), long_format = False)
-                    body = '<p>Abbiamo pubblicato un nuovo aggiornamento dei risultati di Umanot.</p>'
-                    body += '<p><a href="http://www.umanot.com/it/servizi/osserva-umanot">ACCEDI SUBITO ALLA PAGINA</a></p>'
+                    body = '<p>È stata aggiornata la pagina "Osserva Umanot in azione".</p>'
+                    body += '<p><a href="http://www.umanot.com/it/servizi/osserva-umanot">ACCEDI SUBITO!</a></p>'
+                elif uid == '63836100e9664f24b2064cfb81c55d2f':
+                    subject = "Observe Umanot in action - %s" % context.toLocalizedTime(DateTime(), long_format = False)
+                    body = '<p>Observe Umanot in action has been updated.</p>'
+                    body += '<p><a href="http://www.umanot.com/en/services/observe-umanot-in-action-1">CHECK NOW!</a></p>'
                 else:
                     subject = "[Umanot update] %s" % self.safeencode(followed_obj.Title())
                     body = '<p>È stato modificato il contenuto: <a href="%s">%s</a></p>' % (context.absolute_url(), self.safeencode(context.Title()))
