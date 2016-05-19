@@ -26,7 +26,7 @@
                     <p tal:content="item/description"></p>
 
                     <a tal:condition="python:lang=='it'" tal:attributes="href string:${item/URL}?ajax_load=1" class="product-modal more btn btn-info ajaxModalTrigger" data-modaltype="huge">Scopri di più</a>
-                    <a tal:condition="python:lang!='it' tal:attributes="href string:${item/URL}?ajax_load=1" class="product-modal more btn btn-info ajaxModalTrigger" data-modaltype="huge">Scopri di più</a>
+                    <a tal:condition="python:lang!='it'" tal:attributes="href string:${item/URL}?ajax_load=1" class="product-modal more btn btn-info ajaxModalTrigger" data-modaltype="huge">Scopri di più</a>
                   </div>
 
                 </div>
