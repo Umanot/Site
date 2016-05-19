@@ -2,6 +2,10 @@ from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from plone.memoize.instance import memoize
 from umanot.article.browser.interfaces import IPostPreFooter, IPostFooter, ILegenda, ILiveComment
+
+from umanot.site.browser.umanot_utils import IUmanotUtils
+
+from zope.component import getUtility
 from zope.interface import implements, Interface
 from zope.security import checkPermission
 
@@ -24,6 +28,7 @@ class PostFolderView(BrowserView):
         self.limit = 2
         self.min_date = request.get('min_date', '')
         self.last_uid = request.get('last_uid')
+        self.umanot_utils = getUtility(IUmanotUtils)
 
     @property
     def portal_catalog(self):
