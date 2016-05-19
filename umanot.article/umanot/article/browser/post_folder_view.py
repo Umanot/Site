@@ -144,7 +144,6 @@ class PostFolderView(BrowserView):
         return brains[0].getObject().getInfo()
 
     def get_data(self):
-        import pdb ;pdb.set_trace()
         portfolio_sql_id = 'portfolio-0'
         data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
@@ -176,7 +175,7 @@ class PostFolderView(BrowserView):
 
             data.reverse()
 
-        text = self.contents[0]['text'] if self.contents else ''
+        text = self.contents[0]['data']['text'] if self.contents else ''
 
         text = text.replace('$NET_PROFIT', performance['net_profit'])
         text = text.replace('$DD_MAX', performance['drawdown'])
