@@ -70,10 +70,6 @@
           </tal:en>
         </form>
 
-        <a class="btn btn-info btn-block btn-lg" type="submit"
-                tal:condition="info/consulenza"
-                tal:attributes="href string:mailto:redazione@complexlab.it?subject=Richiesta preventivo per '${info/title}'">Richiedi un preventivo</a>
-
         <tal:prezi tal:condition="view/can_manage">
           <h5>Prezzi</h5>
           <table class="table listing">
