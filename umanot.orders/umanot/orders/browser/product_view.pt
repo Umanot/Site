@@ -36,12 +36,12 @@
 
           <tal:code tal:condition="python:request.get('code')">
             <tal:it tal:condition="python:lang=='it'">
-              <p tal:condition="discount">Il codice sconto è valido</p>
-              <p tal:condition="not:discount">Il codice sconto non è valido</p>
+              <p tal:condition="discount" style="margin-top: 10px" class="alert alert-success">Il codice sconto è valido</p>
+              <p tal:condition="not:discount" style="margin-top: 10px" class="alert alert-danger">Il codice sconto non è valido</p>
             </tal:it>
             <tal:en tal:condition="python:lang!='it'">
-              <p tal:condition="discount">Discount code validated</p>
-              <p tal:condition="not:discount">Discount code not validated</p>
+              <p tal:condition="discount" style="margin-top: 10px" class="alert alert-success">Discount code validated</p>
+              <p tal:condition="not:discount" style="margin-top: 10px" class="alert alert-danger">Discount code not validated</p>
             </tal:en>
 
           </tal:code>
