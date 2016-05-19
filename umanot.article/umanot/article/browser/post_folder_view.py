@@ -141,57 +141,61 @@ class PostFolderView(BrowserView):
         if not brains:
             return
 
-        portfolio_sql_id = 'portfolio-0'
-        data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
-
-        performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
-        if data:
-            latest = data[0]
-            try:
-                hit_rate = float(latest['win_op']) / (float(latest['los_op']) + float(latest['win_op'])) * 100
-            except:
-                hit_rate = 0
-
-            performance['net_profit'] = str(latest['net_profit']).split('.')[0]
-            performance['drawdown'] = self.context.getLocation()  # latest['drawdown']
-            performance['hit_rate'] = '%0.1f%%' % hit_rate if hit_rate else ''
-            performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
-
-            last_value = 0
-            counter = 0
-
-            data.reverse()
-
-            for x in data:
-                if counter:
-                    x['css_class'] = 'green' if float(x['net_profit']) >= last_value else 'red'
-                    last_value = float(x['net_profit'])
-                else:
-                    x['css_class'] = 'green'
-                counter += 1
-
-            data.reverse()
-
         placeholder = brains[0].getObject().getInfo()
 
-        text = placeholder['text']
+        try:
+            portfolio_sql_id = '0'
+            data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
-        import pdb; pdb.set_trace()
+            performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
+            if data:
+                latest = data[0]
+                try:
+                    hit_rate = float(latest['win_op']) / (float(latest['los_op']) + float(latest['win_op'])) * 100
+                except:
+                    hit_rate = 0
 
-        text = text.replace('$NET_PROFIT', performance['net_profit'])
-        text = text.replace('$DD_MAX', performance['drawdown'])
-        text = text.replace('$HIT_RATE', performance['hit_rate'])
-        text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
+                performance['net_profit'] = str(latest['net_profit']).split('.')[0]
+                performance['drawdown'] = self.context.getLocation()  # latest['drawdown']
+                performance['hit_rate'] = '%0.1f%%' % hit_rate if hit_rate else ''
+                performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
 
-        info = dict(
-            text = text,
-            data = data,
-            performance = performance
-        )
+                last_value = 0
+                counter = 0
 
-        placeholder.update(info)
+                data.reverse()
+
+                for x in data:
+                    if counter:
+                        x['css_class'] = 'green' if float(x['net_profit']) >= last_value else 'red'
+                        last_value = float(x['net_profit'])
+                    else:
+                        x['css_class'] = 'green'
+                    counter += 1
+
+                data.reverse()
+
+
+
+            text = placeholder['text']
+
+            text = text.replace('$NET_PROFIT', performance['net_profit'])
+            text = text.replace('$DD_MAX', performance['drawdown'])
+            text = text.replace('$HIT_RATE', performance['hit_rate'])
+            text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
+
+            info = dict(
+                text = text,
+                data = data,
+                performance = performance
+            )
+
+            placeholder.update(info)
+        except:
+            pass
 
         return placeholder
+
 
     def get_data(self):
         portfolio_sql_id = 'portfolio-0'
