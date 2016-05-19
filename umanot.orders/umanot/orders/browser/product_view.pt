@@ -36,13 +36,14 @@
 
           <tal:code tal:condition="python:request.get('code')">
             <tal:it tal:condition="python:lang=='it'">
-              <p tal:condition="discount">Discount code validated</p>
-              <p tal:condition="not:discount">Discount code not validated</p>
-            </tal:it>
-            <tal:en tal:condition="python:lang!='it'">
               <p tal:condition="discount">Il codice sconto è valido</p>
               <p tal:condition="not:discount">Il codice sconto non è valido</p>
+            </tal:it>
+            <tal:en tal:condition="python:lang!='it'">
+              <p tal:condition="discount">Discount code validated</p>
+              <p tal:condition="not:discount">Discount code not validated</p>
             </tal:en>
+
           </tal:code>
 
           <input type="hidden" name="uid" tal:attributes="value info/uid" />
