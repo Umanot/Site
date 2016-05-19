@@ -145,7 +145,7 @@ class PostFolderView(BrowserView):
 
     def get_data(self):
         import pdb ;pdb.set_trace()
-        portfolio_sql_id = '0'
+        portfolio_sql_id = 'portfolio-0'
         data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
         performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
