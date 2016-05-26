@@ -68,6 +68,9 @@ class PortfolioView(BrowserView):
             obj = self.context.unrestrictedTraverse(brains[0].getPath())
 
             portfolio_sql_id = portfolio_id.split('-')[-1]
+            if portfolio_sql_id in ['2', '3']:
+                portfolio_sql_id = '1'
+
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
             performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
