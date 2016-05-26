@@ -51,14 +51,14 @@ class PortfolioView(BrowserView):
 
         results = []
 
-        root_url = api.portal.get_navigation_root(self.context)
-        import pdb; pdb.set_trace()
+        root_obj = api.portal.get_navigation_root(self.context)
 
         for portfolio in portfolios:
             portfolio_id, portfolio_title = portfolio.split('|')
 
             brains = self.portal_catalog.unrestrictedSearchResults(
                 portal_type = "Post",
+                path = '/'.join(root_obj.getPhysicalPath()),
                 getId = portfolio_id
             )
 
