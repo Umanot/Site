@@ -62,11 +62,12 @@
         <div class="col-md-12" tal:condition="python:context.REQUEST.get('LANGUAGE') == 'it'"><p><a href="/it/documenti-legali/informativa-sulla-privacy">Informativa sulla privacy</a>&nbsp;&bull;&nbsp;<a href="/it/documenti-legali/disclaimer">Disclaimer</a>&nbsp;&bull;&nbsp;<a href="/it/documenti-legali/condizioni-generali-di-uso-e-vendita">Condizioni di vendita</a>&nbsp;&bull;&nbsp;<a href="/it/documenti-legali/guida-ai-comportamenti-corretti">Guida ai comportamenti corretti</a>&nbsp;&bull;&nbsp;<a href="/it/documenti-legali/informativa-cookie-policy">Cookies</a></p></div>
         <div class="col-md-12" tal:condition="python:context.REQUEST.get('LANGUAGE') != 'it'"><p><a href="/en/legal-documents/privacy-policy">Privacy Policy</a>&nbsp;&bull;&nbsp;<a href="/en/legal-documents/disclaimer-terms-of-use">Disclaimer</a>&nbsp;&bull;&nbsp;<a href="/en/legal-documents/general-conditions-of-use-and-sale">General Conditions of Use and Sale</a>&nbsp;&bull;&nbsp;<a href="/en/legal-documents/cookie-policy">Cookie policy</a></p></div>
       </div>
-      <div class="mrow">
-        <div class="col-md-12"><p>Marchi nazionali registrati: Umanot®, Finanza Scientifica®, Analisi Fisica®, Trader Scientifico®, ComplexTrader®.</p></div>
+      <div class="mrow" tal:define="lang request/LANGUAGE">
+        <div class="col-md-12"><p tal:condition="python:lang== 'it'">Marchi nazionali registrati: Umanot®, Finanza Scientifica®, Analisi Fisica®, Trader Scientifico®, ComplexTrader®.</p></div>
+        <div class="col-md-12"><p tal:condition="python:lang== 'en'">National registered trade marks: Umanot®, Scientific Finance®, Physical Analysis®, Scientific Trader®, ComplexTrader®.</p></div>
       </div>
       <div class="mrow">
-        <div class="col-md-12"><p>&copy 2015 UMANOT. All Rights Reserved.</p></div>
+        <div class="col-md-12"><p>&copy 2015 - 2016 UMANOT. All Rights Reserved.</p></div>
       </div>
     </div>
   </section>
