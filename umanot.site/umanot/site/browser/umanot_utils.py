@@ -103,7 +103,8 @@ class UmanotUtils(object):
                 drawdown = item['DD'],
                 win_op = item['WinOp'],
                 los_op = item['LosOp'],
-                profit_factor = item['ProfitFactor']
+                profit_factor = item['ProfitFactor'],
+                net_profit_open = item.get('NPOpenOp'),
             )
 
             results.append(info)

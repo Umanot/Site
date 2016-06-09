@@ -39,8 +39,6 @@ class PortfolioView(BrowserView):
         return self.context.Description()
 
     def get_data(self):
-        portfolios = ['portfolio-1', 'portfolio-2', 'portfolio-3']
-
         user = api.user.get_current()
 
         user_data = user.getProperty('description')
@@ -82,6 +80,7 @@ class PortfolioView(BrowserView):
                     hit_rate = 0
 
                 performance['net_profit'] = str(latest['net_profit']).split('.')[0]
+                performance['net_profit_open'] = str(latest['net_profit_open']).split('.')[0] if latest['net_profit_open'] else ''
                 performance['drawdown'] = obj.getLocation()  # latest['drawdown']
                 performance['hit_rate'] = '%0.1f%%' % hit_rate if hit_rate else ''
                 performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
@@ -104,6 +103,7 @@ class PortfolioView(BrowserView):
             text = obj.getText()
 
             text = text.replace('$NET_PROFIT', performance['net_profit'])
+            text = text.replace('$Net_Profit_Open', performance['net_profit_open'])
             text = text.replace('$DD_MAX', performance['drawdown'])
             text = text.replace('$HIT_RATE', performance['hit_rate'])
             text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
