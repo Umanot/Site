@@ -53,6 +53,8 @@ class PortfolioView(BrowserView):
 
         root_obj = api.portal.get_navigation_root(self.context)
 
+        import pdb; pdb.set_trace()
+
         for portfolio in portfolios:
             portfolio_id, portfolio_title = portfolio.split('|')
 
