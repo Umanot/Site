@@ -66,6 +66,7 @@
         <form method="post" tal:define="data view/get_data; errors view/errors" tal:attributes="action string:${context/absolute_url}/@@gestpay-checkout">
 
           <h3 class="mainSubHeading mainSubHeadingBlue"><span>Dati di fatturazione</span></h3>
+          <p style="font-size: 80%; margin-top: -8px">* i campi con l'asterisco sono obbligatori</p>
 
           <div class="mrow">
             <div class="col-md-6">
