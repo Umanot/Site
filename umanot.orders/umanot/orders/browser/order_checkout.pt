@@ -1,5 +1,31 @@
 <html metal:use-macro="here/main_template/macros/master" i18n:domain="complexlab.orders">
-  <head></head>
+  <head>
+    <metal:js fill-slot="javascript_head_slot">
+      <script>
+
+        $(function () {
+          var $country_select = $("#order-country");
+          console.log($country_select);
+          $country_select.change(function () {
+            var value = $(this).val();
+            var $partita_iva = $('#partita_iva_label');
+            var $province = $('#province_label');
+
+            if (value == 'IT') {
+              $partita_iva.text('Partita IVA o Codice Fiscale / Tax code *');
+              $province.text('Provincia *');
+            }
+            else {
+              $partita_iva.text('Partita IVA o Codice Fiscale / Tax code');
+              $province.text('Provincia');
+            }
+          })
+        });
+
+      </script>
+
+    </metal:js>
+  </head>
   <body>
     <div metal:fill-slot="main">
       <div tal:replace="structure provider:plone.abovecontenttitle" />
@@ -95,14 +121,14 @@
             </div>
             <div class="col-md-4">
               <div tal:define="field_name string:province" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
-                <label>Provincia</label>
+                <label id="province_label">Provincia</label>
                 <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
               </div>
             </div>
             <div class="col-md-6">
               <div tal:define="field_name string:country" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
                 <label>Stato *</label>
-                <select class="form-control" tal:attributes="name field_name">
+                <select id="order-country" class="form-control" tal:attributes="name field_name">
                   <option value="">--</option>
                   <tal:loop repeat="item view/countries">
                     <option tal:attributes="value python:item[0]; selected python:'selected' if item[0] == data.get('country') else None" tal:content="python:item[1]"></option>
@@ -116,7 +142,7 @@
             <div class="col-md-6">
               <div class="form-group">
                 <div tal:define="field_name string:tax_code" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
-                  <label>Partita IVA o Codice Fiscale / Tax code</label>
+                  <label id="partita_iva_label">Partita IVA o Codice Fiscale / Tax code</label>
                   <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
                 </div>
               </div>
