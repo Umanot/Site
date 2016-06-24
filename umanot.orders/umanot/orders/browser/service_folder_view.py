@@ -21,6 +21,8 @@ class ServiceFolderView(BrowserView):
         self.context = context
         self.request = request
         self.language = request.get('LANGUAGE')
+        self.limit = 2
+        self.min_date = request.get('min_date', '')
 
     @property
     def portal_catalog(self):

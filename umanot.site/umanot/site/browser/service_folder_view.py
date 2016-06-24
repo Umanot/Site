@@ -20,8 +20,6 @@ class ServiceFolderView(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        self.limit = 2
-        self.min_date = request.get('min_date', '')
 
     @property
     def portal_catalog(self):
