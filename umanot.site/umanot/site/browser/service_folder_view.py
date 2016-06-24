@@ -1,7 +1,9 @@
 import itertools
+
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
 from zope.interface import implements, Interface
+
 
 class IServiceFolderView(Interface):
     """
@@ -24,23 +26,26 @@ class ServiceFolderView(BrowserView):
     @property
     def portal_catalog(self):
         return getToolByName(self.context, 'portal_catalog')
-        
+
     @property
     def title(self):
         return self.context.Title()
-        
+
     @property
     def description(self):
         return self.context.Description()
-        
+
     @property
     def contents(self):
         brains = self.portal_catalog(
             portal_type = ["Document", "Article", "Folder"],
-            path = {'query':'/'.join(self.context.getPhysicalPath()) ,'depth': 1},
+            path = {'query': '/'.join(self.context.getPhysicalPath()), 'depth': 1},
             sort_on = 'getObjPositionInParent',
             review_state = 'published'
         )
+
+        import pdb;
+        pdb.set_trace()
 
         results = []
 
@@ -64,9 +69,6 @@ class ServiceFolderView(BrowserView):
         description = brain.Description
         obj = brain.getObject()
         portfolio_sql_id = 'portfolio-1' if 'P_ITA01' in brain.Title else 'portfolio-0'
-
-        import pdb;
-        pdb.set_trace()
 
         data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
@@ -107,25 +109,28 @@ class ServiceFolderView(BrowserView):
 
         return description
 
-
     def grouper(self, n, iterable, fillvalue=None):
         "Collect data into fixed-length chunks or blocks"
         # grouper(3, 'ABCDEFG', 'x') --> ABC DEF Gxx
         args = [iter(iterable)] * n
-        return izip_longest(fillvalue=fillvalue, *args)
+        return izip_longest(fillvalue = fillvalue, *args)
+
 
 class ZipExhausted(Exception):
     pass
+
 
 def izip_longest(*args, **kwds):
     # izip_longest('ABCD', 'xy', fillvalue='-') --> Ax By C- D-
     fillvalue = kwds.get('fillvalue')
     counter = [len(args) - 1]
+
     def sentinel():
         if not counter[0]:
             raise ZipExhausted
         counter[0] -= 1
         yield fillvalue
+
     fillers = itertools.repeat(fillvalue)
     iterators = [itertools.chain(it, sentinel(), fillers) for it in args]
     try:
