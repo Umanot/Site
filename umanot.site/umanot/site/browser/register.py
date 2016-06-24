@@ -493,6 +493,7 @@ class RegistrationForm(BaseRegistrationForm):
             # will never get displayed.
             return []
         portal = getUtility(ISiteRoot)
+        defaultFields['fullname'].field.required = True
         defaultFields = super(RegistrationForm, self).form_fields
         # Can the user actually set his/her own password?
         if portal.getProperty('validate_email', True):

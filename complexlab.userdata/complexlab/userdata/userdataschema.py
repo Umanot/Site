@@ -116,7 +116,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         value_type=schema.TextLine(required=False),
     )
     tos = schema.Bool(
-        title = u"Con la registrazione a ComplexLab accetti integralmente i seguenti documenti: Informativa sulla Privacy, Cookie Policy, Disclaimer, Condizioni generali di Uso e di Vendita, Guida ai comportamenti corretti (consultabili ai link in fondo a questa pagina)",
+        title = u"Con la registrazione a Umanot accetti integralmente i seguenti documenti: Informativa sulla privacy • Disclaimer • Condizioni di vendita • Guida ai comportamenti corretti • Cookies (consultabili ai link in fondo a questa pagina)",
         required = True
     )
     #===========================================================================
