@@ -2,6 +2,8 @@ import itertools
 
 from Products.CMFCore.utils import getToolByName
 from Products.Five import BrowserView
+from umanot.site.browser.umanot_utils import IUmanotUtils
+from zope.component import getUtility
 from zope.interface import implements, Interface
 
 
