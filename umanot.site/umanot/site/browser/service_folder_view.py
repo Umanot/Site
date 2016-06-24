@@ -63,7 +63,7 @@ class ServiceFolderView(BrowserView):
     def get_description(self, brain):
         description = brain.Description
         obj = brain.getObject()
-        portfolio_sql_id = obj.getLocation()
+        portfolio_sql_id = 'portfolio-1' if 'P_ITA01' in brain.Title else 'portfolio-0'
 
         data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
@@ -77,7 +77,7 @@ class ServiceFolderView(BrowserView):
 
             performance['net_profit'] = str(latest['net_profit']).split('.')[0]
             performance['net_profit_open'] = str(latest['net_profit_open']).split('.')[0] if latest['net_profit_open'] else ''
-            performance['drawdown'] = ''  # latest['drawdown']
+            performance['drawdown'] = obj.getLocation()  # latest['drawdown']
             performance['hit_rate'] = '%0.1f%%' % hit_rate if hit_rate else ''
             performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
 
