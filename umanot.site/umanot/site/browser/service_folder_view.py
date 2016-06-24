@@ -102,6 +102,8 @@ class ServiceFolderView(BrowserView):
         description = description.replace('$HIT_RATE', performance['hit_rate'])
         description = description.replace('$PROFIT_FACTOR', performance['profit_factor'])
 
+        import pdb; pdb.set_trace()
+
         return description
 
 
