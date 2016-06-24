@@ -111,7 +111,7 @@ class ServiceFolderView(BrowserView):
     def get_description(self, brain):
         description = brain.Description
         obj = brain.getObject()
-        portfolio_sql_id = 'portfolio-1' if 'P_ITA01' in brain.Title else 'portfolio-0'
+        portfolio_sql_id = '1' if 'P_ITA01' in brain.Title else '0'
 
         import pdb; pdb.set_trace()
 
