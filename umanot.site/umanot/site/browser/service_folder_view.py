@@ -18,6 +18,8 @@ class ServiceFolderView(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
+        self.limit = 2
+        self.min_date = request.get('min_date', '')
 
     @property
     def portal_catalog(self):
@@ -48,7 +50,7 @@ class ServiceFolderView(BrowserView):
 
             info = dict(
                 title = brain.Title,
-                description = brain.Description,
+                description = self.get_description(brain),
                 URL = brain.getURL()
             )
 
@@ -57,6 +59,51 @@ class ServiceFolderView(BrowserView):
         results = self.grouper(3, results, None)
 
         return results
+
+    def get_description(self, brain):
+        description = brain.Description
+        obj = brain.getObject()
+        portfolio_sql_id = obj.getLocation()
+
+        data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
+
+        performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
+        if data:
+            latest = data[0]
+            try:
+                hit_rate = float(latest['win_op']) / (float(latest['los_op']) + float(latest['win_op'])) * 100
+            except:
+                hit_rate = 0
+
+            performance['net_profit'] = str(latest['net_profit']).split('.')[0]
+            performance['net_profit_open'] = str(latest['net_profit_open']).split('.')[0] if latest['net_profit_open'] else ''
+            performance['drawdown'] = ''  # latest['drawdown']
+            performance['hit_rate'] = '%0.1f%%' % hit_rate if hit_rate else ''
+            performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
+
+            last_value = 0
+            counter = 0
+
+            data.reverse()
+
+            for x in data:
+                if counter:
+                    x['css_class'] = 'green' if float(x['net_profit']) >= last_value else 'red'
+                    last_value = float(x['net_profit'])
+                else:
+                    x['css_class'] = 'green'
+                counter += 1
+
+            data.reverse()
+
+        description = description.replace('$NET_PROFIT', performance['net_profit'])
+        description = description.replace('$Net_Profit_Open', performance['net_profit_open'])
+        description = description.replace('$DD_MAX', performance['drawdown'])
+        description = description.replace('$HIT_RATE', performance['hit_rate'])
+        description = description.replace('$PROFIT_FACTOR', performance['profit_factor'])
+
+        return description
+
 
     def grouper(self, n, iterable, fillvalue=None):
         "Collect data into fixed-length chunks or blocks"
