@@ -92,7 +92,8 @@
             </div>
             <div class="col-md-6">
               <div tal:define="field_name string:phone" tal:attributes="data-name field_name; class python:'field error' if field_name in errors else 'cofield'">
-                <label>Telefono / Phone *</label>
+                <label tal:condition="not:view/is_top">Telefono / Phone</label>
+                <label tal:condition="view/is_top">Cellulare / Mobile *</label>
                 <input class="form-control" type="text" tal:attributes="name field_name; value python:data.get(field_name)" />
               </div>
             </div>

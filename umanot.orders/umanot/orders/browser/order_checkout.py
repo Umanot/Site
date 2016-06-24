@@ -34,6 +34,9 @@ class OrderCheckout(BrowserView):
     def title(self):
         return self.context.Title()
 
+    def is_top(self):
+        return "Top" in self.context.Title()
+
     def get_data(self):
         results = {}
 

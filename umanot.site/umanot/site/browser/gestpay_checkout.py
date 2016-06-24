@@ -28,7 +28,9 @@ class GestpayCheckout(BrowserView):
         for k, v in self.request.form.iteritems():
             self.request.form[k] = v.strip()
 
-        mandatory = [] # ['lastname', 'address', 'zip_code', 'city', 'country', 'email', 'phone']
+        mandatory = ['lastname', 'address', 'zip_code', 'city', 'country', 'email']
+        if "Top" in self.context.Title():
+            mandatory.append('phone')
 
         for k in mandatory:
             if not self.request.form.get(k, '').strip():
