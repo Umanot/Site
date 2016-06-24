@@ -108,6 +108,8 @@ class ServiceFolderView(BrowserView):
         obj = brain.getObject()
         portfolio_sql_id = 'portfolio-1' if 'P_ITA01' in brain.Title else 'portfolio-0'
 
+        import pdb; pdb.set_trace()
+
         data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
         performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
