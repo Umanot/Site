@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<object name="portal_memberdata" meta_type="Plone Memberdata Tool">
+  <property name="company" type="string"></property>
+  <property name="role" type="string"></property>
+  <property name="professional_profile" type="string"></property>
+  <property name="city" type="string"></property>
+  <property name="website" type="string"></property>
+  <property name="phone" type="string"></property>
+  <property name="mobile" type="string"></property>
+  <property name="skype" type="string"></property>
+  <property name="linkedin" type="string"></property>
+  <property name="twitter" type="string"></property>
+  <property name="facebook" type="string"></property>
+  <property name="partita_iva" type="string"></property>
+  <property name="province" type="string"></property>
+  <property name="ente" type="string"></property>
+  <property name="competenze" type="lines"></property>
+  <property name="tos" type="boolean">False</property>
+</object>
