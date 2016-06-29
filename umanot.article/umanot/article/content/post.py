@@ -6,6 +6,7 @@ from DateTime.DateTime import DateTime
 from Products.ATContentTypes.content import folder, schemata
 from Products.ATContentTypes.content.document import ATDocumentSchema
 from Products.ATContentTypes.content.image import ATImageSchema
+from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
 
 try:
     from Products.LinguaPlone import public as atapi
