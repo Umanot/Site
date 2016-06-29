@@ -7,7 +7,13 @@ from Products.ATContentTypes.content import folder, schemata
 from Products.ATContentTypes.content.document import ATDocumentSchema
 from Products.ATContentTypes.content.image import ATImageSchema
 from Products.ATContentTypes.lib.imagetransform import ATCTImageTransform
-from Products.Archetypes import atapi
+
+try:
+    from Products.LinguaPlone import public as atapi
+except ImportError:
+    # No multilingual support
+    from Products.Archetypes import atapi
+
 from Products.CMFCore import permissions
 from Products.CMFCore.utils import getToolByName
 from mediatria.utils.browser.mediatria_utils import IMediatriaUtils
