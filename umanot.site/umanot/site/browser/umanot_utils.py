@@ -93,7 +93,7 @@ class UmanotUtils(object):
             price = item.get('Price')
 
             if price:
-                post = 'Buy at %.2f €' % float(price)
+                post = 'Buy at %.3f €' % float(price)
             else:
                 post = item['Post']
 
