@@ -2,6 +2,7 @@
 import copy
 import json
 from decimal import Decimal
+from random import randint
 from xml.etree.ElementTree import fromstring
 
 import oursql
@@ -79,6 +80,8 @@ class UmanotUtils(object):
         base_path = 'http://5.189.133.164/umanot/UmanotImage/'
 
         for item in json_data:
+            item['Price'] = randint(54000,58000) / 100
+
             has_image = bool(item['destimage'])
             dt = DateTime(item['Date'])
 
@@ -89,6 +92,13 @@ class UmanotUtils(object):
             else:
                 css_class = None
 
+            price = item.get('Price')
+
+            if price:
+                post = 'Buy at %.2f €' % float(price)
+            else:
+                post = item['Post']
+
             info = dict(
                 symbol = item['Symbol'],
                 share = item['Share'],
@@ -96,7 +106,7 @@ class UmanotUtils(object):
                 date = dt,
                 has_image = has_image,
                 image = base_path + '/' + item['destimage'] if has_image else '',
-                post = item['Post'],
+                post = post,
                 readable_date = '%02d/%02d/%d %02d:%02d:%02d' % (dt.day(), dt.month(), dt.year(), dt.hour(), dt.minute(), dt.second()),
                 css_class = css_class,
                 net_profit = item['NetProfit'] or 0,
