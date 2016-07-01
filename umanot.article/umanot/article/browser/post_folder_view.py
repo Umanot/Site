@@ -234,8 +234,8 @@ class PostFolderView(BrowserView):
 
         text = self.contents['data'][0]['text'] if self.contents else ''
 
-        text = text.replace('$NET_PROFIT', performance['net_profit'])
         text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
+        text = text.replace('$NET_PROFIT', performance['net_profit'])
         text = text.replace('$Net_Profit_Open', performance['net_profit_open'])
         text = text.replace('$DD_MAX', performance['drawdown'])
         text = text.replace('$HIT_RATE', performance['hit_rate'])
