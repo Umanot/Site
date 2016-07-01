@@ -80,8 +80,6 @@ class UmanotUtils(object):
         base_path = 'http://5.189.133.164/umanot/UmanotImage/'
 
         for item in json_data:
-            item['Price'] = randint(54000,58000) / 100
-
             has_image = bool(item['destimage'])
             dt = DateTime(item['Date'])
 
