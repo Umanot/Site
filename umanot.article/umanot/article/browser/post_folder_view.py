@@ -156,6 +156,7 @@ class PostFolderView(BrowserView):
                     hit_rate = 0
 
                 performance['net_profit'] = str(latest['net_profit']).split('.')[0]
+                performance['net_profit_percentuale'] = '%.1f%%' % (latest['net_profit'] / float(100000) * 100)
                 performance['drawdown'] = self.context.getLocation()  # latest['drawdown']
                 performance['hit_rate'] = '%0.1f%%' % hit_rate if hit_rate else ''
                 performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
@@ -179,6 +180,7 @@ class PostFolderView(BrowserView):
 
             text = placeholder['text']
 
+            text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
             text = text.replace('$NET_PROFIT', performance['net_profit'])
             text = text.replace('$DD_MAX', performance['drawdown'])
             text = text.replace('$HIT_RATE', performance['hit_rate'])
