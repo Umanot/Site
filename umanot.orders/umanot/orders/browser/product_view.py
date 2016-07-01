@@ -95,6 +95,7 @@ class ProductView(BrowserView):
                 hit_rate = 0
 
             performance['net_profit'] = str(latest['net_profit']).split('.')[0]
+            performance['net_profit_percentuale'] = '%.1f %%' % (latest['net_profit'] / float(100000) * 100)
             performance['net_profit_open'] = str(latest['net_profit_open']).split('.')[0] if latest['net_profit_open'] else ''
             performance['drawdown'] = self.context.getLocation()  # latest['drawdown']
             performance['hit_rate'] = '%0.1f%%' % hit_rate if hit_rate else ''
@@ -117,6 +118,7 @@ class ProductView(BrowserView):
 
         text = info['text']
 
+        text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
         text = text.replace('$NET_PROFIT', performance['net_profit'])
         text = text.replace('$Net_Profit_Open', performance['net_profit_open'])
         text = text.replace('$DD_MAX', performance['drawdown'])
