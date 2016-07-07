@@ -56,8 +56,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
     )
     mobile = schema.TextLine(
         title = _(u'label_mobile', default = u"Cellulare"),
-        description = _(u'help_mobile',
-                        default = u""),
+        description = u"IMPORTANTE: per chi volesse richiedere il servizio di Avvisi anche via SMS (Portfolio Silver TOP), è necessario inserire anche il numero di CELLULARE (SENZA codice nazionale)",
         required = False,
     )
     skype = schema.TextLine(
