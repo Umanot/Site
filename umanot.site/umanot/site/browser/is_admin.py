@@ -1,13 +1,7 @@
 # -*- coding: utf-8 -*-
-from Products.CMFCore.utils import getToolByName
-from complexlab3.site.browser.complexlab_utils import IComplexLabUtils
-
-from plone import api
-from zope.interface import implements, Interface
 
 from Products.Five import BrowserView
-from zope.component._api import getMultiAdapter, getUtility
-from zope.i18nmessageid import MessageFactory
+from plone import api
 
 
 class IsAdminView(BrowserView):
@@ -18,11 +12,8 @@ class IsAdminView(BrowserView):
     def __init__(self, context, request):
         self.context = context
         self.request = request
-        self.clab_utils = getUtility(IComplexLabUtils)
 
     def __call__(self):
-        mtool = getToolByName(self.context, 'portal_membership')
-
         user = api.user
 
         if user.is_anonymous():
