@@ -62,41 +62,41 @@
     <header id="header" i18n:domain="plone" tal:condition="not:ajax_load">
       <div tal:replace="structure provider:plone.portaltop" />
     </header>
-    
+
     <div id="headline-section">
       <metal:headline define-slot="headline_section_slot"></metal:headline>
     </div>
-        
+
     <div id="portal-columns">
 
       <div id="portal-column-content">
-      
+
           <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" tal:condition="not:ajax_load" />
-      
+
           <metal:block define-slot="content">
               <div metal:define-macro="content"
                   tal:define="show_border context/@@plone/showEditableBorder; show_border python:show_border and not ajax_load"
                   tal:attributes="class python:show_border and 'documentEditable' or ''">
-      
+
                   <div id="edit-bar"
                       tal:condition="show_border"
                       tal:content="structure provider:plone.contentviews" />
-      
+
                   <div metal:use-macro="context/global_statusmessage/macros/portal_message">
                    Status message
                   </div>
-      
+
                   <metal:slot define-slot="body">
                       <div id="content">
-      
+
                           <metal:header define-slot="header" tal:content="nothing">
                           Visual Header
                           </metal:header>
-      
+
                           <metal:bodytext define-slot="main">
-      
+
                            <div id="viewlet-above-content-title" tal:content="structure provider:plone.abovecontenttitle" tal:condition="not:ajax_load" />
-                           
+
                            <metal:title define-slot="content-title">
                                <metal:comment tal:content="nothing">
                                    If you write a custom title always use
@@ -106,9 +106,9 @@
                                    Generic KSS Title. Is rendered with class="documentFirstHeading".
                                </h1>
                            </metal:title>
-                           
+
                            <div id="viewlet-below-content-title" tal:content="structure provider:plone.belowcontenttitle" tal:condition="not:ajax_load" />
-      
+
                            <metal:description define-slot="content-description">
                                <metal:comment tal:content="nothing">
                                    If you write a custom description always use
@@ -118,26 +118,26 @@
                                    Generic KSS Description. Is rendered with class="documentDescription".
                                </div>
                            </metal:description>
-      
+
                            <div id="viewlet-above-content-body" tal:content="structure provider:plone.abovecontentbody" tal:condition="not:ajax_load" />
-                           
+
                            <div id="content-core">
                                <metal:text define-slot="content-core" tal:content="nothing">
                                    Page body text
                                </metal:text>
                            </div>
-                           
+
                            <div id="viewlet-below-content-body" tal:content="structure provider:plone.belowcontentbody" tal:condition="not:ajax_load" />
-      
+
                           </metal:bodytext>
                       </div>
                   </metal:slot>
-                  
+
               </div>
           </metal:block>
-      
+
           <div id="viewlet-below-content" tal:content="structure provider:plone.belowcontent" tal:condition="not:ajax_load" />
-          
+
       </div>
 
     </div>
@@ -159,9 +159,21 @@
   <tal:cond condition="here/portal_membership/isAnonymousUser">
     <tal:scripts replace="structure provider:plone.resourceregistries.scripts" />
   </tal:cond>
-    
+
   <metal:javascriptslot define-slot="javascript_head_slot" />
 
+<tal:not_admin tal:condition="not:context/is_admin">
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-62494199-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </tal:not_admin>
 </body>
 </html>
 </metal:page>

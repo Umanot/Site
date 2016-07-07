@@ -10,49 +10,49 @@
     interface=".interfaces.IThemeSpecific"
     type="zope.publisher.interfaces.browser.IBrowserSkinType"
     name="Umanot - SitePackage"
-    />
+  />
 
   <browser:resourceDirectory
     name="umanot.site.images"
     directory="images"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <browser:resourceDirectory
     name="umanot.site.stylesheets"
     directory="stylesheets"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <browser:resourceDirectory
     name="umanot.site.templates"
     directory="templates"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <browser:resourceDirectory
     name="umanot.site.javascripts"
     directory="javascripts"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <browser:resourceDirectory
     name="umanot.site.viewlets"
     directory="viewlets"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <browser:resourceDirectory
     name="umanot.site.fonts"
     directory="fonts"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <browser:resourceDirectory
     name="umanot.site.portlets"
     directory="portlets"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- resourceregistries -->
   <browser:viewlet
@@ -61,7 +61,7 @@
     template="viewlets/resourceregistries.pt"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- The portal header -->
   <browser:viewlet
@@ -70,7 +70,7 @@
     template="viewlets/portal_header.pt"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- The logo -->
   <browser:viewlet
@@ -79,7 +79,7 @@
     class=".viewlets.LogoViewlet"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- The global sections -->
   <browser:viewlet
@@ -88,7 +88,7 @@
     class=".viewlets.GlobalSectionsViewlet"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- The personal bar -->
   <browser:viewlet
@@ -97,7 +97,7 @@
     class=".viewlets.PersonalBarViewlet"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- The search box -->
   <browser:viewlet
@@ -106,7 +106,7 @@
     class=".viewlets.SearchBoxViewlet"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- The breadcrumbs -->
   <browser:viewlet
@@ -115,7 +115,7 @@
     class=".viewlets.PathBarViewlet"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- Render the document byline -->
   <browser:viewlet
@@ -124,7 +124,7 @@
     class=".viewlets.DocumentBylineViewlet"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- Render the keywords -->
   <browser:viewlet
@@ -134,7 +134,7 @@
     template="viewlets/keywords.pt"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- Render the document actions -->
   <browser:viewlet
@@ -143,7 +143,7 @@
     class=".viewlets.DocumentActionsViewlet"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- The related items -->
   <browser:viewlet
@@ -153,7 +153,7 @@
     view="plone.app.layout.globals.interfaces.IViewView"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- The site actions -->
   <browser:viewlet
@@ -162,7 +162,7 @@
     class=".viewlets.SiteActionsViewlet"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- Footer -->
   <browser:viewlet
@@ -172,7 +172,7 @@
     class=".viewlets.FooterViewlet"
     permission="zope.Public"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- Colophon -->
   <browser:viewlet
@@ -182,7 +182,7 @@
     class=".viewlets.ColophonViewlet"
     permission="zope.Public"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- The Message box -->
   <browser:viewlet
@@ -191,7 +191,7 @@
     class=".viewlets.MessageViewlet"
     permission="zope2.View"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- Umanot Related Items -->
   <browser:viewlet
@@ -201,7 +201,7 @@
     class=".viewlets.RelatedItemsViewlet"
     permission="zope.Public"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- LEADERBOARD TOP -->
   <browser:viewlet
@@ -211,7 +211,7 @@
     class=".viewlets.LeaderboardTopViewlets"
     permission="zope.Public"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- LEADERBOARD BOTTOM -->
   <browser:viewlet
@@ -221,7 +221,7 @@
     class=".viewlets.LeaderboardBottomViewlets"
     permission="zope.Public"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <!-- PORTLETS -->
   <include package="plone.app.portlets"/>
@@ -230,31 +230,31 @@
     portlet="plone.app.portlets.portlets.news.INewsPortlet"
     layer=".interfaces.IThemeSpecific"
     template="portlets/news.pt"
-    />
+  />
 
   <plone:portletRenderer
     portlet="plone.app.portlets.portlets.events.IEventsPortlet"
     layer=".interfaces.IThemeSpecific"
     template="portlets/events.pt"
-    />
+  />
 
   <plone:portletRenderer
     portlet="plone.app.portlets.portlets.calendar.ICalendarPortlet"
     layer=".interfaces.IThemeSpecific"
     template="portlets/calendar.pt"
-    />
+  />
 
   <plone:portletRenderer
     portlet="plone.app.portlets.portlets.search.ISearchPortlet"
     layer=".interfaces.IThemeSpecific"
     template="portlets/search.pt"
-    />
+  />
 
   <plone:portletRenderer
     portlet="plone.app.portlets.portlets.navigation.INavigationPortlet"
     class=".viewlets.Renderer"
     layer=".interfaces.IThemeSpecific"
-    />
+  />
 
   <class class="Products.ATContentTypes.interface.folder.IATFolder">
     <allow interface=".interfaces.IHomepageServices"/>
@@ -291,7 +291,7 @@
     class=".article_view.ArticleView"
     template="templates/article_view.pt"
     permission="zope2.View"
-    />
+  />
 
   <!-- Article Folder View  -->
   <browser:page
@@ -300,7 +300,7 @@
     class=".article_folder_view.ArticleFolderView"
     template="templates/article_folder_view.pt"
     permission="zope2.View"
-    />
+  />
 
   <!-- Homepage View  -->
   <browser:page
@@ -309,7 +309,7 @@
     class=".homepage_view.HomepageView"
     template="templates/homepage_view.pt"
     permission="zope2.View"
-    />
+  />
 
   <!-- Video Folder View  -->
   <browser:page
@@ -318,7 +318,7 @@
     class=".video_folder_view.VideoFolderView"
     template="templates/video_folder_view.pt"
     permission="zope2.View"
-    />
+  />
 
   <!-- Partner Folder View  -->
   <browser:page
@@ -327,7 +327,7 @@
     class=".partner_folder_view.PartnerFolderView"
     template="templates/partner_folder_view.pt"
     permission="zope2.View"
-    />
+  />
 
   <!-- Service Folder View  -->
   <browser:page
@@ -336,7 +336,7 @@
     class=".service_folder_view.ServiceFolderView"
     template="templates/service_folder_view.pt"
     permission="zope2.View"
-    />
+  />
 
   <!-- umanot Document View  -->
   <browser:page
@@ -345,7 +345,7 @@
     class=".umanot_document_view.UmanotDocumentView"
     template="templates/umanot_document_view.pt"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for="*"
@@ -353,7 +353,7 @@
     class=".followers.add_follower.AddFollower"
     template="followers/add_follower_page.pt"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for="*"
@@ -361,14 +361,14 @@
     class=".followers.follow_thanks.FollowThanksView"
     template="followers/follow_thanks.pt"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for="*"
     name="process-add-follower"
     class=".followers.process_add_follower.ProcessAddFollower"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for="*"
@@ -376,28 +376,28 @@
     class=".manage_ad.ManageAdView"
     template="templates/manage_ad.pt"
     permission="cmf.ManagePortal"
-    />
+  />
 
   <browser:page
     for="*"
     name="process-manage-ad"
     class=".process_manage_ad.ProcessManageAdView"
     permission="cmf.ManagePortal"
-    />
+  />
 
   <browser:page
     for="*"
     name="notify_followers"
     class=".followers.notify_followers.NotifyFollowers"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for="*"
     name="notify_update"
     class=".followers.notify_update.NotifyUpdate"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for=".followers.manage_followers.IManageFollowersView"
@@ -405,7 +405,7 @@
     class=".followers.manage_followers.ManageFollowersView"
     template="followers/manage_followers.pt"
     permission="cmf.ManagePortal"
-    />
+  />
 
   <browser:page
     for=".portfolio_view.IPortfolioView"
@@ -413,42 +413,42 @@
     class=".portfolio_view.PortfolioView"
     template="templates/portfolio_view.pt"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for="*"
     name="translate-contents"
     class=".translate_contents.TranslateContentsView"
     permission="cmf.ManagePortal"
-    />
+  />
 
   <browser:page
     for="*"
     name="gestpay-checkout"
     class=".gestpay_checkout.GestpayCheckout"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for="*"
     name="gp-fail"
     class=".gestpay_fail.GestpayFail"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for="*"
     name="gp-ok"
     class=".gestpay_ok.GestpayOk"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     for="*"
     name="gp-s2s"
     class=".gestpay_s2s.GestpayS2S"
     permission="zope2.View"
-    />
+  />
 
   <browser:page
     name="register"
@@ -456,7 +456,7 @@
     class=".register.RegistrationForm"
     layer=".interfaces.IThemeSpecific"
     permission="cmf.AddPortalMember"
-    />
+  />
 
   <browser:page
     name="new-user"
@@ -464,6 +464,12 @@
     class=".register.AddUserForm"
     layer=".interfaces.IThemeSpecific"
     permission="plone.app.controlpanel.UsersAndGroups"
-    />
+  />
 
+  <browser:page
+    for="*"
+    name="is_admin"
+    class=".is_admin.IsAdminView"
+    permission="zope2.View"
+  />
 </configure>
