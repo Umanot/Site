@@ -42,19 +42,19 @@ msgstr "METHODOLOGY"
 
 #: ./browser/post_folder_view.pt:92
 msgid "OPERAZIONI"
-msgstr "OPERATIONS"
+msgstr "TRADES"
 
 #: ./browser/post_folder_view.pt:96
 msgid "OPERAZIONI in PROFITTO - PERDITA"
-msgstr "OPERATIONS WITH PROFITS/LOSSES"
+msgstr "TRADES WITH PROFITS / LOSSES"
 
 #: ./browser/post_folder_view.pt:100
 msgid "Operazioni pendenti da chiudere"
-msgstr "Open trades"
+msgstr "OPEN TRADES"
 
 #: ./browser/post_folder_view.pt:108
 msgid "SW e Dati"
-msgstr "SW and data"
+msgstr "SW AND DATA"
 
 #: ./browser/article_view.pt:86
 msgid "Segui questo articolo"
