@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2016-07-27 06:36+0000\n"
+"POT-Creation-Date: 2016-07-27 06:39+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -96,6 +96,11 @@ msgstr "Company Role"
 #. Default: "Skype"
 #: ./userdataschema.py:56
 msgid "label_skype"
+msgstr ""
+
+#. Default: "Con la registrazione a Umanot accetti integralmente i seguenti documenti: Informativa sulla privacy • Disclaimer • Condizioni di vendita • Guida ai comportamenti corretti • Cookies (consultabili ai link in fondo a questa pagina)"
+#: ./userdataschema.py:95
+msgid "label_tos"
 msgstr ""
 
 #. Default: "Twitter"
