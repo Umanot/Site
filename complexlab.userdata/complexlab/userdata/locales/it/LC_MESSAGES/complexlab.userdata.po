@@ -1,0 +1,100 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2016-07-27 06:33+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: en\n"
+"Language-Name: English\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: DOMAIN\n"
+
+#. Default: "Conferma l'indirizzo di posta elettronica"
+#: ./userdataschema.py:84
+msgid "email_confirm"
+msgstr ""
+
+#. Default: "Inserisci massimo 5 competenze, una per riga"
+#: ./userdataschema.py:89
+msgid "help_competenze"
+msgstr ""
+
+#: ./userdataschema.py:40
+msgid "help_cv"
+msgstr ""
+
+#. Default: "Azienda"
+#: ./userdataschema.py:32
+msgid "label_company"
+msgstr ""
+
+#. Default: "Competenze"
+#: ./userdataschema.py:88
+msgid "label_competenze"
+msgstr ""
+
+#. Default: "Curriculum Vitae"
+#: ./userdataschema.py:39
+msgid "label_cv"
+msgstr ""
+
+#. Default: "Cancella Curriculum Vitae"
+#: ./userdataschema.py:44
+msgid "label_delete_cv"
+msgstr ""
+
+#. Default: "Convenzione"
+#: ./userdataschema.py:80
+msgid "label_ente"
+msgstr ""
+
+#. Default: "Facebook"
+#: ./userdataschema.py:68
+msgid "label_facebook"
+msgstr ""
+
+#. Default: "LinkedIn"
+#: ./userdataschema.py:60
+msgid "label_linkedin"
+msgstr ""
+
+#. Default: "Cellulare"
+#: ./userdataschema.py:51
+msgid "label_mobile"
+msgstr ""
+
+#. Default: "Partita IVA"
+#: ./userdataschema.py:72
+msgid "label_partita_iva"
+msgstr ""
+
+#. Default: "Telefono"
+#: ./userdataschema.py:47
+msgid "label_phone"
+msgstr ""
+
+#. Default: "Provincia"
+#: ./userdataschema.py:76
+msgid "label_province"
+msgstr ""
+
+#. Default: "Ruolo"
+#: ./userdataschema.py:36
+msgid "label_role"
+msgstr ""
+
+#. Default: "Skype"
+#: ./userdataschema.py:56
+msgid "label_skype"
+msgstr ""
+
+#. Default: "Twitter"
+#: ./userdataschema.py:64
+msgid "label_twitter"
+msgstr ""
+
