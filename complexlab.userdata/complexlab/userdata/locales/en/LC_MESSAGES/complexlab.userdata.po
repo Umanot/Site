@@ -17,12 +17,12 @@ msgstr ""
 #. Default: "IMPORTANTE: per chi volesse richiedere il servizio di Avvisi anche via SMS (Portfolio Silver TOP), è necessario inserire anche il numero di CELLULARE (SENZA codice internazionale)"
 #: ./userdataschema.py:52
 msgid "desc_mobile"
-msgstr ""
+msgstr "IMPORTANT: if you wish to receive also SMS trade signals (Portfolio Silver Top service level), we need your mobile number (WITH international code)"
 
 #. Default: "Conferma l'indirizzo di posta elettronica"
 #: ./userdataschema.py:84
 msgid "email_confirm"
-msgstr ""
+msgstr "Confirm your email address"
 
 #. Default: "Inserisci massimo 5 competenze, una per riga"
 #: ./userdataschema.py:89
@@ -36,7 +36,7 @@ msgstr ""
 #. Default: "Azienda"
 #: ./userdataschema.py:32
 msgid "label_company"
-msgstr ""
+msgstr "Company"
 
 #. Default: "Competenze"
 #: ./userdataschema.py:88
@@ -71,27 +71,27 @@ msgstr ""
 #. Default: "Cellulare"
 #: ./userdataschema.py:51
 msgid "label_mobile"
-msgstr ""
+msgstr "Mobile"
 
 #. Default: "Partita IVA"
 #: ./userdataschema.py:72
 msgid "label_partita_iva"
-msgstr ""
+msgstr "VAT Number"
 
 #. Default: "Telefono"
 #: ./userdataschema.py:47
 msgid "label_phone"
-msgstr ""
+msgstr "Phone"
 
 #. Default: "Provincia"
 #: ./userdataschema.py:76
 msgid "label_province"
-msgstr ""
+msgstr "Province"
 
 #. Default: "Ruolo"
 #: ./userdataschema.py:36
 msgid "label_role"
-msgstr ""
+msgstr "Company Role"
 
 #. Default: "Skype"
 #: ./userdataschema.py:56
