@@ -101,7 +101,7 @@ msgstr ""
 #. Default: "Con la registrazione a Umanot accetti integralmente i seguenti documenti: Informativa sulla privacy • Disclaimer • Condizioni di vendita • Guida ai comportamenti corretti • Cookies (consultabili ai link in fondo a questa pagina)"
 #: ./userdataschema.py:95
 msgid "label_tos"
-msgstr ""
+msgstr "By registering yourself in UMANOT, you entirely accept folllowing documents: Privacy policy • Disclaimer • Sales conditions • Correct behaviour code • Cookies (you may check all documents here below in this page)."
 
 #. Default: "Twitter"
 #: ./userdataschema.py:64
