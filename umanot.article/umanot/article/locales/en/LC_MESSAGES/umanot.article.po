@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2015-10-30 11:34+0000\n"
+"POT-Creation-Date: 2016-07-27 06:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -14,15 +14,15 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: DOMAIN\n"
 
-#: ./browser/post_folder_view.pt:152
+#: ./browser/post_folder_view.pt:121
 msgid "COMMENTO:"
 msgstr "COMMENT:"
 
-#: ./browser/post_folder_view.pt:121
+#: ./browser/post_folder_view.pt:88
 msgid "DATI"
 msgstr "TIME FRAME"
 
-#: ./browser/post_folder_view.pt:71
+#: ./browser/post_folder_view.pt:67
 msgid "LEGENDA"
 msgstr "LEGEND"
 
@@ -36,25 +36,25 @@ msgstr "Learn more"
 msgid "Leggi"
 msgstr "Read"
 
-#: ./browser/post_folder_view.pt:137
+#: ./browser/post_folder_view.pt:104
 msgid "METODOLOGIA"
 msgstr "METHODOLOGY"
 
-#: ./browser/post_folder_view.pt:125
+#: ./browser/post_folder_view.pt:92
 msgid "OPERAZIONI"
 msgstr "OPERATIONS"
 
-#: ./browser/post_folder_view.pt:129
+#: ./browser/post_folder_view.pt:96
 msgid "OPERAZIONI in PROFITTO - PERDITA"
 msgstr "OPERATIONS WITH PROFITS/LOSSES"
 
-#: ./browser/post_folder_view.pt:133
-msgid "OPERAZIONI in PROFITTO - PERDITA - (quasi)PAREGGIO"
-msgstr "OPERATIONS WITH PROFITS/LOSSES/BREAKEVEN"
+#: ./browser/post_folder_view.pt:100
+msgid "Operazioni pendenti da chiudere"
+msgstr ""
 
-#: ./browser/post_folder_view.pt:141
-msgid "SW"
-msgstr "SOFTWARE"
+#: ./browser/post_folder_view.pt:108
+msgid "SW e Dati"
+msgstr ""
 
 #: ./browser/article_view.pt:86
 msgid "Segui questo articolo"
@@ -65,7 +65,7 @@ msgstr "Follow this topic"
 msgid "Sei interessato?"
 msgstr "Are you interested?"
 
-#: ./browser/post_folder_view.pt:117
+#: ./browser/post_folder_view.pt:84
 msgid "TITOLO"
 msgstr "STOCK"
 
