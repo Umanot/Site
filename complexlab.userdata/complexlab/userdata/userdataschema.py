@@ -92,7 +92,7 @@ class IEnhancedUserDataSchema(IUserDataSchema):
         value_type=schema.TextLine(required=False),
     )
     tos = schema.Bool(
-        title = u"Con la registrazione a Umanot accetti integralmente i seguenti documenti: Informativa sulla privacy • Disclaimer • Condizioni di vendita • Guida ai comportamenti corretti • Cookies (consultabili ai link in fondo a questa pagina)",
+        title = _(u'label_tos', default = u"Con la registrazione a Umanot accetti integralmente i seguenti documenti: Informativa sulla privacy • Disclaimer • Condizioni di vendita • Guida ai comportamenti corretti • Cookies (consultabili ai link in fondo a questa pagina)"),
         required = True
     )
     #===========================================================================
