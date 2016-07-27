@@ -50,11 +50,11 @@ msgstr "OPERATIONS WITH PROFITS/LOSSES"
 
 #: ./browser/post_folder_view.pt:100
 msgid "Operazioni pendenti da chiudere"
-msgstr ""
+msgstr "Open trades"
 
 #: ./browser/post_folder_view.pt:108
 msgid "SW e Dati"
-msgstr ""
+msgstr "SW and data"
 
 #: ./browser/article_view.pt:86
 msgid "Segui questo articolo"
