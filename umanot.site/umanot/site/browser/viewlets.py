@@ -144,11 +144,20 @@ class MessageViewlet(ViewletBase):
 
     def get_content(self):
         catalog = getToolByName(self.context, 'portal_catalog')
+
         brains = catalog(
             portal_type = "Document",
             object_provides = IMessageBox.__identifier__,
+            getId = self.context.getId(),
             review_state = 'published'
         )
+
+        if not brains:
+            brains = catalog(
+                portal_type = "Document",
+                object_provides = IMessageBox.__identifier__,
+                review_state = 'published'
+            )
 
         if brains:
             obj = brains[0].getObject()
