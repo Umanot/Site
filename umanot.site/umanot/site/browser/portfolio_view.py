@@ -71,8 +71,6 @@ class PortfolioView(BrowserView):
 
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
-            import pdb; pdb.set_trace()
-
             performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
             if data:
                 latest = data[0]
