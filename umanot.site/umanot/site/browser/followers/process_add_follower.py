@@ -40,6 +40,10 @@ class ProcessAddFollower(BrowserView):
             self.context.plone_log("Skipping spam")
             return
 
+        if self.request.form.get('notes') and self.request.form['notes'].strip() == '1':
+            self.context.plone_log("Skipping spam")
+            return
+
         for k, v in self.request.form.iteritems():
             if k in required_input and not v.strip():
                 errors[k] = u"Questo campo è obbligatorio"
