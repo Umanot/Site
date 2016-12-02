@@ -147,7 +147,7 @@ class PostFolderView(BrowserView):
             portfolio_sql_id = '0'
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
-            performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
+            performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'win_op': None}
             if data:
                 latest = data[0]
                 try:
@@ -161,6 +161,7 @@ class PostFolderView(BrowserView):
                 performance['drawdown'] = self.context.getLocation()  # latest['drawdown']
                 performance['hit_rate'] = '%0.1f%%' % hit_rate if hit_rate else ''
                 performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
+                performance['win_op'] = '%.1f' % latest['win_op'] if latest['win_op'] else '--'
 
                 last_value = 0
                 counter = 0
@@ -187,6 +188,7 @@ class PostFolderView(BrowserView):
             text = text.replace('$DD_MAX', performance['drawdown'])
             text = text.replace('$HIT_RATE', performance['hit_rate'])
             text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
+            text = text.replace('$WIN_OP', performance['win_op'])
 
             info = dict(
                 text = text,
@@ -205,7 +207,7 @@ class PostFolderView(BrowserView):
         portfolio_sql_id = 'portfolio-0'
         data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
-        performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None}
+        performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'win_op': None}
         if data:
             latest = data[0]
             try:
@@ -221,6 +223,7 @@ class PostFolderView(BrowserView):
             performance['drawdown'] = self.context.getLocation()  # latest['drawdown']
             performance['hit_rate'] = '%0.1f %%' % hit_rate if hit_rate else ''
             performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
+            performance['win_op'] = '%.1f' % latest['win_op'] if latest['win_op'] else '--'
 
             last_value = 0
             counter = 0
@@ -246,6 +249,7 @@ class PostFolderView(BrowserView):
         text = text.replace('$DD_MAX', performance['drawdown'])
         text = text.replace('$HIT_RATE', performance['hit_rate'])
         text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
+        text = text.replace('$WIN_OP', performance['win_op'])
 
         info = dict(
             text = text,
