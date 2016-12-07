@@ -194,6 +194,10 @@ class PostFolderView(BrowserView):
             text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
             text = text.replace('$WIN_OP', performance['win_op'])
 
+            text = text.replace('$TOTAL_OP', str(performance['total_op']))
+            text = text.replace('$LOSE_OP', str(performance['lose_op']))
+            text = text.replace('$NP_OPEN', str(performance['np_open']))
+
             info = dict(
                 text = text,
                 data = data,
