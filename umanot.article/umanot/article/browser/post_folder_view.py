@@ -184,6 +184,9 @@ class PostFolderView(BrowserView):
 
                 data.reverse()
 
+            m = user.get_current()
+            if m.getId() == 'choco':
+                import pdb; pdb.set_trace()
 
 
             text = placeholder['text']
