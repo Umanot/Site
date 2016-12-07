@@ -227,8 +227,7 @@ class PostFolderView(BrowserView):
             performance['net_profit_open'] = str(latest['net_profit_open']).split('.')[0] if latest['net_profit_open'] else ''
             performance['drawdown'] = self.context.getLocation()  # latest['drawdown']
             performance['hit_rate'] = '%0.1f %%' % hit_rate if hit_rate else ''
-            performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor' \
-                                                                                      ''] else '--'
+            performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
             # Added the following 4 variables in order to display them in the site- by Akbar - 7/12/2016
             # performance['win_op'] = '%.1f' % int(latest['win_op']) if int(latest['win_op']) else '--'
             performance['total_op'] = latest['tot_op'] if latest['tot_op'] else '--'
