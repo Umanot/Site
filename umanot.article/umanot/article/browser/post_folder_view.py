@@ -147,7 +147,7 @@ class PostFolderView(BrowserView):
             portfolio_sql_id = '0'
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
-            performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'win_op': None}
+            performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None , 'lose_op': None, 'np_open': None}
             if data:
                 latest = data[0]
                 try:
@@ -161,7 +161,12 @@ class PostFolderView(BrowserView):
                 performance['drawdown'] = self.context.getLocation()  # latest['drawdown']
                 performance['hit_rate'] = '%0.1f%%' % hit_rate if hit_rate else ''
                 performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
-                performance['win_op'] = '%.1f' % latest['win_op'] if latest['win_op'] else '--'
+                #Added the following 4 variables in order to display them in the site- by Akbar - 7/12/2016
+                #performance['win_op'] = '%.1f' % int(latest['win_op']) if int(latest['win_op']) else '--'
+                performance['total_op'] = int(latest['tot_op']) if int(latest['tot_op']) else '--'
+                performance['win_op'] = int(latest['win_op']) if int(latest['win_op']) else '--'
+                performance['lose_op'] = int(latest['los_op']) if int(latest['los_op']) else '--'
+                performance['np_open'] = int(latest['net_profit_open']) if int(latest['net_profit_open']) else '--'
 
                 last_value = 0
                 counter = 0
@@ -207,7 +212,7 @@ class PostFolderView(BrowserView):
         portfolio_sql_id = 'portfolio-0'
         data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
-        performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'win_op': None}
+        performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None , 'lose_op': None, 'np_open': None}
         if data:
             latest = data[0]
             try:
@@ -223,7 +228,12 @@ class PostFolderView(BrowserView):
             performance['drawdown'] = self.context.getLocation()  # latest['drawdown']
             performance['hit_rate'] = '%0.1f %%' % hit_rate if hit_rate else ''
             performance['profit_factor'] = '%.1f' % latest['profit_factor'] if latest['profit_factor'] else '--'
-            performance['win_op'] = '%.1f' % latest['win_op'] if latest['win_op'] else '--'
+            # Added the following 4 variables in order to display them in the site- by Akbar - 7/12/2016
+            # performance['win_op'] = '%.1f' % int(latest['win_op']) if int(latest['win_op']) else '--'
+            performance['total_op'] = int(latest['tot_op']) if int(latest['tot_op']) else '--'
+            performance['win_op'] = int(latest['win_op']) if int(latest['win_op']) else '--'
+            performance['lose_op'] = int(latest['los_op']) if int(latest['los_op']) else '--'
+            performance['np_open'] = int(latest['net_profit_open']) if int(latest['net_profit_open']) else '--'
 
             last_value = 0
             counter = 0
@@ -249,7 +259,11 @@ class PostFolderView(BrowserView):
         text = text.replace('$DD_MAX', performance['drawdown'])
         text = text.replace('$HIT_RATE', performance['hit_rate'])
         text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
+        # Accepted the following 4 variables as text in order to display them in the site- by Akbar - 7/12/2016
+        text = text.replace('$TOTAL_OP', performance['total_op'])
         text = text.replace('$WIN_OP', performance['win_op'])
+        text = text.replace('$LOSE_OP', performance['lose_op'])
+        text = text.replace('$NP_OPEN', performance['np_open'])
 
         info = dict(
             text = text,

@@ -111,6 +111,7 @@ class UmanotUtils(object):
                 drawdown = item['DD'],
                 win_op = item['WinOp'],
                 los_op = item['LosOp'],
+                tot_op = item['NumOp'],#Added by Akbar on 7/12/2016
                 profit_factor = item['ProfitFactor'],
                 net_profit_open = item.get('NPOpenOp'),
             )
