@@ -113,7 +113,7 @@ class UmanotUtils(object):
                 los_op = item['LosOp'],
                 tot_op = item['NumOp'],#Added by Akbar on 7/12/2016
                 profit_factor = item['ProfitFactor'],
-                net_profit_open = item.get('NPOpenOp'),
+                net_profit_open = item['NPOpenOP'] or 0 #Corrected by Akbar on 8/12/2016
             )
 
             results.append(info)
