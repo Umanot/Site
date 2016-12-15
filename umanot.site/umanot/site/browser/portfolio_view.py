@@ -109,6 +109,8 @@ class PortfolioView(BrowserView):
 
             text = obj.getText()
 
+            import pdb; pdb.set_trace()
+
             text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
             text = text.replace('$NET_PROFIT', performance['net_profit'])
             text = text.replace('$TOTAL_EQUITY', performance['total_equity'])
