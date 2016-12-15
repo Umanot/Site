@@ -184,8 +184,6 @@ class PostFolderView(BrowserView):
 
                 data.reverse()
 
-            import pdb; pdb.set_trace()
-
             text = placeholder['text']
 
             text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
