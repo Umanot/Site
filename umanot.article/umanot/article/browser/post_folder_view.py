@@ -203,7 +203,7 @@ class PostFolderView(BrowserView):
             text = text.replace('$LOSE_OP', str(performance['lose_op']))
             # text = text.replace('$NP_OPEN', str(performance['np_open']))
 
-            placeholder['operazioni'] = text = text.replace('$TOTAL_OP', str(performance['total_op']))
+            placeholder['operazioni'] = placeholder['operazioni'].replace('$TOTAL_OP', str(performance['total_op']))
 
             info = dict(
                 text = text,
