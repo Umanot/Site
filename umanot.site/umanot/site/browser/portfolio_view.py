@@ -116,10 +116,10 @@ class PortfolioView(BrowserView):
             text = text.replace('$HIT_RATE', performance['hit_rate'])
             text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
             # Accepted the following 4 variables as text in order to display them in the site- by Akbar - 7/12/2016
-            text = text.replace('$TOTAL_OP', performance['total_op'])
-            text = text.replace('$WIN_OP', performance['win_op'])
-            text = text.replace('$LOSE_OP', performance['lose_op'])
-            text = text.replace('$NET_PROFIT_OPEN', performance['net_profit_open'])
+            text = text.replace('$TOTAL_OP', str(performance['total_op']))
+            text = text.replace('$WIN_OP', str(performance['win_op']))
+            text = text.replace('$LOSE_OP', str(performance['lose_op']))
+            text = text.replace('$NET_PROFIT_OPEN', str(performance['net_profit_open']))
 
             info = dict(
                 title = portfolio_title,
