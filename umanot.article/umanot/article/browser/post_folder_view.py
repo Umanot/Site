@@ -184,7 +184,7 @@ class PostFolderView(BrowserView):
 
                 data.reverse()
 
-
+            import pdb; pdb.set_trace()
 
             text = placeholder['text']
 
