@@ -196,7 +196,7 @@ class PostFolderView(BrowserView):
             # Accepted the following 4 variables as text in order to display them in the site- by Akbar - 7/12/2016
             # text = text.replace('$TOTAL_OP', performance['total_op'])
             text = text.replace('$WIN_OP', str(performance['win_op']))
-            # text = text.replace('$LOSE_OP', performance['lose_op'])
+            text = text.replace('$LOSE_OP', str(performance['lose_op']))
 
 
             text = text.replace('$TOTAL_OP', str(performance['total_op']))
@@ -204,6 +204,8 @@ class PostFolderView(BrowserView):
             # text = text.replace('$NP_OPEN', str(performance['np_open']))
 
             placeholder['operazioni'] = placeholder['operazioni'].replace('$TOTAL_OP', str(performance['total_op']))
+            placeholder['operazioni_12'] = placeholder['operazioni_12'].replace('$WIN_OP', str(performance['win_op'])).replace('$LOSE_OP', str(performance['lose_op']))
+            placeholder['operazioni_1x2'] = placeholder['operazioni_1x2']
 
             info = dict(
                 text = text,
