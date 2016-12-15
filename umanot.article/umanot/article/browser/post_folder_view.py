@@ -184,8 +184,6 @@ class PostFolderView(BrowserView):
 
                 data.reverse()
 
-            import pdb; pdb.set_trace()
-
             text = placeholder['text']
 
             text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
@@ -202,7 +200,7 @@ class PostFolderView(BrowserView):
 
             text = text.replace('$TOTAL_OP', str(performance['total_op']))
             text = text.replace('$LOSE_OP', str(performance['lose_op']))
-            text = text.replace('$NP_OPEN', str(performance['np_open']))
+            text = text.replace('$NP_OPEN', str(performance['net_profit_open']))
 
             info = dict(
                 text = text,
