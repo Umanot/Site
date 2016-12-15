@@ -187,6 +187,7 @@ class PostFolderView(BrowserView):
             text = placeholder['text']
 
             text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
+            text = text.replace('$NET_PROFIT_OPEN', str(performance['net_profit_open']))
             text = text.replace('$NET_PROFIT', performance['net_profit'])
             text = text.replace('$TOTAL_EQUITY', performance['total_equity'])
             text = text.replace('$DD_MAX', performance['drawdown'])
@@ -196,11 +197,11 @@ class PostFolderView(BrowserView):
             # text = text.replace('$TOTAL_OP', performance['total_op'])
             text = text.replace('$WIN_OP', str(performance['win_op']))
             # text = text.replace('$LOSE_OP', performance['lose_op'])
-            text = text.replace('$NET_PROFIT_OPEN', str(performance['net_profit_open']))
+
 
             text = text.replace('$TOTAL_OP', str(performance['total_op']))
             text = text.replace('$LOSE_OP', str(performance['lose_op']))
-            text = text.replace('$NP_OPEN', str(performance['net_profit_open']))
+            # text = text.replace('$NP_OPEN', str(performance['np_open']))
 
             info = dict(
                 text = text,
