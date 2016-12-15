@@ -144,8 +144,6 @@ class PostFolderView(BrowserView):
 
         placeholder = brains[0].getObject().getInfo()
 
-        import pdb; pdb.set_trace()
-
         try:
             portfolio_sql_id = '0'
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
@@ -197,9 +195,9 @@ class PostFolderView(BrowserView):
             text = text.replace('$HIT_RATE', performance['hit_rate'])
             text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
             # Accepted the following 4 variables as text in order to display them in the site- by Akbar - 7/12/2016
-            text = text.replace('$TOTAL_OP', performance['total_op'])
+            # text = text.replace('$TOTAL_OP', performance['total_op'])
             text = text.replace('$WIN_OP', performance['win_op'])
-            text = text.replace('$LOSE_OP', performance['lose_op'])
+            # text = text.replace('$LOSE_OP', performance['lose_op'])
             text = text.replace('$NET_PROFIT_OPEN', performance['net_profit_open'])
 
             text = text.replace('$TOTAL_OP', str(performance['total_op']))
