@@ -148,7 +148,7 @@ class PostFolderView(BrowserView):
             portfolio_sql_id = '0'
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
-            performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None, 'lose_op': None, 'net_profit_open': None}
+            performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None, 'lose_op': None, 'open_op': None,'net_profit_open': None}
             if data:
                 latest = data[0]
                 try:
@@ -167,6 +167,8 @@ class PostFolderView(BrowserView):
                 performance['total_op'] = latest['tot_op'] if latest['tot_op'] else '--'
                 performance['win_op'] = latest['win_op'] if latest['win_op'] else '--'
                 performance['lose_op'] = latest['los_op'] if latest['los_op'] else '--'
+                # Added one more variable(open_op) in order to display them in the site- by Akbar - 16/12/2016
+                performance['open_op'] = latest['open_op'] if latest['open_op'] else '--'
                 performance['net_profit_open'] = str(latest['net_profit_open']).split('.')[0] if latest['net_profit_open'] else ''
 
                 last_value = 0
@@ -201,11 +203,12 @@ class PostFolderView(BrowserView):
 
             text = text.replace('$TOTAL_OP', str(performance['total_op']))
             text = text.replace('$LOSE_OP', str(performance['lose_op']))
-            # text = text.replace('$NP_OPEN', str(performance['np_open']))
+            # Added one more variable(open_op) as text in order to display them in the site- by Akbar - 16/12/2016
+            text = text.replace('$OPEN_OP', str(performance['open_op']))
 
             placeholder['operazioni'] = placeholder['operazioni'].replace('$TOTAL_OP', str(performance['total_op']))
             placeholder['operazioni_12'] = placeholder['operazioni_12'].replace('$WIN_OP', str(performance['win_op'])).replace('$LOSE_OP', str(performance['lose_op']))
-            placeholder['operazioni_1x2'] = placeholder['operazioni_1x2']  # @ AKBAR PUT THE OPEN_OP REPLACEMENTE HERE. REMEMBER TO CAST NUMBER TO STRING
+            placeholder['operazioni_1x2'] = placeholder['operazioni_1x2'].replace('$OPEN_OP', str(performance['open_op']))  # @ AKBAR PUT THE OPEN_OP REPLACEMENTE HERE. REMEMBER TO CAST NUMBER TO STRING
 
             info = dict(
                 text = text,
@@ -224,7 +227,7 @@ class PostFolderView(BrowserView):
         portfolio_sql_id = 'portfolio-0'
         data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
-        performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None , 'lose_op': None, 'net_profit_open': None}
+        performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None , 'lose_op': None, 'open_op': None, 'net_profit_open': None}
         if data:
             latest = data[0]
             try:
@@ -243,6 +246,8 @@ class PostFolderView(BrowserView):
             performance['total_op'] = latest['tot_op'] if latest['tot_op'] else '--'
             performance['win_op'] = latest['win_op'] if latest['win_op'] else '--'
             performance['lose_op'] = latest['los_op'] if latest['los_op'] else '--'
+            # Added one more variable(open_op) in order to display them in the site- by Akbar - 16/12/2016
+            performance['open_op'] = latest['open_op'] if latest['open_op'] else '--'
             performance['net_profit_open'] = str(latest['net_profit_open']).split('.')[0] if latest['net_profit_open'] else ''
 
             last_value = 0
@@ -272,6 +277,8 @@ class PostFolderView(BrowserView):
         text = text.replace('$TOTAL_OP', str(performance['total_op']))
         text = text.replace('$WIN_OP', str(performance['win_op']))
         text = text.replace('$LOSE_OP', str(performance['lose_op']))
+        # Added one more variable(open_op) as text in order to display them in the site- by Akbar - 16/12/2016
+        text = text.replace('$OPEN_OP', str(performance['open_op']))
         text = text.replace('$NET_PROFIT_OPEN', str(performance['net_profit_open']))
 
         info = dict(
