@@ -114,7 +114,7 @@ class UmanotUtils(object):
                 tot_op = item['NumOp'],#Added by Akbar on 7/12/2016
                 profit_factor = item['ProfitFactor'],
                 net_profit_open = item['NPOpenOP'] or 0, #Corrected by Akbar on 8/12/2016
-                open_op=item['OpenOP'] or 0,  # Added by Akbar on 16/12/2016
+                open_op=item['OpenOp'] or 0,  # Added by Akbar on 16/12/2016
                 total_number_of_trades = item.get('NumOP'),
             )
 
