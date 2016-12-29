@@ -151,4 +151,6 @@ $(function () {
     if($elem.length > 0) {
         $('html,body').animate({scrollTop: $elem.offset().top - 81}, 500);
     }
+
+    $('#form.actions.shutdown').hide()
 });
