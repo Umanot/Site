@@ -10,6 +10,7 @@
   <body>
 
     <metal:headline fill-slot="headline_section_slot">
+      <span class="svntest"></span>
 
       <section id="intro-section">
 
