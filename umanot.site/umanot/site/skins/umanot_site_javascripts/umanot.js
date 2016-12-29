@@ -152,5 +152,6 @@ $(function () {
         $('html,body').animate({scrollTop: $elem.offset().top - 81}, 500);
     }
 
+    console.log('qweqwe');
     $('#form.actions.shutdown').hide()
 });
