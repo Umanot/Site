@@ -75,6 +75,12 @@
               <iframe class="embed-responsive-item" quality="high" width="900" height="541" src="http://share.xdevel.com/api/?platform=streamsolution&get=player&key=c5369609e1b3bdd5d19d30900a886b3a" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>   </div>
             </div>
           </div>
+          <div class="col-md-12">
+            <div class="iframe-wrapper">
+              <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" quality="high" width="900" height="541" src="http://share.xdevel.com/api/?platform=streamsolution&get=player&key=c5369609e1b3bdd5d19d30900a886b3a" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>   </div>
+            </div>
+          </div>
           <div class="col-md-5">
             <div class="tablePaddingWrp">
               <table class="articleTableW">
