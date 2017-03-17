@@ -123,7 +123,7 @@
                 <tbody>
                   <tr tal:condition="item/titolo">
                     <td i18n:translate="TITOLO">TITOLO</td>
-                    <td tal:content="item/titolo">FCA (Fiat Chrysler Automobiles)</td>
+                    <td tal:content="item/titolo">STM (ST Micro Electronics)</td>
                   </tr>
                   <tr tal:condition="item/intervallo">
                     <td i18n:translate="DATI">DATI</td>
