@@ -121,9 +121,9 @@
               </table>
                <table class="articleTableW">
                 <tbody>
-                  <tr tal:condition="item/titolo">
+                  <tr tal:condition="item/titolo_stm">
                     <td i18n:translate="TITOLO">TITOLO</td>
-                    <td tal:content="item/titolo">STM (ST Micro Electronics)</td>
+                    <td tal:content="item/titolo_stm">STM (ST Micro Electronics)</td>
                   </tr>
                   <tr tal:condition="item/intervallo">
                     <td i18n:translate="DATI">DATI</td>
