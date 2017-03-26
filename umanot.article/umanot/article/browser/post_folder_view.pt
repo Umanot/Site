@@ -106,8 +106,8 @@
                     <td tal:content="item/operazioni_1x2"> 7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/metodologia">
-                    <td i18n:translate="METODOLOGIA">Net Profit Operazioni Chiuse</td>
-                    <td tal:content="item/metodologia">ANALISI FISICA®</td>
+                    <td i18n:translate="METODOLOGIA">METODOLOGIA</td>
+                    <td tal:content="item/metodologia">Net Profit Operazioni Chiuse</td>
                   </tr>
                   <tr tal:condition="item/metodologia">
                     <td i18n:translate="METODOLOGIA">METODOLOGIA</td>
