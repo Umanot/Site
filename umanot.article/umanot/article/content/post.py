@@ -60,6 +60,13 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         )
     ),
     atapi.StringField(
+        name = 'operazioni_1x3',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Net profitto",
+        )
+    ),
+    atapi.StringField(
         name = 'metodologia',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
