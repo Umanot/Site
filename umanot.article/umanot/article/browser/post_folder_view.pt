@@ -75,19 +75,13 @@
               <iframe class="embed-responsive-item" quality="high" width="900" height="541" src="http://share.xdevel.com/api/?platform=streamsolution&get=player&key=c5369609e1b3bdd5d19d30900a886b3a" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>   </div>
             </div>
           </div>
-          <div class="col-md-12">
-            <div class="iframe-wrapper">
-              <div class="embed-responsive embed-responsive-16by9">
-              <iframe class="embed-responsive-item" quality="high" width="900" height="541" src="http://share.xdevel.com/api/?platform=streamsolution&get=player&key=c66a28c7e39b39382be2fa8e1a3bb06b" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>   </div>
-            </div>
-          </div>
           <div class="col-md-5">
             <div class="tablePaddingWrp">
               <table class="articleTableW">
                 <tbody>
                   <tr tal:condition="item/titolo">
                     <td i18n:translate="TITOLO">TITOLO</td>
-                    <td tal:content="item/titolo">STM (ST Micro Electronics)</td>
+                    <td tal:content="item/titolo">FCA (Fiat Chrysler Automobiles)</td>
                   </tr>
                   <tr tal:condition="item/intervallo">
                     <td i18n:translate="DATI">DATI</td>
@@ -119,7 +113,6 @@
                 </tbody>
 
               </table>
-
             </div>
           </div>
           <div class="col-md-7">
@@ -194,7 +187,7 @@
                   <div class="col-md-5">
                     <table class="articleTableW">
                       <tbody>
-                        <tr tal:condition="item/ ">
+                        <tr tal:condition="item/titolo">
                           <td i18n:translate="TITOLO">TITOLO</td>
                           <td tal:content="item/titolo">FCA (Fiat Chrysler Automobiles)</td>
                         </tr>
