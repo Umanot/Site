@@ -106,6 +106,10 @@
                     <td tal:content="item/operazioni_1x2"> 7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/metodologia">
+                    <td i18n:translate="METODOLOGIA">Net Profit Operazioni Chiuse</td>
+                    <td tal:content="item/metodologia">ANALISI FISICA®</td>
+                  </tr>
+                  <tr tal:condition="item/metodologia">
                     <td i18n:translate="METODOLOGIA">METODOLOGIA</td>
                     <td tal:content="item/metodologia">ANALISI FISICA®</td>
                   </tr>
@@ -229,7 +233,7 @@
                   <div class="col-md-5">
                     <table class="articleTableW">
                       <tbody>
-                        <tr tal:condition="item/titolo">
+                        <tr tal:condition="item/ ">
                           <td i18n:translate="TITOLO">TITOLO</td>
                           <td tal:content="item/titolo">FCA (Fiat Chrysler Automobiles)</td>
                         </tr>
