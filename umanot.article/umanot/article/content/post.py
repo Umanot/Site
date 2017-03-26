@@ -191,7 +191,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             operazioni = self.getOperazioni(),
             operazioni_12 = self.getOperazioni_12(),
             operazioni_1x2 = self.getOperazioni_1x2(),
-            operazioni_1x3=self.getOperazioni_1x3(),
+            operazioni_1x3 = self.getOperazioni_1x3(),
             metodologia = self.getMetodologia(),
             software = self.getSoftware(),
             notes = self.getNotes(),

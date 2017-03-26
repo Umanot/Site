@@ -105,6 +105,10 @@
                     <td i18n:translate="Operazioni pendenti da chiudere">Operazioni pendenti da chiudere</td>
                     <td tal:content="item/operazioni_1x2"> 7 - 2 - 1</td>
                   </tr>
+                   <tr tal:condition="item/operazioni_1x3">
+                     <td i18n:translate="Net Profit Operazioni Chiuse">Net Profit Operazioni Chiuse</td>
+                     <td tal:content="item/operazioni_1x3">7 - 2 - 1</td>
+                   </tr>
                   <tr tal:condition="item/metodologia">
                     <td i18n:translate="METODOLOGIA">METODOLOGIA</td>
                     <td tal:content="item/metodologia">ANALISI FISICA®</td>
