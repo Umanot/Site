@@ -209,6 +209,7 @@ class PostFolderView(BrowserView):
             placeholder['operazioni'] = placeholder['operazioni'].replace('$TOTAL_OP', str(performance['total_op']))
             placeholder['operazioni_12'] = placeholder['operazioni_12'].replace('$WIN_OP', str(performance['win_op'])).replace('$LOSE_OP', str(performance['lose_op']))
             placeholder['operazioni_1x2'] = placeholder['operazioni_1x2'].replace('$OPEN_OP', str(performance['open_op']))  # @ AKBAR PUT THE OPEN_OP REPLACEMENTE HERE. REMEMBER TO CAST NUMBER TO STRING
+            placeholder['operazioni_1x3'] = placeholder['operazioni_1x3'].replace('$NET_PROFIT', str(performance['net_profit']))  #26/3/17 @ Added by AKBAR for enhancing the blue box
 
             info = dict(
                 text = text,
