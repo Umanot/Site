@@ -67,6 +67,27 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         )
     ),
     atapi.StringField(
+        name='operazioni_1x4',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(
+            label=u"Maximum Draw Down%",
+        )
+    ),
+    atapi.StringField(
+        name='operazioni_1x5',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(
+            label=u"Profit Factor",
+        )
+    ),
+    atapi.StringField(
+        name='operazioni_1x6',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(
+            label=u"Hit Rate",
+        )
+    ),
+    atapi.StringField(
         name = 'metodologia',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
@@ -192,6 +213,9 @@ class Post(folder.ATFolder, ATCTImageTransform):
             operazioni_12 = self.getOperazioni_12(),
             operazioni_1x2 = self.getOperazioni_1x2(),
             operazioni_1x3 = self.getOperazioni_1x3(),
+            operazioni_1x4 = self.getOperazioni_1x4(),
+            operazioni_1x5 = self.getOperazioni_1x5(),
+            operazioni_1x6 = self.getOperazioni_1x6(),
             metodologia = self.getMetodologia(),
             software = self.getSoftware(),
             notes = self.getNotes(),
