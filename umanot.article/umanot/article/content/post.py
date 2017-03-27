@@ -109,6 +109,13 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         )
     ),
     atapi.TextField(
+        name = 'commento',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.TextAreaWidget(
+            label = u"Commento",
+        )
+    ),
+    atapi.TextField(
         name = 'importante',
         storage = atapi.AnnotationStorage(),
         widget = atapi.RichWidget(
@@ -219,6 +226,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             metodologia = self.getMetodologia(),
             software = self.getSoftware(),
             notes = self.getNotes(),
+            commento = self.getCommento(),
             importante = self.getRawImportante(),
         )
 
