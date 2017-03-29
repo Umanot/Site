@@ -81,6 +81,12 @@
               <iframe class="embed-responsive-item" quality="high" width="900" height="541" src="http://share.xdevel.com/api/?platform=streamsolution&get=player&key=c66a28c7e39b39382be2fa8e1a3bb06b" style="border:0;outline:0" frameborder="0" scrolling="no"></iframe>   </div>
             </div>
           </div>
+          <div class="col-md-12">
+            <div class="commentPaddingWrp">
+              <h4 i18n:translate="COMMENTO:">COMMENTO:</h4>
+              <p tal:replace="structure item/text">Brutta rottura ribassista oggi, 19 agosto, della recente Isteresi Isteresi (13660 - 13860)...UMANOT rimane Long ma... all'erta!</p>
+            </div>
+          </div>
           <div class="col-md-6">
             <div class="tablePaddingWrp">
               <table class="articleTableW">
@@ -140,7 +146,7 @@
               </table>
             </div>
           </div>
-<div class="col-md-6">
+          <div class="col-md-6">
             <div class="tablePaddingWrp">
               <table class="articleTableW">
                 <tbody>
