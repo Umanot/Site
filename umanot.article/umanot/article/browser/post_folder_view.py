@@ -210,9 +210,10 @@ class PostFolderView(BrowserView):
             placeholder['operazioni_12'] = placeholder['operazioni_12'].replace('$WIN_OP', str(performance['win_op'])).replace('$LOSE_OP', str(performance['lose_op']))
             placeholder['operazioni_1x2'] = placeholder['operazioni_1x2'].replace('$OPEN_OP', str(performance['open_op']))  # @ AKBAR PUT THE OPEN_OP REPLACEMENTE HERE. REMEMBER TO CAST NUMBER TO STRING
             placeholder['operazioni_1x3'] = placeholder['operazioni_1x3'].replace('$NET_PROFIT', str(performance['net_profit']))  # 26/3/17 @ Added by AKBAR for enhancing the blue box
-            placeholder['operazioni_1x4'] = placeholder['operazioni_1x4'].replace('$DD_MAX', str(performance['drawdown']))  # 26/3/17 @ Added by AKBAR for enhancing the blue box
-            placeholder['operazioni_1x5'] = placeholder['operazioni_1x5'].replace('$PROFIT_FACTOR', str(performance['profit_factor']))  # 26/3/17 @ Added by AKBAR for enhancing the blue box
-            placeholder['operazioni_1x6'] = placeholder['operazioni_1x6'].replace('$HIT_RATE', str(performance['hit_rate']))  # 26/3/17 @ Added by AKBAR for enhancing the blue box
+            placeholder['operazioni_1x4'] = placeholder['operazioni_1x4'].replace('$NET_PROFIT_OPEN', str(performance['net_profit_open']))  # 26/3/17 @ Added by AKBAR for enhancing the blue box
+            placeholder['operazioni_1x5'] = placeholder['operazioni_1x5'].replace('$DD_MAX', str(performance['drawdown']))  # 26/3/17 @ Added by AKBAR for enhancing the blue box
+            placeholder['operazioni_1x6'] = placeholder['operazioni_1x6'].replace('$PROFIT_FACTOR', str(performance['profit_factor']))  # 26/3/17 @ Added by AKBAR for enhancing the blue box
+            placeholder['operazioni_1x7'] = placeholder['operazioni_1x7'].replace('$HIT_RATE', str(performance['hit_rate']))  # 26/3/17 @ Added by AKBAR for enhancing the blue box
 
             info = dict(
                 text = text,

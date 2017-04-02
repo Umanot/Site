@@ -67,21 +67,28 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         )
     ),
     atapi.StringField(
-        name='operazioni_1x4',
-        storage=atapi.AnnotationStorage(),
-        widget=atapi.StringWidget(
-            label=u"Maximum Draw Down%",
+        name = 'operazioni_1x4',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Net profitto open",
         )
     ),
     atapi.StringField(
         name='operazioni_1x5',
         storage=atapi.AnnotationStorage(),
         widget=atapi.StringWidget(
-            label=u"Profit Factor",
+            label=u"Maximum Draw Down%",
         )
     ),
     atapi.StringField(
         name='operazioni_1x6',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(
+            label=u"Profit Factor",
+        )
+    ),
+    atapi.StringField(
+        name='operazioni_1x7',
         storage=atapi.AnnotationStorage(),
         widget=atapi.StringWidget(
             label=u"Hit Rate",
@@ -101,7 +108,7 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
             label = u"Software",
         )
     ),
-atapi.StringField(
+    atapi.StringField(
         name = 'titolo_2',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
@@ -144,21 +151,28 @@ atapi.StringField(
         )
     ),
     atapi.StringField(
-        name='operazioni_2x4',
-        storage=atapi.AnnotationStorage(),
-        widget=atapi.StringWidget(
-            label=u"Maximum Draw Down%",
+        name = 'operazioni_2x4',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Net profitto open",
         )
     ),
     atapi.StringField(
         name='operazioni_2x5',
         storage=atapi.AnnotationStorage(),
         widget=atapi.StringWidget(
-            label=u"Profit Factor",
+            label=u"Maximum Draw Down%",
         )
     ),
     atapi.StringField(
         name='operazioni_2x6',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(
+            label=u"Profit Factor",
+        )
+    ),
+    atapi.StringField(
+        name='operazioni_2x7',
         storage=atapi.AnnotationStorage(),
         widget=atapi.StringWidget(
             label=u"Hit Rate",
@@ -221,21 +235,28 @@ atapi.StringField(
         )
     ),
     atapi.StringField(
-        name='operazioni_3x4',
-        storage=atapi.AnnotationStorage(),
-        widget=atapi.StringWidget(
-            label=u"Maximum Draw Down%",
+        name = 'operazioni_3x4',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Net profitto open",
         )
     ),
     atapi.StringField(
         name='operazioni_3x5',
         storage=atapi.AnnotationStorage(),
         widget=atapi.StringWidget(
-            label=u"Profit Factor",
+            label=u"Maximum Draw Down%",
         )
     ),
     atapi.StringField(
         name='operazioni_3x6',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(
+            label=u"Profit Factor",
+        )
+    ),
+    atapi.StringField(
+        name='operazioni_3x7',
         storage=atapi.AnnotationStorage(),
         widget=atapi.StringWidget(
             label=u"Hit Rate",
@@ -298,21 +319,28 @@ atapi.StringField(
         )
     ),
     atapi.StringField(
-        name='operazioni_4x4',
-        storage=atapi.AnnotationStorage(),
-        widget=atapi.StringWidget(
-            label=u"Maximum Draw Down%",
+        name = 'operazioni_4x4',
+        storage = atapi.AnnotationStorage(),
+        widget = atapi.StringWidget(
+            label = u"Net profitto open",
         )
     ),
     atapi.StringField(
         name='operazioni_4x5',
         storage=atapi.AnnotationStorage(),
         widget=atapi.StringWidget(
-            label=u"Profit Factor",
+            label=u"Maximum Draw Down%",
         )
     ),
     atapi.StringField(
         name='operazioni_4x6',
+        storage=atapi.AnnotationStorage(),
+        widget=atapi.StringWidget(
+            label=u"Profit Factor",
+        )
+    ),
+    atapi.StringField(
+        name='operazioni_4x7',
         storage=atapi.AnnotationStorage(),
         widget=atapi.StringWidget(
             label=u"Hit Rate",
@@ -456,6 +484,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             operazioni_1x4 = self.getOperazioni_1x4(),
             operazioni_1x5 = self.getOperazioni_1x5(),
             operazioni_1x6 = self.getOperazioni_1x6(),
+            operazioni_1x7 = self.getOperazioni_1x7(),
             metodologia = self.getMetodologia(),
             software = self.getSoftware(),
             titolo_2=self.getTitolo_2(),
@@ -467,6 +496,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             operazioni_2x4=self.getOperazioni_2x4(),
             operazioni_2x5=self.getOperazioni_2x5(),
             operazioni_2x6=self.getOperazioni_2x6(),
+            operazioni_2x7=self.getOperazioni_2x7(),
             metodologia_2=self.getMetodologia_2(),
             software_2=self.getSoftware_2(),
             titolo_3=self.getTitolo_3(),
@@ -478,6 +508,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             operazioni_3x4=self.getOperazioni_3x4(),
             operazioni_3x5=self.getOperazioni_3x5(),
             operazioni_3x6=self.getOperazioni_3x6(),
+            operazioni_3x7=self.getOperazioni_3x7(),
             metodologia_3=self.getMetodologia_3(),
             software_3=self.getSoftware_3(),
             titolo_4=self.getTitolo_4(),
@@ -489,6 +520,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             operazioni_4x4=self.getOperazioni_4x4(),
             operazioni_4x5=self.getOperazioni_4x5(),
             operazioni_4x6=self.getOperazioni_4x6(),
+            operazioni_4x7=self.getOperazioni_4x7(),
             metodologia_4=self.getMetodologia_4(),
             software_4=self.getSoftware_4(),
             notes = self.getNotes(),
