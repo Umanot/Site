@@ -130,6 +130,10 @@
                     <td i18n:translate="Profit Factor">Profit Factor</td>
                     <td tal:content="item/operazioni_1x6">7 - 2 - 1</td>
                   </tr>
+                   <tr tal:condition="item/operazioni_1x7">
+                    <td i18n:translate="Hit Rate">Hit Rate</td>
+                    <td tal:content="item/operazioni_1x7">7 - 2 - 1</td>
+                  </tr>
                   <tr tal:condition="item/metodologia">
                     <td i18n:translate="METODOLOGIA">METODOLOGIA</td>
                     <td tal:content="item/metodologia">ANALISI FISICA®</td>
