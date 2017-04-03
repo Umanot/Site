@@ -95,7 +95,7 @@
               <table class="articleTableW">
                 <tbody>
                   <tr tal:condition="item/titolo">
-                    <td i18n:translate="TITOLO">TITOLO_FCA</td>
+                    <td i18n:translate="TITOLO">TITOLO</td>
                     <td tal:content="item/titolo">FCA (Fiat Chrysler Automobiles)</td>
                   </tr>
                   <tr tal:condition="item/intervallo">
@@ -152,12 +152,12 @@
               </table>
             </div>
           </div>
-<div class="col-md-6">
+            <div class="col-md-6">
             <div class="tablePaddingWrp">
               <table class="articleTableW">
                 <tbody>
                   <tr tal:condition="item/titolo_2">
-                    <td i18n:translate="TITOLO">TITOLO_STM</td>
+                    <td i18n:translate="TITOLO">TITOLO</td>
                     <td tal:content="item/titolo_2">STM (S T Microelectronics)</td>
                   </tr>
                   <tr tal:condition="item/intervallo_2">
@@ -214,7 +214,7 @@
               <table class="articleTableW">
                 <tbody>
                   <tr tal:condition="item/titolo_3">
-                    <td i18n:translate="TITOLO">TITOLO_ISP</td>
+                    <td i18n:translate="TITOLO">TITOLO</td>
                     <td tal:content="item/titolo_3">ISP (Intessa Sao Polo)</td>
                   </tr>
                   <tr tal:condition="item/intervallo_3">
@@ -271,7 +271,7 @@
               <table class="articleTableW">
                 <tbody>
                   <tr tal:condition="item/titolo_4">
-                    <td i18n:translate="TITOLO">TITOLO_ENEL</td>
+                    <td i18n:translate="TITOLO">TITOLO</td>
                     <td tal:content="item/titolo_4">ENEL (ENEL)</td>
                   </tr>
                   <tr tal:condition="item/intervallo_4">
