@@ -28,7 +28,7 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         name = 'titolo',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
-            label = u"Titolo",
+            label = u"Titolo_FCA",
         )
     ),
     atapi.StringField(
@@ -112,7 +112,7 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         name = 'titolo_2',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
-            label = u"Titolo",
+            label = u"Titolo_STM",
         )
     ),
     atapi.StringField(
@@ -196,7 +196,7 @@ atapi.StringField(
         name = 'titolo_3',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
-            label = u"Titolo",
+            label = u"Titolo_ISP",
         )
     ),
     atapi.StringField(
@@ -280,7 +280,7 @@ atapi.StringField(
         name = 'titolo_4',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
-            label = u"Titolo",
+            label = u"Titolo_ENEL",
         )
     ),
     atapi.StringField(
