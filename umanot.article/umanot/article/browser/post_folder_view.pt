@@ -181,7 +181,7 @@
                     <td tal:content="item/operazioni_2x3">7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/operazioni_2x4">
-                    <td i18n:translate="Net Profit Operazioni Chiuse">Net Open Profit Operazioni Chiuse</td>
+                    <td i18n:translate="Net Profit Operazioni Aperte">Net Profit Operazioni Aperte</td>
                     <td tal:content="item/operazioni_2x4">7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/operazioni_2x5">
@@ -238,7 +238,7 @@
                     <td tal:content="item/operazioni_3x3">7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/operazioni_3x4">
-                    <td i18n:translate="Net Profit Operazioni Chiuse">Net Open Profit Operazioni Chiuse</td>
+                    <td i18n:translate="Net Profit Operazioni Aperte">Net Profit Operazioni Aperte</td>
                     <td tal:content="item/operazioni_3x4">7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/operazioni_3x5">
@@ -295,7 +295,7 @@
                     <td tal:content="item/operazioni_4x3">7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/operazioni_4x4">
-                    <td i18n:translate="Net Profit Operazioni Chiuse">Net Open Profit Operazioni Chiuse</td>
+                    <td i18n:translate="Net Profit Operazioni Aperte">Net Profit Operazioni Aperte</td>
                     <td tal:content="item/operazioni_4x4">7 - 2 - 1</td>
                   </tr>
                   <tr tal:condition="item/operazioni_4x5">
