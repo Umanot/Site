@@ -196,7 +196,7 @@ atapi.StringField(
         name = 'titolo_3',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
-            label = u"Titolo_USP",
+            label = u"Titolo_ISP",
         )
     ),
     atapi.StringField(
@@ -499,7 +499,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             operazioni_2x7=self.getOperazioni_2x7(),
             metodologia_2=self.getMetodologia_2(),
             software_2=self.getSoftware_2(),
-            titolo_3=self.getTitolo_3(),
+           titolo_3=self.getTitolo_3(),
             intervallo_3=self.getIntervallo_3(),
             operazioni_3=self.getOperazioni_3(),
             operazioni_32=self.getOperazioni_32(),
