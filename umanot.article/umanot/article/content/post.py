@@ -196,7 +196,7 @@ atapi.StringField(
         name = 'titolo_3',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
-            label = u"Titolo_ISP",
+            label = u"Titolo_USP",
         )
     ),
     atapi.StringField(
