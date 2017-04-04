@@ -148,7 +148,7 @@ class PostFolderView(BrowserView):
             portfolio_sql_id = '0'
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
-            performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None, 'lose_op': None, 'open_op': None,'net_profit_open': None}
+            performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None, 'lose_op': None, 'open_op': None,'net_profit_open': None, 'net_profit_2': None, 'drawdown_2': None, 'hit_rate_2': None, 'profit_factor_2': None, 'total_op_2': None, 'win_op_2': None, 'lose_op_2': None, 'open_op_2': None,'net_profit_open_2': None}
             if data:
                 latest = data[0]
                 latest_2 = data[1]
