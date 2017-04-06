@@ -145,7 +145,6 @@ class PostFolderView(BrowserView):
         placeholder = brains[0].getObject().getInfo()
 
         try:
-            import pdb; pdb.set_trace()
             portfolio_sql_id = '0'
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
             performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None, 'lose_op': None, 'open_op': None,'net_profit_open': None, 'net_profit_2': None, 'drawdown_2': None, 'hit_rate_2': None, 'profit_factor_2': None, 'total_op_2': None, 'win_op_2': None, 'lose_op_2': None, 'open_op_2': None,'net_profit_open_2': None}
@@ -177,20 +176,20 @@ class PostFolderView(BrowserView):
                 performance['net_profit_open'] = str(latest['net_profit_open']).split('.')[0] if latest['net_profit_open'] else ''
 
                 # for STM stock
-                performance['net_profit_2'] = str(latest_2['net_profit_2']).split('.')[0]
-                performance['total_equity_2'] = str(latest_2['net_profit_2'] + 100000).split('.')[0]
+                performance['net_profit_2'] = str(latest_2['net_profit']).split('.')[0]
+                performance['total_equity_2'] = str(latest_2['net_profit'] + 100000).split('.')[0]
                 performance['net_profit_percentuale_2'] = '+ %.1f %%' % (latest_2['net_profit'] / float(100000) * 100)
                 performance['drawdown_2'] = self.context.getLocation()  # latest['drawdown']
                 performance['hit_rate_2'] = '%0.1f%%' % hit_rate_2 if hit_rate_2 else ''
-                performance['profit_factor_2'] = '%.1f' % latest_2['profit_factor_2'] if latest_2['profit_factor_2'] else '--'
+                performance['profit_factor_2'] = '%.1f' % latest_2['profit_factor'] if latest_2['profit_factor'] else '--'
                 # Added the following 4 variables in order to display them in the site- by Akbar - 7/12/2016
                 # performance['win_op'] = '%.1f' % int(latest['win_op']) if int(latest['win_op']) else '--'
-                performance['total_op_2'] = latest_2['tot_op_2'] if latest_2['tot_op_2'] else '--'
-                performance['win_op_2'] = latest_2['win_op_2'] if latest_2['win_op_2'] else '--'
-                performance['lose_op_2'] = latest_2['los_op_2'] if latest_2['los_op_2'] else '--'
+                performance['total_op_2'] = latest_2['tot_op'] if latest_2['tot_op'] else '--'
+                performance['win_op_2'] = latest_2['win_op'] if latest_2['win_op'] else '--'
+                performance['lose_op_2'] = latest_2['los_o2'] if latest_2['los_op'] else '--'
                 # Added one more variable(open_op) in order to display them in the site- by Akbar - 16/12/2016
-                performance['open_op_2'] = latest_2['open_op_2'] if latest_2['open_op_2'] else '--'
-                performance['net_profit_open_2'] = str(latest_2['net_profit_open_2']).split('.')[0] if latest_2['net_profit_open_2'] else ''
+                performance['open_op_2'] = latest_2['open_op'] if latest_2['open_op'] else '--'
+                performance['net_profit_open_2'] = str(latest_2['net_profit_open']).split('.')[0] if latest_2['net_profit_open'] else ''
 
                 last_value = 0
                 counter = 0
