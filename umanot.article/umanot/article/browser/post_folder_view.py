@@ -144,8 +144,6 @@ class PostFolderView(BrowserView):
 
         placeholder = brains[0].getObject().getInfo()
 
-        import pdb; pdb.set_trace()
-
         try:
             portfolio_sql_id = '0'
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
