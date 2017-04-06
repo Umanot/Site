@@ -188,7 +188,7 @@ class PostFolderView(BrowserView):
                 # performance['win_op'] = '%.1f' % int(latest['win_op']) if int(latest['win_op']) else '--'
                 performance['total_op_2'] = latest_2['tot_op'] if latest_2['tot_op'] else '--'
                 performance['win_op_2'] = latest_2['win_op'] if latest_2['win_op'] else '--'
-                performance['lose_op_2'] = latest_2['los_o2'] if latest_2['los_op'] else '--'
+                performance['lose_op_2'] = latest_2['los_op'] if latest_2['los_op'] else '--'
                 # Added one more variable(open_op) in order to display them in the site- by Akbar - 16/12/2016
                 performance['open_op_2'] = latest_2['open_op'] if latest_2['open_op'] else '--'
                 performance['net_profit_open_2'] = str(latest_2['net_profit_open']).split('.')[0] if latest_2['net_profit_open'] else ''
