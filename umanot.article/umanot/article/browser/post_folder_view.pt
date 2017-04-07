@@ -90,7 +90,7 @@
               <tal:prefooter tal:content="structure text"></tal:prefooter>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="tablePaddingWrp">
               <table class="articleTableW">
                 <tbody>
@@ -152,7 +152,7 @@
               </table>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="tablePaddingWrp">
               <table class="articleTableW">
                 <tbody>
@@ -209,7 +209,7 @@
               </table>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div class="tablePaddingWrp">
               <table class="articleTableW">
                 <tbody>
