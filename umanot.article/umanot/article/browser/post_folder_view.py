@@ -145,7 +145,7 @@ class PostFolderView(BrowserView):
         placeholder = brains[0].getObject().getInfo()
 
         try:
-            portfolio_sql_id = '0'
+            portfolio_sql_id = '111'
             data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
             performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None, 'lose_op': None, 'open_op': None,'net_profit_open': None, 'net_profit_3': None, 'drawdown_3': None, 'hit_rate_3': None, 'profit_factor_3': None, 'total_op_3': None, 'win_op_3': None, 'lose_op_3': None, 'open_op_3': None,'net_profit_open_3': None, 'net_profit_4': None, 'drawdown_4': None, 'hit_rate_4': None, 'profit_factor_4': None, 'total_op_4': None, 'win_op_4': None, 'lose_op_4': None, 'open_op_4': None,'net_profit_open_4': None}
 
