@@ -153,7 +153,7 @@ class PostFolderView(BrowserView):
             if data:
                 latest = data[0]
                 latest_3 = data[1]
-                latest_4 = data[1]
+                latest_4 = data[2]
                 try:
                     hit_rate = float(latest['win_op']) / (float(latest['los_op']) + float(latest['win_op'])) * 100
                     hit_rate_3 = float(latest_3['win_op']) / (float(latest_3['los_op']) + float(latest_3['win_op'])) * 100
