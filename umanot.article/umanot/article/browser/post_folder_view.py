@@ -151,9 +151,9 @@ class PostFolderView(BrowserView):
 
             # performance = {'net_profit': None, 'drawdown': None, 'hit_rate': None, 'profit_factor': None, 'total_op': None, 'win_op': None, 'lose_op': None, 'open_op': None,'net_profit_open': None}
             if data:
-                latest = data[0]
-                latest_3 = data[1]
-                latest_4 = data[2]
+                latest = data[2]
+                latest_3 = data[0]
+                latest_4 = data[1]
                 try:
                     hit_rate = float(latest['win_op']) / (float(latest['los_op']) + float(latest['win_op'])) * 100
                     hit_rate_3 = float(latest_3['win_op']) / (float(latest_3['los_op']) + float(latest_3['win_op'])) * 100
