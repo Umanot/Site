@@ -119,9 +119,8 @@ class UmanotUtils(object):
             )
 
             results.append(info)
-
-        results.sort(lambda x, y: cmp(y['date'], x['date']))
-
+        if portfolio != '111':
+            results.sort(lambda x, y: cmp(y['date'], x['date'])) # Enabled a check before sorting, because there is no sorting required for bluebox data, added by Akbar on 13/4/2017
         return results
 
     def money_from_float(self, float_value, show_currency=True, show_decimals=True, show_plus=False):
