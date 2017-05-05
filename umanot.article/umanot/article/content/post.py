@@ -39,13 +39,6 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         )
     ),
     atapi.StringField(
-        name='capitaleiniziale',
-        storage=atapi.AnnotationStorage(),
-        widget=atapi.StringWidget(
-            label=u"Capitale Iniziale",
-        )
-    ),
-    atapi.StringField(
         name = 'operazioni',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
@@ -130,13 +123,6 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         )
     ),
     atapi.StringField(
-        name='capitaleiniziale_3',
-        storage=atapi.AnnotationStorage(),
-        widget=atapi.StringWidget(
-            label=u"Capitale Iniziale",
-        )
-    ),
-    atapi.StringField(
         name = 'operazioni_3',
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
@@ -218,13 +204,6 @@ PostSchema = folder.ATFolderSchema.copy() + atapi.Schema((
         storage = atapi.AnnotationStorage(),
         widget = atapi.StringWidget(
             label = u"Intervallo dati",
-        )
-    ),
-    atapi.StringField(
-        name='capitaleiniziale_4',
-        storage=atapi.AnnotationStorage(),
-        widget=atapi.StringWidget(
-            label=u"Capitale Iniziale",
         )
     ),
     atapi.StringField(
@@ -413,7 +392,6 @@ class Post(folder.ATFolder, ATCTImageTransform):
             readable_date = effective_readable,
             sortable_date = effective.asdatetime().isoformat(),
             titolo = self.getTitolo(),
-            capitaleiniziale = self.getCapitaleIniziale(),
             intervallo = self.getIntervallo(),
             operazioni = self.getOperazioni(),
             operazioni_12 = self.getOperazioni_12(),
@@ -427,7 +405,6 @@ class Post(folder.ATFolder, ATCTImageTransform):
             software = self.getSoftware(),
             titolo_3=self.getTitolo_3(),
             intervallo_3=self.getIntervallo_3(),
-            capitaleiniziale_3 = self.getCapitaleIniziale_3(),
             operazioni_3=self.getOperazioni_3(),
             operazioni_32=self.getOperazioni_32(),
             operazioni_3x2=self.getOperazioni_3x2(),
@@ -440,7 +417,6 @@ class Post(folder.ATFolder, ATCTImageTransform):
             software_3=self.getSoftware_3(),
             titolo_4=self.getTitolo_4(),
             intervallo_4=self.getIntervallo_4(),
-            capitaleiniziale_4 = self.getCapitaleIniziale_4(),
             operazioni_4=self.getOperazioni_4(),
             operazioni_42=self.getOperazioni_42(),
             operazioni_4x2=self.getOperazioni_4x2(),
