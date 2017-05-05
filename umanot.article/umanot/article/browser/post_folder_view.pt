@@ -102,10 +102,6 @@
                     <td i18n:translate="DATI">DATI</td>
                     <td tal:content="item/intervallo">dal ... al ...</td>
                   </tr>
-                   <tr tal:condition="item/capitaleiniziale">
-                    <td i18n:translate="CAPITALE INIZIALE">CAPITALE INIZIALE</td>
-                    <td tal:content="item/capitaleiniziale">7 - 2 - 1</td>
-                  </tr>
                   <tr tal:condition="item/operazioni">
                     <td i18n:translate="OPERAZIONI">OPERAZIONI</td>
                     <td tal:content="item/operazioni">10 = 8 Buy + 2 Sell</td>
