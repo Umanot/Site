@@ -425,7 +425,7 @@ class Post(folder.ATFolder, ATCTImageTransform):
             operazioni_1x7 = self.getOperazioni_1x7(),
             metodologia = self.getMetodologia(),
             software = self.getSoftware(),
-           titolo_3=self.getTitolo_3(),
+            titolo_3=self.getTitolo_3(),
             intervallo_3=self.getIntervallo_3(),
             capitale_iniziale_3 = self.getCapitaleIniziale_3(),
             operazioni_3=self.getOperazioni_3(),
