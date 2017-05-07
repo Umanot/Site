@@ -120,7 +120,7 @@
                   </tr>
                    <tr tal:condition="item/operazioni_1x4">
                     <td i18n:translate="Net Profit Operazioni Aperte">Net Profit Operazioni Aperte</td>
-                    <td tal:content="item/operazioni_1x4">7 - 2 - 1</td>
+                    <td tal:content="item/operazioni_1x4">7 - 2 - 1</td><span>- profitto cumulativo netto per le sole operazioni ancora aperte, da chiudere.</span>
                   </tr>
                   <tr tal:condition="item/operazioni_1x5">
                     <td i18n:translate="Draw Down Max">Draw Down Max</td>
