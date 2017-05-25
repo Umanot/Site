@@ -2,7 +2,7 @@
   <section id="section-footer">
     <div class="container-fluid">
       <div class="mrow">
-        <div class="col-md-4">
+        <div class="col-md-4" tal:condition="nothing">
           <h6 class="footerTitle" i18n:translate="Intelligenza connettiva">Intelligenza connettiva</h6>
           <ul class="footerList">
             <tal:loop repeat="item view/articles">
