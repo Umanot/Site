@@ -122,7 +122,7 @@
 
           </section>
 
-          <section id="article-section">
+          <section id="article-section" tal:condition="nothing">
             <h2 i18n:translate="trader_scientifico">Per diventare un Trader Scientifico<sup>&reg;</sup></h2>
             <div class="isotope">
 
