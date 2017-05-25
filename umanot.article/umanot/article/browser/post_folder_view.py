@@ -52,6 +52,7 @@ class PostFolderView(BrowserView):
         brains = self.portal_catalog(
             portal_type = "Document",
             object_provides = ILegenda.__identifier__,
+            path = '/'.join(self.context.getPhysicalPath()),
         )
 
         if not brains:
@@ -64,6 +65,7 @@ class PostFolderView(BrowserView):
         brains = self.portal_catalog(
             portal_type = "Document",
             object_provides = IPostPreFooter.__identifier__,
+            path = '/'.join(self.context.getPhysicalPath()),
         )
 
         if not brains:
@@ -76,6 +78,7 @@ class PostFolderView(BrowserView):
         brains = self.portal_catalog(
             portal_type = "Document",
             object_provides = IPostFooter.__identifier__,
+            path = '/'.join(self.context.getPhysicalPath()),
         )
 
         if not brains:
@@ -136,7 +139,8 @@ class PostFolderView(BrowserView):
     def get_live_comment(self):
         brains = self.portal_catalog(
             portal_type = "Post",
-            object_provides = ILiveComment.__identifier__
+            object_provides = ILiveComment.__identifier__,
+            path = '/'.join(self.context.getPhysicalPath()),
         )
 
         if not brains:
