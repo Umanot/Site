@@ -414,7 +414,7 @@ class PostFolderView(BrowserView):
             data.reverse()
 
         text = ""
-        if self.contents:
+        if self.contents and self.contents.get('data'):
             text = self.contents['data'][0]['text'] if self.contents else ''
 
             text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
