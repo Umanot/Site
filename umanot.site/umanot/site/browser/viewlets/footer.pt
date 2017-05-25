@@ -11,7 +11,7 @@
           </ul>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div class="footerBlock" tal:define="item view/about" tal:condition="item">
             <h6 class="footerTitle" i18n:translate="Chi Siamo">Chi Siamo</h6>
 
@@ -20,7 +20,7 @@
           </div>
         </div>
 
-        <div class="col-md-4">
+        <div class="col-md-6">
           <div id="contact-block">
 
             <h6 class="footerTitle" i18n:translate="Contattaci">Contattaci</h6>
