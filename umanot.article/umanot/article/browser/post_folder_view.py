@@ -413,21 +413,23 @@ class PostFolderView(BrowserView):
 
             data.reverse()
 
-        text = self.contents['data'][0]['text'] if self.contents else ''
+        text = ""
+        if self.contents:
+            text = self.contents['data'][0]['text'] if self.contents else ''
 
-        text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
-        text = text.replace('$NET_PROFIT', performance['net_profit'])
-        text = text.replace('$TOTAL_EQUITY', performance['total_equity'])
-        text = text.replace('$DD_MAX', performance['drawdown'])
-        text = text.replace('$HIT_RATE', performance['hit_rate'])
-        text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
-        # Accepted the following 4 variables as text in order to display them in the site- by Akbar - 7/12/2016
-        text = text.replace('$TOTAL_OP', str(performance['total_op']))
-        text = text.replace('$WIN_OP', str(performance['win_op']))
-        text = text.replace('$LOSE_OP', str(performance['lose_op']))
-        # Added one more variable(open_op) as text in order to display them in the site- by Akbar - 16/12/2016
-        text = text.replace('$OPEN_OP', str(performance['open_op']))
-        text = text.replace('$NET_PROFIT_OPEN', str(performance['net_profit_open']))
+            text = text.replace('$NET_PROFIT_PERCENTUALE', performance['net_profit_percentuale'])
+            text = text.replace('$NET_PROFIT', performance['net_profit'])
+            text = text.replace('$TOTAL_EQUITY', performance['total_equity'])
+            text = text.replace('$DD_MAX', performance['drawdown'])
+            text = text.replace('$HIT_RATE', performance['hit_rate'])
+            text = text.replace('$PROFIT_FACTOR', performance['profit_factor'])
+            # Accepted the following 4 variables as text in order to display them in the site- by Akbar - 7/12/2016
+            text = text.replace('$TOTAL_OP', str(performance['total_op']))
+            text = text.replace('$WIN_OP', str(performance['win_op']))
+            text = text.replace('$LOSE_OP', str(performance['lose_op']))
+            # Added one more variable(open_op) as text in order to display them in the site- by Akbar - 16/12/2016
+            text = text.replace('$OPEN_OP', str(performance['open_op']))
+            text = text.replace('$NET_PROFIT_OPEN', str(performance['net_profit_open']))
 
         info = dict(
             text = text,
