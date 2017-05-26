@@ -83,7 +83,7 @@ class ProductView(BrowserView):
         return self.umanot_utils.money_from_float(value)
 
     def get_data(self, info):
-        portfolio_sql_id = '100' if 'P_ITA01' in self.context.Title() else '0'
+        portfolio_sql_id = '1' if 'P_ITA01' in self.context.Title() else '0'
 
         data = self.umanot_utils.get_posts_by_portfolio(portfolio_sql_id, self.limit, self.min_date)
 
