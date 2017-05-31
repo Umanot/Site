@@ -15,7 +15,7 @@
         <div class="owl-carousel">
           <tal:loop repeat="item view/slides">
             <div class="item">
-              <div id="slide01" class="slideItem" tal:attributes="id string:slide0${repeat/item/number}">
+              <div id="slide01" class="slideItem" tal:attributes="id string:slide0${repeat/item/number}; style python:'background: #000 url(%s/image) no-repeat center top;' % item['URL']">
                 <div class="introText" style="width: 100%">
                   <h1 class="heroTitle">Uman<span>ot</span></h1>
 
