@@ -99,7 +99,7 @@ class HomepageView(BrowserView):
         for brain in brains:
             obj = brain.getObject()
             info = obj.getInfo()
-            info['URL'] = brain.getURL()
+            info['slide_url'] = brain.getURL()
             results.append(info)
 
         return results
